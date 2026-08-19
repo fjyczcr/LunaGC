@@ -84,7 +84,7 @@ public final class AsterMidDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 82: {
+            case 98: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 campList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo>();
                 mutable_bitField0_ |= 0x00000001;
@@ -93,17 +93,17 @@ public final class AsterMidDetailInfoOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.parser(), extensionRegistry));
               break;
             }
-            case 48: {
+            case 64: {
 
               isOpen_ = input.readBool();
               break;
             }
-            case 24: {
+            case 88: {
 
               beginTime_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 8: {
 
               collectCount_ = input.readUInt32();
               break;
@@ -143,7 +143,7 @@ public final class AsterMidDetailInfoOuterClass {
               emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.class, emu.grasscutter.net.proto.AsterMidDetailInfoOuterClass.AsterMidDetailInfo.Builder.class);
     }
 
-    public static final int CAMP_LIST_FIELD_NUMBER = 10;
+    public static final int CAMP_LIST_FIELD_NUMBER = 12;
     private java.util.List<emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo> campList_;
 
     @java.lang.Override
@@ -173,7 +173,7 @@ public final class AsterMidDetailInfoOuterClass {
       return campList_.get(index);
     }
 
-    public static final int COLLECT_COUNT_FIELD_NUMBER = 7;
+    public static final int COLLECT_COUNT_FIELD_NUMBER = 1;
     private int collectCount_;
 
     @java.lang.Override
@@ -181,7 +181,7 @@ public final class AsterMidDetailInfoOuterClass {
       return collectCount_;
     }
 
-    public static final int BEGIN_TIME_FIELD_NUMBER = 3;
+    public static final int BEGIN_TIME_FIELD_NUMBER = 11;
     private int beginTime_;
 
     @java.lang.Override
@@ -189,7 +189,7 @@ public final class AsterMidDetailInfoOuterClass {
       return beginTime_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 6;
+    public static final int IS_OPEN_FIELD_NUMBER = 8;
     private boolean isOpen_;
 
     @java.lang.Override
@@ -212,16 +212,16 @@ public final class AsterMidDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < campList_.size(); i++) {
-        output.writeMessage(10, campList_.get(i));
+        output.writeMessage(12, campList_.get(i));
       }
       if (isOpen_ != false) {
-        output.writeBool(6, isOpen_);
+        output.writeBool(8, isOpen_);
       }
       if (beginTime_ != 0) {
-        output.writeUInt32(3, beginTime_);
+        output.writeUInt32(11, beginTime_);
       }
       if (collectCount_ != 0) {
-        output.writeUInt32(7, collectCount_);
+        output.writeUInt32(1, collectCount_);
       }
       unknownFields.writeTo(output);
     }
@@ -234,19 +234,19 @@ public final class AsterMidDetailInfoOuterClass {
       size = 0;
       for (int i = 0; i < campList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, campList_.get(i));
+          .computeMessageSize(12, campList_.get(i));
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isOpen_);
+          .computeBoolSize(8, isOpen_);
       }
       if (beginTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, beginTime_);
+          .computeUInt32Size(11, beginTime_);
       }
       if (collectCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, collectCount_);
+          .computeUInt32Size(1, collectCount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

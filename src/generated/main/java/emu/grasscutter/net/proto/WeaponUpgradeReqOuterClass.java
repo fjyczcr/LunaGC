@@ -91,7 +91,7 @@ public final class WeaponUpgradeReqOuterClass {
             case 0:
               done = true;
               break;
-            case 106: {
+            case 66: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 itemParamList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000002;
@@ -100,7 +100,7 @@ public final class WeaponUpgradeReqOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.parser(), extensionRegistry));
               break;
             }
-            case 40: {
+            case 16: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 foodWeaponGuidList_ = newLongList();
                 mutable_bitField0_ |= 0x00000001;
@@ -108,7 +108,7 @@ public final class WeaponUpgradeReqOuterClass {
               foodWeaponGuidList_.addLong(input.readUInt64());
               break;
             }
-            case 42: {
+            case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -121,7 +121,7 @@ public final class WeaponUpgradeReqOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 24: {
+            case 48: {
 
               targetWeaponGuid_ = input.readUInt64();
               break;
@@ -164,7 +164,7 @@ public final class WeaponUpgradeReqOuterClass {
               emu.grasscutter.net.proto.WeaponUpgradeReqOuterClass.WeaponUpgradeReq.class, emu.grasscutter.net.proto.WeaponUpgradeReqOuterClass.WeaponUpgradeReq.Builder.class);
     }
 
-    public static final int FOOD_WEAPON_GUID_LIST_FIELD_NUMBER = 5;
+    public static final int FOOD_WEAPON_GUID_LIST_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.LongList foodWeaponGuidList_;
 
     @java.lang.Override
@@ -182,7 +182,7 @@ public final class WeaponUpgradeReqOuterClass {
     }
     private int foodWeaponGuidListMemoizedSerializedSize = -1;
 
-    public static final int ITEM_PARAM_LIST_FIELD_NUMBER = 13;
+    public static final int ITEM_PARAM_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> itemParamList_;
 
     @java.lang.Override
@@ -212,7 +212,7 @@ public final class WeaponUpgradeReqOuterClass {
       return itemParamList_.get(index);
     }
 
-    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 3;
+    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 6;
     private long targetWeaponGuid_;
 
     @java.lang.Override
@@ -236,17 +236,17 @@ public final class WeaponUpgradeReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       for (int i = 0; i < itemParamList_.size(); i++) {
-        output.writeMessage(13, itemParamList_.get(i));
+        output.writeMessage(8, itemParamList_.get(i));
       }
       if (getFoodWeaponGuidListList().size() > 0) {
-        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(18);
         output.writeUInt32NoTag(foodWeaponGuidListMemoizedSerializedSize);
       }
       for (int i = 0; i < foodWeaponGuidList_.size(); i++) {
         output.writeUInt64NoTag(foodWeaponGuidList_.getLong(i));
       }
       if (targetWeaponGuid_ != 0L) {
-        output.writeUInt64(3, targetWeaponGuid_);
+        output.writeUInt64(6, targetWeaponGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -259,7 +259,7 @@ public final class WeaponUpgradeReqOuterClass {
       size = 0;
       for (int i = 0; i < itemParamList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, itemParamList_.get(i));
+          .computeMessageSize(8, itemParamList_.get(i));
       }
       {
         int dataSize = 0;
@@ -277,7 +277,7 @@ public final class WeaponUpgradeReqOuterClass {
       }
       if (targetWeaponGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, targetWeaponGuid_);
+          .computeUInt64Size(6, targetWeaponGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

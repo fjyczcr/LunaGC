@@ -80,12 +80,12 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 24: {
 
               slipRevivePointId_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 72: {
 
               retcode_ = input.readInt32();
               break;
@@ -122,7 +122,7 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
               emu.grasscutter.net.proto.DungeonSlipRevivePointActivateRspOuterClass.DungeonSlipRevivePointActivateRsp.class, emu.grasscutter.net.proto.DungeonSlipRevivePointActivateRspOuterClass.DungeonSlipRevivePointActivateRsp.Builder.class);
     }
 
-    public static final int SLIP_REVIVE_POINT_ID_FIELD_NUMBER = 13;
+    public static final int SLIP_REVIVE_POINT_ID_FIELD_NUMBER = 3;
     private int slipRevivePointId_;
     /**
      * <code>uint32 slip_revive_point_id = 5;</code>
@@ -133,7 +133,7 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
       return slipRevivePointId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 2;
+    public static final int RETCODE_FIELD_NUMBER = 9;
     private int retcode_;
     /**
      * <code>int32 retcode = 6;</code>
@@ -159,10 +159,10 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (slipRevivePointId_ != 0) {
-        output.writeUInt32(13, slipRevivePointId_);
+        output.writeUInt32(3, slipRevivePointId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(2, retcode_);
+        output.writeInt32(9, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +175,11 @@ public final class DungeonSlipRevivePointActivateRspOuterClass {
       size = 0;
       if (slipRevivePointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, slipRevivePointId_);
+          .computeUInt32Size(3, slipRevivePointId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, retcode_);
+          .computeInt32Size(9, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

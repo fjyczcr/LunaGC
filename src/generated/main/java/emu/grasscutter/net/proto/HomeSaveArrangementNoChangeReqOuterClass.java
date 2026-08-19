@@ -74,7 +74,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 56: {
 
               sceneId_ = input.readUInt32();
               break;
@@ -111,7 +111,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
               emu.grasscutter.net.proto.HomeSaveArrangementNoChangeReqOuterClass.HomeSaveArrangementNoChangeReq.class, emu.grasscutter.net.proto.HomeSaveArrangementNoChangeReqOuterClass.HomeSaveArrangementNoChangeReq.Builder.class);
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 8;
+    public static final int SCENE_ID_FIELD_NUMBER = 7;
     private int sceneId_;
     /**
      * <code>uint32 scene_id = 1;</code>
@@ -137,7 +137,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sceneId_ != 0) {
-        output.writeUInt32(8, sceneId_);
+        output.writeUInt32(7, sceneId_);
       }
       unknownFields.writeTo(output);
     }
@@ -150,7 +150,7 @@ public final class HomeSaveArrangementNoChangeReqOuterClass {
       size = 0;
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, sceneId_);
+          .computeUInt32Size(7, sceneId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

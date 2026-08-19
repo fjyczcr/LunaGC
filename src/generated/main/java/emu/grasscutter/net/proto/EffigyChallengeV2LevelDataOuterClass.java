@@ -113,12 +113,12 @@ public final class EffigyChallengeV2LevelDataOuterClass {
               lAICFKMFKEH_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 32: {
 
               isLevelOpen_ = input.readBool();
               break;
             }
-            case 104: {
+            case 80: {
 
               levelId_ = input.readUInt32();
               break;
@@ -209,7 +209,7 @@ public final class EffigyChallengeV2LevelDataOuterClass {
       return nPLPFHEKCIH_;
     }
 
-    public static final int LEVEL_ID_FIELD_NUMBER = 13;
+    public static final int LEVEL_ID_FIELD_NUMBER = 10;
     private int levelId_;
     /**
      * <code>uint32 level_id = 12;</code>
@@ -220,7 +220,7 @@ public final class EffigyChallengeV2LevelDataOuterClass {
       return levelId_;
     }
 
-    public static final int IS_LEVEL_OPEN_FIELD_NUMBER = 12;
+    public static final int IS_LEVEL_OPEN_FIELD_NUMBER = 4;
     private boolean isLevelOpen_;
     /**
      * <code>bool is_level_open = 11;</code>
@@ -252,10 +252,10 @@ public final class EffigyChallengeV2LevelDataOuterClass {
         output.writeUInt32(6, lAICFKMFKEH_);
       }
       if (isLevelOpen_ != false) {
-        output.writeBool(12, isLevelOpen_);
+        output.writeBool(4, isLevelOpen_);
       }
       if (levelId_ != 0) {
-        output.writeUInt32(13, levelId_);
+        output.writeUInt32(10, levelId_);
       }
       if (nPLPFHEKCIH_ != 0) {
         output.writeUInt32(14, nPLPFHEKCIH_);
@@ -282,11 +282,11 @@ public final class EffigyChallengeV2LevelDataOuterClass {
       }
       if (isLevelOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isLevelOpen_);
+          .computeBoolSize(4, isLevelOpen_);
       }
       if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, levelId_);
+          .computeUInt32Size(10, levelId_);
       }
       if (nPLPFHEKCIH_ != 0) {
         size += com.google.protobuf.CodedOutputStream

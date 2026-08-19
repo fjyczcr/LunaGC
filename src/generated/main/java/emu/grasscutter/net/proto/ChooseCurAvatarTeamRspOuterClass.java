@@ -85,7 +85,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
               retcode_ = input.readInt32();
               break;
             }
-            case 48: {
+            case 80: {
 
               curTeamId_ = input.readUInt32();
               break;
@@ -122,7 +122,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
               emu.grasscutter.net.proto.ChooseCurAvatarTeamRspOuterClass.ChooseCurAvatarTeamRsp.class, emu.grasscutter.net.proto.ChooseCurAvatarTeamRspOuterClass.ChooseCurAvatarTeamRsp.Builder.class);
     }
 
-    public static final int CUR_TEAM_ID_FIELD_NUMBER = 6;
+    public static final int CUR_TEAM_ID_FIELD_NUMBER = 10;
     private int curTeamId_;
     /**
      * <code>uint32 cur_team_id = 10;</code>
@@ -162,7 +162,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
         output.writeInt32(11, retcode_);
       }
       if (curTeamId_ != 0) {
-        output.writeUInt32(6, curTeamId_);
+        output.writeUInt32(10, curTeamId_);
       }
       unknownFields.writeTo(output);
     }
@@ -179,7 +179,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
       }
       if (curTeamId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, curTeamId_);
+          .computeUInt32Size(10, curTeamId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

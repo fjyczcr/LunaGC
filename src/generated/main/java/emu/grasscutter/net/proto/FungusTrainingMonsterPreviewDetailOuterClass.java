@@ -98,12 +98,12 @@ public final class FungusTrainingMonsterPreviewDetailOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 104: {
 
               level_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 88: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 affixList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -111,7 +111,7 @@ public final class FungusTrainingMonsterPreviewDetailOuterClass {
               affixList_.addInt(input.readUInt32());
               break;
             }
-            case 66: {
+            case 90: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -175,7 +175,7 @@ public final class FungusTrainingMonsterPreviewDetailOuterClass {
       return monsterId_;
     }
 
-    public static final int LEVEL_FIELD_NUMBER = 1;
+    public static final int LEVEL_FIELD_NUMBER = 13;
     private int level_;
     /**
      * <code>uint32 level = 6;</code>
@@ -186,7 +186,7 @@ public final class FungusTrainingMonsterPreviewDetailOuterClass {
       return level_;
     }
 
-    public static final int AFFIX_LIST_FIELD_NUMBER = 8;
+    public static final int AFFIX_LIST_FIELD_NUMBER = 11;
     private com.google.protobuf.Internal.IntList affixList_;
     /**
      * <code>repeated uint32 affix_list = 11;</code>
@@ -230,10 +230,10 @@ public final class FungusTrainingMonsterPreviewDetailOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (level_ != 0) {
-        output.writeUInt32(1, level_);
+        output.writeUInt32(13, level_);
       }
       if (getAffixListList().size() > 0) {
-        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(90);
         output.writeUInt32NoTag(affixListMemoizedSerializedSize);
       }
       for (int i = 0; i < affixList_.size(); i++) {
@@ -253,7 +253,7 @@ public final class FungusTrainingMonsterPreviewDetailOuterClass {
       size = 0;
       if (level_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, level_);
+          .computeUInt32Size(13, level_);
       }
       {
         int dataSize = 0;

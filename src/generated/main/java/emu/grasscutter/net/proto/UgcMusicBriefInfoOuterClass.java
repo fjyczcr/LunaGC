@@ -241,7 +241,7 @@ public final class UgcMusicBriefInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 48: {
 
               musicId_ = input.readUInt32();
               break;
@@ -256,7 +256,7 @@ public final class UgcMusicBriefInfoOuterClass {
               gLBNECCHCOB_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 64: {
 
               ugcGuid_ = input.readUInt32();
               break;
@@ -266,7 +266,7 @@ public final class UgcMusicBriefInfoOuterClass {
               jOLJHDCPGPN_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 128008: {
 
               lPCOPFPMHAK_ = input.readUInt64();
               break;
@@ -286,7 +286,7 @@ public final class UgcMusicBriefInfoOuterClass {
               aAHNFINJFAF_ = input.readUInt64();
               break;
             }
-            case 80: {
+            case 32: {
 
               version_ = input.readUInt32();
               break;
@@ -590,7 +590,7 @@ public final class UgcMusicBriefInfoOuterClass {
       return aAHNFINJFAF_;
     }
 
-    public static final int MUSIC_ID_FIELD_NUMBER = 2;
+    public static final int MUSIC_ID_FIELD_NUMBER = 6;
     private int musicId_;
 
     @java.lang.Override
@@ -686,7 +686,7 @@ public final class UgcMusicBriefInfoOuterClass {
       return eHHGDAPAPLP_;
     }
 
-    public static final int VERSION_FIELD_NUMBER = 10;
+    public static final int VERSION_FIELD_NUMBER = 4;
     private int version_;
 
     @java.lang.Override
@@ -694,7 +694,7 @@ public final class UgcMusicBriefInfoOuterClass {
       return version_;
     }
 
-    public static final int UGC_GUID_FIELD_NUMBER = 4;
+    public static final int UGC_GUID_FIELD_NUMBER = 8;
     private int ugcGuid_;
 
     @java.lang.Override
@@ -724,7 +724,7 @@ public final class UgcMusicBriefInfoOuterClass {
       return lLLFNBFGDBF_;
     }
 
-    public static final int LPCOPFPMHAK_FIELD_NUMBER = 8;
+    public static final int LPCOPFPMHAK_FIELD_NUMBER = 16001;
     private long lPCOPFPMHAK_;
     /**
      * <code>uint64 LPCOPFPMHAK = 8;</code>
@@ -795,7 +795,7 @@ public final class UgcMusicBriefInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (musicId_ != 0) {
-        output.writeUInt32(2, musicId_);
+        output.writeUInt32(6, musicId_);
       }
       if (fDMGJAOKBPP_ != 0) {
         output.writeUInt32(3, fDMGJAOKBPP_);
@@ -804,13 +804,13 @@ public final class UgcMusicBriefInfoOuterClass {
         output.writeUInt32(5, gLBNECCHCOB_);
       }
       if (ugcGuid_ != 0) {
-        output.writeUInt32(4, ugcGuid_);
+        output.writeUInt32(8, ugcGuid_);
       }
       if (jOLJHDCPGPN_ != 0) {
         output.writeUInt32(7, jOLJHDCPGPN_);
       }
       if (lPCOPFPMHAK_ != 0L) {
-        output.writeUInt64(8, lPCOPFPMHAK_);
+        output.writeUInt64(16001, lPCOPFPMHAK_);
       }
       if (jBGOFOMFAHF_ != 0) {
         output.writeUInt32(9, jBGOFOMFAHF_);
@@ -822,7 +822,7 @@ public final class UgcMusicBriefInfoOuterClass {
         output.writeUInt64(11, aAHNFINJFAF_);
       }
       if (version_ != 0) {
-        output.writeUInt32(10, version_);
+        output.writeUInt32(4, version_);
       }
       if (dADJBDLKDFO_ != false) {
         output.writeBool(16, dADJBDLKDFO_);
@@ -889,7 +889,7 @@ public final class UgcMusicBriefInfoOuterClass {
       size = 0;
       if (musicId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, musicId_);
+          .computeUInt32Size(6, musicId_);
       }
       if (fDMGJAOKBPP_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -901,7 +901,7 @@ public final class UgcMusicBriefInfoOuterClass {
       }
       if (ugcGuid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, ugcGuid_);
+          .computeUInt32Size(8, ugcGuid_);
       }
       if (jOLJHDCPGPN_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -909,7 +909,7 @@ public final class UgcMusicBriefInfoOuterClass {
       }
       if (lPCOPFPMHAK_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, lPCOPFPMHAK_);
+          .computeUInt64Size(16001, lPCOPFPMHAK_);
       }
       if (jBGOFOMFAHF_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -925,7 +925,7 @@ public final class UgcMusicBriefInfoOuterClass {
       }
       if (version_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, version_);
+          .computeUInt32Size(4, version_);
       }
       if (dADJBDLKDFO_ != false) {
         size += com.google.protobuf.CodedOutputStream

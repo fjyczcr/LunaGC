@@ -80,7 +80,7 @@ public final class QuestProgressUpdateNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 120: {
+            case 112: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 failProgressList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -88,7 +88,7 @@ public final class QuestProgressUpdateNotifyOuterClass {
               failProgressList_.addInt(input.readUInt32());
               break;
             }
-            case 122: {
+            case 114: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -122,7 +122,7 @@ public final class QuestProgressUpdateNotifyOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 64: {
+            case 32: {
 
               questId_ = input.readUInt32();
               break;
@@ -165,7 +165,7 @@ public final class QuestProgressUpdateNotifyOuterClass {
               emu.grasscutter.net.proto.QuestProgressUpdateNotifyOuterClass.QuestProgressUpdateNotify.class, emu.grasscutter.net.proto.QuestProgressUpdateNotifyOuterClass.QuestProgressUpdateNotify.Builder.class);
     }
 
-    public static final int FAIL_PROGRESS_LIST_FIELD_NUMBER = 15;
+    public static final int FAIL_PROGRESS_LIST_FIELD_NUMBER = 14;
     private com.google.protobuf.Internal.IntList failProgressList_;
 
     @java.lang.Override
@@ -201,7 +201,7 @@ public final class QuestProgressUpdateNotifyOuterClass {
     }
     private int finishProgressListMemoizedSerializedSize = -1;
 
-    public static final int QUEST_ID_FIELD_NUMBER = 8;
+    public static final int QUEST_ID_FIELD_NUMBER = 4;
     private int questId_;
 
     @java.lang.Override
@@ -225,7 +225,7 @@ public final class QuestProgressUpdateNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getFailProgressListList().size() > 0) {
-        output.writeUInt32NoTag(122);
+        output.writeUInt32NoTag(114);
         output.writeUInt32NoTag(failProgressListMemoizedSerializedSize);
       }
       for (int i = 0; i < failProgressList_.size(); i++) {
@@ -239,7 +239,7 @@ public final class QuestProgressUpdateNotifyOuterClass {
         output.writeUInt32NoTag(finishProgressList_.getInt(i));
       }
       if (questId_ != 0) {
-        output.writeUInt32(8, questId_);
+        output.writeUInt32(4, questId_);
       }
       unknownFields.writeTo(output);
     }
@@ -280,7 +280,7 @@ public final class QuestProgressUpdateNotifyOuterClass {
       }
       if (questId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, questId_);
+          .computeUInt32Size(4, questId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

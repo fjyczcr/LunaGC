@@ -124,7 +124,7 @@ public final class RogueStageInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 34: {
+            case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 runeRecordList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RoguelikeRuneRecordOuterClass.RoguelikeRuneRecord>();
                 mutable_bitField0_ |= 0x00000001;
@@ -133,7 +133,7 @@ public final class RogueStageInfoOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.RoguelikeRuneRecordOuterClass.RoguelikeRuneRecord.parser(), extensionRegistry));
               break;
             }
-            case 58: {
+            case 82: {
               emu.grasscutter.net.proto.RogueShowAvatarTeamInfoOuterClass.RogueShowAvatarTeamInfo.Builder subBuilder = null;
               if (avatarTeam_ != null) {
                 subBuilder = avatarTeam_.toBuilder();
@@ -146,7 +146,7 @@ public final class RogueStageInfoOuterClass {
 
               break;
             }
-            case 120: {
+            case 72: {
 
               isPassed_ = input.readBool();
               break;
@@ -156,7 +156,7 @@ public final class RogueStageInfoOuterClass {
               eGIEMIPFFMH_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 104: {
 
               stageId_ = input.readUInt32();
               break;
@@ -166,12 +166,12 @@ public final class RogueStageInfoOuterClass {
               isOpen_ = input.readBool();
               break;
             }
-            case 64: {
+            case 24: {
 
               curLevel_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 32: {
 
               isTakenReward_ = input.readBool();
               break;
@@ -231,7 +231,7 @@ public final class RogueStageInfoOuterClass {
               emu.grasscutter.net.proto.RogueStageInfoOuterClass.RogueStageInfo.class, emu.grasscutter.net.proto.RogueStageInfoOuterClass.RogueStageInfo.Builder.class);
     }
 
-    public static final int RUNE_RECORD_LIST_FIELD_NUMBER = 4;
+    public static final int RUNE_RECORD_LIST_FIELD_NUMBER = 1;
     private java.util.List<emu.grasscutter.net.proto.RoguelikeRuneRecordOuterClass.RoguelikeRuneRecord> runeRecordList_;
 
     @java.lang.Override
@@ -261,7 +261,7 @@ public final class RogueStageInfoOuterClass {
       return runeRecordList_.get(index);
     }
 
-    public static final int AVATAR_TEAM_FIELD_NUMBER = 7;
+    public static final int AVATAR_TEAM_FIELD_NUMBER = 10;
     private emu.grasscutter.net.proto.RogueShowAvatarTeamInfoOuterClass.RogueShowAvatarTeamInfo avatarTeam_;
 
     @java.lang.Override
@@ -342,7 +342,7 @@ public final class RogueStageInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int IS_PASSED_FIELD_NUMBER = 15;
+    public static final int IS_PASSED_FIELD_NUMBER = 9;
     private boolean isPassed_;
 
     @java.lang.Override
@@ -350,7 +350,7 @@ public final class RogueStageInfoOuterClass {
       return isPassed_;
     }
 
-    public static final int IS_TAKEN_REWARD_FIELD_NUMBER = 11;
+    public static final int IS_TAKEN_REWARD_FIELD_NUMBER = 4;
     private boolean isTakenReward_;
 
     @java.lang.Override
@@ -358,7 +358,7 @@ public final class RogueStageInfoOuterClass {
       return isTakenReward_;
     }
 
-    public static final int CUR_LEVEL_FIELD_NUMBER = 8;
+    public static final int CUR_LEVEL_FIELD_NUMBER = 3;
     private int curLevel_;
 
     @java.lang.Override
@@ -366,7 +366,7 @@ public final class RogueStageInfoOuterClass {
       return curLevel_;
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 5;
+    public static final int STAGE_ID_FIELD_NUMBER = 13;
     private int stageId_;
 
     @java.lang.Override
@@ -389,28 +389,28 @@ public final class RogueStageInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < runeRecordList_.size(); i++) {
-        output.writeMessage(4, runeRecordList_.get(i));
+        output.writeMessage(1, runeRecordList_.get(i));
       }
       if (avatarTeam_ != null) {
-        output.writeMessage(7, getAvatarTeam());
+        output.writeMessage(10, getAvatarTeam());
       }
       if (isPassed_ != false) {
-        output.writeBool(15, isPassed_);
+        output.writeBool(9, isPassed_);
       }
       if (eGIEMIPFFMH_ != 0) {
         output.writeUInt32(16000, eGIEMIPFFMH_);
       }
       if (stageId_ != 0) {
-        output.writeUInt32(5, stageId_);
+        output.writeUInt32(13, stageId_);
       }
       if (isOpen_ != false) {
         output.writeBool(6, isOpen_);
       }
       if (curLevel_ != 0) {
-        output.writeUInt32(8, curLevel_);
+        output.writeUInt32(3, curLevel_);
       }
       if (isTakenReward_ != false) {
-        output.writeBool(11, isTakenReward_);
+        output.writeBool(4, isTakenReward_);
       }
       if (aEFDFPDBIEN_ != false) {
         output.writeBool(17, aEFDFPDBIEN_);
@@ -435,15 +435,15 @@ public final class RogueStageInfoOuterClass {
       size = 0;
       for (int i = 0; i < runeRecordList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, runeRecordList_.get(i));
+          .computeMessageSize(1, runeRecordList_.get(i));
       }
       if (avatarTeam_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getAvatarTeam());
+          .computeMessageSize(10, getAvatarTeam());
       }
       if (isPassed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isPassed_);
+          .computeBoolSize(9, isPassed_);
       }
       if (eGIEMIPFFMH_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -451,7 +451,7 @@ public final class RogueStageInfoOuterClass {
       }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, stageId_);
+          .computeUInt32Size(13, stageId_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -459,11 +459,11 @@ public final class RogueStageInfoOuterClass {
       }
       if (curLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, curLevel_);
+          .computeUInt32Size(3, curLevel_);
       }
       if (isTakenReward_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, isTakenReward_);
+          .computeBoolSize(4, isTakenReward_);
       }
       if (aEFDFPDBIEN_ != false) {
         size += com.google.protobuf.CodedOutputStream

@@ -101,13 +101,13 @@ public final class EvtBulletDeactiveNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 112: {
               int rawValue = input.readEnum();
 
               forwardType_ = rawValue;
               break;
             }
-            case 18: {
+            case 50: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (disappearPos_ != null) {
                 subBuilder = disappearPos_.toBuilder();
@@ -120,7 +120,7 @@ public final class EvtBulletDeactiveNotifyOuterClass {
 
               break;
             }
-            case 80: {
+            case 24: {
 
               entityId_ = input.readUInt32();
               break;
@@ -157,7 +157,7 @@ public final class EvtBulletDeactiveNotifyOuterClass {
               emu.grasscutter.net.proto.EvtBulletDeactiveNotifyOuterClass.EvtBulletDeactiveNotify.class, emu.grasscutter.net.proto.EvtBulletDeactiveNotifyOuterClass.EvtBulletDeactiveNotify.Builder.class);
     }
 
-    public static final int FORWARD_TYPE_FIELD_NUMBER = 13;
+    public static final int FORWARD_TYPE_FIELD_NUMBER = 14;
     private int forwardType_;
     /**
      * <code>.ForwardType forward_type = 1;</code>
@@ -176,7 +176,7 @@ public final class EvtBulletDeactiveNotifyOuterClass {
       return result == null ? emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.UNRECOGNIZED : result;
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 10;
+    public static final int ENTITY_ID_FIELD_NUMBER = 3;
     private int entityId_;
     /**
      * <code>uint32 entity_id = 14;</code>
@@ -187,7 +187,7 @@ public final class EvtBulletDeactiveNotifyOuterClass {
       return entityId_;
     }
 
-    public static final int DISAPPEAR_POS_FIELD_NUMBER = 2;
+    public static final int DISAPPEAR_POS_FIELD_NUMBER = 6;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector disappearPos_;
     /**
      * <code>.Vector disappear_pos = 8;</code>
@@ -228,13 +228,13 @@ public final class EvtBulletDeactiveNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
-        output.writeEnum(13, forwardType_);
+        output.writeEnum(14, forwardType_);
       }
       if (disappearPos_ != null) {
-        output.writeMessage(2, getDisappearPos());
+        output.writeMessage(6, getDisappearPos());
       }
       if (entityId_ != 0) {
-        output.writeUInt32(10, entityId_);
+        output.writeUInt32(3, entityId_);
       }
       unknownFields.writeTo(output);
     }
@@ -247,15 +247,15 @@ public final class EvtBulletDeactiveNotifyOuterClass {
       size = 0;
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(13, forwardType_);
+          .computeEnumSize(14, forwardType_);
       }
       if (disappearPos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getDisappearPos());
+          .computeMessageSize(6, getDisappearPos());
       }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, entityId_);
+          .computeUInt32Size(3, entityId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

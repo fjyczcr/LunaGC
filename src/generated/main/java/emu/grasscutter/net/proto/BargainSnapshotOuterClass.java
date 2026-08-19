@@ -106,7 +106,7 @@ public final class BargainSnapshotOuterClass {
               iOCNPJJNHLD_ = input.readUInt32();
               break;
             }
-            case 8: {
+            case 80: {
 
               bargainId_ = input.readUInt32();
               break;
@@ -176,7 +176,7 @@ public final class BargainSnapshotOuterClass {
       return curMood_;
     }
 
-    public static final int BARGAIN_ID_FIELD_NUMBER = 1;
+    public static final int BARGAIN_ID_FIELD_NUMBER = 10;
     private int bargainId_;
     /**
      * <code>uint32 bargain_id = 15;</code>
@@ -211,7 +211,7 @@ public final class BargainSnapshotOuterClass {
         output.writeUInt32(12, iOCNPJJNHLD_);
       }
       if (bargainId_ != 0) {
-        output.writeUInt32(1, bargainId_);
+        output.writeUInt32(10, bargainId_);
       }
       unknownFields.writeTo(output);
     }
@@ -236,7 +236,7 @@ public final class BargainSnapshotOuterClass {
       }
       if (bargainId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, bargainId_);
+          .computeUInt32Size(10, bargainId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

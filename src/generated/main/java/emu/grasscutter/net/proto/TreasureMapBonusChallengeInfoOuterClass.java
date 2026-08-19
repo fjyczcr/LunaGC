@@ -126,7 +126,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 122: {
+            case 74: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 fragmentMap_ = com.google.protobuf.MapField.newMapField(
                     FragmentMapDefaultEntryHolder.defaultEntry);
@@ -139,22 +139,22 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
                   fragmentMap__.getKey(), fragmentMap__.getValue());
               break;
             }
-            case 40: {
+            case 80: {
 
               configId_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 64: {
 
               isActive_ = input.readBool();
               break;
             }
-            case 64: {
+            case 48: {
 
               solutionId_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 56: {
 
               isDone_ = input.readBool();
               break;
@@ -203,7 +203,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
               emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.class, emu.grasscutter.net.proto.TreasureMapBonusChallengeInfoOuterClass.TreasureMapBonusChallengeInfo.Builder.class);
     }
 
-    public static final int IS_ACTIVE_FIELD_NUMBER = 2;
+    public static final int IS_ACTIVE_FIELD_NUMBER = 8;
     private boolean isActive_;
     /**
      * <code>bool is_active = 6;</code>
@@ -214,7 +214,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
       return isActive_;
     }
 
-    public static final int CONFIG_ID_FIELD_NUMBER = 5;
+    public static final int CONFIG_ID_FIELD_NUMBER = 10;
     private int configId_;
     /**
      * <code>uint32 config_id = 5;</code>
@@ -225,7 +225,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
       return configId_;
     }
 
-    public static final int FRAGMENT_MAP_FIELD_NUMBER = 15;
+    public static final int FRAGMENT_MAP_FIELD_NUMBER = 9;
     private static final class FragmentMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Boolean> defaultEntry =
@@ -306,7 +306,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
       return map.get(key);
     }
 
-    public static final int SOLUTION_ID_FIELD_NUMBER = 8;
+    public static final int SOLUTION_ID_FIELD_NUMBER = 6;
     private int solutionId_;
     /**
      * <code>uint32 solution_id = 9;</code>
@@ -317,7 +317,7 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
       return solutionId_;
     }
 
-    public static final int IS_DONE_FIELD_NUMBER = 4;
+    public static final int IS_DONE_FIELD_NUMBER = 7;
     private boolean isDone_;
     /**
      * <code>bool is_done = 10;</code>
@@ -347,18 +347,18 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
           output,
           internalGetFragmentMap(),
           FragmentMapDefaultEntryHolder.defaultEntry,
-          15);
+          9);
       if (configId_ != 0) {
-        output.writeUInt32(5, configId_);
+        output.writeUInt32(10, configId_);
       }
       if (isActive_ != false) {
-        output.writeBool(2, isActive_);
+        output.writeBool(8, isActive_);
       }
       if (solutionId_ != 0) {
-        output.writeUInt32(8, solutionId_);
+        output.writeUInt32(6, solutionId_);
       }
       if (isDone_ != false) {
-        output.writeBool(4, isDone_);
+        output.writeBool(7, isDone_);
       }
       unknownFields.writeTo(output);
     }
@@ -377,23 +377,23 @@ public final class TreasureMapBonusChallengeInfoOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(15, fragmentMap__);
+            .computeMessageSize(9, fragmentMap__);
       }
       if (configId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, configId_);
+          .computeUInt32Size(10, configId_);
       }
       if (isActive_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isActive_);
+          .computeBoolSize(8, isActive_);
       }
       if (solutionId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, solutionId_);
+          .computeUInt32Size(6, solutionId_);
       }
       if (isDone_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isDone_);
+          .computeBoolSize(7, isDone_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

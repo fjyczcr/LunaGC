@@ -86,17 +86,17 @@ public final class HomeTransferReqOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 96: {
 
               isTransferToSafePoint_ = input.readBool();
               break;
             }
-            case 96: {
+            case 24: {
 
               isTransferToMainHousePoint_ = input.readBool();
               break;
             }
-            case 80: {
+            case 112: {
 
               guid_ = input.readUInt32();
               break;
@@ -133,7 +133,7 @@ public final class HomeTransferReqOuterClass {
               emu.grasscutter.net.proto.HomeTransferReqOuterClass.HomeTransferReq.class, emu.grasscutter.net.proto.HomeTransferReqOuterClass.HomeTransferReq.Builder.class);
     }
 
-    public static final int GUID_FIELD_NUMBER = 10;
+    public static final int GUID_FIELD_NUMBER = 14;
     private int guid_;
     /**
      * <code>uint32 guid = 12;</code>
@@ -144,7 +144,7 @@ public final class HomeTransferReqOuterClass {
       return guid_;
     }
 
-    public static final int IS_TRANSFER_TO_MAIN_HOUSE_POINT_FIELD_NUMBER = 12;
+    public static final int IS_TRANSFER_TO_MAIN_HOUSE_POINT_FIELD_NUMBER = 3;
     private boolean isTransferToMainHousePoint_;
     /**
      * <code>bool is_transfer_to_main_house_point = 5;</code>
@@ -155,7 +155,7 @@ public final class HomeTransferReqOuterClass {
       return isTransferToMainHousePoint_;
     }
 
-    public static final int IS_TRANSFER_TO_SAFE_POINT_FIELD_NUMBER = 11;
+    public static final int IS_TRANSFER_TO_SAFE_POINT_FIELD_NUMBER = 12;
     private boolean isTransferToSafePoint_;
     /**
      * <code>bool is_transfer_to_safe_point = 3;</code>
@@ -181,13 +181,13 @@ public final class HomeTransferReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isTransferToSafePoint_ != false) {
-        output.writeBool(11, isTransferToSafePoint_);
+        output.writeBool(12, isTransferToSafePoint_);
       }
       if (isTransferToMainHousePoint_ != false) {
-        output.writeBool(12, isTransferToMainHousePoint_);
+        output.writeBool(3, isTransferToMainHousePoint_);
       }
       if (guid_ != 0) {
-        output.writeUInt32(10, guid_);
+        output.writeUInt32(14, guid_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,15 +200,15 @@ public final class HomeTransferReqOuterClass {
       size = 0;
       if (isTransferToSafePoint_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, isTransferToSafePoint_);
+          .computeBoolSize(12, isTransferToSafePoint_);
       }
       if (isTransferToMainHousePoint_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isTransferToMainHousePoint_);
+          .computeBoolSize(3, isTransferToMainHousePoint_);
       }
       if (guid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, guid_);
+          .computeUInt32Size(14, guid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

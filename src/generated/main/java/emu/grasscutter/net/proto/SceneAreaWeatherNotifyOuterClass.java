@@ -97,7 +97,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 90: {
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 weatherValueMap_ = com.google.protobuf.MapField.newMapField(
                     WeatherValueMapDefaultEntryHolder.defaultEntry);
@@ -110,22 +110,22 @@ public final class SceneAreaWeatherNotifyOuterClass {
                   weatherValueMap__.getKey(), weatherValueMap__.getValue());
               break;
             }
-            case 53: {
+            case 37: {
 
               transDuration_ = input.readFloat();
               break;
             }
-            case 8: {
+            case 104: {
 
               weatherGadgetId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 80: {
 
               climateType_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 16: {
 
               weatherAreaId_ = input.readUInt32();
               break;
@@ -174,7 +174,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
               emu.grasscutter.net.proto.SceneAreaWeatherNotifyOuterClass.SceneAreaWeatherNotify.class, emu.grasscutter.net.proto.SceneAreaWeatherNotifyOuterClass.SceneAreaWeatherNotify.Builder.class);
     }
 
-    public static final int WEATHER_VALUE_MAP_FIELD_NUMBER = 11;
+    public static final int WEATHER_VALUE_MAP_FIELD_NUMBER = 3;
     private static final class WeatherValueMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.String> defaultEntry =
@@ -246,7 +246,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
       return map.get(key);
     }
 
-    public static final int TRANS_DURATION_FIELD_NUMBER = 6;
+    public static final int TRANS_DURATION_FIELD_NUMBER = 4;
     private float transDuration_;
 
     @java.lang.Override
@@ -254,7 +254,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
       return transDuration_;
     }
 
-    public static final int CLIMATE_TYPE_FIELD_NUMBER = 12;
+    public static final int CLIMATE_TYPE_FIELD_NUMBER = 10;
     private int climateType_;
 
     @java.lang.Override
@@ -262,7 +262,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
       return climateType_;
     }
 
-    public static final int WEATHER_GADGET_ID_FIELD_NUMBER = 1;
+    public static final int WEATHER_GADGET_ID_FIELD_NUMBER = 13;
     private int weatherGadgetId_;
 
     @java.lang.Override
@@ -270,7 +270,7 @@ public final class SceneAreaWeatherNotifyOuterClass {
       return weatherGadgetId_;
     }
 
-    public static final int WEATHER_AREA_ID_FIELD_NUMBER = 4;
+    public static final int WEATHER_AREA_ID_FIELD_NUMBER = 2;
     private int weatherAreaId_;
 
     @java.lang.Override
@@ -293,22 +293,22 @@ public final class SceneAreaWeatherNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (weatherGadgetId_ != 0) {
-        output.writeUInt32(1, weatherGadgetId_);
+        output.writeUInt32(13, weatherGadgetId_);
       }
       if (transDuration_ != 0F) {
-        output.writeFloat(6, transDuration_);
+        output.writeFloat(4, transDuration_);
       }
       if (weatherAreaId_ != 0) {
-        output.writeUInt32(4, weatherAreaId_);
+        output.writeUInt32(2, weatherAreaId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetWeatherValueMap(),
           WeatherValueMapDefaultEntryHolder.defaultEntry,
-          11);
+          3);
       if (climateType_ != 0) {
-        output.writeUInt32(12, climateType_);
+        output.writeUInt32(10, climateType_);
       }
       unknownFields.writeTo(output);
     }
@@ -321,15 +321,15 @@ public final class SceneAreaWeatherNotifyOuterClass {
       size = 0;
       if (weatherGadgetId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, weatherGadgetId_);
+          .computeUInt32Size(13, weatherGadgetId_);
       }
       if (transDuration_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(6, transDuration_);
+          .computeFloatSize(4, transDuration_);
       }
       if (weatherAreaId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, weatherAreaId_);
+          .computeUInt32Size(2, weatherAreaId_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.String> entry
            : internalGetWeatherValueMap().getMap().entrySet()) {
@@ -339,11 +339,11 @@ public final class SceneAreaWeatherNotifyOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(11, weatherValueMap__);
+            .computeMessageSize(3, weatherValueMap__);
       }
       if (climateType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, climateType_);
+          .computeUInt32Size(10, climateType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

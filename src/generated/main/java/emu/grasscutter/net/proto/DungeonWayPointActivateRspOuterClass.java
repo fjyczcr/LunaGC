@@ -80,12 +80,12 @@ public final class DungeonWayPointActivateRspOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 72: {
 
               wayPointId_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 104: {
 
               retcode_ = input.readInt32();
               break;
@@ -122,7 +122,7 @@ public final class DungeonWayPointActivateRspOuterClass {
               emu.grasscutter.net.proto.DungeonWayPointActivateRspOuterClass.DungeonWayPointActivateRsp.class, emu.grasscutter.net.proto.DungeonWayPointActivateRspOuterClass.DungeonWayPointActivateRsp.Builder.class);
     }
 
-    public static final int WAY_POINT_ID_FIELD_NUMBER = 8;
+    public static final int WAY_POINT_ID_FIELD_NUMBER = 9;
     private int wayPointId_;
     /**
      * <code>uint32 way_point_id = 3;</code>
@@ -133,7 +133,7 @@ public final class DungeonWayPointActivateRspOuterClass {
       return wayPointId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 5;
+    public static final int RETCODE_FIELD_NUMBER = 13;
     private int retcode_;
     /**
      * <code>int32 retcode = 14;</code>
@@ -159,10 +159,10 @@ public final class DungeonWayPointActivateRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (wayPointId_ != 0) {
-        output.writeUInt32(8, wayPointId_);
+        output.writeUInt32(9, wayPointId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(5, retcode_);
+        output.writeInt32(13, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +175,11 @@ public final class DungeonWayPointActivateRspOuterClass {
       size = 0;
       if (wayPointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, wayPointId_);
+          .computeUInt32Size(9, wayPointId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, retcode_);
+          .computeInt32Size(13, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

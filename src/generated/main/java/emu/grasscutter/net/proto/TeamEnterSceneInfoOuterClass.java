@@ -77,7 +77,7 @@ public final class TeamEnterSceneInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 66: {
+            case 26: {
               emu.grasscutter.net.proto.AbilityControlBlockOuterClass.AbilityControlBlock.Builder subBuilder = null;
               if (abilityControlBlock_ != null) {
                 subBuilder = abilityControlBlock_.toBuilder();
@@ -90,7 +90,7 @@ public final class TeamEnterSceneInfoOuterClass {
 
               break;
             }
-            case 122: {
+            case 42: {
               emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo.Builder subBuilder = null;
               if (teamAbilityInfo_ != null) {
                 subBuilder = teamAbilityInfo_.toBuilder();
@@ -103,7 +103,7 @@ public final class TeamEnterSceneInfoOuterClass {
 
               break;
             }
-            case 96: {
+            case 104: {
 
               teamEntityId_ = input.readUInt32();
               break;
@@ -140,7 +140,7 @@ public final class TeamEnterSceneInfoOuterClass {
               emu.grasscutter.net.proto.TeamEnterSceneInfoOuterClass.TeamEnterSceneInfo.class, emu.grasscutter.net.proto.TeamEnterSceneInfoOuterClass.TeamEnterSceneInfo.Builder.class);
     }
 
-    public static final int ABILITY_CONTROL_BLOCK_FIELD_NUMBER = 8;
+    public static final int ABILITY_CONTROL_BLOCK_FIELD_NUMBER = 3;
     private emu.grasscutter.net.proto.AbilityControlBlockOuterClass.AbilityControlBlock abilityControlBlock_;
 
     @java.lang.Override
@@ -158,7 +158,7 @@ public final class TeamEnterSceneInfoOuterClass {
       return getAbilityControlBlock();
     }
 
-    public static final int TEAM_ABILITY_INFO_FIELD_NUMBER = 15;
+    public static final int TEAM_ABILITY_INFO_FIELD_NUMBER = 5;
     private emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo teamAbilityInfo_;
 
     @java.lang.Override
@@ -176,7 +176,7 @@ public final class TeamEnterSceneInfoOuterClass {
       return getTeamAbilityInfo();
     }
 
-    public static final int TEAM_ENTITY_ID_FIELD_NUMBER = 12;
+    public static final int TEAM_ENTITY_ID_FIELD_NUMBER = 13;
     private int teamEntityId_;
 
     @java.lang.Override
@@ -199,13 +199,13 @@ public final class TeamEnterSceneInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (teamEntityId_ != 0) {
-        output.writeUInt32(12, teamEntityId_);
+        output.writeUInt32(13, teamEntityId_);
       }
       if (teamAbilityInfo_ != null) {
-        output.writeMessage(15, getTeamAbilityInfo());
+        output.writeMessage(5, getTeamAbilityInfo());
       }
       if (abilityControlBlock_ != null) {
-        output.writeMessage(8, getAbilityControlBlock());
+        output.writeMessage(3, getAbilityControlBlock());
       }
       unknownFields.writeTo(output);
     }
@@ -218,15 +218,15 @@ public final class TeamEnterSceneInfoOuterClass {
       size = 0;
       if (teamEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, teamEntityId_);
+          .computeUInt32Size(13, teamEntityId_);
       }
       if (teamAbilityInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getTeamAbilityInfo());
+          .computeMessageSize(5, getTeamAbilityInfo());
       }
       if (abilityControlBlock_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getAbilityControlBlock());
+          .computeMessageSize(3, getAbilityControlBlock());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

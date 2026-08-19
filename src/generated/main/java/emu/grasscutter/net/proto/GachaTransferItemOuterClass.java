@@ -71,12 +71,12 @@ public final class GachaTransferItemOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 48: {
 
               isTransferItemNew_ = input.readBool();
               break;
             }
-            case 34: {
+            case 74: {
               emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam.Builder subBuilder = null;
               if (item_ != null) {
                 subBuilder = item_.toBuilder();
@@ -121,7 +121,7 @@ public final class GachaTransferItemOuterClass {
               emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem.class, emu.grasscutter.net.proto.GachaTransferItemOuterClass.GachaTransferItem.Builder.class);
     }
 
-    public static final int ITEM_FIELD_NUMBER = 4;
+    public static final int ITEM_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam item_;
 
     @java.lang.Override
@@ -139,7 +139,7 @@ public final class GachaTransferItemOuterClass {
       return getItem();
     }
 
-    public static final int IS_TRANSFER_ITEM_NEW_FIELD_NUMBER = 1;
+    public static final int IS_TRANSFER_ITEM_NEW_FIELD_NUMBER = 6;
     private boolean isTransferItemNew_;
 
     @java.lang.Override
@@ -162,10 +162,10 @@ public final class GachaTransferItemOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isTransferItemNew_ != false) {
-        output.writeBool(1, isTransferItemNew_);
+        output.writeBool(6, isTransferItemNew_);
       }
       if (item_ != null) {
-        output.writeMessage(4, getItem());
+        output.writeMessage(9, getItem());
       }
       unknownFields.writeTo(output);
     }
@@ -178,11 +178,11 @@ public final class GachaTransferItemOuterClass {
       size = 0;
       if (isTransferItemNew_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isTransferItemNew_);
+          .computeBoolSize(6, isTransferItemNew_);
       }
       if (item_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getItem());
+          .computeMessageSize(9, getItem());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

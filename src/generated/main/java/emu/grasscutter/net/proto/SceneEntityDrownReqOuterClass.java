@@ -74,7 +74,7 @@ public final class SceneEntityDrownReqOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 24: {
 
               entityId_ = input.readUInt32();
               break;
@@ -111,7 +111,7 @@ public final class SceneEntityDrownReqOuterClass {
               emu.grasscutter.net.proto.SceneEntityDrownReqOuterClass.SceneEntityDrownReq.class, emu.grasscutter.net.proto.SceneEntityDrownReqOuterClass.SceneEntityDrownReq.Builder.class);
     }
 
-    public static final int ENTITYID_FIELD_NUMBER = 7;
+    public static final int ENTITYID_FIELD_NUMBER = 3;
     private int entityId_;
     /**
      * <code>uint32 entityId = 7;</code>
@@ -137,7 +137,7 @@ public final class SceneEntityDrownReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entityId_ != 0) {
-        output.writeUInt32(7, entityId_);
+        output.writeUInt32(3, entityId_);
       }
       unknownFields.writeTo(output);
     }
@@ -150,7 +150,7 @@ public final class SceneEntityDrownReqOuterClass {
       size = 0;
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, entityId_);
+          .computeUInt32Size(3, entityId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

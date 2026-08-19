@@ -89,12 +89,12 @@ public final class GetDungeonEntryExploreConditionRspOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 16: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 98: {
+            case 90: {
               emu.grasscutter.net.proto.DungeonEntryCondOuterClass.DungeonEntryCond.Builder subBuilder = null;
               if (dungeonEntryCond_ != null) {
                 subBuilder = dungeonEntryCond_.toBuilder();
@@ -139,7 +139,7 @@ public final class GetDungeonEntryExploreConditionRspOuterClass {
               emu.grasscutter.net.proto.GetDungeonEntryExploreConditionRspOuterClass.GetDungeonEntryExploreConditionRsp.class, emu.grasscutter.net.proto.GetDungeonEntryExploreConditionRspOuterClass.GetDungeonEntryExploreConditionRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 1;
+    public static final int RETCODE_FIELD_NUMBER = 2;
     private int retcode_;
     /**
      * <code>int32 retcode = 11;</code>
@@ -150,7 +150,7 @@ public final class GetDungeonEntryExploreConditionRspOuterClass {
       return retcode_;
     }
 
-    public static final int DUNGEON_ENTRY_COND_FIELD_NUMBER = 12;
+    public static final int DUNGEON_ENTRY_COND_FIELD_NUMBER = 11;
     private emu.grasscutter.net.proto.DungeonEntryCondOuterClass.DungeonEntryCond dungeonEntryCond_;
     /**
      * <code>.DungeonEntryCond dungeon_entry_cond = 12;</code>
@@ -191,10 +191,10 @@ public final class GetDungeonEntryExploreConditionRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(1, retcode_);
+        output.writeInt32(2, retcode_);
       }
       if (dungeonEntryCond_ != null) {
-        output.writeMessage(12, getDungeonEntryCond());
+        output.writeMessage(11, getDungeonEntryCond());
       }
       unknownFields.writeTo(output);
     }
@@ -207,11 +207,11 @@ public final class GetDungeonEntryExploreConditionRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, retcode_);
+          .computeInt32Size(2, retcode_);
       }
       if (dungeonEntryCond_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getDungeonEntryCond());
+          .computeMessageSize(11, getDungeonEntryCond());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

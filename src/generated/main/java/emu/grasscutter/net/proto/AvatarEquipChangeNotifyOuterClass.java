@@ -87,22 +87,22 @@ public final class AvatarEquipChangeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 64: {
 
               equipGuid_ = input.readUInt64();
               break;
             }
-            case 32: {
+            case 96: {
 
               equipType_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 72: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 74: {
+            case 106: {
               emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo.Builder subBuilder = null;
               if (weapon_ != null) {
                 subBuilder = weapon_.toBuilder();
@@ -165,7 +165,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify.class, emu.grasscutter.net.proto.AvatarEquipChangeNotifyOuterClass.AvatarEquipChangeNotify.Builder.class);
     }
 
-    public static final int WEAPON_FIELD_NUMBER = 9;
+    public static final int WEAPON_FIELD_NUMBER = 13;
     private emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfo weapon_;
 
     @java.lang.Override
@@ -201,7 +201,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
       return getReliquary();
     }
 
-    public static final int EQUIP_GUID_FIELD_NUMBER = 6;
+    public static final int EQUIP_GUID_FIELD_NUMBER = 8;
     private long equipGuid_;
 
     @java.lang.Override
@@ -209,7 +209,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
       return equipGuid_;
     }
 
-    public static final int EQUIP_TYPE_FIELD_NUMBER = 4;
+    public static final int EQUIP_TYPE_FIELD_NUMBER = 12;
     private int equipType_;
 
     @java.lang.Override
@@ -225,7 +225,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
       return itemId_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 12;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 9;
     private long avatarGuid_;
 
     @java.lang.Override
@@ -248,13 +248,13 @@ public final class AvatarEquipChangeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (equipType_ != 0) {
-        output.writeUInt32(4, equipType_);
+        output.writeUInt32(12, equipType_);
       }
       if (weapon_ != null) {
-        output.writeMessage(9, getWeapon());
+        output.writeMessage(13, getWeapon());
       }
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(12, avatarGuid_);
+        output.writeUInt64(9, avatarGuid_);
       }
       if (itemId_ != 0) {
         output.writeUInt32(3, itemId_);
@@ -263,7 +263,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
         output.writeMessage(10, getReliquary());
       }
       if (equipGuid_ != 0L) {
-        output.writeUInt64(6, equipGuid_);
+        output.writeUInt64(8, equipGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -276,15 +276,15 @@ public final class AvatarEquipChangeNotifyOuterClass {
       size = 0;
       if (equipType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, equipType_);
+          .computeUInt32Size(12, equipType_);
       }
       if (weapon_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getWeapon());
+          .computeMessageSize(13, getWeapon());
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(12, avatarGuid_);
+          .computeUInt64Size(9, avatarGuid_);
       }
       if (itemId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -296,7 +296,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
       }
       if (equipGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, equipGuid_);
+          .computeUInt64Size(8, equipGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

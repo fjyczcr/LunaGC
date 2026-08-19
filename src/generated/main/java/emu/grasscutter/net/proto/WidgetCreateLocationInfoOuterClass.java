@@ -97,7 +97,7 @@ public final class WidgetCreateLocationInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
+            case 90: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (rot_ != null) {
                 subBuilder = rot_.toBuilder();
@@ -155,7 +155,7 @@ public final class WidgetCreateLocationInfoOuterClass {
               emu.grasscutter.net.proto.WidgetCreateLocationInfoOuterClass.WidgetCreateLocationInfo.class, emu.grasscutter.net.proto.WidgetCreateLocationInfoOuterClass.WidgetCreateLocationInfo.Builder.class);
     }
 
-    public static final int ROT_FIELD_NUMBER = 2;
+    public static final int ROT_FIELD_NUMBER = 11;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
     /**
      * <code>.Vector rot = 3;</code>
@@ -222,7 +222,7 @@ public final class WidgetCreateLocationInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (rot_ != null) {
-        output.writeMessage(2, getRot());
+        output.writeMessage(11, getRot());
       }
       if (pos_ != null) {
         output.writeMessage(14, getPos());
@@ -238,7 +238,7 @@ public final class WidgetCreateLocationInfoOuterClass {
       size = 0;
       if (rot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getRot());
+          .computeMessageSize(11, getRot());
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream

@@ -118,7 +118,7 @@ public final class GetScenePointRspOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 16: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 unlockedPointList_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
@@ -126,7 +126,7 @@ public final class GetScenePointRspOuterClass {
               unlockedPointList_.addInt(input.readUInt32());
               break;
             }
-            case 34: {
+            case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
@@ -139,12 +139,12 @@ public final class GetScenePointRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 80: {
+            case 8: {
 
               isRelogin_ = input.readBool();
               break;
             }
-            case 56: {
+            case 48: {
               if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 unlockAreaList_ = newIntList();
                 mutable_bitField0_ |= 0x00000020;
@@ -152,7 +152,7 @@ public final class GetScenePointRspOuterClass {
               unlockAreaList_.addInt(input.readUInt32());
               break;
             }
-            case 58: {
+            case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
@@ -165,7 +165,7 @@ public final class GetScenePointRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 112: {
+            case 96: {
 
               sceneId_ = input.readUInt32();
               break;
@@ -191,7 +191,7 @@ public final class GetScenePointRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 72: {
+            case 112: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 hidePointList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -199,7 +199,7 @@ public final class GetScenePointRspOuterClass {
               hidePointList_.addInt(input.readUInt32());
               break;
             }
-            case 74: {
+            case 114: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -212,7 +212,7 @@ public final class GetScenePointRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 104: {
+            case 64: {
               if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 unhidePointList_ = newIntList();
                 mutable_bitField0_ |= 0x00000008;
@@ -220,7 +220,7 @@ public final class GetScenePointRspOuterClass {
               unhidePointList_.addInt(input.readUInt32());
               break;
             }
-            case 106: {
+            case 66: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
@@ -233,7 +233,7 @@ public final class GetScenePointRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 48: {
+            case 104: {
 
               belongUid_ = input.readUInt32();
               break;
@@ -243,7 +243,7 @@ public final class GetScenePointRspOuterClass {
               retcode_ = input.readInt32();
               break;
             }
-            case 16: {
+            case 72: {
               if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 groupUnlimitPointList_ = newIntList();
                 mutable_bitField0_ |= 0x00000010;
@@ -251,7 +251,7 @@ public final class GetScenePointRspOuterClass {
               groupUnlimitPointList_.addInt(input.readUInt32());
               break;
             }
-            case 18: {
+            case 74: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
@@ -314,7 +314,7 @@ public final class GetScenePointRspOuterClass {
               emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp.class, emu.grasscutter.net.proto.GetScenePointRspOuterClass.GetScenePointRsp.Builder.class);
     }
 
-    public static final int HIDE_POINT_LIST_FIELD_NUMBER = 9;
+    public static final int HIDE_POINT_LIST_FIELD_NUMBER = 14;
     private com.google.protobuf.Internal.IntList hidePointList_;
 
     @java.lang.Override
@@ -350,7 +350,7 @@ public final class GetScenePointRspOuterClass {
     }
     private int lockedPointListMemoizedSerializedSize = -1;
 
-    public static final int UNLOCKED_POINT_LIST_FIELD_NUMBER = 4;
+    public static final int UNLOCKED_POINT_LIST_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.IntList unlockedPointList_;
 
     @java.lang.Override
@@ -368,7 +368,7 @@ public final class GetScenePointRspOuterClass {
     }
     private int unlockedPointListMemoizedSerializedSize = -1;
 
-    public static final int UNHIDE_POINT_LIST_FIELD_NUMBER = 13;
+    public static final int UNHIDE_POINT_LIST_FIELD_NUMBER = 8;
     private com.google.protobuf.Internal.IntList unhidePointList_;
 
     @java.lang.Override
@@ -386,7 +386,7 @@ public final class GetScenePointRspOuterClass {
     }
     private int unhidePointListMemoizedSerializedSize = -1;
 
-    public static final int GROUP_UNLIMIT_POINT_LIST_FIELD_NUMBER = 2;
+    public static final int GROUP_UNLIMIT_POINT_LIST_FIELD_NUMBER = 9;
     private com.google.protobuf.Internal.IntList groupUnlimitPointList_;
 
     @java.lang.Override
@@ -404,7 +404,7 @@ public final class GetScenePointRspOuterClass {
     }
     private int groupUnlimitPointListMemoizedSerializedSize = -1;
 
-    public static final int UNLOCK_AREA_LIST_FIELD_NUMBER = 7;
+    public static final int UNLOCK_AREA_LIST_FIELD_NUMBER = 6;
     private com.google.protobuf.Internal.IntList unlockAreaList_;
 
     @java.lang.Override
@@ -422,7 +422,7 @@ public final class GetScenePointRspOuterClass {
     }
     private int unlockAreaListMemoizedSerializedSize = -1;
 
-    public static final int BELONG_UID_FIELD_NUMBER = 6;
+    public static final int BELONG_UID_FIELD_NUMBER = 13;
     private int belongUid_;
 
     @java.lang.Override
@@ -430,7 +430,7 @@ public final class GetScenePointRspOuterClass {
       return belongUid_;
     }
 
-    public static final int IS_RELOGIN_FIELD_NUMBER = 10;
+    public static final int IS_RELOGIN_FIELD_NUMBER = 1;
     private boolean isRelogin_;
 
     @java.lang.Override
@@ -438,7 +438,7 @@ public final class GetScenePointRspOuterClass {
       return isRelogin_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 14;
+    public static final int SCENE_ID_FIELD_NUMBER = 12;
     private int sceneId_;
 
     @java.lang.Override
@@ -470,14 +470,14 @@ public final class GetScenePointRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getUnlockedPointListList().size() > 0) {
-        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(18);
         output.writeUInt32NoTag(unlockedPointListMemoizedSerializedSize);
       }
       for (int i = 0; i < unlockedPointList_.size(); i++) {
         output.writeUInt32NoTag(unlockedPointList_.getInt(i));
       }
       if (belongUid_ != 0) {
-        output.writeUInt32(6, belongUid_);
+        output.writeUInt32(13, belongUid_);
       }
       if (getLockedPointListList().size() > 0) {
         output.writeUInt32NoTag(122);
@@ -487,41 +487,41 @@ public final class GetScenePointRspOuterClass {
         output.writeUInt32NoTag(lockedPointList_.getInt(i));
       }
       if (getHidePointListList().size() > 0) {
-        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(114);
         output.writeUInt32NoTag(hidePointListMemoizedSerializedSize);
       }
       for (int i = 0; i < hidePointList_.size(); i++) {
         output.writeUInt32NoTag(hidePointList_.getInt(i));
       }
       if (getUnhidePointListList().size() > 0) {
-        output.writeUInt32NoTag(106);
+        output.writeUInt32NoTag(66);
         output.writeUInt32NoTag(unhidePointListMemoizedSerializedSize);
       }
       for (int i = 0; i < unhidePointList_.size(); i++) {
         output.writeUInt32NoTag(unhidePointList_.getInt(i));
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(14, sceneId_);
+        output.writeUInt32(12, sceneId_);
       }
       if (retcode_ != 0) {
         output.writeInt32(3, retcode_);
       }
       if (getGroupUnlimitPointListList().size() > 0) {
-        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(74);
         output.writeUInt32NoTag(groupUnlimitPointListMemoizedSerializedSize);
       }
       for (int i = 0; i < groupUnlimitPointList_.size(); i++) {
         output.writeUInt32NoTag(groupUnlimitPointList_.getInt(i));
       }
       if (getUnlockAreaListList().size() > 0) {
-        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(50);
         output.writeUInt32NoTag(unlockAreaListMemoizedSerializedSize);
       }
       for (int i = 0; i < unlockAreaList_.size(); i++) {
         output.writeUInt32NoTag(unlockAreaList_.getInt(i));
       }
       if (isRelogin_ != false) {
-        output.writeBool(10, isRelogin_);
+        output.writeBool(1, isRelogin_);
       }
       unknownFields.writeTo(output);
     }
@@ -548,7 +548,7 @@ public final class GetScenePointRspOuterClass {
       }
       if (belongUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, belongUid_);
+          .computeUInt32Size(13, belongUid_);
       }
       {
         int dataSize = 0;
@@ -580,7 +580,7 @@ public final class GetScenePointRspOuterClass {
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, sceneId_);
+          .computeUInt32Size(12, sceneId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -630,7 +630,7 @@ public final class GetScenePointRspOuterClass {
       }
       if (isRelogin_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isRelogin_);
+          .computeBoolSize(1, isRelogin_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

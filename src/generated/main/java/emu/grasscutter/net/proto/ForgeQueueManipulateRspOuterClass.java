@@ -122,7 +122,7 @@ public final class ForgeQueueManipulateRspOuterClass {
               retcode_ = input.readInt32();
               break;
             }
-            case 58: {
+            case 128002: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 outputItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemHintOuterClass.ItemHint>();
                 mutable_bitField0_ |= 0x00000001;
@@ -131,7 +131,7 @@ public final class ForgeQueueManipulateRspOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ItemHintOuterClass.ItemHint.parser(), extensionRegistry));
               break;
             }
-            case 26: {
+            case 58: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 extraOutputItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemHintOuterClass.ItemHint>();
                 mutable_bitField0_ |= 0x00000004;
@@ -149,7 +149,7 @@ public final class ForgeQueueManipulateRspOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ItemHintOuterClass.ItemHint.parser(), extensionRegistry));
               break;
             }
-            case 104: {
+            case 72: {
               int rawValue = input.readEnum();
 
               manipulateType_ = rawValue;
@@ -196,7 +196,7 @@ public final class ForgeQueueManipulateRspOuterClass {
               emu.grasscutter.net.proto.ForgeQueueManipulateRspOuterClass.ForgeQueueManipulateRsp.class, emu.grasscutter.net.proto.ForgeQueueManipulateRspOuterClass.ForgeQueueManipulateRsp.Builder.class);
     }
 
-    public static final int OUTPUT_ITEM_LIST_FIELD_NUMBER = 7;
+    public static final int OUTPUT_ITEM_LIST_FIELD_NUMBER = 16000;
     private java.util.List<emu.grasscutter.net.proto.ItemHintOuterClass.ItemHint> outputItemList_;
 
     @java.lang.Override
@@ -256,7 +256,7 @@ public final class ForgeQueueManipulateRspOuterClass {
       return returnItemList_.get(index);
     }
 
-    public static final int EXTRA_OUTPUT_ITEM_LIST_FIELD_NUMBER = 3;
+    public static final int EXTRA_OUTPUT_ITEM_LIST_FIELD_NUMBER = 7;
     private java.util.List<emu.grasscutter.net.proto.ItemHintOuterClass.ItemHint> extraOutputItemList_;
 
     @java.lang.Override
@@ -294,7 +294,7 @@ public final class ForgeQueueManipulateRspOuterClass {
       return retcode_;
     }
 
-    public static final int MANIPULATE_TYPE_FIELD_NUMBER = 13;
+    public static final int MANIPULATE_TYPE_FIELD_NUMBER = 9;
     private int manipulateType_;
 
     @java.lang.Override public int getManipulateTypeValue() {
@@ -328,13 +328,13 @@ public final class ForgeQueueManipulateRspOuterClass {
         output.writeInt32(2, retcode_);
       }
       if (manipulateType_ != emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.ForgeQueueManipulateType_RECEIVE_OUTPUT.getNumber()) {
-        output.writeEnum(13, manipulateType_);
+        output.writeEnum(9, manipulateType_);
       }
       for (int i = 0; i < outputItemList_.size(); i++) {
-        output.writeMessage(7, outputItemList_.get(i));
+        output.writeMessage(16000, outputItemList_.get(i));
       }
       for (int i = 0; i < extraOutputItemList_.size(); i++) {
-        output.writeMessage(3, extraOutputItemList_.get(i));
+        output.writeMessage(7, extraOutputItemList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -355,15 +355,15 @@ public final class ForgeQueueManipulateRspOuterClass {
       }
       if (manipulateType_ != emu.grasscutter.net.proto.ForgeQueueManipulateTypeOuterClass.ForgeQueueManipulateType.ForgeQueueManipulateType_RECEIVE_OUTPUT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(13, manipulateType_);
+          .computeEnumSize(9, manipulateType_);
       }
       for (int i = 0; i < outputItemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, outputItemList_.get(i));
+          .computeMessageSize(16000, outputItemList_.get(i));
       }
       for (int i = 0; i < extraOutputItemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, extraOutputItemList_.get(i));
+          .computeMessageSize(7, extraOutputItemList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

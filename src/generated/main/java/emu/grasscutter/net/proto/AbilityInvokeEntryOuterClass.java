@@ -92,13 +92,13 @@ public final class AbilityInvokeEntryOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 96: {
               int rawValue = input.readEnum();
 
               forwardType_ = rawValue;
               break;
             }
-            case 96: {
+            case 80: {
 
               entityId_ = input.readUInt32();
               break;
@@ -116,27 +116,27 @@ public final class AbilityInvokeEntryOuterClass {
 
               break;
             }
-            case 80: {
+            case 120: {
 
               forwardPeer_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 56: {
 
               isIgnoreAuth_ = input.readBool();
               break;
             }
-            case 16: {
+            case 8: {
 
               eventId_ = input.readUInt32();
               break;
             }
-            case 58: {
+            case 66: {
 
               abilityData_ = input.readBytes();
               break;
             }
-            case 32: {
+            case 72: {
               int rawValue = input.readEnum();
 
               argumentType_ = rawValue;
@@ -197,7 +197,7 @@ public final class AbilityInvokeEntryOuterClass {
       return getHead();
     }
 
-    public static final int ABILITY_DATA_FIELD_NUMBER = 7;
+    public static final int ABILITY_DATA_FIELD_NUMBER = 8;
     private com.google.protobuf.ByteString abilityData_;
 
     @java.lang.Override
@@ -205,7 +205,7 @@ public final class AbilityInvokeEntryOuterClass {
       return abilityData_;
     }
 
-    public static final int IS_IGNORE_AUTH_FIELD_NUMBER = 15;
+    public static final int IS_IGNORE_AUTH_FIELD_NUMBER = 7;
     private boolean isIgnoreAuth_;
 
     @java.lang.Override
@@ -213,7 +213,7 @@ public final class AbilityInvokeEntryOuterClass {
       return isIgnoreAuth_;
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 12;
+    public static final int ENTITY_ID_FIELD_NUMBER = 10;
     private int entityId_;
 
     @java.lang.Override
@@ -221,7 +221,7 @@ public final class AbilityInvokeEntryOuterClass {
       return entityId_;
     }
 
-    public static final int ARGUMENT_TYPE_FIELD_NUMBER = 4;
+    public static final int ARGUMENT_TYPE_FIELD_NUMBER = 9;
     private int argumentType_;
 
     @java.lang.Override public int getArgumentTypeValue() {
@@ -234,7 +234,7 @@ public final class AbilityInvokeEntryOuterClass {
       return result == null ? emu.grasscutter.net.proto.AbilityInvokeArgumentOuterClass.AbilityInvokeArgument.UNRECOGNIZED : result;
     }
 
-    public static final int FORWARD_PEER_FIELD_NUMBER = 10;
+    public static final int FORWARD_PEER_FIELD_NUMBER = 15;
     private int forwardPeer_;
 
     @java.lang.Override
@@ -242,7 +242,7 @@ public final class AbilityInvokeEntryOuterClass {
       return forwardPeer_;
     }
 
-    public static final int EVENT_ID_FIELD_NUMBER = 2;
+    public static final int EVENT_ID_FIELD_NUMBER = 1;
     private int eventId_;
 
     @java.lang.Override
@@ -250,7 +250,7 @@ public final class AbilityInvokeEntryOuterClass {
       return eventId_;
     }
 
-    public static final int FORWARD_TYPE_FIELD_NUMBER = 11;
+    public static final int FORWARD_TYPE_FIELD_NUMBER = 12;
     private int forwardType_;
 
     @java.lang.Override public int getForwardTypeValue() {
@@ -286,31 +286,31 @@ public final class AbilityInvokeEntryOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
-        output.writeEnum(11, forwardType_);
+        output.writeEnum(12, forwardType_);
       }
       if (eventId_ != 0) {
-        output.writeUInt32(2, eventId_);
+        output.writeUInt32(1, eventId_);
       }
       if (entityId_ != 0) {
-        output.writeUInt32(12, entityId_);
+        output.writeUInt32(10, entityId_);
       }
       if (head_ != null) {
         output.writeMessage(6, getHead());
       }
       if (isIgnoreAuth_ != false) {
-        output.writeBool(15, isIgnoreAuth_);
+        output.writeBool(7, isIgnoreAuth_);
       }
       if (totalTickTime_ != 0D) {
         output.writeDouble(5, totalTickTime_);
       }
       if (forwardPeer_ != 0) {
-        output.writeUInt32(10, forwardPeer_);
+        output.writeUInt32(15, forwardPeer_);
       }
       if (!abilityData_.isEmpty()) {
-        output.writeBytes(7, abilityData_);
+        output.writeBytes(8, abilityData_);
       }
       if (argumentType_ != emu.grasscutter.net.proto.AbilityInvokeArgumentOuterClass.AbilityInvokeArgument.AbilityInvokeArgument_ABILITY_NONE.getNumber()) {
-        output.writeEnum(4, argumentType_);
+        output.writeEnum(9, argumentType_);
       }
       unknownFields.writeTo(output);
     }
@@ -323,15 +323,15 @@ public final class AbilityInvokeEntryOuterClass {
       size = 0;
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(11, forwardType_);
+          .computeEnumSize(12, forwardType_);
       }
       if (eventId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, eventId_);
+          .computeUInt32Size(1, eventId_);
       }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, entityId_);
+          .computeUInt32Size(10, entityId_);
       }
       if (head_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -339,7 +339,7 @@ public final class AbilityInvokeEntryOuterClass {
       }
       if (isIgnoreAuth_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isIgnoreAuth_);
+          .computeBoolSize(7, isIgnoreAuth_);
       }
       if (totalTickTime_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
@@ -347,15 +347,15 @@ public final class AbilityInvokeEntryOuterClass {
       }
       if (forwardPeer_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, forwardPeer_);
+          .computeUInt32Size(15, forwardPeer_);
       }
       if (!abilityData_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, abilityData_);
+          .computeBytesSize(8, abilityData_);
       }
       if (argumentType_ != emu.grasscutter.net.proto.AbilityInvokeArgumentOuterClass.AbilityInvokeArgument.AbilityInvokeArgument_ABILITY_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, argumentType_);
+          .computeEnumSize(9, argumentType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

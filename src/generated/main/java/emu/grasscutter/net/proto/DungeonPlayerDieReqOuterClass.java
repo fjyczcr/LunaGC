@@ -86,12 +86,12 @@ public final class DungeonPlayerDieReqOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 16: {
 
               dungeonId_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 48: {
               int rawValue = input.readEnum();
 
               dieType_ = rawValue;
@@ -129,7 +129,7 @@ public final class DungeonPlayerDieReqOuterClass {
               emu.grasscutter.net.proto.DungeonPlayerDieReqOuterClass.DungeonPlayerDieReq.class, emu.grasscutter.net.proto.DungeonPlayerDieReqOuterClass.DungeonPlayerDieReq.Builder.class);
     }
 
-    public static final int DIE_TYPE_FIELD_NUMBER = 8;
+    public static final int DIE_TYPE_FIELD_NUMBER = 6;
     private int dieType_;
     /**
      * <code>.PlayerDieType die_type = 2;</code>
@@ -148,7 +148,7 @@ public final class DungeonPlayerDieReqOuterClass {
       return result == null ? emu.grasscutter.net.proto.PlayerDieTypeOuterClass.PlayerDieType.UNRECOGNIZED : result;
     }
 
-    public static final int DUNGEON_ID_FIELD_NUMBER = 7;
+    public static final int DUNGEON_ID_FIELD_NUMBER = 2;
     private int dungeonId_;
     /**
      * <code>uint32 dungeon_id = 1;</code>
@@ -174,10 +174,10 @@ public final class DungeonPlayerDieReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (dungeonId_ != 0) {
-        output.writeUInt32(7, dungeonId_);
+        output.writeUInt32(2, dungeonId_);
       }
       if (dieType_ != emu.grasscutter.net.proto.PlayerDieTypeOuterClass.PlayerDieType.PlayerDieType_PLAYER_DIE_NONE.getNumber()) {
-        output.writeEnum(8, dieType_);
+        output.writeEnum(6, dieType_);
       }
       unknownFields.writeTo(output);
     }
@@ -190,11 +190,11 @@ public final class DungeonPlayerDieReqOuterClass {
       size = 0;
       if (dungeonId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, dungeonId_);
+          .computeUInt32Size(2, dungeonId_);
       }
       if (dieType_ != emu.grasscutter.net.proto.PlayerDieTypeOuterClass.PlayerDieType.PlayerDieType_PLAYER_DIE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, dieType_);
+          .computeEnumSize(6, dieType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

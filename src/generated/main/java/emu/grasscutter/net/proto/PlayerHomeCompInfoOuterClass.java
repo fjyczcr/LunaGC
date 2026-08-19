@@ -134,7 +134,7 @@ public final class PlayerHomeCompInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 104: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 levelupRewardGotLevelList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -142,7 +142,7 @@ public final class PlayerHomeCompInfoOuterClass {
               levelupRewardGotLevelList_.addInt(input.readUInt32());
               break;
             }
-            case 26: {
+            case 106: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -155,7 +155,7 @@ public final class PlayerHomeCompInfoOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 80: {
+            case 24: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 seenModuleIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
@@ -163,7 +163,7 @@ public final class PlayerHomeCompInfoOuterClass {
               seenModuleIdList_.addInt(input.readUInt32());
               break;
             }
-            case 82: {
+            case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
@@ -176,7 +176,7 @@ public final class PlayerHomeCompInfoOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 88: {
+            case 8: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 unlockedModuleIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000002;
@@ -184,7 +184,7 @@ public final class PlayerHomeCompInfoOuterClass {
               unlockedModuleIdList_.addInt(input.readUInt32());
               break;
             }
-            case 90: {
+            case 10: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
@@ -244,7 +244,7 @@ public final class PlayerHomeCompInfoOuterClass {
               emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo.class, emu.grasscutter.net.proto.PlayerHomeCompInfoOuterClass.PlayerHomeCompInfo.Builder.class);
     }
 
-    public static final int LEVELUP_REWARD_GOT_LEVEL_LIST_FIELD_NUMBER = 3;
+    public static final int LEVELUP_REWARD_GOT_LEVEL_LIST_FIELD_NUMBER = 13;
     private com.google.protobuf.Internal.IntList levelupRewardGotLevelList_;
     /**
      * <code>repeated uint32 levelup_reward_got_level_list = 3;</code>
@@ -272,7 +272,7 @@ public final class PlayerHomeCompInfoOuterClass {
     }
     private int levelupRewardGotLevelListMemoizedSerializedSize = -1;
 
-    public static final int UNLOCKED_MODULE_ID_LIST_FIELD_NUMBER = 11;
+    public static final int UNLOCKED_MODULE_ID_LIST_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.IntList unlockedModuleIdList_;
     /**
      * <code>repeated uint32 unlocked_module_id_list = 10;</code>
@@ -300,7 +300,7 @@ public final class PlayerHomeCompInfoOuterClass {
     }
     private int unlockedModuleIdListMemoizedSerializedSize = -1;
 
-    public static final int SEEN_MODULE_ID_LIST_FIELD_NUMBER = 10;
+    public static final int SEEN_MODULE_ID_LIST_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.IntList seenModuleIdList_;
     /**
      * <code>repeated uint32 seen_module_id_list = 8;</code>
@@ -363,21 +363,21 @@ public final class PlayerHomeCompInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getLevelupRewardGotLevelListList().size() > 0) {
-        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(106);
         output.writeUInt32NoTag(levelupRewardGotLevelListMemoizedSerializedSize);
       }
       for (int i = 0; i < levelupRewardGotLevelList_.size(); i++) {
         output.writeUInt32NoTag(levelupRewardGotLevelList_.getInt(i));
       }
       if (getSeenModuleIdListList().size() > 0) {
-        output.writeUInt32NoTag(82);
+        output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(seenModuleIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < seenModuleIdList_.size(); i++) {
         output.writeUInt32NoTag(seenModuleIdList_.getInt(i));
       }
       if (getUnlockedModuleIdListList().size() > 0) {
-        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(10);
         output.writeUInt32NoTag(unlockedModuleIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < unlockedModuleIdList_.size(); i++) {

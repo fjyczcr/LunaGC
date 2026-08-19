@@ -113,7 +113,7 @@ public final class QueryCodexMonsterBeKilledNumRspOuterClass {
             case 0:
               done = true;
               break;
-            case 40: {
+            case 16: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 codexIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -121,7 +121,7 @@ public final class QueryCodexMonsterBeKilledNumRspOuterClass {
               codexIdList_.addInt(input.readUInt32());
               break;
             }
-            case 42: {
+            case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -155,7 +155,7 @@ public final class QueryCodexMonsterBeKilledNumRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 48: {
+            case 112: {
 
               retcode_ = input.readInt32();
               break;
@@ -222,7 +222,7 @@ public final class QueryCodexMonsterBeKilledNumRspOuterClass {
               emu.grasscutter.net.proto.QueryCodexMonsterBeKilledNumRspOuterClass.QueryCodexMonsterBeKilledNumRsp.class, emu.grasscutter.net.proto.QueryCodexMonsterBeKilledNumRspOuterClass.QueryCodexMonsterBeKilledNumRsp.Builder.class);
     }
 
-    public static final int CODEX_ID_LIST_FIELD_NUMBER = 5;
+    public static final int CODEX_ID_LIST_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.IntList codexIdList_;
 
     @java.lang.Override
@@ -296,7 +296,7 @@ public final class QueryCodexMonsterBeKilledNumRspOuterClass {
     }
     private int pHDCOLPGNBIMemoizedSerializedSize = -1;
 
-    public static final int RETCODE_FIELD_NUMBER = 6;
+    public static final int RETCODE_FIELD_NUMBER = 14;
     private int retcode_;
 
     @java.lang.Override
@@ -320,7 +320,7 @@ public final class QueryCodexMonsterBeKilledNumRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getCodexIdListList().size() > 0) {
-        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(18);
         output.writeUInt32NoTag(codexIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < codexIdList_.size(); i++) {
@@ -334,7 +334,7 @@ public final class QueryCodexMonsterBeKilledNumRspOuterClass {
         output.writeUInt32NoTag(dNICBJIEKBM_.getInt(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(6, retcode_);
+        output.writeInt32(14, retcode_);
       }
       if (getPHDCOLPGNBIList().size() > 0) {
         output.writeUInt32NoTag(122);
@@ -382,7 +382,7 @@ public final class QueryCodexMonsterBeKilledNumRspOuterClass {
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, retcode_);
+          .computeInt32Size(14, retcode_);
       }
       {
         int dataSize = 0;

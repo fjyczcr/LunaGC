@@ -89,7 +89,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 66: {
+            case 26: {
               emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.Builder subBuilder = null;
               if (watcherInfo_ != null) {
                 subBuilder = watcherInfo_.toBuilder();
@@ -102,7 +102,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
 
               break;
             }
-            case 96: {
+            case 16: {
 
               activityId_ = input.readUInt32();
               break;
@@ -139,7 +139,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
               emu.grasscutter.net.proto.ActivityUpdateWatcherNotifyOuterClass.ActivityUpdateWatcherNotify.class, emu.grasscutter.net.proto.ActivityUpdateWatcherNotifyOuterClass.ActivityUpdateWatcherNotify.Builder.class);
     }
 
-    public static final int WATCHER_INFO_FIELD_NUMBER = 8;
+    public static final int WATCHER_INFO_FIELD_NUMBER = 3;
     private emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo watcherInfo_;
     /**
      * <code>.ActivityWatcherInfo watcher_info = 6;</code>
@@ -165,7 +165,7 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       return getWatcherInfo();
     }
 
-    public static final int ACTIVITY_ID_FIELD_NUMBER = 12;
+    public static final int ACTIVITY_ID_FIELD_NUMBER = 2;
     private int activityId_;
     /**
      * <code>uint32 activity_id = 10;</code>
@@ -191,10 +191,10 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (watcherInfo_ != null) {
-        output.writeMessage(8, getWatcherInfo());
+        output.writeMessage(3, getWatcherInfo());
       }
       if (activityId_ != 0) {
-        output.writeUInt32(12, activityId_);
+        output.writeUInt32(2, activityId_);
       }
       unknownFields.writeTo(output);
     }
@@ -207,11 +207,11 @@ public final class ActivityUpdateWatcherNotifyOuterClass {
       size = 0;
       if (watcherInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getWatcherInfo());
+          .computeMessageSize(3, getWatcherInfo());
       }
       if (activityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, activityId_);
+          .computeUInt32Size(2, activityId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -70,7 +70,7 @@ public final class ActivityPushTipsDataOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 64: {
 
               activityPushTipsId_ = input.readUInt32();
               break;
@@ -113,7 +113,7 @@ public final class ActivityPushTipsDataOuterClass {
               emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData.class, emu.grasscutter.net.proto.ActivityPushTipsDataOuterClass.ActivityPushTipsData.Builder.class);
     }
 
-    public static final int ACTIVITY_PUSH_TIPS_ID_FIELD_NUMBER = 12;
+    public static final int ACTIVITY_PUSH_TIPS_ID_FIELD_NUMBER = 8;
     private int activityPushTipsId_;
 
     @java.lang.Override
@@ -149,7 +149,7 @@ public final class ActivityPushTipsDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (activityPushTipsId_ != 0) {
-        output.writeUInt32(12, activityPushTipsId_);
+        output.writeUInt32(8, activityPushTipsId_);
       }
       if (state_ != emu.grasscutter.net.proto.ActivityPushTipsStateOuterClass.ActivityPushTipsState.ActivityPushTipsState_NONE.getNumber()) {
         output.writeEnum(4, state_);
@@ -165,7 +165,7 @@ public final class ActivityPushTipsDataOuterClass {
       size = 0;
       if (activityPushTipsId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, activityPushTipsId_);
+          .computeUInt32Size(8, activityPushTipsId_);
       }
       if (state_ != emu.grasscutter.net.proto.ActivityPushTipsStateOuterClass.ActivityPushTipsState.ActivityPushTipsState_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream

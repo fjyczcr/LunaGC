@@ -73,17 +73,17 @@ public final class PlayerGameTimeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 104: {
 
               uid_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 40: {
 
               isHome_ = input.readBool();
               break;
             }
-            case 120: {
+            case 48: {
 
               gameTime_ = input.readUInt32();
               break;
@@ -120,7 +120,7 @@ public final class PlayerGameTimeNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify.class, emu.grasscutter.net.proto.PlayerGameTimeNotifyOuterClass.PlayerGameTimeNotify.Builder.class);
     }
 
-    public static final int IS_HOME_FIELD_NUMBER = 10;
+    public static final int IS_HOME_FIELD_NUMBER = 5;
     private boolean isHome_;
 
     @java.lang.Override
@@ -128,7 +128,7 @@ public final class PlayerGameTimeNotifyOuterClass {
       return isHome_;
     }
 
-    public static final int UID_FIELD_NUMBER = 9;
+    public static final int UID_FIELD_NUMBER = 13;
     private int uid_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class PlayerGameTimeNotifyOuterClass {
       return uid_;
     }
 
-    public static final int GAME_TIME_FIELD_NUMBER = 15;
+    public static final int GAME_TIME_FIELD_NUMBER = 6;
     private int gameTime_;
 
     @java.lang.Override
@@ -159,13 +159,13 @@ public final class PlayerGameTimeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (uid_ != 0) {
-        output.writeUInt32(9, uid_);
+        output.writeUInt32(13, uid_);
       }
       if (isHome_ != false) {
-        output.writeBool(10, isHome_);
+        output.writeBool(5, isHome_);
       }
       if (gameTime_ != 0) {
-        output.writeUInt32(15, gameTime_);
+        output.writeUInt32(6, gameTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,15 +178,15 @@ public final class PlayerGameTimeNotifyOuterClass {
       size = 0;
       if (uid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, uid_);
+          .computeUInt32Size(13, uid_);
       }
       if (isHome_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isHome_);
+          .computeBoolSize(5, isHome_);
       }
       if (gameTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, gameTime_);
+          .computeUInt32Size(6, gameTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

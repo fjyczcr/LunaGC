@@ -109,7 +109,7 @@ public final class HomeNpcDataOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 80: {
 
               costumeId_ = input.readUInt32();
               break;
@@ -127,12 +127,12 @@ public final class HomeNpcDataOuterClass {
 
               break;
             }
-            case 8: {
+            case 40: {
 
               avatarId_ = input.readUInt32();
               break;
             }
-            case 98: {
+            case 34: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (spawnRot_ != null) {
                 subBuilder = spawnRot_.toBuilder();
@@ -177,7 +177,7 @@ public final class HomeNpcDataOuterClass {
               emu.grasscutter.net.proto.HomeNpcDataOuterClass.HomeNpcData.class, emu.grasscutter.net.proto.HomeNpcDataOuterClass.HomeNpcData.Builder.class);
     }
 
-    public static final int SPAWNROT_FIELD_NUMBER = 15;
+    public static final int SPAWNROT_FIELD_NUMBER = 4;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector spawnRot_;
     /**
      * <code>.Vector spawnRot = 12;</code>
@@ -203,7 +203,7 @@ public final class HomeNpcDataOuterClass {
       return getSpawnRot();
     }
 
-    public static final int AVATAR_ID_FIELD_NUMBER = 1;
+    public static final int AVATAR_ID_FIELD_NUMBER = 5;
     private int avatarId_;
     /**
      * <code>uint32 avatar_id = 10;</code>
@@ -240,7 +240,7 @@ public final class HomeNpcDataOuterClass {
       return getSpawnPos();
     }
 
-    public static final int COSTUME_ID_FIELD_NUMBER = 6;
+    public static final int COSTUME_ID_FIELD_NUMBER = 10;
     private int costumeId_;
     /**
      * <code>uint32 costume_id = 1;</code>
@@ -266,16 +266,16 @@ public final class HomeNpcDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (costumeId_ != 0) {
-        output.writeUInt32(6, costumeId_);
+        output.writeUInt32(10, costumeId_);
       }
       if (spawnPos_ != null) {
         output.writeMessage(3, getSpawnPos());
       }
       if (avatarId_ != 0) {
-        output.writeUInt32(1, avatarId_);
+        output.writeUInt32(5, avatarId_);
       }
       if (spawnRot_ != null) {
-        output.writeMessage(12, getSpawnRot());
+        output.writeMessage(4, getSpawnRot());
       }
       unknownFields.writeTo(output);
     }
@@ -288,7 +288,7 @@ public final class HomeNpcDataOuterClass {
       size = 0;
       if (costumeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, costumeId_);
+          .computeUInt32Size(10, costumeId_);
       }
       if (spawnPos_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -296,11 +296,11 @@ public final class HomeNpcDataOuterClass {
       }
       if (avatarId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, avatarId_);
+          .computeUInt32Size(5, avatarId_);
       }
       if (spawnRot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getSpawnRot());
+          .computeMessageSize(4, getSpawnRot());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

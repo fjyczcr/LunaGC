@@ -97,27 +97,27 @@ public final class EffigyChallengeDungeonResultInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 80: {
 
               challengeId_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 24: {
 
               isInTimeLimit_ = input.readBool();
               break;
             }
-            case 56: {
+            case 112: {
 
               challengeMaxScore_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 56: {
 
               isSuccess_ = input.readBool();
               break;
             }
-            case 104: {
+            case 120: {
 
               challengeScore_ = input.readUInt32();
               break;
@@ -154,7 +154,7 @@ public final class EffigyChallengeDungeonResultInfoOuterClass {
               emu.grasscutter.net.proto.EffigyChallengeDungeonResultInfoOuterClass.EffigyChallengeDungeonResultInfo.class, emu.grasscutter.net.proto.EffigyChallengeDungeonResultInfoOuterClass.EffigyChallengeDungeonResultInfo.Builder.class);
     }
 
-    public static final int IS_IN_TIME_LIMIT_FIELD_NUMBER = 2;
+    public static final int IS_IN_TIME_LIMIT_FIELD_NUMBER = 3;
     private boolean isInTimeLimit_;
     /**
      * <code>bool is_in_time_limit = 8;</code>
@@ -165,7 +165,7 @@ public final class EffigyChallengeDungeonResultInfoOuterClass {
       return isInTimeLimit_;
     }
 
-    public static final int CHALLENGE_ID_FIELD_NUMBER = 4;
+    public static final int CHALLENGE_ID_FIELD_NUMBER = 10;
     private int challengeId_;
     /**
      * <code>uint32 challenge_id = 5;</code>
@@ -176,7 +176,7 @@ public final class EffigyChallengeDungeonResultInfoOuterClass {
       return challengeId_;
     }
 
-    public static final int CHALLENGE_MAX_SCORE_FIELD_NUMBER = 7;
+    public static final int CHALLENGE_MAX_SCORE_FIELD_NUMBER = 14;
     private int challengeMaxScore_;
     /**
      * <code>uint32 challenge_max_score = 11;</code>
@@ -187,7 +187,7 @@ public final class EffigyChallengeDungeonResultInfoOuterClass {
       return challengeMaxScore_;
     }
 
-    public static final int CHALLENGE_SCORE_FIELD_NUMBER = 13;
+    public static final int CHALLENGE_SCORE_FIELD_NUMBER = 15;
     private int challengeScore_;
     /**
      * <code>uint32 challenge_score = 15;</code>
@@ -198,7 +198,7 @@ public final class EffigyChallengeDungeonResultInfoOuterClass {
       return challengeScore_;
     }
 
-    public static final int IS_SUCCESS_FIELD_NUMBER = 9;
+    public static final int IS_SUCCESS_FIELD_NUMBER = 7;
     private boolean isSuccess_;
     /**
      * <code>bool is_success = 13;</code>
@@ -224,19 +224,19 @@ public final class EffigyChallengeDungeonResultInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (challengeId_ != 0) {
-        output.writeUInt32(4, challengeId_);
+        output.writeUInt32(10, challengeId_);
       }
       if (isInTimeLimit_ != false) {
-        output.writeBool(2, isInTimeLimit_);
+        output.writeBool(3, isInTimeLimit_);
       }
       if (challengeMaxScore_ != 0) {
-        output.writeUInt32(7, challengeMaxScore_);
+        output.writeUInt32(14, challengeMaxScore_);
       }
       if (isSuccess_ != false) {
-        output.writeBool(9, isSuccess_);
+        output.writeBool(7, isSuccess_);
       }
       if (challengeScore_ != 0) {
-        output.writeUInt32(13, challengeScore_);
+        output.writeUInt32(15, challengeScore_);
       }
       unknownFields.writeTo(output);
     }
@@ -249,23 +249,23 @@ public final class EffigyChallengeDungeonResultInfoOuterClass {
       size = 0;
       if (challengeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, challengeId_);
+          .computeUInt32Size(10, challengeId_);
       }
       if (isInTimeLimit_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isInTimeLimit_);
+          .computeBoolSize(3, isInTimeLimit_);
       }
       if (challengeMaxScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, challengeMaxScore_);
+          .computeUInt32Size(14, challengeMaxScore_);
       }
       if (isSuccess_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isSuccess_);
+          .computeBoolSize(7, isSuccess_);
       }
       if (challengeScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, challengeScore_);
+          .computeUInt32Size(15, challengeScore_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

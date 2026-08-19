@@ -118,27 +118,27 @@ public final class WeaponAwakenRspOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 112: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 24: {
+            case 8: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 96: {
+            case 72: {
 
               targetWeaponAwakenLevel_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 120: {
 
               targetWeaponGuid_ = input.readUInt64();
               break;
             }
-            case 58: {
+            case 90: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 oldAffixLevelMap_ = com.google.protobuf.MapField.newMapField(
                     OldAffixLevelMapDefaultEntryHolder.defaultEntry);
@@ -151,7 +151,7 @@ public final class WeaponAwakenRspOuterClass {
                   oldAffixLevelMap__.getKey(), oldAffixLevelMap__.getValue());
               break;
             }
-            case 82: {
+            case 34: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 curAffixLevelMap_ = com.google.protobuf.MapField.newMapField(
                     CurAffixLevelMapDefaultEntryHolder.defaultEntry);
@@ -210,7 +210,7 @@ public final class WeaponAwakenRspOuterClass {
               emu.grasscutter.net.proto.WeaponAwakenRspOuterClass.WeaponAwakenRsp.class, emu.grasscutter.net.proto.WeaponAwakenRspOuterClass.WeaponAwakenRsp.Builder.class);
     }
 
-    public static final int OLD_AFFIX_LEVEL_MAP_FIELD_NUMBER = 7;
+    public static final int OLD_AFFIX_LEVEL_MAP_FIELD_NUMBER = 11;
     private static final class OldAffixLevelMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -282,7 +282,7 @@ public final class WeaponAwakenRspOuterClass {
       return map.get(key);
     }
 
-    public static final int CUR_AFFIX_LEVEL_MAP_FIELD_NUMBER = 10;
+    public static final int CUR_AFFIX_LEVEL_MAP_FIELD_NUMBER = 4;
     private static final class CurAffixLevelMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -354,7 +354,7 @@ public final class WeaponAwakenRspOuterClass {
       return map.get(key);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 3;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 1;
     private long avatarGuid_;
 
     @java.lang.Override
@@ -362,7 +362,7 @@ public final class WeaponAwakenRspOuterClass {
       return avatarGuid_;
     }
 
-    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 4;
+    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 15;
     private long targetWeaponGuid_;
 
     @java.lang.Override
@@ -370,7 +370,7 @@ public final class WeaponAwakenRspOuterClass {
       return targetWeaponGuid_;
     }
 
-    public static final int TARGET_WEAPON_AWAKEN_LEVEL_FIELD_NUMBER = 12;
+    public static final int TARGET_WEAPON_AWAKEN_LEVEL_FIELD_NUMBER = 9;
     private int targetWeaponAwakenLevel_;
 
     @java.lang.Override
@@ -378,7 +378,7 @@ public final class WeaponAwakenRspOuterClass {
       return targetWeaponAwakenLevel_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
+    public static final int RETCODE_FIELD_NUMBER = 14;
     private int retcode_;
 
     @java.lang.Override
@@ -405,25 +405,25 @@ public final class WeaponAwakenRspOuterClass {
           output,
           internalGetOldAffixLevelMap(),
           OldAffixLevelMapDefaultEntryHolder.defaultEntry,
-          7);
+          11);
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(3, avatarGuid_);
+        output.writeUInt64(1, avatarGuid_);
       }
       if (targetWeaponGuid_ != 0L) {
-        output.writeUInt64(4, targetWeaponGuid_);
+        output.writeUInt64(15, targetWeaponGuid_);
       }
       if (targetWeaponAwakenLevel_ != 0) {
-        output.writeUInt32(12, targetWeaponAwakenLevel_);
+        output.writeUInt32(9, targetWeaponAwakenLevel_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
+        output.writeInt32(14, retcode_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetCurAffixLevelMap(),
           CurAffixLevelMapDefaultEntryHolder.defaultEntry,
-          10);
+          4);
       unknownFields.writeTo(output);
     }
 
@@ -441,23 +441,23 @@ public final class WeaponAwakenRspOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, oldAffixLevelMap__);
+            .computeMessageSize(11, oldAffixLevelMap__);
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, avatarGuid_);
+          .computeUInt64Size(1, avatarGuid_);
       }
       if (targetWeaponGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, targetWeaponGuid_);
+          .computeUInt64Size(15, targetWeaponGuid_);
       }
       if (targetWeaponAwakenLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, targetWeaponAwakenLevel_);
+          .computeUInt32Size(9, targetWeaponAwakenLevel_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
+          .computeInt32Size(14, retcode_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
            : internalGetCurAffixLevelMap().getMap().entrySet()) {
@@ -467,7 +467,7 @@ public final class WeaponAwakenRspOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(10, curAffixLevelMap__);
+            .computeMessageSize(4, curAffixLevelMap__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

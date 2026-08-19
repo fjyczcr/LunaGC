@@ -91,18 +91,18 @@ public final class MistTrialBestAvatarOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 112: {
               int rawValue = input.readEnum();
 
               avatarType_ = rawValue;
               break;
             }
-            case 96: {
+            case 24: {
 
               avatarId_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 104: {
 
               costumeId_ = input.readUInt32();
               break;
@@ -139,7 +139,7 @@ public final class MistTrialBestAvatarOuterClass {
               emu.grasscutter.net.proto.MistTrialBestAvatarOuterClass.MistTrialBestAvatar.class, emu.grasscutter.net.proto.MistTrialBestAvatarOuterClass.MistTrialBestAvatar.Builder.class);
     }
 
-    public static final int AVATAR_TYPE_FIELD_NUMBER = 13;
+    public static final int AVATAR_TYPE_FIELD_NUMBER = 14;
     private int avatarType_;
     /**
      * <code>.AvatarType avatar_type = 4;</code>
@@ -158,7 +158,7 @@ public final class MistTrialBestAvatarOuterClass {
       return result == null ? emu.grasscutter.net.proto.AvatarTypeOuterClass.AvatarType.UNRECOGNIZED : result;
     }
 
-    public static final int AVATAR_ID_FIELD_NUMBER = 12;
+    public static final int AVATAR_ID_FIELD_NUMBER = 3;
     private int avatarId_;
     /**
      * <code>uint32 avatar_id = 6;</code>
@@ -169,7 +169,7 @@ public final class MistTrialBestAvatarOuterClass {
       return avatarId_;
     }
 
-    public static final int COSTUME_ID_FIELD_NUMBER = 4;
+    public static final int COSTUME_ID_FIELD_NUMBER = 13;
     private int costumeId_;
     /**
      * <code>uint32 costume_id = 14;</code>
@@ -195,13 +195,13 @@ public final class MistTrialBestAvatarOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarType_ != emu.grasscutter.net.proto.AvatarTypeOuterClass.AvatarType.AVATAR_TYPE_NONE.getNumber()) {
-        output.writeEnum(13, avatarType_);
+        output.writeEnum(14, avatarType_);
       }
       if (avatarId_ != 0) {
-        output.writeUInt32(12, avatarId_);
+        output.writeUInt32(3, avatarId_);
       }
       if (costumeId_ != 0) {
-        output.writeUInt32(4, costumeId_);
+        output.writeUInt32(13, costumeId_);
       }
       unknownFields.writeTo(output);
     }
@@ -214,15 +214,15 @@ public final class MistTrialBestAvatarOuterClass {
       size = 0;
       if (avatarType_ != emu.grasscutter.net.proto.AvatarTypeOuterClass.AvatarType.AVATAR_TYPE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(13, avatarType_);
+          .computeEnumSize(14, avatarType_);
       }
       if (avatarId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, avatarId_);
+          .computeUInt32Size(3, avatarId_);
       }
       if (costumeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, costumeId_);
+          .computeUInt32Size(13, costumeId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

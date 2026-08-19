@@ -86,12 +86,12 @@ public final class PlayerGetForceQuitBanInfoRspOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 24: {
 
               expireTime_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 64: {
 
               matchId_ = input.readUInt32();
               break;
@@ -133,7 +133,7 @@ public final class PlayerGetForceQuitBanInfoRspOuterClass {
               emu.grasscutter.net.proto.PlayerGetForceQuitBanInfoRspOuterClass.PlayerGetForceQuitBanInfoRsp.class, emu.grasscutter.net.proto.PlayerGetForceQuitBanInfoRspOuterClass.PlayerGetForceQuitBanInfoRsp.Builder.class);
     }
 
-    public static final int MATCH_ID_FIELD_NUMBER = 3;
+    public static final int MATCH_ID_FIELD_NUMBER = 8;
     private int matchId_;
     /**
      * <code>uint32 match_id = 6;</code>
@@ -155,7 +155,7 @@ public final class PlayerGetForceQuitBanInfoRspOuterClass {
       return retcode_;
     }
 
-    public static final int EXPIRE_TIME_FIELD_NUMBER = 12;
+    public static final int EXPIRE_TIME_FIELD_NUMBER = 3;
     private int expireTime_;
     /**
      * <code>uint32 expire_time = 3;</code>
@@ -181,10 +181,10 @@ public final class PlayerGetForceQuitBanInfoRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (expireTime_ != 0) {
-        output.writeUInt32(12, expireTime_);
+        output.writeUInt32(3, expireTime_);
       }
       if (matchId_ != 0) {
-        output.writeUInt32(3, matchId_);
+        output.writeUInt32(8, matchId_);
       }
       if (retcode_ != 0) {
         output.writeInt32(10, retcode_);
@@ -200,11 +200,11 @@ public final class PlayerGetForceQuitBanInfoRspOuterClass {
       size = 0;
       if (expireTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, expireTime_);
+          .computeUInt32Size(3, expireTime_);
       }
       if (matchId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, matchId_);
+          .computeUInt32Size(8, matchId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream

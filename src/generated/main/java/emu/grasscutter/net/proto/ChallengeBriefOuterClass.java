@@ -79,12 +79,12 @@ public final class ChallengeBriefOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 96: {
 
               curProgress_ = input.readUInt32();
               break;
             }
-            case 8: {
+            case 80: {
 
               isSuccess_ = input.readBool();
               break;
@@ -153,7 +153,7 @@ public final class ChallengeBriefOuterClass {
       return oDJLLLPLBHE_;
     }
 
-    public static final int CUR_PROGRESS_FIELD_NUMBER = 7;
+    public static final int CUR_PROGRESS_FIELD_NUMBER = 12;
     private int curProgress_;
 
     @java.lang.Override
@@ -161,7 +161,7 @@ public final class ChallengeBriefOuterClass {
       return curProgress_;
     }
 
-    public static final int IS_SUCCESS_FIELD_NUMBER = 1;
+    public static final int IS_SUCCESS_FIELD_NUMBER = 10;
     private boolean isSuccess_;
 
     @java.lang.Override
@@ -184,10 +184,10 @@ public final class ChallengeBriefOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (curProgress_ != 0) {
-        output.writeUInt32(7, curProgress_);
+        output.writeUInt32(12, curProgress_);
       }
       if (isSuccess_ != false) {
-        output.writeBool(1, isSuccess_);
+        output.writeBool(10, isSuccess_);
       }
       if (oDJLLLPLBHE_ != 0) {
         output.writeUInt32(32570, oDJLLLPLBHE_);
@@ -206,11 +206,11 @@ public final class ChallengeBriefOuterClass {
       size = 0;
       if (curProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, curProgress_);
+          .computeUInt32Size(12, curProgress_);
       }
       if (isSuccess_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isSuccess_);
+          .computeBoolSize(10, isSuccess_);
       }
       if (oDJLLLPLBHE_ != 0) {
         size += com.google.protobuf.CodedOutputStream

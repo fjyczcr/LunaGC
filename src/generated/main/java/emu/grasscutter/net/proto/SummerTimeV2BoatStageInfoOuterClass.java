@@ -91,22 +91,22 @@ public final class SummerTimeV2BoatStageInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 64: {
 
               bestScore_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 112: {
 
               openTime_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 32: {
 
               stageId_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 104: {
 
               isOpen_ = input.readBool();
               break;
@@ -143,7 +143,7 @@ public final class SummerTimeV2BoatStageInfoOuterClass {
               emu.grasscutter.net.proto.SummerTimeV2BoatStageInfoOuterClass.SummerTimeV2BoatStageInfo.class, emu.grasscutter.net.proto.SummerTimeV2BoatStageInfoOuterClass.SummerTimeV2BoatStageInfo.Builder.class);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 6;
+    public static final int IS_OPEN_FIELD_NUMBER = 13;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 11;</code>
@@ -154,7 +154,7 @@ public final class SummerTimeV2BoatStageInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 14;
+    public static final int STAGE_ID_FIELD_NUMBER = 4;
     private int stageId_;
     /**
      * <code>uint32 stage_id = 9;</code>
@@ -165,7 +165,7 @@ public final class SummerTimeV2BoatStageInfoOuterClass {
       return stageId_;
     }
 
-    public static final int BEST_SCORE_FIELD_NUMBER = 10;
+    public static final int BEST_SCORE_FIELD_NUMBER = 8;
     private int bestScore_;
     /**
      * <code>uint32 best_score = 3;</code>
@@ -176,7 +176,7 @@ public final class SummerTimeV2BoatStageInfoOuterClass {
       return bestScore_;
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 15;
+    public static final int OPEN_TIME_FIELD_NUMBER = 14;
     private int openTime_;
     /**
      * <code>uint32 open_time = 7;</code>
@@ -202,16 +202,16 @@ public final class SummerTimeV2BoatStageInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (bestScore_ != 0) {
-        output.writeUInt32(10, bestScore_);
+        output.writeUInt32(8, bestScore_);
       }
       if (openTime_ != 0) {
-        output.writeUInt32(15, openTime_);
+        output.writeUInt32(14, openTime_);
       }
       if (stageId_ != 0) {
-        output.writeUInt32(14, stageId_);
+        output.writeUInt32(4, stageId_);
       }
       if (isOpen_ != false) {
-        output.writeBool(6, isOpen_);
+        output.writeBool(13, isOpen_);
       }
       unknownFields.writeTo(output);
     }
@@ -224,19 +224,19 @@ public final class SummerTimeV2BoatStageInfoOuterClass {
       size = 0;
       if (bestScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, bestScore_);
+          .computeUInt32Size(8, bestScore_);
       }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, openTime_);
+          .computeUInt32Size(14, openTime_);
       }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, stageId_);
+          .computeUInt32Size(4, stageId_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isOpen_);
+          .computeBoolSize(13, isOpen_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

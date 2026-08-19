@@ -106,13 +106,13 @@ public final class EvtAvatarUpdateFocusNotifyOuterClass {
               entityId_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 24: {
               int rawValue = input.readEnum();
 
               forwardType_ = rawValue;
               break;
             }
-            case 26: {
+            case 122: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (focusForward_ != null) {
                 subBuilder = focusForward_.toBuilder();
@@ -168,7 +168,7 @@ public final class EvtAvatarUpdateFocusNotifyOuterClass {
       return entityId_;
     }
 
-    public static final int FOCUS_FORWARD_FIELD_NUMBER = 3;
+    public static final int FOCUS_FORWARD_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector focusForward_;
     /**
      * <code>.Vector focus_forward = 14;</code>
@@ -194,7 +194,7 @@ public final class EvtAvatarUpdateFocusNotifyOuterClass {
       return getFocusForward();
     }
 
-    public static final int FORWARD_TYPE_FIELD_NUMBER = 2;
+    public static final int FORWARD_TYPE_FIELD_NUMBER = 3;
     private int forwardType_;
     /**
      * <code>.ForwardType forward_type = 9;</code>
@@ -231,10 +231,10 @@ public final class EvtAvatarUpdateFocusNotifyOuterClass {
         output.writeUInt32(11, entityId_);
       }
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
-        output.writeEnum(2, forwardType_);
+        output.writeEnum(3, forwardType_);
       }
       if (focusForward_ != null) {
-        output.writeMessage(3, getFocusForward());
+        output.writeMessage(15, getFocusForward());
       }
       unknownFields.writeTo(output);
     }
@@ -251,11 +251,11 @@ public final class EvtAvatarUpdateFocusNotifyOuterClass {
       }
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, forwardType_);
+          .computeEnumSize(3, forwardType_);
       }
       if (focusForward_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getFocusForward());
+          .computeMessageSize(15, getFocusForward());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

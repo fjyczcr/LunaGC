@@ -118,7 +118,7 @@ public final class GetCompoundDataRspOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 16: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 unlockCompoundList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -126,7 +126,7 @@ public final class GetCompoundDataRspOuterClass {
               unlockCompoundList_.addInt(input.readUInt32());
               break;
             }
-            case 74: {
+            case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -202,7 +202,7 @@ public final class GetCompoundDataRspOuterClass {
       return retcode_;
     }
 
-    public static final int UNLOCKCOMPOUNDLIST_FIELD_NUMBER = 8;
+    public static final int UNLOCKCOMPOUNDLIST_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.IntList unlockCompoundList_;
     /**
      * <code>repeated uint32 unlockCompoundList = 9;</code>
@@ -286,7 +286,7 @@ public final class GetCompoundDataRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getUnlockCompoundListList().size() > 0) {
-        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(18);
         output.writeUInt32NoTag(unlockCompoundListMemoizedSerializedSize);
       }
       for (int i = 0; i < unlockCompoundList_.size(); i++) {

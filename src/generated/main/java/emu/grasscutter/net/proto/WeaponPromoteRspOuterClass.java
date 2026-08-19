@@ -92,22 +92,22 @@ public final class WeaponPromoteRspOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 112: {
 
               curPromoteLevel_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 32: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 80: {
+            case 48: {
 
               targetWeaponGuid_ = input.readUInt64();
               break;
             }
-            case 8: {
+            case 56: {
 
               oldPromoteLevel_ = input.readUInt32();
               break;
@@ -144,7 +144,7 @@ public final class WeaponPromoteRspOuterClass {
               emu.grasscutter.net.proto.WeaponPromoteRspOuterClass.WeaponPromoteRsp.class, emu.grasscutter.net.proto.WeaponPromoteRspOuterClass.WeaponPromoteRsp.Builder.class);
     }
 
-    public static final int CUR_PROMOTE_LEVEL_FIELD_NUMBER = 12;
+    public static final int CUR_PROMOTE_LEVEL_FIELD_NUMBER = 14;
     private int curPromoteLevel_;
     /**
      * <code>uint32 cur_promote_level = 4;</code>
@@ -155,7 +155,7 @@ public final class WeaponPromoteRspOuterClass {
       return curPromoteLevel_;
     }
 
-    public static final int OLD_PROMOTE_LEVEL_FIELD_NUMBER = 1;
+    public static final int OLD_PROMOTE_LEVEL_FIELD_NUMBER = 7;
     private int oldPromoteLevel_;
     /**
      * <code>uint32 old_promote_level = 14;</code>
@@ -166,7 +166,7 @@ public final class WeaponPromoteRspOuterClass {
       return oldPromoteLevel_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 15;
+    public static final int RETCODE_FIELD_NUMBER = 4;
     private int retcode_;
     /**
      * <code>int32 retcode = 6;</code>
@@ -177,7 +177,7 @@ public final class WeaponPromoteRspOuterClass {
       return retcode_;
     }
 
-    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 10;
+    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 6;
     private long targetWeaponGuid_;
     /**
      * <code>uint64 target_weapon_guid = 3;</code>
@@ -203,16 +203,16 @@ public final class WeaponPromoteRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (targetWeaponGuid_ != 0L) {
-        output.writeUInt64(10, targetWeaponGuid_);
+        output.writeUInt64(6, targetWeaponGuid_);
       }
       if (curPromoteLevel_ != 0) {
-        output.writeUInt32(12, curPromoteLevel_);
+        output.writeUInt32(14, curPromoteLevel_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(15, retcode_);
+        output.writeInt32(4, retcode_);
       }
       if (oldPromoteLevel_ != 0) {
-        output.writeUInt32(1, oldPromoteLevel_);
+        output.writeUInt32(7, oldPromoteLevel_);
       }
       unknownFields.writeTo(output);
     }
@@ -225,19 +225,19 @@ public final class WeaponPromoteRspOuterClass {
       size = 0;
       if (targetWeaponGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(10, targetWeaponGuid_);
+          .computeUInt64Size(6, targetWeaponGuid_);
       }
       if (curPromoteLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, curPromoteLevel_);
+          .computeUInt32Size(14, curPromoteLevel_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, retcode_);
+          .computeInt32Size(4, retcode_);
       }
       if (oldPromoteLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, oldPromoteLevel_);
+          .computeUInt32Size(7, oldPromoteLevel_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

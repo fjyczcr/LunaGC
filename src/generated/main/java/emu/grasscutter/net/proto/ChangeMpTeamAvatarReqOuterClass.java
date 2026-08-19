@@ -98,7 +98,7 @@ public final class ChangeMpTeamAvatarReqOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 48: {
+            case 32: {
 
               curAvatarGuid_ = input.readUInt64();
               break;
@@ -156,7 +156,7 @@ public final class ChangeMpTeamAvatarReqOuterClass {
     }
     private int avatarGuidListMemoizedSerializedSize = -1;
 
-    public static final int CUR_AVATAR_GUID_FIELD_NUMBER = 6;
+    public static final int CUR_AVATAR_GUID_FIELD_NUMBER = 4;
     private long curAvatarGuid_;
 
     @java.lang.Override
@@ -187,7 +187,7 @@ public final class ChangeMpTeamAvatarReqOuterClass {
         output.writeUInt64NoTag(avatarGuidList_.getLong(i));
       }
       if (curAvatarGuid_ != 0L) {
-        output.writeUInt64(6, curAvatarGuid_);
+        output.writeUInt64(4, curAvatarGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -214,7 +214,7 @@ public final class ChangeMpTeamAvatarReqOuterClass {
       }
       if (curAvatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, curAvatarGuid_);
+          .computeUInt64Size(4, curAvatarGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

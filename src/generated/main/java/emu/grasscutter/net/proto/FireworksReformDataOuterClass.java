@@ -99,7 +99,7 @@ public final class FireworksReformDataOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 104: {
 
               id_ = input.readUInt32();
               break;
@@ -188,7 +188,7 @@ public final class FireworksReformDataOuterClass {
       return reformParamList_.get(index);
     }
 
-    public static final int ID_FIELD_NUMBER = 6;
+    public static final int ID_FIELD_NUMBER = 13;
     private int id_;
     /**
      * <code>uint32 id = 4;</code>
@@ -214,7 +214,7 @@ public final class FireworksReformDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
-        output.writeUInt32(6, id_);
+        output.writeUInt32(13, id_);
       }
       for (int i = 0; i < reformParamList_.size(); i++) {
         output.writeMessage(1, reformParamList_.get(i));
@@ -230,7 +230,7 @@ public final class FireworksReformDataOuterClass {
       size = 0;
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, id_);
+          .computeUInt32Size(13, id_);
       }
       for (int i = 0; i < reformParamList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream

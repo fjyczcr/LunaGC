@@ -85,17 +85,17 @@ public final class IslandPartyStageDataOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 120: {
 
               stageId_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 88: {
 
               bestScore_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 112: {
 
               isOpen_ = input.readBool();
               break;
@@ -132,7 +132,7 @@ public final class IslandPartyStageDataOuterClass {
               emu.grasscutter.net.proto.IslandPartyStageDataOuterClass.IslandPartyStageData.class, emu.grasscutter.net.proto.IslandPartyStageDataOuterClass.IslandPartyStageData.Builder.class);
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 3;
+    public static final int STAGE_ID_FIELD_NUMBER = 15;
     private int stageId_;
     /**
      * <code>uint32 stage_id = 1;</code>
@@ -143,7 +143,7 @@ public final class IslandPartyStageDataOuterClass {
       return stageId_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 5;
+    public static final int IS_OPEN_FIELD_NUMBER = 14;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 11;</code>
@@ -154,7 +154,7 @@ public final class IslandPartyStageDataOuterClass {
       return isOpen_;
     }
 
-    public static final int BEST_SCORE_FIELD_NUMBER = 4;
+    public static final int BEST_SCORE_FIELD_NUMBER = 11;
     private int bestScore_;
     /**
      * <code>uint32 best_score = 5;</code>
@@ -180,13 +180,13 @@ public final class IslandPartyStageDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (stageId_ != 0) {
-        output.writeUInt32(3, stageId_);
+        output.writeUInt32(15, stageId_);
       }
       if (bestScore_ != 0) {
-        output.writeUInt32(4, bestScore_);
+        output.writeUInt32(11, bestScore_);
       }
       if (isOpen_ != false) {
-        output.writeBool(5, isOpen_);
+        output.writeBool(14, isOpen_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class IslandPartyStageDataOuterClass {
       size = 0;
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, stageId_);
+          .computeUInt32Size(15, stageId_);
       }
       if (bestScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, bestScore_);
+          .computeUInt32Size(11, bestScore_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isOpen_);
+          .computeBoolSize(14, isOpen_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

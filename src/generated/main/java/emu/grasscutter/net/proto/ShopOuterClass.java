@@ -134,7 +134,7 @@ public final class ShopOuterClass {
             case 0:
               done = true;
               break;
-            case 58: {
+            case 106: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 mcoinProductList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct>();
                 mutable_bitField0_ |= 0x00000002;
@@ -143,17 +143,17 @@ public final class ShopOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct.parser(), extensionRegistry));
               break;
             }
-            case 16: {
+            case 8: {
 
               nextRefreshTime_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 120: {
 
               shopType_ = input.readUInt32();
               break;
             }
-            case 66: {
+            case 90: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 concertProductList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct>();
                 mutable_bitField0_ |= 0x00000001;
@@ -171,12 +171,12 @@ public final class ShopOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.parser(), extensionRegistry));
               break;
             }
-            case 72: {
+            case 40: {
 
               cityReputationLevel_ = input.readUInt32();
               break;
             }
-            case 98: {
+            case 66: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 goodsList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods>();
                 mutable_bitField0_ |= 0x00000004;
@@ -185,7 +185,7 @@ public final class ShopOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods.parser(), extensionRegistry));
               break;
             }
-            case 112: {
+            case 80: {
 
               cityId_ = input.readUInt32();
               break;
@@ -239,7 +239,7 @@ public final class ShopOuterClass {
               emu.grasscutter.net.proto.ShopOuterClass.Shop.class, emu.grasscutter.net.proto.ShopOuterClass.Shop.Builder.class);
     }
 
-    public static final int CONCERT_PRODUCT_LIST_FIELD_NUMBER = 8;
+    public static final int CONCERT_PRODUCT_LIST_FIELD_NUMBER = 11;
     private java.util.List<emu.grasscutter.net.proto.ShopConcertProductOuterClass.ShopConcertProduct> concertProductList_;
 
     @java.lang.Override
@@ -269,7 +269,7 @@ public final class ShopOuterClass {
       return concertProductList_.get(index);
     }
 
-    public static final int MCOIN_PRODUCT_LIST_FIELD_NUMBER = 7;
+    public static final int MCOIN_PRODUCT_LIST_FIELD_NUMBER = 13;
     private java.util.List<emu.grasscutter.net.proto.ShopMcoinProductOuterClass.ShopMcoinProduct> mcoinProductList_;
 
     @java.lang.Override
@@ -299,7 +299,7 @@ public final class ShopOuterClass {
       return mcoinProductList_.get(index);
     }
 
-    public static final int GOODS_LIST_FIELD_NUMBER = 12;
+    public static final int GOODS_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.ShopGoodsOuterClass.ShopGoods> goodsList_;
 
     @java.lang.Override
@@ -359,7 +359,7 @@ public final class ShopOuterClass {
       return cardProductList_.get(index);
     }
 
-    public static final int CITY_ID_FIELD_NUMBER = 14;
+    public static final int CITY_ID_FIELD_NUMBER = 10;
     private int cityId_;
 
     @java.lang.Override
@@ -367,7 +367,7 @@ public final class ShopOuterClass {
       return cityId_;
     }
 
-    public static final int NEXT_REFRESH_TIME_FIELD_NUMBER = 2;
+    public static final int NEXT_REFRESH_TIME_FIELD_NUMBER = 1;
     private int nextRefreshTime_;
 
     @java.lang.Override
@@ -375,7 +375,7 @@ public final class ShopOuterClass {
       return nextRefreshTime_;
     }
 
-    public static final int CITY_REPUTATION_LEVEL_FIELD_NUMBER = 9;
+    public static final int CITY_REPUTATION_LEVEL_FIELD_NUMBER = 5;
     private int cityReputationLevel_;
 
     @java.lang.Override
@@ -383,7 +383,7 @@ public final class ShopOuterClass {
       return cityReputationLevel_;
     }
 
-    public static final int SHOP_TYPE_FIELD_NUMBER = 5;
+    public static final int SHOP_TYPE_FIELD_NUMBER = 15;
     private int shopType_;
 
     @java.lang.Override
@@ -417,28 +417,28 @@ public final class ShopOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < mcoinProductList_.size(); i++) {
-        output.writeMessage(7, mcoinProductList_.get(i));
+        output.writeMessage(13, mcoinProductList_.get(i));
       }
       if (nextRefreshTime_ != 0) {
-        output.writeUInt32(2, nextRefreshTime_);
+        output.writeUInt32(1, nextRefreshTime_);
       }
       if (shopType_ != 0) {
-        output.writeUInt32(5, shopType_);
+        output.writeUInt32(15, shopType_);
       }
       for (int i = 0; i < concertProductList_.size(); i++) {
-        output.writeMessage(8, concertProductList_.get(i));
+        output.writeMessage(11, concertProductList_.get(i));
       }
       for (int i = 0; i < cardProductList_.size(); i++) {
         output.writeMessage(4, cardProductList_.get(i));
       }
       if (cityReputationLevel_ != 0) {
-        output.writeUInt32(9, cityReputationLevel_);
+        output.writeUInt32(5, cityReputationLevel_);
       }
       for (int i = 0; i < goodsList_.size(); i++) {
-        output.writeMessage(12, goodsList_.get(i));
+        output.writeMessage(8, goodsList_.get(i));
       }
       if (cityId_ != 0) {
-        output.writeUInt32(14, cityId_);
+        output.writeUInt32(10, cityId_);
       }
       if (hOGDKCCKGAP_ != 0) {
         output.writeUInt32(1201, hOGDKCCKGAP_);
@@ -454,19 +454,19 @@ public final class ShopOuterClass {
       size = 0;
       for (int i = 0; i < mcoinProductList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, mcoinProductList_.get(i));
+          .computeMessageSize(13, mcoinProductList_.get(i));
       }
       if (nextRefreshTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, nextRefreshTime_);
+          .computeUInt32Size(1, nextRefreshTime_);
       }
       if (shopType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, shopType_);
+          .computeUInt32Size(15, shopType_);
       }
       for (int i = 0; i < concertProductList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, concertProductList_.get(i));
+          .computeMessageSize(11, concertProductList_.get(i));
       }
       for (int i = 0; i < cardProductList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -474,15 +474,15 @@ public final class ShopOuterClass {
       }
       if (cityReputationLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, cityReputationLevel_);
+          .computeUInt32Size(5, cityReputationLevel_);
       }
       for (int i = 0; i < goodsList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, goodsList_.get(i));
+          .computeMessageSize(8, goodsList_.get(i));
       }
       if (cityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, cityId_);
+          .computeUInt32Size(10, cityId_);
       }
       if (hOGDKCCKGAP_ != 0) {
         size += com.google.protobuf.CodedOutputStream

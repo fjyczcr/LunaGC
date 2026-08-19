@@ -109,7 +109,7 @@ public final class EffigyDailyInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 104: {
 
               beginTime_ = input.readUInt32();
               break;
@@ -119,27 +119,27 @@ public final class EffigyDailyInfoOuterClass {
               kDLLALBPPLE_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 128000: {
 
               bOJLBFLOAPN_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 32: {
 
               challengeId_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 48: {
 
               dayIndex_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 120: {
 
               isFirstPassRewardTaken_ = input.readBool();
               break;
             }
-            case 120: {
+            case 16: {
 
               challengeMaxScore_ = input.readUInt32();
               break;
@@ -176,7 +176,7 @@ public final class EffigyDailyInfoOuterClass {
               emu.grasscutter.net.proto.EffigyDailyInfoOuterClass.EffigyDailyInfo.class, emu.grasscutter.net.proto.EffigyDailyInfoOuterClass.EffigyDailyInfo.Builder.class);
     }
 
-    public static final int BOJLBFLOAPN_FIELD_NUMBER = 6;
+    public static final int BOJLBFLOAPN_FIELD_NUMBER = 16000;
     private int bOJLBFLOAPN_;
     /**
      * <code>uint32 BOJLBFLOAPN = 6;</code>
@@ -187,7 +187,7 @@ public final class EffigyDailyInfoOuterClass {
       return bOJLBFLOAPN_;
     }
 
-    public static final int CHALLENGE_ID_FIELD_NUMBER = 8;
+    public static final int CHALLENGE_ID_FIELD_NUMBER = 4;
     private int challengeId_;
     /**
      * <code>uint32 challenge_id = 8;</code>
@@ -209,7 +209,7 @@ public final class EffigyDailyInfoOuterClass {
       return kDLLALBPPLE_;
     }
 
-    public static final int CHALLENGE_MAX_SCORE_FIELD_NUMBER = 15;
+    public static final int CHALLENGE_MAX_SCORE_FIELD_NUMBER = 2;
     private int challengeMaxScore_;
     /**
      * <code>uint32 challenge_max_score = 15;</code>
@@ -220,7 +220,7 @@ public final class EffigyDailyInfoOuterClass {
       return challengeMaxScore_;
     }
 
-    public static final int BEGIN_TIME_FIELD_NUMBER = 10;
+    public static final int BEGIN_TIME_FIELD_NUMBER = 13;
     private int beginTime_;
     /**
      * <code>uint32 begin_time = 1;</code>
@@ -231,7 +231,7 @@ public final class EffigyDailyInfoOuterClass {
       return beginTime_;
     }
 
-    public static final int IS_FIRST_PASS_REWARD_TAKEN_FIELD_NUMBER = 13;
+    public static final int IS_FIRST_PASS_REWARD_TAKEN_FIELD_NUMBER = 15;
     private boolean isFirstPassRewardTaken_;
     /**
      * <code>bool is_first_pass_reward_taken = 11;</code>
@@ -242,7 +242,7 @@ public final class EffigyDailyInfoOuterClass {
       return isFirstPassRewardTaken_;
     }
 
-    public static final int DAY_INDEX_FIELD_NUMBER = 2;
+    public static final int DAY_INDEX_FIELD_NUMBER = 6;
     private int dayIndex_;
     /**
      * <code>uint32 day_index = 9;</code>
@@ -268,25 +268,25 @@ public final class EffigyDailyInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (beginTime_ != 0) {
-        output.writeUInt32(10, beginTime_);
+        output.writeUInt32(13, beginTime_);
       }
       if (kDLLALBPPLE_ != 0) {
         output.writeUInt32(5, kDLLALBPPLE_);
       }
       if (bOJLBFLOAPN_ != 0) {
-        output.writeUInt32(6, bOJLBFLOAPN_);
+        output.writeUInt32(16000, bOJLBFLOAPN_);
       }
       if (challengeId_ != 0) {
-        output.writeUInt32(8, challengeId_);
+        output.writeUInt32(4, challengeId_);
       }
       if (dayIndex_ != 0) {
-        output.writeUInt32(2, dayIndex_);
+        output.writeUInt32(6, dayIndex_);
       }
       if (isFirstPassRewardTaken_ != false) {
-        output.writeBool(13, isFirstPassRewardTaken_);
+        output.writeBool(15, isFirstPassRewardTaken_);
       }
       if (challengeMaxScore_ != 0) {
-        output.writeUInt32(15, challengeMaxScore_);
+        output.writeUInt32(2, challengeMaxScore_);
       }
       unknownFields.writeTo(output);
     }
@@ -299,7 +299,7 @@ public final class EffigyDailyInfoOuterClass {
       size = 0;
       if (beginTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, beginTime_);
+          .computeUInt32Size(13, beginTime_);
       }
       if (kDLLALBPPLE_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -307,23 +307,23 @@ public final class EffigyDailyInfoOuterClass {
       }
       if (bOJLBFLOAPN_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, bOJLBFLOAPN_);
+          .computeUInt32Size(16000, bOJLBFLOAPN_);
       }
       if (challengeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, challengeId_);
+          .computeUInt32Size(4, challengeId_);
       }
       if (dayIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, dayIndex_);
+          .computeUInt32Size(6, dayIndex_);
       }
       if (isFirstPassRewardTaken_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isFirstPassRewardTaken_);
+          .computeBoolSize(15, isFirstPassRewardTaken_);
       }
       if (challengeMaxScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, challengeMaxScore_);
+          .computeUInt32Size(2, challengeMaxScore_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

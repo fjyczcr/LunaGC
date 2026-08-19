@@ -85,17 +85,17 @@ public final class DuelHeartLevelDifficultyInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 64: {
 
               difficulty_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 88: {
 
               isOpen_ = input.readBool();
               break;
             }
-            case 48: {
+            case 56: {
 
               costTime_ = input.readUInt32();
               break;
@@ -132,7 +132,7 @@ public final class DuelHeartLevelDifficultyInfoOuterClass {
               emu.grasscutter.net.proto.DuelHeartLevelDifficultyInfoOuterClass.DuelHeartLevelDifficultyInfo.class, emu.grasscutter.net.proto.DuelHeartLevelDifficultyInfoOuterClass.DuelHeartLevelDifficultyInfo.Builder.class);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 2;
+    public static final int IS_OPEN_FIELD_NUMBER = 11;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 4;</code>
@@ -154,7 +154,7 @@ public final class DuelHeartLevelDifficultyInfoOuterClass {
       return difficulty_;
     }
 
-    public static final int COST_TIME_FIELD_NUMBER = 6;
+    public static final int COST_TIME_FIELD_NUMBER = 7;
     private int costTime_;
     /**
      * <code>uint32 cost_time = 14;</code>
@@ -180,13 +180,13 @@ public final class DuelHeartLevelDifficultyInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (difficulty_ != 0) {
-        output.writeUInt32(1, difficulty_);
+        output.writeUInt32(8, difficulty_);
       }
       if (isOpen_ != false) {
-        output.writeBool(2, isOpen_);
+        output.writeBool(11, isOpen_);
       }
       if (costTime_ != 0) {
-        output.writeUInt32(6, costTime_);
+        output.writeUInt32(7, costTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class DuelHeartLevelDifficultyInfoOuterClass {
       size = 0;
       if (difficulty_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, difficulty_);
+          .computeUInt32Size(8, difficulty_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isOpen_);
+          .computeBoolSize(11, isOpen_);
       }
       if (costTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, costTime_);
+          .computeUInt32Size(7, costTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

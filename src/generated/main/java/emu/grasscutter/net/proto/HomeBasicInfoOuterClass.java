@@ -131,43 +131,43 @@ public final class HomeBasicInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 66: {
+            case 58: {
               java.lang.String s = input.readStringRequireUtf8();
 
               ownerNickName_ = s;
               break;
             }
-            case 80: {
+            case 16: {
 
               curModuleId_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 64: {
 
               isInEditMode_ = input.readBool();
               break;
             }
-            case 120: {
+            case 112: {
 
               exp_ = input.readUInt64();
               break;
             }
-            case 48: {
+            case 88: {
 
               level_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 80: {
 
               curRoomSceneId_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 72: {
 
               homeOwnerUid_ = input.readUInt32();
               break;
             }
-            case 114: {
+            case 106: {
               emu.grasscutter.net.proto.HomeLimitedShopInfoOuterClass.HomeLimitedShopInfo.Builder subBuilder = null;
               if (limitedShopInfo_ != null) {
                 subBuilder = limitedShopInfo_.toBuilder();
@@ -212,7 +212,7 @@ public final class HomeBasicInfoOuterClass {
               emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.class, emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfo.Builder.class);
     }
 
-    public static final int LEVEL_FIELD_NUMBER = 6;
+    public static final int LEVEL_FIELD_NUMBER = 11;
     private int level_;
     /**
      * <code>uint32 level = 11;</code>
@@ -223,7 +223,7 @@ public final class HomeBasicInfoOuterClass {
       return level_;
     }
 
-    public static final int OWNER_NICK_NAME_FIELD_NUMBER = 8;
+    public static final int OWNER_NICK_NAME_FIELD_NUMBER = 7;
     private volatile java.lang.Object ownerNickName_;
     /**
      * <code>string owner_nick_name = 5;</code>
@@ -261,7 +261,7 @@ public final class HomeBasicInfoOuterClass {
       }
     }
 
-    public static final int IS_IN_EDIT_MODE_FIELD_NUMBER = 4;
+    public static final int IS_IN_EDIT_MODE_FIELD_NUMBER = 8;
     private boolean isInEditMode_;
     /**
      * <code>bool is_in_edit_mode = 9;</code>
@@ -272,7 +272,7 @@ public final class HomeBasicInfoOuterClass {
       return isInEditMode_;
     }
 
-    public static final int CUR_ROOM_SCENE_ID_FIELD_NUMBER = 3;
+    public static final int CUR_ROOM_SCENE_ID_FIELD_NUMBER = 10;
     private int curRoomSceneId_;
     /**
      * <code>uint32 cur_room_scene_id = 13;</code>
@@ -283,7 +283,7 @@ public final class HomeBasicInfoOuterClass {
       return curRoomSceneId_;
     }
 
-    public static final int CUR_MODULE_ID_FIELD_NUMBER = 10;
+    public static final int CUR_MODULE_ID_FIELD_NUMBER = 2;
     private int curModuleId_;
     /**
      * <code>uint32 cur_module_id = 8;</code>
@@ -294,7 +294,7 @@ public final class HomeBasicInfoOuterClass {
       return curModuleId_;
     }
 
-    public static final int EXP_FIELD_NUMBER = 15;
+    public static final int EXP_FIELD_NUMBER = 14;
     private long exp_;
     /**
      * <code>uint64 exp = 10;</code>
@@ -305,7 +305,7 @@ public final class HomeBasicInfoOuterClass {
       return exp_;
     }
 
-    public static final int HOME_OWNER_UID_FIELD_NUMBER = 11;
+    public static final int HOME_OWNER_UID_FIELD_NUMBER = 9;
     private int homeOwnerUid_;
     /**
      * <code>uint32 home_owner_uid = 14;</code>
@@ -316,7 +316,7 @@ public final class HomeBasicInfoOuterClass {
       return homeOwnerUid_;
     }
 
-    public static final int LIMITED_SHOP_INFO_FIELD_NUMBER = 14;
+    public static final int LIMITED_SHOP_INFO_FIELD_NUMBER = 13;
     private emu.grasscutter.net.proto.HomeLimitedShopInfoOuterClass.HomeLimitedShopInfo limitedShopInfo_;
     /**
      * <code>.HomeLimitedShopInfo limited_shop_info = 15;</code>
@@ -357,28 +357,28 @@ public final class HomeBasicInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerNickName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, ownerNickName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, ownerNickName_);
       }
       if (curModuleId_ != 0) {
-        output.writeUInt32(10, curModuleId_);
+        output.writeUInt32(2, curModuleId_);
       }
       if (isInEditMode_ != false) {
-        output.writeBool(4, isInEditMode_);
+        output.writeBool(8, isInEditMode_);
       }
       if (exp_ != 0L) {
-        output.writeUInt64(15, exp_);
+        output.writeUInt64(14, exp_);
       }
       if (level_ != 0) {
-        output.writeUInt32(6, level_);
+        output.writeUInt32(11, level_);
       }
       if (curRoomSceneId_ != 0) {
-        output.writeUInt32(3, curRoomSceneId_);
+        output.writeUInt32(10, curRoomSceneId_);
       }
       if (homeOwnerUid_ != 0) {
-        output.writeUInt32(11, homeOwnerUid_);
+        output.writeUInt32(9, homeOwnerUid_);
       }
       if (limitedShopInfo_ != null) {
-        output.writeMessage(14, getLimitedShopInfo());
+        output.writeMessage(13, getLimitedShopInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -390,35 +390,35 @@ public final class HomeBasicInfoOuterClass {
 
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerNickName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, ownerNickName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, ownerNickName_);
       }
       if (curModuleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, curModuleId_);
+          .computeUInt32Size(2, curModuleId_);
       }
       if (isInEditMode_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isInEditMode_);
+          .computeBoolSize(8, isInEditMode_);
       }
       if (exp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(15, exp_);
+          .computeUInt64Size(14, exp_);
       }
       if (level_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, level_);
+          .computeUInt32Size(11, level_);
       }
       if (curRoomSceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, curRoomSceneId_);
+          .computeUInt32Size(10, curRoomSceneId_);
       }
       if (homeOwnerUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, homeOwnerUid_);
+          .computeUInt32Size(9, homeOwnerUid_);
       }
       if (limitedShopInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getLimitedShopInfo());
+          .computeMessageSize(13, getLimitedShopInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

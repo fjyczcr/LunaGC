@@ -87,12 +87,12 @@ public final class PostEnterSceneRspOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 72: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 24: {
+            case 96: {
 
               enterSceneToken_ = input.readUInt32();
               break;
@@ -129,7 +129,7 @@ public final class PostEnterSceneRspOuterClass {
               emu.grasscutter.net.proto.PostEnterSceneRspOuterClass.PostEnterSceneRsp.class, emu.grasscutter.net.proto.PostEnterSceneRspOuterClass.PostEnterSceneRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 6;
+    public static final int RETCODE_FIELD_NUMBER = 9;
     private int retcode_;
     /**
      * <pre>
@@ -144,7 +144,7 @@ public final class PostEnterSceneRspOuterClass {
       return retcode_;
     }
 
-    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 3;
+    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 12;
     private int enterSceneToken_;
     /**
      * <pre>
@@ -174,10 +174,10 @@ public final class PostEnterSceneRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (enterSceneToken_ != 0) {
-        output.writeUInt32(3, enterSceneToken_);
+        output.writeUInt32(12, enterSceneToken_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(6, retcode_);
+        output.writeInt32(9, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -190,11 +190,11 @@ public final class PostEnterSceneRspOuterClass {
       size = 0;
       if (enterSceneToken_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, enterSceneToken_);
+          .computeUInt32Size(12, enterSceneToken_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, retcode_);
+          .computeInt32Size(9, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

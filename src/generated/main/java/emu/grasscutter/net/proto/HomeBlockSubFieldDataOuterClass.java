@@ -97,7 +97,7 @@ public final class HomeBlockSubFieldDataOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
+            case 10: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (rot_ != null) {
                 subBuilder = rot_.toBuilder();
@@ -110,7 +110,7 @@ public final class HomeBlockSubFieldDataOuterClass {
 
               break;
             }
-            case 74: {
+            case 122: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (pos_ != null) {
                 subBuilder = pos_.toBuilder();
@@ -155,7 +155,7 @@ public final class HomeBlockSubFieldDataOuterClass {
               emu.grasscutter.net.proto.HomeBlockSubFieldDataOuterClass.HomeBlockSubFieldData.class, emu.grasscutter.net.proto.HomeBlockSubFieldDataOuterClass.HomeBlockSubFieldData.Builder.class);
     }
 
-    public static final int ROT_FIELD_NUMBER = 2;
+    public static final int ROT_FIELD_NUMBER = 1;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
     /**
      * <code>.Vector rot = 2;</code>
@@ -181,7 +181,7 @@ public final class HomeBlockSubFieldDataOuterClass {
       return getRot();
     }
 
-    public static final int POS_FIELD_NUMBER = 9;
+    public static final int POS_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
      * <code>.Vector pos = 8;</code>
@@ -222,10 +222,10 @@ public final class HomeBlockSubFieldDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (rot_ != null) {
-        output.writeMessage(2, getRot());
+        output.writeMessage(1, getRot());
       }
       if (pos_ != null) {
-        output.writeMessage(9, getPos());
+        output.writeMessage(15, getPos());
       }
       unknownFields.writeTo(output);
     }
@@ -238,11 +238,11 @@ public final class HomeBlockSubFieldDataOuterClass {
       size = 0;
       if (rot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getRot());
+          .computeMessageSize(1, getRot());
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getPos());
+          .computeMessageSize(15, getPos());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -278,7 +278,7 @@ public final class TowerAllDataRspOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 32: {
 
               retcode_ = input.readInt32();
               break;
@@ -288,7 +288,7 @@ public final class TowerAllDataRspOuterClass {
               cMPBNABBONP_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 8: {
 
               towerScheduleId_ = input.readUInt32();
               break;
@@ -306,17 +306,17 @@ public final class TowerAllDataRspOuterClass {
                   aCGKLDIPIBD__.getKey(), aCGKLDIPIBD__.getValue());
               break;
             }
-            case 72: {
+            case 64: {
 
               isFinishedEntranceFloor_ = input.readBool();
               break;
             }
-            case 32: {
+            case 24: {
 
               nextScheduleChangeTime_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 80: {
 
               isFirstInteract_ = input.readBool();
               break;
@@ -339,7 +339,7 @@ public final class TowerAllDataRspOuterClass {
               mMLCHIKJNBP_ = input.readUInt32();
               break;
             }
-            case 90: {
+            case 122: {
               emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder subBuilder = null;
               if (monthlyBrief_ != null) {
                 subBuilder = monthlyBrief_.toBuilder();
@@ -357,7 +357,7 @@ public final class TowerAllDataRspOuterClass {
               cNHABFOCHCE_ = input.readUInt32();
               break;
             }
-            case 114: {
+            case 106: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 towerFloorRecordList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord>();
                 mutable_bitField0_ |= 0x00000001;
@@ -371,7 +371,7 @@ public final class TowerAllDataRspOuterClass {
               dAMFIAIIDBC_ = input.readUInt32();
               break;
             }
-            case 8122: {
+            case 15442: {
               emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief.Builder subBuilder = null;
               if (lastScheduleMonthlyBrief_ != null) {
                 subBuilder = lastScheduleMonthlyBrief_.toBuilder();
@@ -389,7 +389,7 @@ public final class TowerAllDataRspOuterClass {
               jPOGDCOIDHD_ = input.readUInt32();
               break;
             }
-            case 2512: {
+            case 5280: {
               int rawValue = input.readEnum();
 
               towerSkipFloorState_ = rawValue;
@@ -457,7 +457,7 @@ public final class TowerAllDataRspOuterClass {
               emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.class, emu.grasscutter.net.proto.TowerAllDataRspOuterClass.TowerAllDataRsp.Builder.class);
     }
 
-    public static final int TOWER_FLOOR_RECORD_LIST_FIELD_NUMBER = 14;
+    public static final int TOWER_FLOOR_RECORD_LIST_FIELD_NUMBER = 13;
     private java.util.List<emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord> towerFloorRecordList_;
     /**
      * <code>repeated .TowerFloorRecord tower_floor_record_list = 15;</code>
@@ -497,7 +497,7 @@ public final class TowerAllDataRspOuterClass {
       return towerFloorRecordList_.get(index);
     }
 
-    public static final int LAST_SCHEDULE_MONTHLY_BRIEF_FIELD_NUMBER = 1015;
+    public static final int LAST_SCHEDULE_MONTHLY_BRIEF_FIELD_NUMBER = 1930;
     private emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief lastScheduleMonthlyBrief_;
     /**
      * <code>.TowerMonthlyBrief last_schedule_monthly_brief = 320;</code>
@@ -711,7 +711,7 @@ public final class TowerAllDataRspOuterClass {
       return map.get(key);
     }
 
-    public static final int MONTHLY_BRIEF_FIELD_NUMBER = 11;
+    public static final int MONTHLY_BRIEF_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.TowerMonthlyBriefOuterClass.TowerMonthlyBrief monthlyBrief_;
     /**
      * <code>.TowerMonthlyBrief monthly_brief = 13;</code>
@@ -737,7 +737,7 @@ public final class TowerAllDataRspOuterClass {
       return getMonthlyBrief();
     }
 
-    public static final int TOWER_SKIP_FLOOR_STATE_FIELD_NUMBER = 314;
+    public static final int TOWER_SKIP_FLOOR_STATE_FIELD_NUMBER = 660;
     private int towerSkipFloorState_;
     /**
      * <code>.TowerSkipFloorState tower_skip_floor_state = 1619;</code>
@@ -778,7 +778,7 @@ public final class TowerAllDataRspOuterClass {
       return cMPBNABBONP_;
     }
 
-    public static final int IS_FINISHED_ENTRANCE_FLOOR_FIELD_NUMBER = 9;
+    public static final int IS_FINISHED_ENTRANCE_FLOOR_FIELD_NUMBER = 8;
     private boolean isFinishedEntranceFloor_;
     /**
      * <code>bool is_finished_entrance_floor = 7;</code>
@@ -789,7 +789,7 @@ public final class TowerAllDataRspOuterClass {
       return isFinishedEntranceFloor_;
     }
 
-    public static final int IS_FIRST_INTERACT_FIELD_NUMBER = 8;
+    public static final int IS_FIRST_INTERACT_FIELD_NUMBER = 10;
     private boolean isFirstInteract_;
     /**
      * <code>bool is_first_interact = 9;</code>
@@ -800,7 +800,7 @@ public final class TowerAllDataRspOuterClass {
       return isFirstInteract_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
+    public static final int RETCODE_FIELD_NUMBER = 4;
     private int retcode_;
     /**
      * <code>int32 retcode = 1;</code>
@@ -811,7 +811,7 @@ public final class TowerAllDataRspOuterClass {
       return retcode_;
     }
 
-    public static final int NEXT_SCHEDULE_CHANGE_TIME_FIELD_NUMBER = 4;
+    public static final int NEXT_SCHEDULE_CHANGE_TIME_FIELD_NUMBER = 3;
     private int nextScheduleChangeTime_;
     /**
      * <code>uint32 next_schedule_change_time = 8;</code>
@@ -844,7 +844,7 @@ public final class TowerAllDataRspOuterClass {
       return jPOGDCOIDHD_;
     }
 
-    public static final int TOWER_SCHEDULE_ID_FIELD_NUMBER = 2;
+    public static final int TOWER_SCHEDULE_ID_FIELD_NUMBER = 1;
     private int towerScheduleId_;
     /**
      * <code>uint32 tower_schedule_id = 4;</code>
@@ -881,13 +881,13 @@ public final class TowerAllDataRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
+        output.writeInt32(4, retcode_);
       }
       if (cMPBNABBONP_ != 0) {
         output.writeUInt32(16001, cMPBNABBONP_);
       }
       if (towerScheduleId_ != 0) {
-        output.writeUInt32(2, towerScheduleId_);
+        output.writeUInt32(1, towerScheduleId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
@@ -896,13 +896,13 @@ public final class TowerAllDataRspOuterClass {
           ACGKLDIPIBDDefaultEntryHolder.defaultEntry,
           6);
       if (isFinishedEntranceFloor_ != false) {
-        output.writeBool(9, isFinishedEntranceFloor_);
+        output.writeBool(8, isFinishedEntranceFloor_);
       }
       if (nextScheduleChangeTime_ != 0) {
-        output.writeUInt32(4, nextScheduleChangeTime_);
+        output.writeUInt32(3, nextScheduleChangeTime_);
       }
       if (isFirstInteract_ != false) {
-        output.writeBool(8, isFirstInteract_);
+        output.writeBool(10, isFirstInteract_);
       }
       if (aPNIJHFBPJJ_ != null) {
         output.writeMessage(16000, getAPNIJHFBPJJ());
@@ -911,25 +911,25 @@ public final class TowerAllDataRspOuterClass {
         output.writeUInt32(12, mMLCHIKJNBP_);
       }
       if (monthlyBrief_ != null) {
-        output.writeMessage(11, getMonthlyBrief());
+        output.writeMessage(15, getMonthlyBrief());
       }
       if (cNHABFOCHCE_ != 0) {
         output.writeUInt32(16002, cNHABFOCHCE_);
       }
       for (int i = 0; i < towerFloorRecordList_.size(); i++) {
-        output.writeMessage(14, towerFloorRecordList_.get(i));
+        output.writeMessage(13, towerFloorRecordList_.get(i));
       }
       if (dAMFIAIIDBC_ != 0) {
         output.writeUInt32(16, dAMFIAIIDBC_);
       }
       if (lastScheduleMonthlyBrief_ != null) {
-        output.writeMessage(1015, getLastScheduleMonthlyBrief());
+        output.writeMessage(1930, getLastScheduleMonthlyBrief());
       }
       if (jPOGDCOIDHD_ != 0) {
         output.writeUInt32(1089, jPOGDCOIDHD_);
       }
       if (towerSkipFloorState_ != emu.grasscutter.net.proto.TowerSkipFloorStateOuterClass.TowerSkipFloorState.TowerSkipFloorState_TOWER_SKIP_FLOOR_STATE_NONE.getNumber()) {
-        output.writeEnum(314, towerSkipFloorState_);
+        output.writeEnum(660, towerSkipFloorState_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
@@ -948,7 +948,7 @@ public final class TowerAllDataRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
+          .computeInt32Size(4, retcode_);
       }
       if (cMPBNABBONP_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -956,7 +956,7 @@ public final class TowerAllDataRspOuterClass {
       }
       if (towerScheduleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, towerScheduleId_);
+          .computeUInt32Size(1, towerScheduleId_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
            : internalGetACGKLDIPIBD().getMap().entrySet()) {
@@ -970,15 +970,15 @@ public final class TowerAllDataRspOuterClass {
       }
       if (isFinishedEntranceFloor_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isFinishedEntranceFloor_);
+          .computeBoolSize(8, isFinishedEntranceFloor_);
       }
       if (nextScheduleChangeTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, nextScheduleChangeTime_);
+          .computeUInt32Size(3, nextScheduleChangeTime_);
       }
       if (isFirstInteract_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, isFirstInteract_);
+          .computeBoolSize(10, isFirstInteract_);
       }
       if (aPNIJHFBPJJ_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -990,7 +990,7 @@ public final class TowerAllDataRspOuterClass {
       }
       if (monthlyBrief_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getMonthlyBrief());
+          .computeMessageSize(15, getMonthlyBrief());
       }
       if (cNHABFOCHCE_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -998,7 +998,7 @@ public final class TowerAllDataRspOuterClass {
       }
       for (int i = 0; i < towerFloorRecordList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, towerFloorRecordList_.get(i));
+          .computeMessageSize(13, towerFloorRecordList_.get(i));
       }
       if (dAMFIAIIDBC_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1006,7 +1006,7 @@ public final class TowerAllDataRspOuterClass {
       }
       if (lastScheduleMonthlyBrief_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1015, getLastScheduleMonthlyBrief());
+          .computeMessageSize(1930, getLastScheduleMonthlyBrief());
       }
       if (jPOGDCOIDHD_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1014,7 +1014,7 @@ public final class TowerAllDataRspOuterClass {
       }
       if (towerSkipFloorState_ != emu.grasscutter.net.proto.TowerSkipFloorStateOuterClass.TowerSkipFloorState.TowerSkipFloorState_TOWER_SKIP_FLOOR_STATE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(314, towerSkipFloorState_);
+          .computeEnumSize(660, towerSkipFloorState_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
            : internalGetHMPEGBNAENL().getMap().entrySet()) {

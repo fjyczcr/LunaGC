@@ -111,7 +111,7 @@ public final class FindHilichurlDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
+            case 128002: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 fMCBBDAOAID_ = new java.util.ArrayList<emu.grasscutter.net.proto.KDLAPAGEBBJOuterClass.KDLAPAGEBBJ>();
                 mutable_bitField0_ |= 0x00000001;
@@ -120,17 +120,17 @@ public final class FindHilichurlDetailInfoOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.KDLAPAGEBBJOuterClass.KDLAPAGEBBJ.parser(), extensionRegistry));
               break;
             }
-            case 64: {
+            case 16: {
 
               isContentClosed_ = input.readBool();
               break;
             }
-            case 72: {
+            case 112: {
 
               contentCloseTime_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 128008: {
 
               fCFICEIPBKH_ = input.readUInt32();
               break;
@@ -180,7 +180,7 @@ public final class FindHilichurlDetailInfoOuterClass {
               emu.grasscutter.net.proto.FindHilichurlDetailInfoOuterClass.FindHilichurlDetailInfo.class, emu.grasscutter.net.proto.FindHilichurlDetailInfoOuterClass.FindHilichurlDetailInfo.Builder.class);
     }
 
-    public static final int FMCBBDAOAID_FIELD_NUMBER = 2;
+    public static final int FMCBBDAOAID_FIELD_NUMBER = 16000;
     private java.util.List<emu.grasscutter.net.proto.KDLAPAGEBBJOuterClass.KDLAPAGEBBJ> fMCBBDAOAID_;
     /**
      * <code>repeated .KDLAPAGEBBJ FMCBBDAOAID = 2;</code>
@@ -220,7 +220,7 @@ public final class FindHilichurlDetailInfoOuterClass {
       return fMCBBDAOAID_.get(index);
     }
 
-    public static final int FCFICEIPBKH_FIELD_NUMBER = 14;
+    public static final int FCFICEIPBKH_FIELD_NUMBER = 16001;
     private int fCFICEIPBKH_;
     /**
      * <code>uint32 FCFICEIPBKH = 14;</code>
@@ -231,7 +231,7 @@ public final class FindHilichurlDetailInfoOuterClass {
       return fCFICEIPBKH_;
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 8;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 2;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -261,7 +261,7 @@ public final class FindHilichurlDetailInfoOuterClass {
       return fIPBFDJDGBN_;
     }
 
-    public static final int CONTENT_CLOSE_TIME_FIELD_NUMBER = 9;
+    public static final int CONTENT_CLOSE_TIME_FIELD_NUMBER = 14;
     private int contentCloseTime_;
 
     @java.lang.Override
@@ -284,16 +284,16 @@ public final class FindHilichurlDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < fMCBBDAOAID_.size(); i++) {
-        output.writeMessage(2, fMCBBDAOAID_.get(i));
+        output.writeMessage(16000, fMCBBDAOAID_.get(i));
       }
       if (isContentClosed_ != false) {
-        output.writeBool(8, isContentClosed_);
+        output.writeBool(2, isContentClosed_);
       }
       if (contentCloseTime_ != 0) {
-        output.writeUInt32(9, contentCloseTime_);
+        output.writeUInt32(14, contentCloseTime_);
       }
       if (fCFICEIPBKH_ != 0) {
-        output.writeUInt32(14, fCFICEIPBKH_);
+        output.writeUInt32(16001, fCFICEIPBKH_);
       }
       if (fIPBFDJDGBN_ != 0) {
         output.writeUInt32(15, fIPBFDJDGBN_);
@@ -312,19 +312,19 @@ public final class FindHilichurlDetailInfoOuterClass {
       size = 0;
       for (int i = 0; i < fMCBBDAOAID_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, fMCBBDAOAID_.get(i));
+          .computeMessageSize(16000, fMCBBDAOAID_.get(i));
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, isContentClosed_);
+          .computeBoolSize(2, isContentClosed_);
       }
       if (contentCloseTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, contentCloseTime_);
+          .computeUInt32Size(14, contentCloseTime_);
       }
       if (fCFICEIPBKH_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, fCFICEIPBKH_);
+          .computeUInt32Size(16001, fCFICEIPBKH_);
       }
       if (fIPBFDJDGBN_ != 0) {
         size += com.google.protobuf.CodedOutputStream

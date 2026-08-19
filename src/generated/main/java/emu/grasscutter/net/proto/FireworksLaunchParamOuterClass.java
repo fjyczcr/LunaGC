@@ -85,12 +85,12 @@ public final class FireworksLaunchParamOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 88: {
 
               value_ = input.readInt32();
               break;
             }
-            case 72: {
+            case 96: {
               int rawValue = input.readEnum();
 
               type_ = rawValue;
@@ -128,7 +128,7 @@ public final class FireworksLaunchParamOuterClass {
               emu.grasscutter.net.proto.FireworksLaunchParamOuterClass.FireworksLaunchParam.class, emu.grasscutter.net.proto.FireworksLaunchParamOuterClass.FireworksLaunchParam.Builder.class);
     }
 
-    public static final int TYPE_FIELD_NUMBER = 9;
+    public static final int TYPE_FIELD_NUMBER = 12;
     private int type_;
     /**
      * <code>.FireworksLaunchParamType type = 14;</code>
@@ -147,7 +147,7 @@ public final class FireworksLaunchParamOuterClass {
       return result == null ? emu.grasscutter.net.proto.FireworksLaunchParamTypeOuterClass.FireworksLaunchParamType.UNRECOGNIZED : result;
     }
 
-    public static final int VALUE_FIELD_NUMBER = 13;
+    public static final int VALUE_FIELD_NUMBER = 11;
     private int value_;
     /**
      * <code>int32 value = 2;</code>
@@ -173,10 +173,10 @@ public final class FireworksLaunchParamOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (value_ != 0) {
-        output.writeInt32(13, value_);
+        output.writeInt32(11, value_);
       }
       if (type_ != emu.grasscutter.net.proto.FireworksLaunchParamTypeOuterClass.FireworksLaunchParamType.FIREWORKS_LAUNCH_PARAM_NONE.getNumber()) {
-        output.writeEnum(9, type_);
+        output.writeEnum(12, type_);
       }
       unknownFields.writeTo(output);
     }
@@ -189,11 +189,11 @@ public final class FireworksLaunchParamOuterClass {
       size = 0;
       if (value_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, value_);
+          .computeInt32Size(11, value_);
       }
       if (type_ != emu.grasscutter.net.proto.FireworksLaunchParamTypeOuterClass.FireworksLaunchParamType.FIREWORKS_LAUNCH_PARAM_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(9, type_);
+          .computeEnumSize(12, type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

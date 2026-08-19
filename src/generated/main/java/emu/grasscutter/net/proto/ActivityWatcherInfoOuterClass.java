@@ -71,7 +71,7 @@ public final class ActivityWatcherInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 32: {
 
               curProgress_ = input.readUInt32();
               break;
@@ -81,12 +81,12 @@ public final class ActivityWatcherInfoOuterClass {
               isTakenReward_ = input.readBool();
               break;
             }
-            case 8: {
+            case 16: {
 
               watcherId_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 104: {
 
               totalProgress_ = input.readUInt32();
               break;
@@ -123,7 +123,7 @@ public final class ActivityWatcherInfoOuterClass {
               emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.class, emu.grasscutter.net.proto.ActivityWatcherInfoOuterClass.ActivityWatcherInfo.Builder.class);
     }
 
-    public static final int TOTAL_PROGRESS_FIELD_NUMBER = 10;
+    public static final int TOTAL_PROGRESS_FIELD_NUMBER = 13;
     private int totalProgress_;
 
     @java.lang.Override
@@ -131,7 +131,7 @@ public final class ActivityWatcherInfoOuterClass {
       return totalProgress_;
     }
 
-    public static final int CUR_PROGRESS_FIELD_NUMBER = 11;
+    public static final int CUR_PROGRESS_FIELD_NUMBER = 4;
     private int curProgress_;
 
     @java.lang.Override
@@ -147,7 +147,7 @@ public final class ActivityWatcherInfoOuterClass {
       return isTakenReward_;
     }
 
-    public static final int WATCHER_ID_FIELD_NUMBER = 1;
+    public static final int WATCHER_ID_FIELD_NUMBER = 2;
     private int watcherId_;
 
     @java.lang.Override
@@ -170,16 +170,16 @@ public final class ActivityWatcherInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (curProgress_ != 0) {
-        output.writeUInt32(11, curProgress_);
+        output.writeUInt32(4, curProgress_);
       }
       if (isTakenReward_ != false) {
         output.writeBool(12, isTakenReward_);
       }
       if (watcherId_ != 0) {
-        output.writeUInt32(1, watcherId_);
+        output.writeUInt32(2, watcherId_);
       }
       if (totalProgress_ != 0) {
-        output.writeUInt32(10, totalProgress_);
+        output.writeUInt32(13, totalProgress_);
       }
       unknownFields.writeTo(output);
     }
@@ -192,7 +192,7 @@ public final class ActivityWatcherInfoOuterClass {
       size = 0;
       if (curProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, curProgress_);
+          .computeUInt32Size(4, curProgress_);
       }
       if (isTakenReward_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -200,11 +200,11 @@ public final class ActivityWatcherInfoOuterClass {
       }
       if (watcherId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, watcherId_);
+          .computeUInt32Size(2, watcherId_);
       }
       if (totalProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, totalProgress_);
+          .computeUInt32Size(13, totalProgress_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

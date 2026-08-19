@@ -67,12 +67,12 @@ public final class AsterLargeDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 8: {
 
               isOpen_ = input.readBool();
               break;
             }
-            case 104: {
+            case 48: {
 
               beginTime_ = input.readUInt32();
               break;
@@ -109,7 +109,7 @@ public final class AsterLargeDetailInfoOuterClass {
               emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo.class, emu.grasscutter.net.proto.AsterLargeDetailInfoOuterClass.AsterLargeDetailInfo.Builder.class);
     }
 
-    public static final int BEGIN_TIME_FIELD_NUMBER = 13;
+    public static final int BEGIN_TIME_FIELD_NUMBER = 6;
     private int beginTime_;
 
     @java.lang.Override
@@ -117,7 +117,7 @@ public final class AsterLargeDetailInfoOuterClass {
       return beginTime_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 7;
+    public static final int IS_OPEN_FIELD_NUMBER = 1;
     private boolean isOpen_;
 
     @java.lang.Override
@@ -140,10 +140,10 @@ public final class AsterLargeDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isOpen_ != false) {
-        output.writeBool(7, isOpen_);
+        output.writeBool(1, isOpen_);
       }
       if (beginTime_ != 0) {
-        output.writeUInt32(13, beginTime_);
+        output.writeUInt32(6, beginTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -156,11 +156,11 @@ public final class AsterLargeDetailInfoOuterClass {
       size = 0;
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isOpen_);
+          .computeBoolSize(1, isOpen_);
       }
       if (beginTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, beginTime_);
+          .computeUInt32Size(6, beginTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

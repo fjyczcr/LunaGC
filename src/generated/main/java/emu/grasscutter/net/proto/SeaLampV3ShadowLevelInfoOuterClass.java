@@ -90,12 +90,12 @@ public final class SeaLampV3ShadowLevelInfoOuterClass {
               isOpen_ = input.readBool();
               break;
             }
-            case 16: {
+            case 96: {
 
               minFinishTime_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 64: {
 
               levelId_ = input.readUInt32();
               break;
@@ -143,7 +143,7 @@ public final class SeaLampV3ShadowLevelInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int LEVEL_ID_FIELD_NUMBER = 14;
+    public static final int LEVEL_ID_FIELD_NUMBER = 8;
     private int levelId_;
     /**
      * <code>uint32 level_id = 10;</code>
@@ -154,7 +154,7 @@ public final class SeaLampV3ShadowLevelInfoOuterClass {
       return levelId_;
     }
 
-    public static final int MIN_FINISH_TIME_FIELD_NUMBER = 2;
+    public static final int MIN_FINISH_TIME_FIELD_NUMBER = 12;
     private int minFinishTime_;
     /**
      * <code>uint32 min_finish_time = 4;</code>
@@ -183,10 +183,10 @@ public final class SeaLampV3ShadowLevelInfoOuterClass {
         output.writeBool(5, isOpen_);
       }
       if (minFinishTime_ != 0) {
-        output.writeUInt32(2, minFinishTime_);
+        output.writeUInt32(12, minFinishTime_);
       }
       if (levelId_ != 0) {
-        output.writeUInt32(14, levelId_);
+        output.writeUInt32(8, levelId_);
       }
       unknownFields.writeTo(output);
     }
@@ -203,11 +203,11 @@ public final class SeaLampV3ShadowLevelInfoOuterClass {
       }
       if (minFinishTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, minFinishTime_);
+          .computeUInt32Size(12, minFinishTime_);
       }
       if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, levelId_);
+          .computeUInt32Size(8, levelId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

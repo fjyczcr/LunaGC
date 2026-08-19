@@ -74,18 +74,18 @@ public final class EvtDoSkillSuccNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 32: {
 
               skillId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 120: {
               int rawValue = input.readEnum();
 
               forwardType_ = rawValue;
               break;
             }
-            case 90: {
+            case 82: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (forward_ != null) {
                 subBuilder = forward_.toBuilder();
@@ -98,7 +98,7 @@ public final class EvtDoSkillSuccNotifyOuterClass {
 
               break;
             }
-            case 8: {
+            case 88: {
 
               casterId_ = input.readUInt32();
               break;
@@ -135,7 +135,7 @@ public final class EvtDoSkillSuccNotifyOuterClass {
               emu.grasscutter.net.proto.EvtDoSkillSuccNotifyOuterClass.EvtDoSkillSuccNotify.class, emu.grasscutter.net.proto.EvtDoSkillSuccNotifyOuterClass.EvtDoSkillSuccNotify.Builder.class);
     }
 
-    public static final int FORWARD_FIELD_NUMBER = 11;
+    public static final int FORWARD_FIELD_NUMBER = 10;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector forward_;
 
     @java.lang.Override
@@ -153,7 +153,7 @@ public final class EvtDoSkillSuccNotifyOuterClass {
       return getForward();
     }
 
-    public static final int FORWARD_TYPE_FIELD_NUMBER = 13;
+    public static final int FORWARD_TYPE_FIELD_NUMBER = 15;
     private int forwardType_;
 
     @java.lang.Override public int getForwardTypeValue() {
@@ -166,7 +166,7 @@ public final class EvtDoSkillSuccNotifyOuterClass {
       return result == null ? emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.UNRECOGNIZED : result;
     }
 
-    public static final int CASTER_ID_FIELD_NUMBER = 1;
+    public static final int CASTER_ID_FIELD_NUMBER = 11;
     private int casterId_;
 
     @java.lang.Override
@@ -174,7 +174,7 @@ public final class EvtDoSkillSuccNotifyOuterClass {
       return casterId_;
     }
 
-    public static final int SKILL_ID_FIELD_NUMBER = 6;
+    public static final int SKILL_ID_FIELD_NUMBER = 4;
     private int skillId_;
 
     @java.lang.Override
@@ -197,16 +197,16 @@ public final class EvtDoSkillSuccNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (casterId_ != 0) {
-        output.writeUInt32(1, casterId_);
+        output.writeUInt32(11, casterId_);
       }
       if (skillId_ != 0) {
-        output.writeUInt32(6, skillId_);
+        output.writeUInt32(4, skillId_);
       }
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
-        output.writeEnum(13, forwardType_);
+        output.writeEnum(15, forwardType_);
       }
       if (forward_ != null) {
-        output.writeMessage(11, getForward());
+        output.writeMessage(10, getForward());
       }
       unknownFields.writeTo(output);
     }
@@ -219,19 +219,19 @@ public final class EvtDoSkillSuccNotifyOuterClass {
       size = 0;
       if (casterId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, casterId_);
+          .computeUInt32Size(11, casterId_);
       }
       if (skillId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, skillId_);
+          .computeUInt32Size(4, skillId_);
       }
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(13, forwardType_);
+          .computeEnumSize(15, forwardType_);
       }
       if (forward_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getForward());
+          .computeMessageSize(10, getForward());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

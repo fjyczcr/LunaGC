@@ -72,12 +72,12 @@ public final class SetNameCardRspOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 96: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 56: {
+            case 80: {
 
               nameCardId_ = input.readUInt32();
               break;
@@ -114,7 +114,7 @@ public final class SetNameCardRspOuterClass {
               emu.grasscutter.net.proto.SetNameCardRspOuterClass.SetNameCardRsp.class, emu.grasscutter.net.proto.SetNameCardRspOuterClass.SetNameCardRsp.Builder.class);
     }
 
-    public static final int NAME_CARD_ID_FIELD_NUMBER = 7;
+    public static final int NAME_CARD_ID_FIELD_NUMBER = 10;
     private int nameCardId_;
 
     @java.lang.Override
@@ -122,7 +122,7 @@ public final class SetNameCardRspOuterClass {
       return nameCardId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 8;
+    public static final int RETCODE_FIELD_NUMBER = 12;
     private int retcode_;
 
     @java.lang.Override
@@ -145,10 +145,10 @@ public final class SetNameCardRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (nameCardId_ != 0) {
-        output.writeUInt32(7, nameCardId_);
+        output.writeUInt32(10, nameCardId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(8, retcode_);
+        output.writeInt32(12, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -161,11 +161,11 @@ public final class SetNameCardRspOuterClass {
       size = 0;
       if (nameCardId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, nameCardId_);
+          .computeUInt32Size(10, nameCardId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, retcode_);
+          .computeInt32Size(12, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

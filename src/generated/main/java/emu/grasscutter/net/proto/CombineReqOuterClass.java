@@ -86,7 +86,7 @@ public final class CombineReqOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 104: {
 
               avatarGuid_ = input.readUInt64();
               break;
@@ -96,7 +96,7 @@ public final class CombineReqOuterClass {
               combineId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 32: {
 
               combineCount_ = input.readUInt32();
               break;
@@ -133,7 +133,7 @@ public final class CombineReqOuterClass {
               emu.grasscutter.net.proto.CombineReqOuterClass.CombineReq.class, emu.grasscutter.net.proto.CombineReqOuterClass.CombineReq.Builder.class);
     }
 
-    public static final int COMBINE_COUNT_FIELD_NUMBER = 12;
+    public static final int COMBINE_COUNT_FIELD_NUMBER = 4;
     private int combineCount_;
     /**
      * <code>uint32 combine_count = 5;</code>
@@ -144,7 +144,7 @@ public final class CombineReqOuterClass {
       return combineCount_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 7;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 13;
     private long avatarGuid_;
     /**
      * <code>uint64 avatar_guid = 2;</code>
@@ -181,13 +181,13 @@ public final class CombineReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(7, avatarGuid_);
+        output.writeUInt64(13, avatarGuid_);
       }
       if (combineId_ != 0) {
         output.writeUInt32(8, combineId_);
       }
       if (combineCount_ != 0) {
-        output.writeUInt32(12, combineCount_);
+        output.writeUInt32(4, combineCount_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,7 +200,7 @@ public final class CombineReqOuterClass {
       size = 0;
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, avatarGuid_);
+          .computeUInt64Size(13, avatarGuid_);
       }
       if (combineId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -208,7 +208,7 @@ public final class CombineReqOuterClass {
       }
       if (combineCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, combineCount_);
+          .computeUInt32Size(4, combineCount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

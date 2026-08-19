@@ -104,7 +104,7 @@ public final class AvatarSkillInfoNotifyOuterClass {
                   skillMap__.getKey(), skillMap__.getValue());
               break;
             }
-            case 32: {
+            case 120: {
 
               guid_ = input.readUInt64();
               break;
@@ -225,7 +225,7 @@ public final class AvatarSkillInfoNotifyOuterClass {
       return map.get(key);
     }
 
-    public static final int GUID_FIELD_NUMBER = 4;
+    public static final int GUID_FIELD_NUMBER = 15;
     private long guid_;
 
     @java.lang.Override
@@ -254,7 +254,7 @@ public final class AvatarSkillInfoNotifyOuterClass {
           SkillMapDefaultEntryHolder.defaultEntry,
           11);
       if (guid_ != 0L) {
-        output.writeUInt64(4, guid_);
+        output.writeUInt64(15, guid_);
       }
       unknownFields.writeTo(output);
     }
@@ -277,7 +277,7 @@ public final class AvatarSkillInfoNotifyOuterClass {
       }
       if (guid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, guid_);
+          .computeUInt64Size(15, guid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

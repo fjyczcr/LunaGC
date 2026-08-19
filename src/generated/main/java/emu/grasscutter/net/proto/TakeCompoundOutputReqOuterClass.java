@@ -85,7 +85,7 @@ public final class TakeCompoundOutputReqOuterClass {
               compoundId_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 88: {
 
               compoundGroupId_ = input.readUInt32();
               break;
@@ -122,7 +122,7 @@ public final class TakeCompoundOutputReqOuterClass {
               emu.grasscutter.net.proto.TakeCompoundOutputReqOuterClass.TakeCompoundOutputReq.class, emu.grasscutter.net.proto.TakeCompoundOutputReqOuterClass.TakeCompoundOutputReq.Builder.class);
     }
 
-    public static final int COMPOUND_GROUP_ID_FIELD_NUMBER = 7;
+    public static final int COMPOUND_GROUP_ID_FIELD_NUMBER = 11;
     private int compoundGroupId_;
     /**
      * <code>uint32 compound_group_id = 1;</code>
@@ -159,7 +159,7 @@ public final class TakeCompoundOutputReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (compoundGroupId_ != 0) {
-        output.writeUInt32(7, compoundGroupId_);
+        output.writeUInt32(11, compoundGroupId_);
       }
       if (compoundId_ != 0) {
         output.writeUInt32(10, compoundId_);
@@ -175,7 +175,7 @@ public final class TakeCompoundOutputReqOuterClass {
       size = 0;
       if (compoundGroupId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, compoundGroupId_);
+          .computeUInt32Size(11, compoundGroupId_);
       }
       if (compoundId_ != 0) {
         size += com.google.protobuf.CodedOutputStream

@@ -92,22 +92,22 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 88: {
 
               talentType_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 80: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 16: {
+            case 8: {
 
               extraLevel_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 16: {
 
               talentIndex_ = input.readUInt32();
               break;
@@ -144,7 +144,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
               emu.grasscutter.net.proto.ProudSkillExtraLevelNotifyOuterClass.ProudSkillExtraLevelNotify.class, emu.grasscutter.net.proto.ProudSkillExtraLevelNotifyOuterClass.ProudSkillExtraLevelNotify.Builder.class);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 8;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 10;
     private long avatarGuid_;
     /**
      * <code>uint64 avatar_guid = 4;</code>
@@ -155,7 +155,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
       return avatarGuid_;
     }
 
-    public static final int TALENT_INDEX_FIELD_NUMBER = 14;
+    public static final int TALENT_INDEX_FIELD_NUMBER = 2;
     private int talentIndex_;
     /**
      * <code>uint32 talent_index = 9;</code>
@@ -166,7 +166,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
       return talentIndex_;
     }
 
-    public static final int EXTRA_LEVEL_FIELD_NUMBER = 2;
+    public static final int EXTRA_LEVEL_FIELD_NUMBER = 1;
     private int extraLevel_;
     /**
      * <code>uint32 extra_level = 8;</code>
@@ -177,7 +177,7 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
       return extraLevel_;
     }
 
-    public static final int TALENT_TYPE_FIELD_NUMBER = 7;
+    public static final int TALENT_TYPE_FIELD_NUMBER = 11;
     private int talentType_;
     /**
      * <code>uint32 talent_type = 2;</code>
@@ -203,16 +203,16 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (talentType_ != 0) {
-        output.writeUInt32(7, talentType_);
+        output.writeUInt32(11, talentType_);
       }
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(8, avatarGuid_);
+        output.writeUInt64(10, avatarGuid_);
       }
       if (extraLevel_ != 0) {
-        output.writeUInt32(2, extraLevel_);
+        output.writeUInt32(1, extraLevel_);
       }
       if (talentIndex_ != 0) {
-        output.writeUInt32(14, talentIndex_);
+        output.writeUInt32(2, talentIndex_);
       }
       unknownFields.writeTo(output);
     }
@@ -225,19 +225,19 @@ public final class ProudSkillExtraLevelNotifyOuterClass {
       size = 0;
       if (talentType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, talentType_);
+          .computeUInt32Size(11, talentType_);
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, avatarGuid_);
+          .computeUInt64Size(10, avatarGuid_);
       }
       if (extraLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, extraLevel_);
+          .computeUInt32Size(1, extraLevel_);
       }
       if (talentIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, talentIndex_);
+          .computeUInt32Size(2, talentIndex_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

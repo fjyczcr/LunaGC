@@ -83,7 +83,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 128000: {
 
               oMEBOHLACPH_ = input.readUInt32();
               break;
@@ -93,7 +93,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
               jEAAOBMJBFF_ = input.readBool();
               break;
             }
-            case 56: {
+            case 8: {
 
               isContentClosed_ = input.readBool();
               break;
@@ -135,7 +135,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
               emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo.class, emu.grasscutter.net.proto.LuminanceStoneChallengeActivityDetailInfoOuterClass.LuminanceStoneChallengeActivityDetailInfo.Builder.class);
     }
 
-    public static final int OMEBOHLACPH_FIELD_NUMBER = 1;
+    public static final int OMEBOHLACPH_FIELD_NUMBER = 16000;
     private int oMEBOHLACPH_;
     /**
      * <code>uint32 OMEBOHLACPH = 1;</code>
@@ -157,7 +157,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       return jEAAOBMJBFF_;
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 7;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 1;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -191,13 +191,13 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (oMEBOHLACPH_ != 0) {
-        output.writeUInt32(1, oMEBOHLACPH_);
+        output.writeUInt32(16000, oMEBOHLACPH_);
       }
       if (jEAAOBMJBFF_ != false) {
         output.writeBool(6, jEAAOBMJBFF_);
       }
       if (isContentClosed_ != false) {
-        output.writeBool(7, isContentClosed_);
+        output.writeBool(1, isContentClosed_);
       }
       if (nCMAJBKNJCA_ != 0) {
         output.writeUInt32(11, nCMAJBKNJCA_);
@@ -213,7 +213,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       size = 0;
       if (oMEBOHLACPH_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, oMEBOHLACPH_);
+          .computeUInt32Size(16000, oMEBOHLACPH_);
       }
       if (jEAAOBMJBFF_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -221,7 +221,7 @@ public final class LuminanceStoneChallengeActivityDetailInfoOuterClass {
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isContentClosed_);
+          .computeBoolSize(1, isContentClosed_);
       }
       if (nCMAJBKNJCA_ != 0) {
         size += com.google.protobuf.CodedOutputStream

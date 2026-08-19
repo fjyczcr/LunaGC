@@ -93,7 +93,7 @@ public final class UnlockedFurnitureSuiteDataNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 32: {
 
               isAll_ = input.readBool();
               break;
@@ -182,7 +182,7 @@ public final class UnlockedFurnitureSuiteDataNotifyOuterClass {
     }
     private int furnitureSuiteIdListMemoizedSerializedSize = -1;
 
-    public static final int IS_ALL_FIELD_NUMBER = 1;
+    public static final int IS_ALL_FIELD_NUMBER = 4;
     private boolean isAll_;
     /**
      * <code>bool is_all = 7;</code>
@@ -209,7 +209,7 @@ public final class UnlockedFurnitureSuiteDataNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (isAll_ != false) {
-        output.writeBool(1, isAll_);
+        output.writeBool(4, isAll_);
       }
       if (getFurnitureSuiteIdListList().size() > 0) {
         output.writeUInt32NoTag(58);
@@ -229,7 +229,7 @@ public final class UnlockedFurnitureSuiteDataNotifyOuterClass {
       size = 0;
       if (isAll_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isAll_);
+          .computeBoolSize(4, isAll_);
       }
       {
         int dataSize = 0;

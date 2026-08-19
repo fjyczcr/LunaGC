@@ -77,7 +77,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
             case 0:
               done = true;
               break;
-            case 122: {
+            case 66: {
               emu.grasscutter.net.proto.SocialDetailOuterClass.SocialDetail.Builder subBuilder = null;
               if (detailData_ != null) {
                 subBuilder = detailData_.toBuilder();
@@ -90,12 +90,12 @@ public final class GetPlayerSocialDetailRspOuterClass {
 
               break;
             }
-            case 56: {
+            case 112: {
 
               param_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 16: {
 
               retcode_ = input.readInt32();
               break;
@@ -132,7 +132,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
               emu.grasscutter.net.proto.GetPlayerSocialDetailRspOuterClass.GetPlayerSocialDetailRsp.class, emu.grasscutter.net.proto.GetPlayerSocialDetailRspOuterClass.GetPlayerSocialDetailRsp.Builder.class);
     }
 
-    public static final int DETAIL_DATA_FIELD_NUMBER = 15;
+    public static final int DETAIL_DATA_FIELD_NUMBER = 8;
     private emu.grasscutter.net.proto.SocialDetailOuterClass.SocialDetail detailData_;
 
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
       return getDetailData();
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
+    public static final int RETCODE_FIELD_NUMBER = 2;
     private int retcode_;
 
     @java.lang.Override
@@ -158,7 +158,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
       return retcode_;
     }
 
-    public static final int PARAM_FIELD_NUMBER = 7;
+    public static final int PARAM_FIELD_NUMBER = 14;
     private int param_;
 
     @java.lang.Override
@@ -181,13 +181,13 @@ public final class GetPlayerSocialDetailRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (detailData_ != null) {
-        output.writeMessage(15, getDetailData());
+        output.writeMessage(8, getDetailData());
       }
       if (param_ != 0) {
-        output.writeUInt32(7, param_);
+        output.writeUInt32(14, param_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
+        output.writeInt32(2, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,15 +200,15 @@ public final class GetPlayerSocialDetailRspOuterClass {
       size = 0;
       if (detailData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getDetailData());
+          .computeMessageSize(8, getDetailData());
       }
       if (param_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, param_);
+          .computeUInt32Size(14, param_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
+          .computeInt32Size(2, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

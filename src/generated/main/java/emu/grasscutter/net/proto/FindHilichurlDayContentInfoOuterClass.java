@@ -73,7 +73,7 @@ public final class FindHilichurlDayContentInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 40: {
+            case 80: {
 
               startTime_ = input.readUInt32();
               break;
@@ -110,7 +110,7 @@ public final class FindHilichurlDayContentInfoOuterClass {
               emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo.class, emu.grasscutter.net.proto.FindHilichurlDayContentInfoOuterClass.FindHilichurlDayContentInfo.Builder.class);
     }
 
-    public static final int START_TIME_FIELD_NUMBER = 5;
+    public static final int START_TIME_FIELD_NUMBER = 10;
     private int startTime_;
     /**
      * <code>uint32 start_time = 14;</code>
@@ -136,7 +136,7 @@ public final class FindHilichurlDayContentInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (startTime_ != 0) {
-        output.writeUInt32(5, startTime_);
+        output.writeUInt32(10, startTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -149,7 +149,7 @@ public final class FindHilichurlDayContentInfoOuterClass {
       size = 0;
       if (startTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, startTime_);
+          .computeUInt32Size(10, startTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -84,22 +84,22 @@ public final class DungeonEntryPointInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 24: {
 
               pointId_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 80: {
 
               sceneId_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 16: {
 
               recommendDungeonId_ = input.readUInt32();
               break;
             }
-            case 10: {
+            case 98: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 dungeonEntryList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DungeonEntryInfoOuterClass.DungeonEntryInfo>();
                 mutable_bitField0_ |= 0x00000001;
@@ -143,7 +143,7 @@ public final class DungeonEntryPointInfoOuterClass {
               emu.grasscutter.net.proto.DungeonEntryPointInfoOuterClass.DungeonEntryPointInfo.class, emu.grasscutter.net.proto.DungeonEntryPointInfoOuterClass.DungeonEntryPointInfo.Builder.class);
     }
 
-    public static final int DUNGEON_ENTRY_LIST_FIELD_NUMBER = 1;
+    public static final int DUNGEON_ENTRY_LIST_FIELD_NUMBER = 12;
     private java.util.List<emu.grasscutter.net.proto.DungeonEntryInfoOuterClass.DungeonEntryInfo> dungeonEntryList_;
 
     @java.lang.Override
@@ -173,7 +173,7 @@ public final class DungeonEntryPointInfoOuterClass {
       return dungeonEntryList_.get(index);
     }
 
-    public static final int RECOMMEND_DUNGEON_ID_FIELD_NUMBER = 14;
+    public static final int RECOMMEND_DUNGEON_ID_FIELD_NUMBER = 2;
     private int recommendDungeonId_;
 
     @java.lang.Override
@@ -181,7 +181,7 @@ public final class DungeonEntryPointInfoOuterClass {
       return recommendDungeonId_;
     }
 
-    public static final int POINT_ID_FIELD_NUMBER = 12;
+    public static final int POINT_ID_FIELD_NUMBER = 3;
     private int pointId_;
 
     @java.lang.Override
@@ -189,7 +189,7 @@ public final class DungeonEntryPointInfoOuterClass {
       return pointId_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 7;
+    public static final int SCENE_ID_FIELD_NUMBER = 10;
     private int sceneId_;
 
     @java.lang.Override
@@ -212,16 +212,16 @@ public final class DungeonEntryPointInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pointId_ != 0) {
-        output.writeUInt32(12, pointId_);
+        output.writeUInt32(3, pointId_);
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(7, sceneId_);
+        output.writeUInt32(10, sceneId_);
       }
       if (recommendDungeonId_ != 0) {
-        output.writeUInt32(14, recommendDungeonId_);
+        output.writeUInt32(2, recommendDungeonId_);
       }
       for (int i = 0; i < dungeonEntryList_.size(); i++) {
-        output.writeMessage(1, dungeonEntryList_.get(i));
+        output.writeMessage(12, dungeonEntryList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -234,19 +234,19 @@ public final class DungeonEntryPointInfoOuterClass {
       size = 0;
       if (pointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, pointId_);
+          .computeUInt32Size(3, pointId_);
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, sceneId_);
+          .computeUInt32Size(10, sceneId_);
       }
       if (recommendDungeonId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, recommendDungeonId_);
+          .computeUInt32Size(2, recommendDungeonId_);
       }
       for (int i = 0; i < dungeonEntryList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, dungeonEntryList_.get(i));
+          .computeMessageSize(12, dungeonEntryList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

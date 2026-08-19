@@ -96,22 +96,22 @@ public final class UseItemReqOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 48: {
 
               targetGuid_ = input.readUInt64();
               break;
             }
-            case 56: {
+            case 64: {
 
               isEnterMpDungeonTeam_ = input.readBool();
               break;
             }
-            case 96: {
+            case 8: {
 
               optionIdx_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 128000: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 aPAANIAIJFI_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -119,7 +119,7 @@ public final class UseItemReqOuterClass {
               aPAANIAIJFI_.addInt(input.readUInt32());
               break;
             }
-            case 66: {
+            case 128002: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -132,12 +132,12 @@ public final class UseItemReqOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 104: {
+            case 56: {
 
               guid_ = input.readUInt64();
               break;
             }
-            case 112: {
+            case 32: {
 
               count_ = input.readUInt32();
               break;
@@ -177,7 +177,7 @@ public final class UseItemReqOuterClass {
               emu.grasscutter.net.proto.UseItemReqOuterClass.UseItemReq.class, emu.grasscutter.net.proto.UseItemReqOuterClass.UseItemReq.Builder.class);
     }
 
-    public static final int APAANIAIJFI_FIELD_NUMBER = 8;
+    public static final int APAANIAIJFI_FIELD_NUMBER = 16000;
     private com.google.protobuf.Internal.IntList aPAANIAIJFI_;
     /**
      * <code>repeated uint32 APAANIAIJFI = 9;</code>
@@ -205,7 +205,7 @@ public final class UseItemReqOuterClass {
     }
     private int aPAANIAIJFIMemoizedSerializedSize = -1;
 
-    public static final int GUID_FIELD_NUMBER = 13;
+    public static final int GUID_FIELD_NUMBER = 7;
     private long guid_;
 
     @java.lang.Override
@@ -213,7 +213,7 @@ public final class UseItemReqOuterClass {
       return guid_;
     }
 
-    public static final int IS_ENTER_MP_DUNGEON_TEAM_FIELD_NUMBER = 7;
+    public static final int IS_ENTER_MP_DUNGEON_TEAM_FIELD_NUMBER = 8;
     private boolean isEnterMpDungeonTeam_;
 
     @java.lang.Override
@@ -221,7 +221,7 @@ public final class UseItemReqOuterClass {
       return isEnterMpDungeonTeam_;
     }
 
-    public static final int OPTION_IDX_FIELD_NUMBER = 12;
+    public static final int OPTION_IDX_FIELD_NUMBER = 1;
     private int optionIdx_;
 
     @java.lang.Override
@@ -229,7 +229,7 @@ public final class UseItemReqOuterClass {
       return optionIdx_;
     }
 
-    public static final int COUNT_FIELD_NUMBER = 14;
+    public static final int COUNT_FIELD_NUMBER = 4;
     private int count_;
 
     @java.lang.Override
@@ -237,7 +237,7 @@ public final class UseItemReqOuterClass {
       return count_;
     }
 
-    public static final int TARGET_GUID_FIELD_NUMBER = 2;
+    public static final int TARGET_GUID_FIELD_NUMBER = 6;
     private long targetGuid_;
 
     @java.lang.Override
@@ -261,26 +261,26 @@ public final class UseItemReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (targetGuid_ != 0L) {
-        output.writeUInt64(2, targetGuid_);
+        output.writeUInt64(6, targetGuid_);
       }
       if (count_ != 0) {
-        output.writeUInt32(14, count_);
+        output.writeUInt32(4, count_);
       }
       if (getAPAANIAIJFIList().size() > 0) {
-        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(128002);
         output.writeUInt32NoTag(aPAANIAIJFIMemoizedSerializedSize);
       }
       for (int i = 0; i < aPAANIAIJFI_.size(); i++) {
         output.writeUInt32NoTag(aPAANIAIJFI_.getInt(i));
       }
       if (isEnterMpDungeonTeam_ != false) {
-        output.writeBool(7, isEnterMpDungeonTeam_);
+        output.writeBool(8, isEnterMpDungeonTeam_);
       }
       if (guid_ != 0L) {
-        output.writeUInt64(13, guid_);
+        output.writeUInt64(7, guid_);
       }
       if (optionIdx_ != 0) {
-        output.writeUInt32(12, optionIdx_);
+        output.writeUInt32(1, optionIdx_);
       }
       unknownFields.writeTo(output);
     }
@@ -293,11 +293,11 @@ public final class UseItemReqOuterClass {
       size = 0;
       if (targetGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, targetGuid_);
+          .computeUInt64Size(6, targetGuid_);
       }
       if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, count_);
+          .computeUInt32Size(4, count_);
       }
       {
         int dataSize = 0;
@@ -307,7 +307,7 @@ public final class UseItemReqOuterClass {
         }
         size += dataSize;
         if (!getAPAANIAIJFIList().isEmpty()) {
-          size += 1;
+          size += 3;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
@@ -315,15 +315,15 @@ public final class UseItemReqOuterClass {
       }
       if (isEnterMpDungeonTeam_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isEnterMpDungeonTeam_);
+          .computeBoolSize(8, isEnterMpDungeonTeam_);
       }
       if (guid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(13, guid_);
+          .computeUInt64Size(7, guid_);
       }
       if (optionIdx_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, optionIdx_);
+          .computeUInt32Size(1, optionIdx_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

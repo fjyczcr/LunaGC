@@ -75,22 +75,22 @@ public final class NpcTalkRspOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 120: {
 
               entityId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 104: {
 
               npcEntityId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 56: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 40: {
+            case 16: {
 
               curTalkId_ = input.readUInt32();
               break;
@@ -127,7 +127,7 @@ public final class NpcTalkRspOuterClass {
               emu.grasscutter.net.proto.NpcTalkRspOuterClass.NpcTalkRsp.class, emu.grasscutter.net.proto.NpcTalkRspOuterClass.NpcTalkRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 13;
+    public static final int RETCODE_FIELD_NUMBER = 7;
     private int retcode_;
 
     @java.lang.Override
@@ -135,7 +135,7 @@ public final class NpcTalkRspOuterClass {
       return retcode_;
     }
 
-    public static final int CUR_TALK_ID_FIELD_NUMBER = 5;
+    public static final int CUR_TALK_ID_FIELD_NUMBER = 2;
     private int curTalkId_;
 
     @java.lang.Override
@@ -143,7 +143,7 @@ public final class NpcTalkRspOuterClass {
       return curTalkId_;
     }
 
-    public static final int NPC_ENTITY_ID_FIELD_NUMBER = 12;
+    public static final int NPC_ENTITY_ID_FIELD_NUMBER = 13;
     private int npcEntityId_;
 
     @java.lang.Override
@@ -151,7 +151,7 @@ public final class NpcTalkRspOuterClass {
       return npcEntityId_;
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 3;
+    public static final int ENTITY_ID_FIELD_NUMBER = 15;
     private int entityId_;
 
     @java.lang.Override
@@ -174,16 +174,16 @@ public final class NpcTalkRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entityId_ != 0) {
-        output.writeUInt32(3, entityId_);
+        output.writeUInt32(15, entityId_);
       }
       if (npcEntityId_ != 0) {
-        output.writeUInt32(12, npcEntityId_);
+        output.writeUInt32(13, npcEntityId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(13, retcode_);
+        output.writeInt32(7, retcode_);
       }
       if (curTalkId_ != 0) {
-        output.writeUInt32(5, curTalkId_);
+        output.writeUInt32(2, curTalkId_);
       }
       unknownFields.writeTo(output);
     }
@@ -196,19 +196,19 @@ public final class NpcTalkRspOuterClass {
       size = 0;
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, entityId_);
+          .computeUInt32Size(15, entityId_);
       }
       if (npcEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, npcEntityId_);
+          .computeUInt32Size(13, npcEntityId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(13, retcode_);
+          .computeInt32Size(7, retcode_);
       }
       if (curTalkId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, curTalkId_);
+          .computeUInt32Size(2, curTalkId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

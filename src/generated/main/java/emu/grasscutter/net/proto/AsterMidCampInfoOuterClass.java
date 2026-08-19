@@ -71,7 +71,7 @@ public final class AsterMidCampInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
+            case 42: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (pos_ != null) {
                 subBuilder = pos_.toBuilder();
@@ -84,7 +84,7 @@ public final class AsterMidCampInfoOuterClass {
 
               break;
             }
-            case 80: {
+            case 88: {
 
               campId_ = input.readUInt32();
               break;
@@ -121,7 +121,7 @@ public final class AsterMidCampInfoOuterClass {
               emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.class, emu.grasscutter.net.proto.AsterMidCampInfoOuterClass.AsterMidCampInfo.Builder.class);
     }
 
-    public static final int POS_FIELD_NUMBER = 2;
+    public static final int POS_FIELD_NUMBER = 5;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
 
     @java.lang.Override
@@ -139,7 +139,7 @@ public final class AsterMidCampInfoOuterClass {
       return getPos();
     }
 
-    public static final int CAMP_ID_FIELD_NUMBER = 10;
+    public static final int CAMP_ID_FIELD_NUMBER = 11;
     private int campId_;
 
     @java.lang.Override
@@ -162,10 +162,10 @@ public final class AsterMidCampInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pos_ != null) {
-        output.writeMessage(2, getPos());
+        output.writeMessage(5, getPos());
       }
       if (campId_ != 0) {
-        output.writeUInt32(10, campId_);
+        output.writeUInt32(11, campId_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,11 +178,11 @@ public final class AsterMidCampInfoOuterClass {
       size = 0;
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPos());
+          .computeMessageSize(5, getPos());
       }
       if (campId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, campId_);
+          .computeUInt32Size(11, campId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

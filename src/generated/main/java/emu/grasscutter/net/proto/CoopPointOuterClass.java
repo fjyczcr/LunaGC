@@ -91,17 +91,17 @@ public final class CoopPointOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 56: {
 
               id_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 24: {
 
               selfConfidence_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 16: {
               int rawValue = input.readEnum();
 
               state_ = rawValue;
@@ -260,7 +260,7 @@ public final class CoopPointOuterClass {
       // @@protoc_insertion_point(enum_scope:CoopPoint.State)
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
+    public static final int ID_FIELD_NUMBER = 7;
     private int id_;
     /**
      * <code>uint32 id = 8;</code>
@@ -271,7 +271,7 @@ public final class CoopPointOuterClass {
       return id_;
     }
 
-    public static final int STATE_FIELD_NUMBER = 4;
+    public static final int STATE_FIELD_NUMBER = 2;
     private int state_;
     /**
      * <code>.CoopPoint.State state = 14;</code>
@@ -290,7 +290,7 @@ public final class CoopPointOuterClass {
       return result == null ? emu.grasscutter.net.proto.CoopPointOuterClass.CoopPoint.State.UNRECOGNIZED : result;
     }
 
-    public static final int SELF_CONFIDENCE_FIELD_NUMBER = 2;
+    public static final int SELF_CONFIDENCE_FIELD_NUMBER = 3;
     private int selfConfidence_;
     /**
      * <code>uint32 self_confidence = 10;</code>
@@ -316,13 +316,13 @@ public final class CoopPointOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
-        output.writeUInt32(1, id_);
+        output.writeUInt32(7, id_);
       }
       if (selfConfidence_ != 0) {
-        output.writeUInt32(2, selfConfidence_);
+        output.writeUInt32(3, selfConfidence_);
       }
       if (state_ != emu.grasscutter.net.proto.CoopPointOuterClass.CoopPoint.State.STATE_UNSTARTED.getNumber()) {
-        output.writeEnum(4, state_);
+        output.writeEnum(2, state_);
       }
       unknownFields.writeTo(output);
     }
@@ -335,15 +335,15 @@ public final class CoopPointOuterClass {
       size = 0;
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, id_);
+          .computeUInt32Size(7, id_);
       }
       if (selfConfidence_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, selfConfidence_);
+          .computeUInt32Size(3, selfConfidence_);
       }
       if (state_ != emu.grasscutter.net.proto.CoopPointOuterClass.CoopPoint.State.STATE_UNSTARTED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, state_);
+          .computeEnumSize(2, state_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -78,13 +78,13 @@ public final class EvtBeingHitNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 96: {
               int rawValue = input.readEnum();
 
               forwardType_ = rawValue;
               break;
             }
-            case 34: {
+            case 114: {
               emu.grasscutter.net.proto.EvtBeingHitInfoOuterClass.EvtBeingHitInfo.Builder subBuilder = null;
               if (beingHitInfo_ != null) {
                 subBuilder = beingHitInfo_.toBuilder();
@@ -129,7 +129,7 @@ public final class EvtBeingHitNotifyOuterClass {
               emu.grasscutter.net.proto.EvtBeingHitNotifyOuterClass.EvtBeingHitNotify.class, emu.grasscutter.net.proto.EvtBeingHitNotifyOuterClass.EvtBeingHitNotify.Builder.class);
     }
 
-    public static final int BEING_HIT_INFO_FIELD_NUMBER = 4;
+    public static final int BEING_HIT_INFO_FIELD_NUMBER = 14;
     private emu.grasscutter.net.proto.EvtBeingHitInfoOuterClass.EvtBeingHitInfo beingHitInfo_;
 
     @java.lang.Override
@@ -147,7 +147,7 @@ public final class EvtBeingHitNotifyOuterClass {
       return getBeingHitInfo();
     }
 
-    public static final int FORWARD_TYPE_FIELD_NUMBER = 8;
+    public static final int FORWARD_TYPE_FIELD_NUMBER = 12;
     private int forwardType_;
 
     @java.lang.Override public int getForwardTypeValue() {
@@ -175,10 +175,10 @@ public final class EvtBeingHitNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
-        output.writeEnum(8, forwardType_);
+        output.writeEnum(12, forwardType_);
       }
       if (beingHitInfo_ != null) {
-        output.writeMessage(4, getBeingHitInfo());
+        output.writeMessage(14, getBeingHitInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -191,11 +191,11 @@ public final class EvtBeingHitNotifyOuterClass {
       size = 0;
       if (forwardType_ != emu.grasscutter.net.proto.ForwardTypeOuterClass.ForwardType.ForwardType_FORWARD_LOCAL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, forwardType_);
+          .computeEnumSize(12, forwardType_);
       }
       if (beingHitInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getBeingHitInfo());
+          .computeMessageSize(14, getBeingHitInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

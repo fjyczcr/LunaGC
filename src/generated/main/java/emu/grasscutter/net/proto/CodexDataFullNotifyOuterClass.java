@@ -106,7 +106,7 @@ public final class CodexDataFullNotifyOuterClass {
               bFGINKEJIAA_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 40: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 recentViewedPushtipsList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -114,7 +114,7 @@ public final class CodexDataFullNotifyOuterClass {
               recentViewedPushtipsList_.addInt(input.readUInt32());
               break;
             }
-            case 114: {
+            case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -127,7 +127,7 @@ public final class CodexDataFullNotifyOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 50: {
+            case 98: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 typeDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CodexTypeDataOuterClass.CodexTypeData>();
                 mutable_bitField0_ |= 0x00000002;
@@ -179,7 +179,7 @@ public final class CodexDataFullNotifyOuterClass {
               emu.grasscutter.net.proto.CodexDataFullNotifyOuterClass.CodexDataFullNotify.class, emu.grasscutter.net.proto.CodexDataFullNotifyOuterClass.CodexDataFullNotify.Builder.class);
     }
 
-    public static final int RECENT_VIEWED_PUSHTIPS_LIST_FIELD_NUMBER = 14;
+    public static final int RECENT_VIEWED_PUSHTIPS_LIST_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.IntList recentViewedPushtipsList_;
 
     @java.lang.Override
@@ -197,7 +197,7 @@ public final class CodexDataFullNotifyOuterClass {
     }
     private int recentViewedPushtipsListMemoizedSerializedSize = -1;
 
-    public static final int TYPE_DATA_LIST_FIELD_NUMBER = 6;
+    public static final int TYPE_DATA_LIST_FIELD_NUMBER = 12;
     private java.util.List<emu.grasscutter.net.proto.CodexTypeDataOuterClass.CodexTypeData> typeDataList_;
 
     @java.lang.Override
@@ -268,14 +268,14 @@ public final class CodexDataFullNotifyOuterClass {
         output.writeUInt32(3, bFGINKEJIAA_);
       }
       if (getRecentViewedPushtipsListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(recentViewedPushtipsListMemoizedSerializedSize);
       }
       for (int i = 0; i < recentViewedPushtipsList_.size(); i++) {
         output.writeUInt32NoTag(recentViewedPushtipsList_.getInt(i));
       }
       for (int i = 0; i < typeDataList_.size(); i++) {
-        output.writeMessage(6, typeDataList_.get(i));
+        output.writeMessage(12, typeDataList_.get(i));
       }
       if (iPCLHNCJCNB_ != 0) {
         output.writeUInt32(16000, iPCLHNCJCNB_);
@@ -309,7 +309,7 @@ public final class CodexDataFullNotifyOuterClass {
       }
       for (int i = 0; i < typeDataList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, typeDataList_.get(i));
+          .computeMessageSize(12, typeDataList_.get(i));
       }
       if (iPCLHNCJCNB_ != 0) {
         size += com.google.protobuf.CodedOutputStream

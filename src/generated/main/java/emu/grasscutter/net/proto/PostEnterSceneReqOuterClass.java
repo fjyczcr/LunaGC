@@ -71,12 +71,12 @@ public final class PostEnterSceneReqOuterClass {
             case 0:
               done = true;
               break;
-            case 33: {
+            case 49: {
 
               totalTickTime_ = input.readDouble();
               break;
             }
-            case 40: {
+            case 64: {
 
               enterSceneToken_ = input.readUInt32();
               break;
@@ -113,7 +113,7 @@ public final class PostEnterSceneReqOuterClass {
               emu.grasscutter.net.proto.PostEnterSceneReqOuterClass.PostEnterSceneReq.class, emu.grasscutter.net.proto.PostEnterSceneReqOuterClass.PostEnterSceneReq.Builder.class);
     }
 
-    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 5;
+    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 8;
     private int enterSceneToken_;
 
     @java.lang.Override
@@ -121,7 +121,7 @@ public final class PostEnterSceneReqOuterClass {
       return enterSceneToken_;
     }
 
-    public static final int TOTAL_TICK_TIME_FIELD_NUMBER = 4;
+    public static final int TOTAL_TICK_TIME_FIELD_NUMBER = 6;
     private double totalTickTime_;
 
     @java.lang.Override
@@ -144,10 +144,10 @@ public final class PostEnterSceneReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (totalTickTime_ != 0D) {
-        output.writeDouble(4, totalTickTime_);
+        output.writeDouble(6, totalTickTime_);
       }
       if (enterSceneToken_ != 0) {
-        output.writeUInt32(5, enterSceneToken_);
+        output.writeUInt32(8, enterSceneToken_);
       }
       unknownFields.writeTo(output);
     }
@@ -160,11 +160,11 @@ public final class PostEnterSceneReqOuterClass {
       size = 0;
       if (totalTickTime_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, totalTickTime_);
+          .computeDoubleSize(6, totalTickTime_);
       }
       if (enterSceneToken_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, enterSceneToken_);
+          .computeUInt32Size(8, enterSceneToken_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -71,7 +71,7 @@ public final class GetPlayerSocialDetailReqOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 104: {
 
               param_ = input.readUInt32();
               break;
@@ -113,7 +113,7 @@ public final class GetPlayerSocialDetailReqOuterClass {
               emu.grasscutter.net.proto.GetPlayerSocialDetailReqOuterClass.GetPlayerSocialDetailReq.class, emu.grasscutter.net.proto.GetPlayerSocialDetailReqOuterClass.GetPlayerSocialDetailReq.Builder.class);
     }
 
-    public static final int PARAM_FIELD_NUMBER = 8;
+    public static final int PARAM_FIELD_NUMBER = 13;
     private int param_;
 
     @java.lang.Override
@@ -144,7 +144,7 @@ public final class GetPlayerSocialDetailReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (param_ != 0) {
-        output.writeUInt32(8, param_);
+        output.writeUInt32(13, param_);
       }
       if (uid_ != 0) {
         output.writeUInt32(15, uid_);
@@ -160,7 +160,7 @@ public final class GetPlayerSocialDetailReqOuterClass {
       size = 0;
       if (param_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, param_);
+          .computeUInt32Size(13, param_);
       }
       if (uid_ != 0) {
         size += com.google.protobuf.CodedOutputStream

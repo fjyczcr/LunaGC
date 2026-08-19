@@ -81,22 +81,22 @@ public final class UpdatePlayerShowAvatarListRspOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 88: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 40: {
+            case 128000: {
 
               isShowConstellationNum_ = input.readBool();
               break;
             }
-            case 8: {
+            case 40: {
 
               isShowAvatar_ = input.readBool();
               break;
             }
-            case 80: {
+            case 64: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 showAvatarIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -104,7 +104,7 @@ public final class UpdatePlayerShowAvatarListRspOuterClass {
               showAvatarIdList_.addInt(input.readUInt32());
               break;
             }
-            case 82: {
+            case 66: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -152,7 +152,7 @@ public final class UpdatePlayerShowAvatarListRspOuterClass {
               emu.grasscutter.net.proto.UpdatePlayerShowAvatarListRspOuterClass.UpdatePlayerShowAvatarListRsp.class, emu.grasscutter.net.proto.UpdatePlayerShowAvatarListRspOuterClass.UpdatePlayerShowAvatarListRsp.Builder.class);
     }
 
-    public static final int SHOW_AVATAR_ID_LIST_FIELD_NUMBER = 10;
+    public static final int SHOW_AVATAR_ID_LIST_FIELD_NUMBER = 8;
     private com.google.protobuf.Internal.IntList showAvatarIdList_;
 
     @java.lang.Override
@@ -170,7 +170,7 @@ public final class UpdatePlayerShowAvatarListRspOuterClass {
     }
     private int showAvatarIdListMemoizedSerializedSize = -1;
 
-    public static final int RETCODE_FIELD_NUMBER = 6;
+    public static final int RETCODE_FIELD_NUMBER = 11;
     private int retcode_;
 
     @java.lang.Override
@@ -178,7 +178,7 @@ public final class UpdatePlayerShowAvatarListRspOuterClass {
       return retcode_;
     }
 
-    public static final int IS_SHOW_CONSTELLATION_NUM_FIELD_NUMBER = 5;
+    public static final int IS_SHOW_CONSTELLATION_NUM_FIELD_NUMBER = 16000;
     private boolean isShowConstellationNum_;
 
     @java.lang.Override
@@ -186,7 +186,7 @@ public final class UpdatePlayerShowAvatarListRspOuterClass {
       return isShowConstellationNum_;
     }
 
-    public static final int IS_SHOW_AVATAR_FIELD_NUMBER = 1;
+    public static final int IS_SHOW_AVATAR_FIELD_NUMBER = 5;
     private boolean isShowAvatar_;
 
     @java.lang.Override
@@ -210,16 +210,16 @@ public final class UpdatePlayerShowAvatarListRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (retcode_ != 0) {
-        output.writeInt32(6, retcode_);
+        output.writeInt32(11, retcode_);
       }
       if (isShowConstellationNum_ != false) {
-        output.writeBool(5, isShowConstellationNum_);
+        output.writeBool(16000, isShowConstellationNum_);
       }
       if (isShowAvatar_ != false) {
-        output.writeBool(1, isShowAvatar_);
+        output.writeBool(5, isShowAvatar_);
       }
       if (getShowAvatarIdListList().size() > 0) {
-        output.writeUInt32NoTag(82);
+        output.writeUInt32NoTag(66);
         output.writeUInt32NoTag(showAvatarIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < showAvatarIdList_.size(); i++) {
@@ -236,15 +236,15 @@ public final class UpdatePlayerShowAvatarListRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, retcode_);
+          .computeInt32Size(11, retcode_);
       }
       if (isShowConstellationNum_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isShowConstellationNum_);
+          .computeBoolSize(16000, isShowConstellationNum_);
       }
       if (isShowAvatar_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isShowAvatar_);
+          .computeBoolSize(5, isShowAvatar_);
       }
       {
         int dataSize = 0;

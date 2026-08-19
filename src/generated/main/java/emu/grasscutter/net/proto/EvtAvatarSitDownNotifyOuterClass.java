@@ -84,12 +84,12 @@ public final class EvtAvatarSitDownNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 120: {
 
               entityId_ = input.readUInt32();
               break;
             }
-            case 98: {
+            case 74: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (position_ != null) {
                 subBuilder = position_.toBuilder();
@@ -144,7 +144,7 @@ public final class EvtAvatarSitDownNotifyOuterClass {
               emu.grasscutter.net.proto.EvtAvatarSitDownNotifyOuterClass.EvtAvatarSitDownNotify.class, emu.grasscutter.net.proto.EvtAvatarSitDownNotifyOuterClass.EvtAvatarSitDownNotify.Builder.class);
     }
 
-    public static final int POSITION_FIELD_NUMBER = 12;
+    public static final int POSITION_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector position_;
 
     @java.lang.Override
@@ -162,7 +162,7 @@ public final class EvtAvatarSitDownNotifyOuterClass {
       return getPosition();
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 4;
+    public static final int ENTITY_ID_FIELD_NUMBER = 15;
     private int entityId_;
 
     @java.lang.Override
@@ -204,10 +204,10 @@ public final class EvtAvatarSitDownNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entityId_ != 0) {
-        output.writeUInt32(4, entityId_);
+        output.writeUInt32(15, entityId_);
       }
       if (position_ != null) {
-        output.writeMessage(12, getPosition());
+        output.writeMessage(9, getPosition());
       }
       if (performId_ != 0) {
         output.writeInt32(16000, performId_);
@@ -226,11 +226,11 @@ public final class EvtAvatarSitDownNotifyOuterClass {
       size = 0;
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, entityId_);
+          .computeUInt32Size(15, entityId_);
       }
       if (position_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getPosition());
+          .computeMessageSize(9, getPosition());
       }
       if (performId_ != 0) {
         size += com.google.protobuf.CodedOutputStream

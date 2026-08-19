@@ -106,12 +106,12 @@ public final class GetActivityShopSheetInfoRspOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 16: {
 
               shopType_ = input.readUInt32();
               break;
             }
-            case 74: {
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 sheetInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo>();
                 mutable_bitField0_ |= 0x00000001;
@@ -120,7 +120,7 @@ public final class GetActivityShopSheetInfoRspOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo.parser(), extensionRegistry));
               break;
             }
-            case 80: {
+            case 64: {
 
               retcode_ = input.readInt32();
               break;
@@ -160,7 +160,7 @@ public final class GetActivityShopSheetInfoRspOuterClass {
               emu.grasscutter.net.proto.GetActivityShopSheetInfoRspOuterClass.GetActivityShopSheetInfoRsp.class, emu.grasscutter.net.proto.GetActivityShopSheetInfoRspOuterClass.GetActivityShopSheetInfoRsp.Builder.class);
     }
 
-    public static final int SHEET_INFO_LIST_FIELD_NUMBER = 9;
+    public static final int SHEET_INFO_LIST_FIELD_NUMBER = 3;
     private java.util.List<emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo> sheetInfoList_;
     /**
      * <code>repeated .ActivityShopSheetInfo sheet_info_list = 5;</code>
@@ -200,7 +200,7 @@ public final class GetActivityShopSheetInfoRspOuterClass {
       return sheetInfoList_.get(index);
     }
 
-    public static final int SHOP_TYPE_FIELD_NUMBER = 14;
+    public static final int SHOP_TYPE_FIELD_NUMBER = 2;
     private int shopType_;
     /**
      * <code>uint32 shop_type = 1;</code>
@@ -211,7 +211,7 @@ public final class GetActivityShopSheetInfoRspOuterClass {
       return shopType_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 10;
+    public static final int RETCODE_FIELD_NUMBER = 8;
     private int retcode_;
     /**
      * <code>int32 retcode = 6;</code>
@@ -237,13 +237,13 @@ public final class GetActivityShopSheetInfoRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (shopType_ != 0) {
-        output.writeUInt32(14, shopType_);
+        output.writeUInt32(2, shopType_);
       }
       for (int i = 0; i < sheetInfoList_.size(); i++) {
-        output.writeMessage(9, sheetInfoList_.get(i));
+        output.writeMessage(3, sheetInfoList_.get(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(10, retcode_);
+        output.writeInt32(8, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -256,15 +256,15 @@ public final class GetActivityShopSheetInfoRspOuterClass {
       size = 0;
       if (shopType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, shopType_);
+          .computeUInt32Size(2, shopType_);
       }
       for (int i = 0; i < sheetInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, sheetInfoList_.get(i));
+          .computeMessageSize(3, sheetInfoList_.get(i));
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, retcode_);
+          .computeInt32Size(8, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

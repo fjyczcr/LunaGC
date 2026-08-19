@@ -89,7 +89,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
+            case 26: {
               emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder subBuilder = null;
               if (lunchBoxData_ != null) {
                 subBuilder = lunchBoxData_.toBuilder();
@@ -102,7 +102,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
 
               break;
             }
-            case 80: {
+            case 56: {
 
               retcode_ = input.readInt32();
               break;
@@ -139,7 +139,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
               emu.grasscutter.net.proto.SetUpLunchBoxWidgetRspOuterClass.SetUpLunchBoxWidgetRsp.class, emu.grasscutter.net.proto.SetUpLunchBoxWidgetRspOuterClass.SetUpLunchBoxWidgetRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 10;
+    public static final int RETCODE_FIELD_NUMBER = 7;
     private int retcode_;
     /**
      * <code>int32 retcode = 8;</code>
@@ -150,7 +150,7 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       return retcode_;
     }
 
-    public static final int LUNCH_BOX_DATA_FIELD_NUMBER = 2;
+    public static final int LUNCH_BOX_DATA_FIELD_NUMBER = 3;
     private emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData lunchBoxData_;
     /**
      * <code>.LunchBoxData lunch_box_data = 6;</code>
@@ -191,10 +191,10 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (lunchBoxData_ != null) {
-        output.writeMessage(2, getLunchBoxData());
+        output.writeMessage(3, getLunchBoxData());
       }
       if (retcode_ != 0) {
-        output.writeInt32(10, retcode_);
+        output.writeInt32(7, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -207,11 +207,11 @@ public final class SetUpLunchBoxWidgetRspOuterClass {
       size = 0;
       if (lunchBoxData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getLunchBoxData());
+          .computeMessageSize(3, getLunchBoxData());
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, retcode_);
+          .computeInt32Size(7, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

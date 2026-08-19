@@ -110,12 +110,12 @@ public final class SummerTimeSprintBoatRecordOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 88: {
 
               bestScore_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 24: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 watcherIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -123,7 +123,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
               watcherIdList_.addInt(input.readUInt32());
               break;
             }
-            case 74: {
+            case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -136,7 +136,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 48: {
+            case 120: {
 
               groupId_ = input.readUInt32();
               break;
@@ -146,7 +146,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
               startTime_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 40: {
 
               isTouched_ = input.readBool();
               break;
@@ -197,7 +197,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
       return startTime_;
     }
 
-    public static final int IS_TOUCHED_FIELD_NUMBER = 12;
+    public static final int IS_TOUCHED_FIELD_NUMBER = 5;
     private boolean isTouched_;
     /**
      * <code>bool is_touched = 15;</code>
@@ -208,7 +208,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
       return isTouched_;
     }
 
-    public static final int WATCHER_ID_LIST_FIELD_NUMBER = 9;
+    public static final int WATCHER_ID_LIST_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.IntList watcherIdList_;
     /**
      * <code>repeated uint32 watcher_id_list = 7;</code>
@@ -236,7 +236,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
     }
     private int watcherIdListMemoizedSerializedSize = -1;
 
-    public static final int GROUP_ID_FIELD_NUMBER = 6;
+    public static final int GROUP_ID_FIELD_NUMBER = 15;
     private int groupId_;
     /**
      * <code>uint32 group_id = 9;</code>
@@ -247,7 +247,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
       return groupId_;
     }
 
-    public static final int BEST_SCORE_FIELD_NUMBER = 1;
+    public static final int BEST_SCORE_FIELD_NUMBER = 11;
     private int bestScore_;
     /**
      * <code>uint32 best_score = 3;</code>
@@ -274,23 +274,23 @@ public final class SummerTimeSprintBoatRecordOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (bestScore_ != 0) {
-        output.writeUInt32(1, bestScore_);
+        output.writeUInt32(11, bestScore_);
       }
       if (getWatcherIdListList().size() > 0) {
-        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(watcherIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < watcherIdList_.size(); i++) {
         output.writeUInt32NoTag(watcherIdList_.getInt(i));
       }
       if (groupId_ != 0) {
-        output.writeUInt32(6, groupId_);
+        output.writeUInt32(15, groupId_);
       }
       if (startTime_ != 0) {
         output.writeUInt32(14, startTime_);
       }
       if (isTouched_ != false) {
-        output.writeBool(12, isTouched_);
+        output.writeBool(5, isTouched_);
       }
       unknownFields.writeTo(output);
     }
@@ -303,7 +303,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
       size = 0;
       if (bestScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, bestScore_);
+          .computeUInt32Size(11, bestScore_);
       }
       {
         int dataSize = 0;
@@ -321,7 +321,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
       }
       if (groupId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, groupId_);
+          .computeUInt32Size(15, groupId_);
       }
       if (startTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -329,7 +329,7 @@ public final class SummerTimeSprintBoatRecordOuterClass {
       }
       if (isTouched_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isTouched_);
+          .computeBoolSize(5, isTouched_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

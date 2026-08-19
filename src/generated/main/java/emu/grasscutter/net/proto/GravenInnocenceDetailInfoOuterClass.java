@@ -125,7 +125,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
+            case 128002: {
               emu.grasscutter.net.proto.OEBEHAKIPCGOuterClass.OEBEHAKIPCG.Builder subBuilder = null;
               if (oLAKMCFOJAH_ != null) {
                 subBuilder = oLAKMCFOJAH_.toBuilder();
@@ -151,7 +151,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
 
               break;
             }
-            case 48: {
+            case 8: {
 
               isContentClosed_ = input.readBool();
               break;
@@ -214,7 +214,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
               emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo.class, emu.grasscutter.net.proto.GravenInnocenceDetailInfoOuterClass.GravenInnocenceDetailInfo.Builder.class);
     }
 
-    public static final int OLAKMCFOJAH_FIELD_NUMBER = 1;
+    public static final int OLAKMCFOJAH_FIELD_NUMBER = 16000;
     private emu.grasscutter.net.proto.OEBEHAKIPCGOuterClass.OEBEHAKIPCG oLAKMCFOJAH_;
     /**
      * <code>.OEBEHAKIPCG OLAKMCFOJAH = 1;</code>
@@ -318,7 +318,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
       return getMAGHEHENLEM();
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 6;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 1;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -341,13 +341,13 @@ public final class GravenInnocenceDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (oLAKMCFOJAH_ != null) {
-        output.writeMessage(1, getOLAKMCFOJAH());
+        output.writeMessage(16000, getOLAKMCFOJAH());
       }
       if (lACBCLHDFCF_ != null) {
         output.writeMessage(3, getLACBCLHDFCF());
       }
       if (isContentClosed_ != false) {
-        output.writeBool(6, isContentClosed_);
+        output.writeBool(1, isContentClosed_);
       }
       if (pJMONLKHJNH_ != null) {
         output.writeMessage(11, getPJMONLKHJNH());
@@ -366,7 +366,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
       size = 0;
       if (oLAKMCFOJAH_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getOLAKMCFOJAH());
+          .computeMessageSize(16000, getOLAKMCFOJAH());
       }
       if (lACBCLHDFCF_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -374,7 +374,7 @@ public final class GravenInnocenceDetailInfoOuterClass {
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isContentClosed_);
+          .computeBoolSize(1, isContentClosed_);
       }
       if (pJMONLKHJNH_ != null) {
         size += com.google.protobuf.CodedOutputStream

@@ -85,17 +85,17 @@ public final class FungusTrainingDungeonDetailOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 72: {
 
               isOpen_ = input.readBool();
               break;
             }
-            case 72: {
+            case 8: {
 
               bestScore_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 88: {
 
               dungeonId_ = input.readUInt32();
               break;
@@ -132,7 +132,7 @@ public final class FungusTrainingDungeonDetailOuterClass {
               emu.grasscutter.net.proto.FungusTrainingDungeonDetailOuterClass.FungusTrainingDungeonDetail.class, emu.grasscutter.net.proto.FungusTrainingDungeonDetailOuterClass.FungusTrainingDungeonDetail.Builder.class);
     }
 
-    public static final int BEST_SCORE_FIELD_NUMBER = 9;
+    public static final int BEST_SCORE_FIELD_NUMBER = 1;
     private int bestScore_;
     /**
      * <code>uint32 best_score = 12;</code>
@@ -143,7 +143,7 @@ public final class FungusTrainingDungeonDetailOuterClass {
       return bestScore_;
     }
 
-    public static final int DUNGEON_ID_FIELD_NUMBER = 14;
+    public static final int DUNGEON_ID_FIELD_NUMBER = 11;
     private int dungeonId_;
     /**
      * <code>uint32 dungeon_id = 14;</code>
@@ -154,7 +154,7 @@ public final class FungusTrainingDungeonDetailOuterClass {
       return dungeonId_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 7;
+    public static final int IS_OPEN_FIELD_NUMBER = 9;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 2;</code>
@@ -180,13 +180,13 @@ public final class FungusTrainingDungeonDetailOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isOpen_ != false) {
-        output.writeBool(7, isOpen_);
+        output.writeBool(9, isOpen_);
       }
       if (bestScore_ != 0) {
-        output.writeUInt32(9, bestScore_);
+        output.writeUInt32(1, bestScore_);
       }
       if (dungeonId_ != 0) {
-        output.writeUInt32(14, dungeonId_);
+        output.writeUInt32(11, dungeonId_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class FungusTrainingDungeonDetailOuterClass {
       size = 0;
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isOpen_);
+          .computeBoolSize(9, isOpen_);
       }
       if (bestScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, bestScore_);
+          .computeUInt32Size(1, bestScore_);
       }
       if (dungeonId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, dungeonId_);
+          .computeUInt32Size(11, dungeonId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

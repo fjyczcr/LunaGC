@@ -75,13 +75,13 @@ public final class SetPlayerSignatureRspOuterClass {
             case 0:
               done = true;
               break;
-            case 18: {
+            case 82: {
               java.lang.String s = input.readStringRequireUtf8();
 
               signature_ = s;
               break;
             }
-            case 40: {
+            case 72: {
 
               retcode_ = input.readInt32();
               break;
@@ -118,7 +118,7 @@ public final class SetPlayerSignatureRspOuterClass {
               emu.grasscutter.net.proto.SetPlayerSignatureRspOuterClass.SetPlayerSignatureRsp.class, emu.grasscutter.net.proto.SetPlayerSignatureRspOuterClass.SetPlayerSignatureRsp.Builder.class);
     }
 
-    public static final int SIGNATURE_FIELD_NUMBER = 8;
+    public static final int SIGNATURE_FIELD_NUMBER = 10;
     private volatile java.lang.Object signature_;
 
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class SetPlayerSignatureRspOuterClass {
       }
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 5;
+    public static final int RETCODE_FIELD_NUMBER = 9;
     private int retcode_;
 
     @java.lang.Override
@@ -173,10 +173,10 @@ public final class SetPlayerSignatureRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signature_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, signature_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(5, retcode_);
+        output.writeInt32(9, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -188,11 +188,11 @@ public final class SetPlayerSignatureRspOuterClass {
 
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, signature_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, signature_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, retcode_);
+          .computeInt32Size(9, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

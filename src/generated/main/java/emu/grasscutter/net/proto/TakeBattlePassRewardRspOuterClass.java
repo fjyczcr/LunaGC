@@ -125,7 +125,7 @@ public final class TakeBattlePassRewardRspOuterClass {
             case 0:
               done = true;
               break;
-            case 98: {
+            case 66: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 takeOptionList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BattlePassRewardTakeOptionOuterClass.BattlePassRewardTakeOption>();
                 mutable_bitField0_ |= 0x00000001;
@@ -134,12 +134,12 @@ public final class TakeBattlePassRewardRspOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.BattlePassRewardTakeOptionOuterClass.BattlePassRewardTakeOption.parser(), extensionRegistry));
               break;
             }
-            case 56: {
+            case 8: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 18: {
+            case 50: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000002;
@@ -186,7 +186,7 @@ public final class TakeBattlePassRewardRspOuterClass {
               emu.grasscutter.net.proto.TakeBattlePassRewardRspOuterClass.TakeBattlePassRewardRsp.class, emu.grasscutter.net.proto.TakeBattlePassRewardRspOuterClass.TakeBattlePassRewardRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 7;
+    public static final int RETCODE_FIELD_NUMBER = 1;
     private int retcode_;
     /**
      * <code>int32 retcode = 12;</code>
@@ -197,7 +197,7 @@ public final class TakeBattlePassRewardRspOuterClass {
       return retcode_;
     }
 
-    public static final int TAKE_OPTION_LIST_FIELD_NUMBER = 12;
+    public static final int TAKE_OPTION_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.BattlePassRewardTakeOptionOuterClass.BattlePassRewardTakeOption> takeOptionList_;
     /**
      * <code>repeated .BattlePassRewardTakeOption take_option_list = 4;</code>
@@ -237,7 +237,7 @@ public final class TakeBattlePassRewardRspOuterClass {
       return takeOptionList_.get(index);
     }
 
-    public static final int ITEM_LIST_FIELD_NUMBER = 2;
+    public static final int ITEM_LIST_FIELD_NUMBER = 6;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> itemList_;
     /**
      * <code>repeated .ItemParam item_list = 14;</code>
@@ -292,13 +292,13 @@ public final class TakeBattlePassRewardRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < takeOptionList_.size(); i++) {
-        output.writeMessage(12, takeOptionList_.get(i));
+        output.writeMessage(8, takeOptionList_.get(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(7, retcode_);
+        output.writeInt32(1, retcode_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
-        output.writeMessage(2, itemList_.get(i));
+        output.writeMessage(6, itemList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -311,15 +311,15 @@ public final class TakeBattlePassRewardRspOuterClass {
       size = 0;
       for (int i = 0; i < takeOptionList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, takeOptionList_.get(i));
+          .computeMessageSize(8, takeOptionList_.get(i));
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, retcode_);
+          .computeInt32Size(1, retcode_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, itemList_.get(i));
+          .computeMessageSize(6, itemList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

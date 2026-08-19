@@ -73,7 +73,7 @@ public final class SetUpLunchBoxWidgetReqOuterClass {
             case 0:
               done = true;
               break;
-            case 74: {
+            case 10: {
               emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder subBuilder = null;
               if (lunchBoxData_ != null) {
                 subBuilder = lunchBoxData_.toBuilder();
@@ -118,7 +118,7 @@ public final class SetUpLunchBoxWidgetReqOuterClass {
               emu.grasscutter.net.proto.SetUpLunchBoxWidgetReqOuterClass.SetUpLunchBoxWidgetReq.class, emu.grasscutter.net.proto.SetUpLunchBoxWidgetReqOuterClass.SetUpLunchBoxWidgetReq.Builder.class);
     }
 
-    public static final int LUNCH_BOX_DATA_FIELD_NUMBER = 9;
+    public static final int LUNCH_BOX_DATA_FIELD_NUMBER = 1;
     private emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData lunchBoxData_;
 
     @java.lang.Override
@@ -151,7 +151,7 @@ public final class SetUpLunchBoxWidgetReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (lunchBoxData_ != null) {
-        output.writeMessage(9, getLunchBoxData());
+        output.writeMessage(1, getLunchBoxData());
       }
       unknownFields.writeTo(output);
     }
@@ -164,7 +164,7 @@ public final class SetUpLunchBoxWidgetReqOuterClass {
       size = 0;
       if (lunchBoxData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getLunchBoxData());
+          .computeMessageSize(1, getLunchBoxData());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

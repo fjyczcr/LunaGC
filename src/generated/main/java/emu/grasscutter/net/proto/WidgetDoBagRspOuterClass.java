@@ -80,12 +80,12 @@ public final class WidgetDoBagRspOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 8: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 72: {
+            case 96: {
 
               materialId_ = input.readUInt32();
               break;
@@ -122,7 +122,7 @@ public final class WidgetDoBagRspOuterClass {
               emu.grasscutter.net.proto.WidgetDoBagRspOuterClass.WidgetDoBagRsp.class, emu.grasscutter.net.proto.WidgetDoBagRspOuterClass.WidgetDoBagRsp.Builder.class);
     }
 
-    public static final int MATERIAL_ID_FIELD_NUMBER = 9;
+    public static final int MATERIAL_ID_FIELD_NUMBER = 12;
     private int materialId_;
     /**
      * <code>uint32 material_id = 15;</code>
@@ -133,7 +133,7 @@ public final class WidgetDoBagRspOuterClass {
       return materialId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 11;
+    public static final int RETCODE_FIELD_NUMBER = 1;
     private int retcode_;
     /**
      * <code>int32 retcode = 4;</code>
@@ -159,10 +159,10 @@ public final class WidgetDoBagRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(11, retcode_);
+        output.writeInt32(1, retcode_);
       }
       if (materialId_ != 0) {
-        output.writeUInt32(9, materialId_);
+        output.writeUInt32(12, materialId_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +175,11 @@ public final class WidgetDoBagRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, retcode_);
+          .computeInt32Size(1, retcode_);
       }
       if (materialId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, materialId_);
+          .computeUInt32Size(12, materialId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -85,17 +85,17 @@ public final class ActivityShopSheetInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 48: {
 
               beginTime_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 88: {
 
               sheetId_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 112: {
 
               endTime_ = input.readUInt32();
               break;
@@ -132,7 +132,7 @@ public final class ActivityShopSheetInfoOuterClass {
               emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo.class, emu.grasscutter.net.proto.ActivityShopSheetInfoOuterClass.ActivityShopSheetInfo.Builder.class);
     }
 
-    public static final int BEGIN_TIME_FIELD_NUMBER = 12;
+    public static final int BEGIN_TIME_FIELD_NUMBER = 6;
     private int beginTime_;
     /**
      * <code>uint32 begin_time = 1;</code>
@@ -143,7 +143,7 @@ public final class ActivityShopSheetInfoOuterClass {
       return beginTime_;
     }
 
-    public static final int SHEET_ID_FIELD_NUMBER = 2;
+    public static final int SHEET_ID_FIELD_NUMBER = 11;
     private int sheetId_;
     /**
      * <code>uint32 sheet_id = 14;</code>
@@ -154,7 +154,7 @@ public final class ActivityShopSheetInfoOuterClass {
       return sheetId_;
     }
 
-    public static final int END_TIME_FIELD_NUMBER = 11;
+    public static final int END_TIME_FIELD_NUMBER = 14;
     private int endTime_;
     /**
      * <code>uint32 end_time = 15;</code>
@@ -180,13 +180,13 @@ public final class ActivityShopSheetInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (beginTime_ != 0) {
-        output.writeUInt32(12, beginTime_);
+        output.writeUInt32(6, beginTime_);
       }
       if (sheetId_ != 0) {
-        output.writeUInt32(2, sheetId_);
+        output.writeUInt32(11, sheetId_);
       }
       if (endTime_ != 0) {
-        output.writeUInt32(11, endTime_);
+        output.writeUInt32(14, endTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class ActivityShopSheetInfoOuterClass {
       size = 0;
       if (beginTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, beginTime_);
+          .computeUInt32Size(6, beginTime_);
       }
       if (sheetId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, sheetId_);
+          .computeUInt32Size(11, sheetId_);
       }
       if (endTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, endTime_);
+          .computeUInt32Size(14, endTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

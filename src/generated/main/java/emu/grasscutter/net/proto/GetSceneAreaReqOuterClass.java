@@ -71,12 +71,12 @@ public final class GetSceneAreaReqOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 40: {
 
               sceneId_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 104: {
 
               belongUid_ = input.readUInt32();
               break;
@@ -113,7 +113,7 @@ public final class GetSceneAreaReqOuterClass {
               emu.grasscutter.net.proto.GetSceneAreaReqOuterClass.GetSceneAreaReq.class, emu.grasscutter.net.proto.GetSceneAreaReqOuterClass.GetSceneAreaReq.Builder.class);
     }
 
-    public static final int BELONG_UID_FIELD_NUMBER = 5;
+    public static final int BELONG_UID_FIELD_NUMBER = 13;
     private int belongUid_;
 
     @java.lang.Override
@@ -121,7 +121,7 @@ public final class GetSceneAreaReqOuterClass {
       return belongUid_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 1;
+    public static final int SCENE_ID_FIELD_NUMBER = 5;
     private int sceneId_;
 
     @java.lang.Override
@@ -144,10 +144,10 @@ public final class GetSceneAreaReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sceneId_ != 0) {
-        output.writeUInt32(1, sceneId_);
+        output.writeUInt32(5, sceneId_);
       }
       if (belongUid_ != 0) {
-        output.writeUInt32(5, belongUid_);
+        output.writeUInt32(13, belongUid_);
       }
       unknownFields.writeTo(output);
     }
@@ -160,11 +160,11 @@ public final class GetSceneAreaReqOuterClass {
       size = 0;
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, sceneId_);
+          .computeUInt32Size(5, sceneId_);
       }
       if (belongUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, belongUid_);
+          .computeUInt32Size(13, belongUid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -73,17 +73,17 @@ public final class PlayerTimeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 80: {
 
               serverTime_ = input.readUInt64();
               break;
             }
-            case 48: {
+            case 24: {
 
               playerTime_ = input.readUInt64();
               break;
             }
-            case 24: {
+            case 104: {
 
               isPaused_ = input.readBool();
               break;
@@ -120,7 +120,7 @@ public final class PlayerTimeNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerTimeNotifyOuterClass.PlayerTimeNotify.class, emu.grasscutter.net.proto.PlayerTimeNotifyOuterClass.PlayerTimeNotify.Builder.class);
     }
 
-    public static final int PLAYER_TIME_FIELD_NUMBER = 6;
+    public static final int PLAYER_TIME_FIELD_NUMBER = 3;
     private long playerTime_;
 
     @java.lang.Override
@@ -128,7 +128,7 @@ public final class PlayerTimeNotifyOuterClass {
       return playerTime_;
     }
 
-    public static final int IS_PAUSED_FIELD_NUMBER = 3;
+    public static final int IS_PAUSED_FIELD_NUMBER = 13;
     private boolean isPaused_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class PlayerTimeNotifyOuterClass {
       return isPaused_;
     }
 
-    public static final int SERVER_TIME_FIELD_NUMBER = 9;
+    public static final int SERVER_TIME_FIELD_NUMBER = 10;
     private long serverTime_;
 
     @java.lang.Override
@@ -159,13 +159,13 @@ public final class PlayerTimeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (serverTime_ != 0L) {
-        output.writeUInt64(9, serverTime_);
+        output.writeUInt64(10, serverTime_);
       }
       if (playerTime_ != 0L) {
-        output.writeUInt64(6, playerTime_);
+        output.writeUInt64(3, playerTime_);
       }
       if (isPaused_ != false) {
-        output.writeBool(3, isPaused_);
+        output.writeBool(13, isPaused_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,15 +178,15 @@ public final class PlayerTimeNotifyOuterClass {
       size = 0;
       if (serverTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(9, serverTime_);
+          .computeUInt64Size(10, serverTime_);
       }
       if (playerTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, playerTime_);
+          .computeUInt64Size(3, playerTime_);
       }
       if (isPaused_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isPaused_);
+          .computeBoolSize(13, isPaused_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

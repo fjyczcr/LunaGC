@@ -89,17 +89,17 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 32: {
 
               haveCurSchedule_ = input.readBool();
               break;
             }
-            case 72: {
+            case 16: {
 
               isViewed_ = input.readBool();
               break;
             }
-            case 18: {
+            case 82: {
               emu.grasscutter.net.proto.BattlePassScheduleOuterClass.BattlePassSchedule.Builder subBuilder = null;
               if (curSchedule_ != null) {
                 subBuilder = curSchedule_.toBuilder();
@@ -117,7 +117,7 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
               pHLGOADDENJ_ = input.readBool();
               break;
             }
-            case 80: {
+            case 128000: {
 
               rewardType_ = input.readUInt32();
               break;
@@ -154,7 +154,7 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
               emu.grasscutter.net.proto.BattlePassCurScheduleUpdateNotifyOuterClass.BattlePassCurScheduleUpdateNotify.class, emu.grasscutter.net.proto.BattlePassCurScheduleUpdateNotifyOuterClass.BattlePassCurScheduleUpdateNotify.Builder.class);
     }
 
-    public static final int CUR_SCHEDULE_FIELD_NUMBER = 2;
+    public static final int CUR_SCHEDULE_FIELD_NUMBER = 10;
     private emu.grasscutter.net.proto.BattlePassScheduleOuterClass.BattlePassSchedule curSchedule_;
 
     @java.lang.Override
@@ -172,7 +172,7 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
       return getCurSchedule();
     }
 
-    public static final int REWARD_TYPE_FIELD_NUMBER = 10;
+    public static final int REWARD_TYPE_FIELD_NUMBER = 16000;
     private int rewardType_;
     /**
      * <code>uint32 reward_type = 12;</code>
@@ -194,7 +194,7 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
       return pHLGOADDENJ_;
     }
 
-    public static final int IS_VIEWED_FIELD_NUMBER = 9;
+    public static final int IS_VIEWED_FIELD_NUMBER = 2;
     private boolean isViewed_;
 
     @java.lang.Override
@@ -202,7 +202,7 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
       return isViewed_;
     }
 
-    public static final int HAVE_CUR_SCHEDULE_FIELD_NUMBER = 11;
+    public static final int HAVE_CUR_SCHEDULE_FIELD_NUMBER = 4;
     private boolean haveCurSchedule_;
 
     @java.lang.Override
@@ -225,19 +225,19 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (curSchedule_ != null) {
-        output.writeMessage(2, getCurSchedule());
+        output.writeMessage(10, getCurSchedule());
       }
       if (haveCurSchedule_ != false) {
-        output.writeBool(11, haveCurSchedule_);
+        output.writeBool(4, haveCurSchedule_);
       }
       if (isViewed_ != false) {
-        output.writeBool(9, isViewed_);
+        output.writeBool(2, isViewed_);
       }
       if (pHLGOADDENJ_ != false) {
         output.writeBool(6, pHLGOADDENJ_);
       }
       if (rewardType_ != 0) {
-        output.writeUInt32(10, rewardType_);
+        output.writeUInt32(16000, rewardType_);
       }
       unknownFields.writeTo(output);
     }
@@ -250,15 +250,15 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
       size = 0;
       if (curSchedule_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getCurSchedule());
+          .computeMessageSize(10, getCurSchedule());
       }
       if (haveCurSchedule_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, haveCurSchedule_);
+          .computeBoolSize(4, haveCurSchedule_);
       }
       if (isViewed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isViewed_);
+          .computeBoolSize(2, isViewed_);
       }
       if (pHLGOADDENJ_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -266,7 +266,7 @@ public final class BattlePassCurScheduleUpdateNotifyOuterClass {
       }
       if (rewardType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, rewardType_);
+          .computeUInt32Size(16000, rewardType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

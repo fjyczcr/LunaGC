@@ -89,7 +89,7 @@ public final class StoreWeightLimitNotifyOuterClass {
               furnitureCountLimit_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 72: {
 
               weightLimit_ = input.readUInt32();
               break;
@@ -99,13 +99,13 @@ public final class StoreWeightLimitNotifyOuterClass {
               eLBMPCBENEO_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 64: {
               int rawValue = input.readEnum();
 
               storeType_ = rawValue;
               break;
             }
-            case 72: {
+            case 32: {
 
               reliquaryCountLimit_ = input.readUInt32();
               break;
@@ -153,7 +153,7 @@ public final class StoreWeightLimitNotifyOuterClass {
       return eLBMPCBENEO_;
     }
 
-    public static final int RELIQUARY_COUNT_LIMIT_FIELD_NUMBER = 9;
+    public static final int RELIQUARY_COUNT_LIMIT_FIELD_NUMBER = 4;
     private int reliquaryCountLimit_;
 
     @java.lang.Override
@@ -169,7 +169,7 @@ public final class StoreWeightLimitNotifyOuterClass {
       return furnitureCountLimit_;
     }
 
-    public static final int STORE_TYPE_FIELD_NUMBER = 3;
+    public static final int STORE_TYPE_FIELD_NUMBER = 8;
     private int storeType_;
 
     @java.lang.Override public int getStoreTypeValue() {
@@ -182,7 +182,7 @@ public final class StoreWeightLimitNotifyOuterClass {
       return result == null ? emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.UNRECOGNIZED : result;
     }
 
-    public static final int WEIGHT_LIMIT_FIELD_NUMBER = 7;
+    public static final int WEIGHT_LIMIT_FIELD_NUMBER = 9;
     private int weightLimit_;
 
     @java.lang.Override
@@ -205,13 +205,13 @@ public final class StoreWeightLimitNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (reliquaryCountLimit_ != 0) {
-        output.writeUInt32(9, reliquaryCountLimit_);
+        output.writeUInt32(4, reliquaryCountLimit_);
       }
       if (weightLimit_ != 0) {
-        output.writeUInt32(7, weightLimit_);
+        output.writeUInt32(9, weightLimit_);
       }
       if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.StoreType_STORE_NONE.getNumber()) {
-        output.writeEnum(3, storeType_);
+        output.writeEnum(8, storeType_);
       }
       if (furnitureCountLimit_ != 0) {
         output.writeUInt32(14, furnitureCountLimit_);
@@ -230,15 +230,15 @@ public final class StoreWeightLimitNotifyOuterClass {
       size = 0;
       if (reliquaryCountLimit_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, reliquaryCountLimit_);
+          .computeUInt32Size(4, reliquaryCountLimit_);
       }
       if (weightLimit_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, weightLimit_);
+          .computeUInt32Size(9, weightLimit_);
       }
       if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.StoreType_STORE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, storeType_);
+          .computeEnumSize(8, storeType_);
       }
       if (furnitureCountLimit_ != 0) {
         size += com.google.protobuf.CodedOutputStream

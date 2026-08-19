@@ -83,7 +83,7 @@ public final class NpcTalkReqOuterClass {
               entityId_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 80: {
 
               talkId_ = input.readUInt32();
               break;
@@ -128,7 +128,7 @@ public final class NpcTalkReqOuterClass {
       return entityId_;
     }
 
-    public static final int TALK_ID_FIELD_NUMBER = 3;
+    public static final int TALK_ID_FIELD_NUMBER = 10;
     private int talkId_;
 
     @java.lang.Override
@@ -159,7 +159,7 @@ public final class NpcTalkReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (talkId_ != 0) {
-        output.writeUInt32(3, talkId_);
+        output.writeUInt32(10, talkId_);
       }
       if (npcEntityId_ != 0) {
         output.writeUInt32(7, npcEntityId_);
@@ -178,7 +178,7 @@ public final class NpcTalkReqOuterClass {
       size = 0;
       if (talkId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, talkId_);
+          .computeUInt32Size(10, talkId_);
       }
       if (npcEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream

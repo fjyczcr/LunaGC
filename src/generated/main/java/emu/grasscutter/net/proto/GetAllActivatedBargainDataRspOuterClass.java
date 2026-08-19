@@ -105,7 +105,7 @@ public final class GetAllActivatedBargainDataRspOuterClass {
               retcode_ = input.readInt32();
               break;
             }
-            case 114: {
+            case 122: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 snapshotList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BargainSnapshotOuterClass.BargainSnapshot>();
                 mutable_bitField0_ |= 0x00000001;
@@ -149,7 +149,7 @@ public final class GetAllActivatedBargainDataRspOuterClass {
               emu.grasscutter.net.proto.GetAllActivatedBargainDataRspOuterClass.GetAllActivatedBargainDataRsp.class, emu.grasscutter.net.proto.GetAllActivatedBargainDataRspOuterClass.GetAllActivatedBargainDataRsp.Builder.class);
     }
 
-    public static final int SNAPSHOT_LIST_FIELD_NUMBER = 14;
+    public static final int SNAPSHOT_LIST_FIELD_NUMBER = 15;
     private java.util.List<emu.grasscutter.net.proto.BargainSnapshotOuterClass.BargainSnapshot> snapshotList_;
     /**
      * <code>repeated .BargainSnapshot snapshot_list = 6;</code>
@@ -218,7 +218,7 @@ public final class GetAllActivatedBargainDataRspOuterClass {
         output.writeInt32(7, retcode_);
       }
       for (int i = 0; i < snapshotList_.size(); i++) {
-        output.writeMessage(14, snapshotList_.get(i));
+        output.writeMessage(15, snapshotList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -235,7 +235,7 @@ public final class GetAllActivatedBargainDataRspOuterClass {
       }
       for (int i = 0; i < snapshotList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, snapshotList_.get(i));
+          .computeMessageSize(15, snapshotList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

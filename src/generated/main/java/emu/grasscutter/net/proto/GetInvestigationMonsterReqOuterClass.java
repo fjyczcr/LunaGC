@@ -77,7 +77,7 @@ public final class GetInvestigationMonsterReqOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 72: {
 
               isForMark_ = input.readBool();
               break;
@@ -156,7 +156,7 @@ public final class GetInvestigationMonsterReqOuterClass {
     }
     private int cityIdListMemoizedSerializedSize = -1;
 
-    public static final int IS_FOR_MARK_FIELD_NUMBER = 3;
+    public static final int IS_FOR_MARK_FIELD_NUMBER = 9;
     private boolean isForMark_;
 
     @java.lang.Override
@@ -180,7 +180,7 @@ public final class GetInvestigationMonsterReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (isForMark_ != false) {
-        output.writeBool(3, isForMark_);
+        output.writeBool(9, isForMark_);
       }
       if (getCityIdListList().size() > 0) {
         output.writeUInt32NoTag(10);
@@ -200,7 +200,7 @@ public final class GetInvestigationMonsterReqOuterClass {
       size = 0;
       if (isForMark_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isForMark_);
+          .computeBoolSize(9, isForMark_);
       }
       {
         int dataSize = 0;

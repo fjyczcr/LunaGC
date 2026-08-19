@@ -78,7 +78,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 72: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 showNameCardIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -86,7 +86,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
               showNameCardIdList_.addInt(input.readUInt32());
               break;
             }
-            case 66: {
+            case 74: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -139,7 +139,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
               emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp.class, emu.grasscutter.net.proto.UpdatePlayerShowNameCardListRspOuterClass.UpdatePlayerShowNameCardListRsp.Builder.class);
     }
 
-    public static final int SHOW_NAME_CARD_ID_LIST_FIELD_NUMBER = 8;
+    public static final int SHOW_NAME_CARD_ID_LIST_FIELD_NUMBER = 9;
     private com.google.protobuf.Internal.IntList showNameCardIdList_;
 
     @java.lang.Override
@@ -181,7 +181,7 @@ public final class UpdatePlayerShowNameCardListRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getShowNameCardIdListList().size() > 0) {
-        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(74);
         output.writeUInt32NoTag(showNameCardIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < showNameCardIdList_.size(); i++) {

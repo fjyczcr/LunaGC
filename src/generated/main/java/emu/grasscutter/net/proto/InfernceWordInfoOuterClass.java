@@ -107,7 +107,7 @@ public final class InfernceWordInfoOuterClass {
               jKDGMJCFEDH_ = input.readBool();
               break;
             }
-            case 104: {
+            case 48: {
 
               wordId_ = input.readUInt32();
               break;
@@ -117,7 +117,7 @@ public final class InfernceWordInfoOuterClass {
               dGMLJIKFAMI_ = input.readBool();
               break;
             }
-            case 16: {
+            case 64: {
 
               unlockByWordId_ = input.readUInt32();
               break;
@@ -154,7 +154,7 @@ public final class InfernceWordInfoOuterClass {
               emu.grasscutter.net.proto.InfernceWordInfoOuterClass.InfernceWordInfo.class, emu.grasscutter.net.proto.InfernceWordInfoOuterClass.InfernceWordInfo.Builder.class);
     }
 
-    public static final int UNLOCK_BY_WORD_ID_FIELD_NUMBER = 2;
+    public static final int UNLOCK_BY_WORD_ID_FIELD_NUMBER = 8;
     private int unlockByWordId_;
     /**
      * <code>uint32 unlock_by_word_id = 13;</code>
@@ -198,7 +198,7 @@ public final class InfernceWordInfoOuterClass {
       return hKJHBOMCGLK_;
     }
 
-    public static final int WORD_ID_FIELD_NUMBER = 13;
+    public static final int WORD_ID_FIELD_NUMBER = 6;
     private int wordId_;
     /**
      * <code>uint32 word_id = 9;</code>
@@ -230,13 +230,13 @@ public final class InfernceWordInfoOuterClass {
         output.writeBool(16000, jKDGMJCFEDH_);
       }
       if (wordId_ != 0) {
-        output.writeUInt32(13, wordId_);
+        output.writeUInt32(6, wordId_);
       }
       if (dGMLJIKFAMI_ != false) {
         output.writeBool(11, dGMLJIKFAMI_);
       }
       if (unlockByWordId_ != 0) {
-        output.writeUInt32(2, unlockByWordId_);
+        output.writeUInt32(8, unlockByWordId_);
       }
       unknownFields.writeTo(output);
     }
@@ -257,7 +257,7 @@ public final class InfernceWordInfoOuterClass {
       }
       if (wordId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, wordId_);
+          .computeUInt32Size(6, wordId_);
       }
       if (dGMLJIKFAMI_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -265,7 +265,7 @@ public final class InfernceWordInfoOuterClass {
       }
       if (unlockByWordId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, unlockByWordId_);
+          .computeUInt32Size(8, unlockByWordId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

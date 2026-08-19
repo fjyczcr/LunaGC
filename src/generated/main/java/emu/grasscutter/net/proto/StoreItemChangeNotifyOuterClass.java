@@ -98,13 +98,13 @@ public final class StoreItemChangeNotifyOuterClass {
               reason_ = rawValue;
               break;
             }
-            case 88: {
+            case 80: {
               int rawValue = input.readEnum();
 
               storeType_ = rawValue;
               break;
             }
-            case 74: {
+            case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemOuterClass.Item>();
                 mutable_bitField0_ |= 0x00000001;
@@ -148,7 +148,7 @@ public final class StoreItemChangeNotifyOuterClass {
               emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify.class, emu.grasscutter.net.proto.StoreItemChangeNotifyOuterClass.StoreItemChangeNotify.Builder.class);
     }
 
-    public static final int ITEM_LIST_FIELD_NUMBER = 9;
+    public static final int ITEM_LIST_FIELD_NUMBER = 1;
     private java.util.List<emu.grasscutter.net.proto.ItemOuterClass.Item> itemList_;
 
     @java.lang.Override
@@ -178,7 +178,7 @@ public final class StoreItemChangeNotifyOuterClass {
       return itemList_.get(index);
     }
 
-    public static final int STORE_TYPE_FIELD_NUMBER = 11;
+    public static final int STORE_TYPE_FIELD_NUMBER = 10;
     private int storeType_;
 
     @java.lang.Override public int getStoreTypeValue() {
@@ -222,10 +222,10 @@ public final class StoreItemChangeNotifyOuterClass {
         output.writeEnum(14, reason_);
       }
       if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.StoreType_STORE_NONE.getNumber()) {
-        output.writeEnum(11, storeType_);
+        output.writeEnum(10, storeType_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
-        output.writeMessage(9, itemList_.get(i));
+        output.writeMessage(1, itemList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -242,11 +242,11 @@ public final class StoreItemChangeNotifyOuterClass {
       }
       if (storeType_ != emu.grasscutter.net.proto.StoreTypeOuterClass.StoreType.StoreType_STORE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(11, storeType_);
+          .computeEnumSize(10, storeType_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, itemList_.get(i));
+          .computeMessageSize(1, itemList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

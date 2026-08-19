@@ -75,12 +75,12 @@ public final class SkyCrystalDetectorDataOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 32: {
 
               groupId_ = input.readUInt32();
               break;
             }
-            case 42: {
+            case 50: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (hintCenterPos_ != null) {
                 subBuilder = hintCenterPos_.toBuilder();
@@ -93,12 +93,12 @@ public final class SkyCrystalDetectorDataOuterClass {
 
               break;
             }
-            case 32: {
+            case 88: {
 
               isHintValid_ = input.readBool();
               break;
             }
-            case 64: {
+            case 96: {
 
               configId_ = input.readUInt32();
               break;
@@ -135,7 +135,7 @@ public final class SkyCrystalDetectorDataOuterClass {
               emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.class, emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.Builder.class);
     }
 
-    public static final int HINT_CENTER_POS_FIELD_NUMBER = 5;
+    public static final int HINT_CENTER_POS_FIELD_NUMBER = 6;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector hintCenterPos_;
 
     @java.lang.Override
@@ -153,7 +153,7 @@ public final class SkyCrystalDetectorDataOuterClass {
       return getHintCenterPos();
     }
 
-    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    public static final int GROUP_ID_FIELD_NUMBER = 4;
     private int groupId_;
 
     @java.lang.Override
@@ -161,7 +161,7 @@ public final class SkyCrystalDetectorDataOuterClass {
       return groupId_;
     }
 
-    public static final int IS_HINT_VALID_FIELD_NUMBER = 4;
+    public static final int IS_HINT_VALID_FIELD_NUMBER = 11;
     private boolean isHintValid_;
 
     @java.lang.Override
@@ -169,7 +169,7 @@ public final class SkyCrystalDetectorDataOuterClass {
       return isHintValid_;
     }
 
-    public static final int CONFIG_ID_FIELD_NUMBER = 8;
+    public static final int CONFIG_ID_FIELD_NUMBER = 12;
     private int configId_;
 
     @java.lang.Override
@@ -192,16 +192,16 @@ public final class SkyCrystalDetectorDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (groupId_ != 0) {
-        output.writeUInt32(1, groupId_);
+        output.writeUInt32(4, groupId_);
       }
       if (hintCenterPos_ != null) {
-        output.writeMessage(5, getHintCenterPos());
+        output.writeMessage(6, getHintCenterPos());
       }
       if (isHintValid_ != false) {
-        output.writeBool(4, isHintValid_);
+        output.writeBool(11, isHintValid_);
       }
       if (configId_ != 0) {
-        output.writeUInt32(8, configId_);
+        output.writeUInt32(12, configId_);
       }
       unknownFields.writeTo(output);
     }
@@ -214,19 +214,19 @@ public final class SkyCrystalDetectorDataOuterClass {
       size = 0;
       if (groupId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, groupId_);
+          .computeUInt32Size(4, groupId_);
       }
       if (hintCenterPos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getHintCenterPos());
+          .computeMessageSize(6, getHintCenterPos());
       }
       if (isHintValid_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isHintValid_);
+          .computeBoolSize(11, isHintValid_);
       }
       if (configId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, configId_);
+          .computeUInt32Size(12, configId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

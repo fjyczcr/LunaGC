@@ -234,7 +234,7 @@ public final class WinterCampActivityDetailInfoOuterClass {
 
               break;
             }
-            case 24: {
+            case 120: {
 
               isContentClosed_ = input.readBool();
               break;
@@ -575,7 +575,7 @@ public final class WinterCampActivityDetailInfoOuterClass {
     }
     private int hMPGMBPMBOMMemoizedSerializedSize = -1;
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 3;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 15;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -609,7 +609,7 @@ public final class WinterCampActivityDetailInfoOuterClass {
         output.writeMessage(5, getBHLHDNBFPLP());
       }
       if (isContentClosed_ != false) {
-        output.writeBool(3, isContentClosed_);
+        output.writeBool(15, isContentClosed_);
       }
       for (int i = 0; i < kCJNLPCOAFO_.size(); i++) {
         output.writeMessage(7, kCJNLPCOAFO_.get(i));
@@ -663,7 +663,7 @@ public final class WinterCampActivityDetailInfoOuterClass {
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isContentClosed_);
+          .computeBoolSize(15, isContentClosed_);
       }
       for (int i = 0; i < kCJNLPCOAFO_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream

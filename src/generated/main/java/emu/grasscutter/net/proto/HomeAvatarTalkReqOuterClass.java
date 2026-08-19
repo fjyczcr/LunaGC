@@ -80,12 +80,12 @@ public final class HomeAvatarTalkReqOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 104: {
 
               talkId_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 72: {
 
               avatarId_ = input.readUInt32();
               break;
@@ -122,7 +122,7 @@ public final class HomeAvatarTalkReqOuterClass {
               emu.grasscutter.net.proto.HomeAvatarTalkReqOuterClass.HomeAvatarTalkReq.class, emu.grasscutter.net.proto.HomeAvatarTalkReqOuterClass.HomeAvatarTalkReq.Builder.class);
     }
 
-    public static final int AVATAR_ID_FIELD_NUMBER = 3;
+    public static final int AVATAR_ID_FIELD_NUMBER = 9;
     private int avatarId_;
     /**
      * <code>uint32 avatar_id = 7;</code>
@@ -133,7 +133,7 @@ public final class HomeAvatarTalkReqOuterClass {
       return avatarId_;
     }
 
-    public static final int TALK_ID_FIELD_NUMBER = 14;
+    public static final int TALK_ID_FIELD_NUMBER = 13;
     private int talkId_;
     /**
      * <code>uint32 talk_id = 6;</code>
@@ -159,10 +159,10 @@ public final class HomeAvatarTalkReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (talkId_ != 0) {
-        output.writeUInt32(14, talkId_);
+        output.writeUInt32(13, talkId_);
       }
       if (avatarId_ != 0) {
-        output.writeUInt32(3, avatarId_);
+        output.writeUInt32(9, avatarId_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +175,11 @@ public final class HomeAvatarTalkReqOuterClass {
       size = 0;
       if (talkId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, talkId_);
+          .computeUInt32Size(13, talkId_);
       }
       if (avatarId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, avatarId_);
+          .computeUInt32Size(9, avatarId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

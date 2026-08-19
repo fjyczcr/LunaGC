@@ -73,7 +73,7 @@ public final class AvatarDieAnimationEndRspOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 120: {
 
               retcode_ = input.readInt32();
               break;
@@ -83,7 +83,7 @@ public final class AvatarDieAnimationEndRspOuterClass {
               dieGuid_ = input.readUInt64();
               break;
             }
-            case 32: {
+            case 72: {
 
               skillId_ = input.readUInt32();
               break;
@@ -128,7 +128,7 @@ public final class AvatarDieAnimationEndRspOuterClass {
       return dieGuid_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 14;
+    public static final int RETCODE_FIELD_NUMBER = 15;
     private int retcode_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class AvatarDieAnimationEndRspOuterClass {
       return retcode_;
     }
 
-    public static final int SKILL_ID_FIELD_NUMBER = 4;
+    public static final int SKILL_ID_FIELD_NUMBER = 9;
     private int skillId_;
 
     @java.lang.Override
@@ -159,13 +159,13 @@ public final class AvatarDieAnimationEndRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(14, retcode_);
+        output.writeInt32(15, retcode_);
       }
       if (dieGuid_ != 0L) {
         output.writeUInt64(8, dieGuid_);
       }
       if (skillId_ != 0) {
-        output.writeUInt32(4, skillId_);
+        output.writeUInt32(9, skillId_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,7 +178,7 @@ public final class AvatarDieAnimationEndRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, retcode_);
+          .computeInt32Size(15, retcode_);
       }
       if (dieGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -186,7 +186,7 @@ public final class AvatarDieAnimationEndRspOuterClass {
       }
       if (skillId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, skillId_);
+          .computeUInt32Size(9, skillId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

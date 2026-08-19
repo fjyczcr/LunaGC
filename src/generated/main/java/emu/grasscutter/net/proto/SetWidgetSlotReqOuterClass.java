@@ -110,7 +110,7 @@ public final class SetWidgetSlotReqOuterClass {
               input.popLimit(oldLimit);
               break;
             }
-            case 40: {
+            case 48: {
               int rawValue = input.readEnum();
 
               op_ = rawValue;
@@ -205,7 +205,7 @@ public final class SetWidgetSlotReqOuterClass {
       return materialId_;
     }
 
-    public static final int OP_FIELD_NUMBER = 5;
+    public static final int OP_FIELD_NUMBER = 6;
     private int op_;
 
     @java.lang.Override public int getOpValue() {
@@ -241,7 +241,7 @@ public final class SetWidgetSlotReqOuterClass {
         output.writeEnumNoTag(tagList_.get(i));
       }
       if (op_ != emu.grasscutter.net.proto.WidgetSlotOpOuterClass.WidgetSlotOp.WidgetSlotOp_ATTACH.getNumber()) {
-        output.writeEnum(5, op_);
+        output.writeEnum(6, op_);
       }
       if (materialId_ != 0) {
         output.writeUInt32(8, materialId_);
@@ -269,7 +269,7 @@ public final class SetWidgetSlotReqOuterClass {
       }
       if (op_ != emu.grasscutter.net.proto.WidgetSlotOpOuterClass.WidgetSlotOp.WidgetSlotOp_ATTACH.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, op_);
+          .computeEnumSize(6, op_);
       }
       if (materialId_ != 0) {
         size += com.google.protobuf.CodedOutputStream

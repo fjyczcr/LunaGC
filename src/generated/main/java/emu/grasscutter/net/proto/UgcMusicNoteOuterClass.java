@@ -67,12 +67,12 @@ public final class UgcMusicNoteOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 56: {
 
               startTime_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 32: {
 
               endTime_ = input.readUInt32();
               break;
@@ -109,7 +109,7 @@ public final class UgcMusicNoteOuterClass {
               emu.grasscutter.net.proto.UgcMusicNoteOuterClass.UgcMusicNote.class, emu.grasscutter.net.proto.UgcMusicNoteOuterClass.UgcMusicNote.Builder.class);
     }
 
-    public static final int START_TIME_FIELD_NUMBER = 8;
+    public static final int START_TIME_FIELD_NUMBER = 7;
     private int startTime_;
 
     @java.lang.Override
@@ -117,7 +117,7 @@ public final class UgcMusicNoteOuterClass {
       return startTime_;
     }
 
-    public static final int END_TIME_FIELD_NUMBER = 14;
+    public static final int END_TIME_FIELD_NUMBER = 4;
     private int endTime_;
 
     @java.lang.Override
@@ -140,10 +140,10 @@ public final class UgcMusicNoteOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (startTime_ != 0) {
-        output.writeUInt32(8, startTime_);
+        output.writeUInt32(7, startTime_);
       }
       if (endTime_ != 0) {
-        output.writeUInt32(14, endTime_);
+        output.writeUInt32(4, endTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -156,11 +156,11 @@ public final class UgcMusicNoteOuterClass {
       size = 0;
       if (startTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, startTime_);
+          .computeUInt32Size(7, startTime_);
       }
       if (endTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, endTime_);
+          .computeUInt32Size(4, endTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

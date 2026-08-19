@@ -131,7 +131,7 @@ public final class QuestUpdateQuestVarReqOuterClass {
               parentQuestVarSeq_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 96: {
 
               parentQuestId_ = input.readUInt32();
               break;
@@ -222,7 +222,7 @@ public final class QuestUpdateQuestVarReqOuterClass {
       return parentQuestVarSeq_;
     }
 
-    public static final int PARENT_QUEST_ID_FIELD_NUMBER = 13;
+    public static final int PARENT_QUEST_ID_FIELD_NUMBER = 12;
     private int parentQuestId_;
     /**
      * <code>uint32 parent_quest_id = 11;</code>
@@ -268,7 +268,7 @@ public final class QuestUpdateQuestVarReqOuterClass {
         output.writeUInt32(1, parentQuestVarSeq_);
       }
       if (parentQuestId_ != 0) {
-        output.writeUInt32(13, parentQuestId_);
+        output.writeUInt32(12, parentQuestId_);
       }
       unknownFields.writeTo(output);
     }
@@ -293,7 +293,7 @@ public final class QuestUpdateQuestVarReqOuterClass {
       }
       if (parentQuestId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, parentQuestId_);
+          .computeUInt32Size(12, parentQuestId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

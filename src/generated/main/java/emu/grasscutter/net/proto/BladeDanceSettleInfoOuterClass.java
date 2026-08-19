@@ -101,12 +101,12 @@ public final class BladeDanceSettleInfoOuterClass {
               costTime_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 104: {
 
               levelId_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 8: {
 
               isNewRecord_ = input.readBool();
               break;
@@ -143,7 +143,7 @@ public final class BladeDanceSettleInfoOuterClass {
               emu.grasscutter.net.proto.BladeDanceSettleInfoOuterClass.BladeDanceSettleInfo.class, emu.grasscutter.net.proto.BladeDanceSettleInfoOuterClass.BladeDanceSettleInfo.Builder.class);
     }
 
-    public static final int IS_NEW_RECORD_FIELD_NUMBER = 8;
+    public static final int IS_NEW_RECORD_FIELD_NUMBER = 1;
     private boolean isNewRecord_;
     /**
      * <code>bool is_new_record = 15;</code>
@@ -176,7 +176,7 @@ public final class BladeDanceSettleInfoOuterClass {
       return costTime_;
     }
 
-    public static final int LEVEL_ID_FIELD_NUMBER = 14;
+    public static final int LEVEL_ID_FIELD_NUMBER = 13;
     private int levelId_;
     /**
      * <code>uint32 level_id = 12;</code>
@@ -208,10 +208,10 @@ public final class BladeDanceSettleInfoOuterClass {
         output.writeUInt32(9, costTime_);
       }
       if (levelId_ != 0) {
-        output.writeUInt32(14, levelId_);
+        output.writeUInt32(13, levelId_);
       }
       if (isNewRecord_ != false) {
-        output.writeBool(8, isNewRecord_);
+        output.writeBool(1, isNewRecord_);
       }
       unknownFields.writeTo(output);
     }
@@ -232,11 +232,11 @@ public final class BladeDanceSettleInfoOuterClass {
       }
       if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, levelId_);
+          .computeUInt32Size(13, levelId_);
       }
       if (isNewRecord_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, isNewRecord_);
+          .computeBoolSize(1, isNewRecord_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

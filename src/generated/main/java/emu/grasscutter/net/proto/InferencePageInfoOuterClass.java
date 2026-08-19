@@ -108,7 +108,7 @@ public final class InferencePageInfoOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.InfernceWordInfoOuterClass.InfernceWordInfo.parser(), extensionRegistry));
               break;
             }
-            case 80: {
+            case 48: {
 
               pageId_ = input.readUInt32();
               break;
@@ -188,7 +188,7 @@ public final class InferencePageInfoOuterClass {
       return unlockWordList_.get(index);
     }
 
-    public static final int PAGE_ID_FIELD_NUMBER = 10;
+    public static final int PAGE_ID_FIELD_NUMBER = 6;
     private int pageId_;
     /**
      * <code>uint32 page_id = 13;</code>
@@ -217,7 +217,7 @@ public final class InferencePageInfoOuterClass {
         output.writeMessage(7, unlockWordList_.get(i));
       }
       if (pageId_ != 0) {
-        output.writeUInt32(10, pageId_);
+        output.writeUInt32(6, pageId_);
       }
       unknownFields.writeTo(output);
     }
@@ -234,7 +234,7 @@ public final class InferencePageInfoOuterClass {
       }
       if (pageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, pageId_);
+          .computeUInt32Size(6, pageId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

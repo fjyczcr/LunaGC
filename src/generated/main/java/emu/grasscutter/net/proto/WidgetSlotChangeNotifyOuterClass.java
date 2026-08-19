@@ -78,7 +78,7 @@ public final class WidgetSlotChangeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 82: {
+            case 114: {
               emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData.Builder subBuilder = null;
               if (slot_ != null) {
                 subBuilder = slot_.toBuilder();
@@ -91,7 +91,7 @@ public final class WidgetSlotChangeNotifyOuterClass {
 
               break;
             }
-            case 96: {
+            case 64: {
               int rawValue = input.readEnum();
 
               op_ = rawValue;
@@ -129,7 +129,7 @@ public final class WidgetSlotChangeNotifyOuterClass {
               emu.grasscutter.net.proto.WidgetSlotChangeNotifyOuterClass.WidgetSlotChangeNotify.class, emu.grasscutter.net.proto.WidgetSlotChangeNotifyOuterClass.WidgetSlotChangeNotify.Builder.class);
     }
 
-    public static final int SLOT_FIELD_NUMBER = 10;
+    public static final int SLOT_FIELD_NUMBER = 14;
     private emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData slot_;
 
     @java.lang.Override
@@ -147,7 +147,7 @@ public final class WidgetSlotChangeNotifyOuterClass {
       return getSlot();
     }
 
-    public static final int OP_FIELD_NUMBER = 12;
+    public static final int OP_FIELD_NUMBER = 8;
     private int op_;
 
     @java.lang.Override public int getOpValue() {
@@ -175,10 +175,10 @@ public final class WidgetSlotChangeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (slot_ != null) {
-        output.writeMessage(10, getSlot());
+        output.writeMessage(14, getSlot());
       }
       if (op_ != emu.grasscutter.net.proto.WidgetSlotOpOuterClass.WidgetSlotOp.WidgetSlotOp_ATTACH.getNumber()) {
-        output.writeEnum(12, op_);
+        output.writeEnum(8, op_);
       }
       unknownFields.writeTo(output);
     }
@@ -191,11 +191,11 @@ public final class WidgetSlotChangeNotifyOuterClass {
       size = 0;
       if (slot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getSlot());
+          .computeMessageSize(14, getSlot());
       }
       if (op_ != emu.grasscutter.net.proto.WidgetSlotOpOuterClass.WidgetSlotOp.WidgetSlotOp_ATTACH.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(12, op_);
+          .computeEnumSize(8, op_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

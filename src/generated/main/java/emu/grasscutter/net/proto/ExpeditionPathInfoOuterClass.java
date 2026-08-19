@@ -146,7 +146,7 @@ public final class ExpeditionPathInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 40: {
               int rawValue = input.readEnum();
 
               state_ = rawValue;
@@ -157,7 +157,7 @@ public final class ExpeditionPathInfoOuterClass {
               dDCIILLJCLH_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 64: {
 
               startTime_ = input.readUInt32();
               break;
@@ -172,7 +172,7 @@ public final class ExpeditionPathInfoOuterClass {
               pathId_ = input.readUInt32();
               break;
             }
-            case 21: {
+            case 109: {
 
               bonusProbability_ = input.readFloat();
               break;
@@ -182,7 +182,7 @@ public final class ExpeditionPathInfoOuterClass {
               oFNGLPBLGGP_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 8: {
 
               challengeId_ = input.readUInt32();
               break;
@@ -259,7 +259,7 @@ public final class ExpeditionPathInfoOuterClass {
       return pathId_;
     }
 
-    public static final int BONUS_PROBABILITY_FIELD_NUMBER = 2;
+    public static final int BONUS_PROBABILITY_FIELD_NUMBER = 13;
     private float bonusProbability_;
     /**
      * <code>float bonus_probability = 9;</code>
@@ -270,7 +270,7 @@ public final class ExpeditionPathInfoOuterClass {
       return bonusProbability_;
     }
 
-    public static final int START_TIME_FIELD_NUMBER = 11;
+    public static final int START_TIME_FIELD_NUMBER = 8;
     private int startTime_;
     /**
      * <code>uint32 start_time = 5;</code>
@@ -320,7 +320,7 @@ public final class ExpeditionPathInfoOuterClass {
     }
     private int avatarIdListMemoizedSerializedSize = -1;
 
-    public static final int STATE_FIELD_NUMBER = 13;
+    public static final int STATE_FIELD_NUMBER = 5;
     private int state_;
     /**
      * <code>.ExpeditionState state = 1;</code>
@@ -350,7 +350,7 @@ public final class ExpeditionPathInfoOuterClass {
       return dDCIILLJCLH_;
     }
 
-    public static final int CHALLENGE_ID_FIELD_NUMBER = 14;
+    public static final int CHALLENGE_ID_FIELD_NUMBER = 1;
     private int challengeId_;
     /**
      * <code>uint32 challenge_id = 13;</code>
@@ -399,13 +399,13 @@ public final class ExpeditionPathInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (state_ != emu.grasscutter.net.proto.ExpeditionStateOuterClass.ExpeditionState.EXPEDITION_NONE.getNumber()) {
-        output.writeEnum(13, state_);
+        output.writeEnum(5, state_);
       }
       if (dDCIILLJCLH_ != 0) {
         output.writeUInt32(4, dDCIILLJCLH_);
       }
       if (startTime_ != 0) {
-        output.writeUInt32(11, startTime_);
+        output.writeUInt32(8, startTime_);
       }
       if (aGGGPFNPNLN_ != 0) {
         output.writeUInt32(16000, aGGGPFNPNLN_);
@@ -414,13 +414,13 @@ public final class ExpeditionPathInfoOuterClass {
         output.writeUInt32(6, pathId_);
       }
       if (bonusProbability_ != 0F) {
-        output.writeFloat(2, bonusProbability_);
+        output.writeFloat(13, bonusProbability_);
       }
       if (oFNGLPBLGGP_ != 0) {
         output.writeUInt32(16002, oFNGLPBLGGP_);
       }
       if (challengeId_ != 0) {
-        output.writeUInt32(14, challengeId_);
+        output.writeUInt32(1, challengeId_);
       }
       if (ePLFCNHCJOD_ != 0) {
         output.writeUInt32(16001, ePLFCNHCJOD_);
@@ -443,7 +443,7 @@ public final class ExpeditionPathInfoOuterClass {
       size = 0;
       if (state_ != emu.grasscutter.net.proto.ExpeditionStateOuterClass.ExpeditionState.EXPEDITION_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(13, state_);
+          .computeEnumSize(5, state_);
       }
       if (dDCIILLJCLH_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -451,7 +451,7 @@ public final class ExpeditionPathInfoOuterClass {
       }
       if (startTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, startTime_);
+          .computeUInt32Size(8, startTime_);
       }
       if (aGGGPFNPNLN_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -463,7 +463,7 @@ public final class ExpeditionPathInfoOuterClass {
       }
       if (bonusProbability_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, bonusProbability_);
+          .computeFloatSize(13, bonusProbability_);
       }
       if (oFNGLPBLGGP_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -471,7 +471,7 @@ public final class ExpeditionPathInfoOuterClass {
       }
       if (challengeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, challengeId_);
+          .computeUInt32Size(1, challengeId_);
       }
       if (ePLFCNHCJOD_ != 0) {
         size += com.google.protobuf.CodedOutputStream

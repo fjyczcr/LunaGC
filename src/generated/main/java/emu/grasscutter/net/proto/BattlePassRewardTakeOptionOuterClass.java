@@ -77,7 +77,7 @@ public final class BattlePassRewardTakeOptionOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 32: {
 
               optionIdx_ = input.readUInt32();
               break;
@@ -87,7 +87,7 @@ public final class BattlePassRewardTakeOptionOuterClass {
               rewardType_ = input.readUInt32();
               break;
             }
-            case 90: {
+            case 58: {
               emu.grasscutter.net.proto.BattlePassRewardTagOuterClass.BattlePassRewardTag.Builder subBuilder = null;
               if (tag_ != null) {
                 subBuilder = tag_.toBuilder();
@@ -132,7 +132,7 @@ public final class BattlePassRewardTakeOptionOuterClass {
               emu.grasscutter.net.proto.BattlePassRewardTakeOptionOuterClass.BattlePassRewardTakeOption.class, emu.grasscutter.net.proto.BattlePassRewardTakeOptionOuterClass.BattlePassRewardTakeOption.Builder.class);
     }
 
-    public static final int TAG_FIELD_NUMBER = 11;
+    public static final int TAG_FIELD_NUMBER = 7;
     private emu.grasscutter.net.proto.BattlePassRewardTagOuterClass.BattlePassRewardTag tag_;
 
     @java.lang.Override
@@ -161,7 +161,7 @@ public final class BattlePassRewardTakeOptionOuterClass {
       return rewardType_;
     }
 
-    public static final int OPTION_IDX_FIELD_NUMBER = 7;
+    public static final int OPTION_IDX_FIELD_NUMBER = 4;
     private int optionIdx_;
 
     @java.lang.Override
@@ -184,13 +184,13 @@ public final class BattlePassRewardTakeOptionOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (optionIdx_ != 0) {
-        output.writeUInt32(7, optionIdx_);
+        output.writeUInt32(4, optionIdx_);
       }
       if (rewardType_ != 0) {
         output.writeUInt32(6, rewardType_);
       }
       if (tag_ != null) {
-        output.writeMessage(11, getTag());
+        output.writeMessage(7, getTag());
       }
       unknownFields.writeTo(output);
     }
@@ -203,7 +203,7 @@ public final class BattlePassRewardTakeOptionOuterClass {
       size = 0;
       if (optionIdx_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, optionIdx_);
+          .computeUInt32Size(4, optionIdx_);
       }
       if (rewardType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -211,7 +211,7 @@ public final class BattlePassRewardTakeOptionOuterClass {
       }
       if (tag_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getTag());
+          .computeMessageSize(7, getTag());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

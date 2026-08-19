@@ -80,12 +80,12 @@ public final class HomeKickPlayerReqOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 8: {
 
               targetUid_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 120: {
 
               isKickAll_ = input.readBool();
               break;
@@ -122,7 +122,7 @@ public final class HomeKickPlayerReqOuterClass {
               emu.grasscutter.net.proto.HomeKickPlayerReqOuterClass.HomeKickPlayerReq.class, emu.grasscutter.net.proto.HomeKickPlayerReqOuterClass.HomeKickPlayerReq.Builder.class);
     }
 
-    public static final int IS_KICK_ALL_FIELD_NUMBER = 2;
+    public static final int IS_KICK_ALL_FIELD_NUMBER = 15;
     private boolean isKickAll_;
     /**
      * <code>bool is_kick_all = 14;</code>
@@ -133,7 +133,7 @@ public final class HomeKickPlayerReqOuterClass {
       return isKickAll_;
     }
 
-    public static final int TARGET_UID_FIELD_NUMBER = 8;
+    public static final int TARGET_UID_FIELD_NUMBER = 1;
     private int targetUid_;
     /**
      * <code>uint32 target_uid = 7;</code>
@@ -159,10 +159,10 @@ public final class HomeKickPlayerReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (targetUid_ != 0) {
-        output.writeUInt32(8, targetUid_);
+        output.writeUInt32(1, targetUid_);
       }
       if (isKickAll_ != false) {
-        output.writeBool(2, isKickAll_);
+        output.writeBool(15, isKickAll_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +175,11 @@ public final class HomeKickPlayerReqOuterClass {
       size = 0;
       if (targetUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, targetUid_);
+          .computeUInt32Size(1, targetUid_);
       }
       if (isKickAll_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isKickAll_);
+          .computeBoolSize(15, isKickAll_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

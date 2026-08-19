@@ -176,7 +176,7 @@ public final class BartenderActivityDetailInfoOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.HBNINDDJCIAOuterClass.HBNINDDJCIA.parser(), extensionRegistry));
               break;
             }
-            case 72: {
+            case 128000: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 jIAIIBBBHDA_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
@@ -184,7 +184,7 @@ public final class BartenderActivityDetailInfoOuterClass {
               jIAIIBBBHDA_.addInt(input.readUInt32());
               break;
             }
-            case 74: {
+            case 128002: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
@@ -197,7 +197,7 @@ public final class BartenderActivityDetailInfoOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 88: {
+            case 72: {
 
               isContentClosed_ = input.readBool();
               break;
@@ -352,7 +352,7 @@ public final class BartenderActivityDetailInfoOuterClass {
       return nPGOIAOBEJF_.get(index);
     }
 
-    public static final int JIAIIBBBHDA_FIELD_NUMBER = 9;
+    public static final int JIAIIBBBHDA_FIELD_NUMBER = 16000;
     private com.google.protobuf.Internal.IntList jIAIIBBBHDA_;
     /**
      * <code>repeated uint32 JIAIIBBBHDA = 9;</code>
@@ -408,7 +408,7 @@ public final class BartenderActivityDetailInfoOuterClass {
     }
     private int gAJCOIOECCOMemoizedSerializedSize = -1;
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 11;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 9;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -449,14 +449,14 @@ public final class BartenderActivityDetailInfoOuterClass {
         output.writeMessage(2, nPGOIAOBEJF_.get(i));
       }
       if (getJIAIIBBBHDAList().size() > 0) {
-        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(128002);
         output.writeUInt32NoTag(jIAIIBBBHDAMemoizedSerializedSize);
       }
       for (int i = 0; i < jIAIIBBBHDA_.size(); i++) {
         output.writeUInt32NoTag(jIAIIBBBHDA_.getInt(i));
       }
       if (isContentClosed_ != false) {
-        output.writeBool(11, isContentClosed_);
+        output.writeBool(9, isContentClosed_);
       }
       if (getGAJCOIOECCOList().size() > 0) {
         output.writeUInt32NoTag(130);
@@ -493,7 +493,7 @@ public final class BartenderActivityDetailInfoOuterClass {
         }
         size += dataSize;
         if (!getJIAIIBBBHDAList().isEmpty()) {
-          size += 1;
+          size += 3;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
@@ -501,7 +501,7 @@ public final class BartenderActivityDetailInfoOuterClass {
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, isContentClosed_);
+          .computeBoolSize(9, isContentClosed_);
       }
       {
         int dataSize = 0;

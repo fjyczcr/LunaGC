@@ -85,17 +85,17 @@ public final class SeaLampV3RaceLevelInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 40: {
 
               maxScore_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 120: {
 
               levelId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 80: {
 
               isOpen_ = input.readBool();
               break;
@@ -132,7 +132,7 @@ public final class SeaLampV3RaceLevelInfoOuterClass {
               emu.grasscutter.net.proto.SeaLampV3RaceLevelInfoOuterClass.SeaLampV3RaceLevelInfo.class, emu.grasscutter.net.proto.SeaLampV3RaceLevelInfoOuterClass.SeaLampV3RaceLevelInfo.Builder.class);
     }
 
-    public static final int LEVEL_ID_FIELD_NUMBER = 6;
+    public static final int LEVEL_ID_FIELD_NUMBER = 15;
     private int levelId_;
     /**
      * <code>uint32 level_id = 7;</code>
@@ -143,7 +143,7 @@ public final class SeaLampV3RaceLevelInfoOuterClass {
       return levelId_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 12;
+    public static final int IS_OPEN_FIELD_NUMBER = 10;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 13;</code>
@@ -154,7 +154,7 @@ public final class SeaLampV3RaceLevelInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int MAX_SCORE_FIELD_NUMBER = 13;
+    public static final int MAX_SCORE_FIELD_NUMBER = 5;
     private int maxScore_;
     /**
      * <code>uint32 max_score = 3;</code>
@@ -180,13 +180,13 @@ public final class SeaLampV3RaceLevelInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (maxScore_ != 0) {
-        output.writeUInt32(13, maxScore_);
+        output.writeUInt32(5, maxScore_);
       }
       if (levelId_ != 0) {
-        output.writeUInt32(6, levelId_);
+        output.writeUInt32(15, levelId_);
       }
       if (isOpen_ != false) {
-        output.writeBool(12, isOpen_);
+        output.writeBool(10, isOpen_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class SeaLampV3RaceLevelInfoOuterClass {
       size = 0;
       if (maxScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, maxScore_);
+          .computeUInt32Size(5, maxScore_);
       }
       if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, levelId_);
+          .computeUInt32Size(15, levelId_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isOpen_);
+          .computeBoolSize(10, isOpen_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

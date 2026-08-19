@@ -73,12 +73,12 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 120: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 24: {
+            case 16: {
 
               skillId_ = input.readUInt32();
               break;
@@ -120,7 +120,7 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarSkillMaxChargeCountNotifyOuterClass.AvatarSkillMaxChargeCountNotify.class, emu.grasscutter.net.proto.AvatarSkillMaxChargeCountNotifyOuterClass.AvatarSkillMaxChargeCountNotify.Builder.class);
     }
 
-    public static final int SKILL_ID_FIELD_NUMBER = 3;
+    public static final int SKILL_ID_FIELD_NUMBER = 2;
     private int skillId_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
       return maxChargeCount_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 10;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 15;
     private long avatarGuid_;
 
     @java.lang.Override
@@ -159,10 +159,10 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(10, avatarGuid_);
+        output.writeUInt64(15, avatarGuid_);
       }
       if (skillId_ != 0) {
-        output.writeUInt32(3, skillId_);
+        output.writeUInt32(2, skillId_);
       }
       if (maxChargeCount_ != 0) {
         output.writeUInt32(11, maxChargeCount_);
@@ -178,11 +178,11 @@ public final class AvatarSkillMaxChargeCountNotifyOuterClass {
       size = 0;
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(10, avatarGuid_);
+          .computeUInt64Size(15, avatarGuid_);
       }
       if (skillId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, skillId_);
+          .computeUInt32Size(2, skillId_);
       }
       if (maxChargeCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream

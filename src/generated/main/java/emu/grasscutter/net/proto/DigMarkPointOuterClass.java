@@ -103,12 +103,12 @@ public final class DigMarkPointOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 104: {
 
               bundleId_ = input.readUInt32();
               break;
             }
-            case 34: {
+            case 90: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (pos_ != null) {
                 subBuilder = pos_.toBuilder();
@@ -121,7 +121,7 @@ public final class DigMarkPointOuterClass {
 
               break;
             }
-            case 74: {
+            case 98: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (rot_ != null) {
                 subBuilder = rot_.toBuilder();
@@ -166,7 +166,7 @@ public final class DigMarkPointOuterClass {
               emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint.class, emu.grasscutter.net.proto.DigMarkPointOuterClass.DigMarkPoint.Builder.class);
     }
 
-    public static final int ROT_FIELD_NUMBER = 9;
+    public static final int ROT_FIELD_NUMBER = 12;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
     /**
      * <code>.Vector rot = 12;</code>
@@ -192,7 +192,7 @@ public final class DigMarkPointOuterClass {
       return getRot();
     }
 
-    public static final int BUNDLE_ID_FIELD_NUMBER = 11;
+    public static final int BUNDLE_ID_FIELD_NUMBER = 13;
     private int bundleId_;
     /**
      * <code>uint32 bundle_id = 6;</code>
@@ -203,7 +203,7 @@ public final class DigMarkPointOuterClass {
       return bundleId_;
     }
 
-    public static final int POS_FIELD_NUMBER = 4;
+    public static final int POS_FIELD_NUMBER = 11;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
      * <code>.Vector pos = 9;</code>
@@ -244,13 +244,13 @@ public final class DigMarkPointOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (bundleId_ != 0) {
-        output.writeUInt32(11, bundleId_);
+        output.writeUInt32(13, bundleId_);
       }
       if (pos_ != null) {
-        output.writeMessage(4, getPos());
+        output.writeMessage(11, getPos());
       }
       if (rot_ != null) {
-        output.writeMessage(9, getRot());
+        output.writeMessage(12, getRot());
       }
       unknownFields.writeTo(output);
     }
@@ -263,15 +263,15 @@ public final class DigMarkPointOuterClass {
       size = 0;
       if (bundleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, bundleId_);
+          .computeUInt32Size(13, bundleId_);
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPos());
+          .computeMessageSize(11, getPos());
       }
       if (rot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getRot());
+          .computeMessageSize(12, getRot());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

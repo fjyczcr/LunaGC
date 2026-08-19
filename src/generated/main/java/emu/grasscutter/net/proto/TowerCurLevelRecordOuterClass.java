@@ -144,7 +144,7 @@ public final class TowerCurLevelRecordOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.TowerTeamOuterClass.TowerTeam.parser(), extensionRegistry));
               break;
             }
-            case 24: {
+            case 72: {
 
               isUpperPart_ = input.readBool();
               break;
@@ -170,12 +170,12 @@ public final class TowerCurLevelRecordOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 32: {
+            case 40: {
 
               curLevelIndex_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 88: {
 
               curFloorId_ = input.readUInt32();
               break;
@@ -263,7 +263,7 @@ public final class TowerCurLevelRecordOuterClass {
       return towerTeamList_.get(index);
     }
 
-    public static final int IS_UPPER_PART_FIELD_NUMBER = 3;
+    public static final int IS_UPPER_PART_FIELD_NUMBER = 9;
     private boolean isUpperPart_;
     /**
      * <code>bool is_upper_part = 7;</code>
@@ -274,7 +274,7 @@ public final class TowerCurLevelRecordOuterClass {
       return isUpperPart_;
     }
 
-    public static final int CUR_FLOOR_ID_FIELD_NUMBER = 8;
+    public static final int CUR_FLOOR_ID_FIELD_NUMBER = 11;
     private int curFloorId_;
     /**
      * <code>uint32 cur_floor_id = 13;</code>
@@ -296,7 +296,7 @@ public final class TowerCurLevelRecordOuterClass {
       return isEmpty_;
     }
 
-    public static final int CUR_LEVEL_INDEX_FIELD_NUMBER = 4;
+    public static final int CUR_LEVEL_INDEX_FIELD_NUMBER = 5;
     private int curLevelIndex_;
     /**
      * <code>uint32 cur_level_index = 11;</code>
@@ -354,7 +354,7 @@ public final class TowerCurLevelRecordOuterClass {
         output.writeMessage(6, towerTeamList_.get(i));
       }
       if (isUpperPart_ != false) {
-        output.writeBool(3, isUpperPart_);
+        output.writeBool(9, isUpperPart_);
       }
       if (getBuffIdListList().size() > 0) {
         output.writeUInt32NoTag(18);
@@ -364,10 +364,10 @@ public final class TowerCurLevelRecordOuterClass {
         output.writeUInt32NoTag(buffIdList_.getInt(i));
       }
       if (curLevelIndex_ != 0) {
-        output.writeUInt32(4, curLevelIndex_);
+        output.writeUInt32(5, curLevelIndex_);
       }
       if (curFloorId_ != 0) {
-        output.writeUInt32(8, curFloorId_);
+        output.writeUInt32(11, curFloorId_);
       }
       if (isEmpty_ != false) {
         output.writeBool(12, isEmpty_);
@@ -387,7 +387,7 @@ public final class TowerCurLevelRecordOuterClass {
       }
       if (isUpperPart_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isUpperPart_);
+          .computeBoolSize(9, isUpperPart_);
       }
       {
         int dataSize = 0;
@@ -405,11 +405,11 @@ public final class TowerCurLevelRecordOuterClass {
       }
       if (curLevelIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, curLevelIndex_);
+          .computeUInt32Size(5, curLevelIndex_);
       }
       if (curFloorId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, curFloorId_);
+          .computeUInt32Size(11, curFloorId_);
       }
       if (isEmpty_ != false) {
         size += com.google.protobuf.CodedOutputStream

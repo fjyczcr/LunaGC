@@ -106,17 +106,17 @@ public final class HomeAvatarRewardEventGetRspOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 120: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 16: {
+            case 24: {
 
               eventId_ = input.readUInt32();
               break;
             }
-            case 26: {
+            case 58: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000001;
@@ -160,7 +160,7 @@ public final class HomeAvatarRewardEventGetRspOuterClass {
               emu.grasscutter.net.proto.HomeAvatarRewardEventGetRspOuterClass.HomeAvatarRewardEventGetRsp.class, emu.grasscutter.net.proto.HomeAvatarRewardEventGetRspOuterClass.HomeAvatarRewardEventGetRsp.Builder.class);
     }
 
-    public static final int ITEM_LIST_FIELD_NUMBER = 3;
+    public static final int ITEM_LIST_FIELD_NUMBER = 7;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> itemList_;
     /**
      * <code>repeated .ItemParam item_list = 15;</code>
@@ -200,7 +200,7 @@ public final class HomeAvatarRewardEventGetRspOuterClass {
       return itemList_.get(index);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 12;
+    public static final int RETCODE_FIELD_NUMBER = 15;
     private int retcode_;
     /**
      * <code>int32 retcode = 10;</code>
@@ -211,7 +211,7 @@ public final class HomeAvatarRewardEventGetRspOuterClass {
       return retcode_;
     }
 
-    public static final int EVENT_ID_FIELD_NUMBER = 2;
+    public static final int EVENT_ID_FIELD_NUMBER = 3;
     private int eventId_;
     /**
      * <code>uint32 event_id = 13;</code>
@@ -237,13 +237,13 @@ public final class HomeAvatarRewardEventGetRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(12, retcode_);
+        output.writeInt32(15, retcode_);
       }
       if (eventId_ != 0) {
-        output.writeUInt32(2, eventId_);
+        output.writeUInt32(3, eventId_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
-        output.writeMessage(3, itemList_.get(i));
+        output.writeMessage(7, itemList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -256,15 +256,15 @@ public final class HomeAvatarRewardEventGetRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, retcode_);
+          .computeInt32Size(15, retcode_);
       }
       if (eventId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, eventId_);
+          .computeUInt32Size(3, eventId_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, itemList_.get(i));
+          .computeMessageSize(7, itemList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

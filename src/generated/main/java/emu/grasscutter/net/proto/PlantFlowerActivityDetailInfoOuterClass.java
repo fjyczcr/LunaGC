@@ -188,12 +188,12 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
                   hNIOAODPNEL__.getKey(), hNIOAODPNEL__.getValue());
               break;
             }
-            case 72: {
+            case 120: {
 
               isContentClosed_ = input.readBool();
               break;
             }
-            case 120: {
+            case 128000: {
 
               aEIMHLOIOKN_ = input.readBool();
               break;
@@ -417,7 +417,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       return jPHIEIBHOLI_;
     }
 
-    public static final int AEIMHLOIOKN_FIELD_NUMBER = 15;
+    public static final int AEIMHLOIOKN_FIELD_NUMBER = 16000;
     private boolean aEIMHLOIOKN_;
     /**
      * <code>bool AEIMHLOIOKN = 15;</code>
@@ -428,7 +428,7 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       return aEIMHLOIOKN_;
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 9;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 15;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -480,10 +480,10 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
           HNIOAODPNELDefaultEntryHolder.defaultEntry,
           11);
       if (isContentClosed_ != false) {
-        output.writeBool(9, isContentClosed_);
+        output.writeBool(15, isContentClosed_);
       }
       if (aEIMHLOIOKN_ != false) {
-        output.writeBool(15, aEIMHLOIOKN_);
+        output.writeBool(16000, aEIMHLOIOKN_);
       }
       unknownFields.writeTo(output);
     }
@@ -524,11 +524,11 @@ public final class PlantFlowerActivityDetailInfoOuterClass {
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isContentClosed_);
+          .computeBoolSize(15, isContentClosed_);
       }
       if (aEIMHLOIOKN_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, aEIMHLOIOKN_);
+          .computeBoolSize(16000, aEIMHLOIOKN_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

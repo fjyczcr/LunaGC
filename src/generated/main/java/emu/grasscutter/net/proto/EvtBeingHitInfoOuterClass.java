@@ -73,12 +73,12 @@ public final class EvtBeingHitInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 16: {
 
               frameNum_ = input.readUInt32();
               break;
             }
-            case 50: {
+            case 74: {
               emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult.Builder subBuilder = null;
               if (attackResult_ != null) {
                 subBuilder = attackResult_.toBuilder();
@@ -91,7 +91,7 @@ public final class EvtBeingHitInfoOuterClass {
 
               break;
             }
-            case 112: {
+            case 56: {
 
               peerId_ = input.readUInt32();
               break;
@@ -128,7 +128,7 @@ public final class EvtBeingHitInfoOuterClass {
               emu.grasscutter.net.proto.EvtBeingHitInfoOuterClass.EvtBeingHitInfo.class, emu.grasscutter.net.proto.EvtBeingHitInfoOuterClass.EvtBeingHitInfo.Builder.class);
     }
 
-    public static final int ATTACK_RESULT_FIELD_NUMBER = 6;
+    public static final int ATTACK_RESULT_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.AttackResultOuterClass.AttackResult attackResult_;
 
     @java.lang.Override
@@ -146,7 +146,7 @@ public final class EvtBeingHitInfoOuterClass {
       return getAttackResult();
     }
 
-    public static final int PEER_ID_FIELD_NUMBER = 14;
+    public static final int PEER_ID_FIELD_NUMBER = 7;
     private int peerId_;
 
     @java.lang.Override
@@ -154,7 +154,7 @@ public final class EvtBeingHitInfoOuterClass {
       return peerId_;
     }
 
-    public static final int FRAME_NUM_FIELD_NUMBER = 8;
+    public static final int FRAME_NUM_FIELD_NUMBER = 2;
     private int frameNum_;
 
     @java.lang.Override
@@ -177,13 +177,13 @@ public final class EvtBeingHitInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (frameNum_ != 0) {
-        output.writeUInt32(8, frameNum_);
+        output.writeUInt32(2, frameNum_);
       }
       if (attackResult_ != null) {
-        output.writeMessage(6, getAttackResult());
+        output.writeMessage(9, getAttackResult());
       }
       if (peerId_ != 0) {
-        output.writeUInt32(14, peerId_);
+        output.writeUInt32(7, peerId_);
       }
       unknownFields.writeTo(output);
     }
@@ -196,15 +196,15 @@ public final class EvtBeingHitInfoOuterClass {
       size = 0;
       if (frameNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, frameNum_);
+          .computeUInt32Size(2, frameNum_);
       }
       if (attackResult_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getAttackResult());
+          .computeMessageSize(9, getAttackResult());
       }
       if (peerId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, peerId_);
+          .computeUInt32Size(7, peerId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

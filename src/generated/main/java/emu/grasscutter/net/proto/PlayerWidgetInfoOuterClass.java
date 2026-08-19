@@ -80,12 +80,12 @@ public final class PlayerWidgetInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 40: {
+            case 56: {
 
               uid_ = input.readUInt32();
               break;
             }
-            case 26: {
+            case 98: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 slotList_ = new java.util.ArrayList<emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData>();
                 mutable_bitField0_ |= 0x00000001;
@@ -129,7 +129,7 @@ public final class PlayerWidgetInfoOuterClass {
               emu.grasscutter.net.proto.PlayerWidgetInfoOuterClass.PlayerWidgetInfo.class, emu.grasscutter.net.proto.PlayerWidgetInfoOuterClass.PlayerWidgetInfo.Builder.class);
     }
 
-    public static final int SLOT_LIST_FIELD_NUMBER = 3;
+    public static final int SLOT_LIST_FIELD_NUMBER = 12;
     private java.util.List<emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData> slotList_;
 
     @java.lang.Override
@@ -159,7 +159,7 @@ public final class PlayerWidgetInfoOuterClass {
       return slotList_.get(index);
     }
 
-    public static final int UID_FIELD_NUMBER = 5;
+    public static final int UID_FIELD_NUMBER = 7;
     private int uid_;
 
     @java.lang.Override
@@ -182,10 +182,10 @@ public final class PlayerWidgetInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (uid_ != 0) {
-        output.writeUInt32(5, uid_);
+        output.writeUInt32(7, uid_);
       }
       for (int i = 0; i < slotList_.size(); i++) {
-        output.writeMessage(3, slotList_.get(i));
+        output.writeMessage(12, slotList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -198,11 +198,11 @@ public final class PlayerWidgetInfoOuterClass {
       size = 0;
       if (uid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, uid_);
+          .computeUInt32Size(7, uid_);
       }
       for (int i = 0; i < slotList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, slotList_.get(i));
+          .computeMessageSize(12, slotList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

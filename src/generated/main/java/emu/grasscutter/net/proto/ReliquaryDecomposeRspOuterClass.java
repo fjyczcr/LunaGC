@@ -98,7 +98,7 @@ public final class ReliquaryDecomposeRspOuterClass {
               retcode_ = input.readInt32();
               break;
             }
-            case 104: {
+            case 48: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 guidList_ = newLongList();
                 mutable_bitField0_ |= 0x00000001;
@@ -106,7 +106,7 @@ public final class ReliquaryDecomposeRspOuterClass {
               guidList_.addLong(input.readUInt64());
               break;
             }
-            case 106: {
+            case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -154,7 +154,7 @@ public final class ReliquaryDecomposeRspOuterClass {
               emu.grasscutter.net.proto.ReliquaryDecomposeRspOuterClass.ReliquaryDecomposeRsp.class, emu.grasscutter.net.proto.ReliquaryDecomposeRspOuterClass.ReliquaryDecomposeRsp.Builder.class);
     }
 
-    public static final int GUID_LIST_FIELD_NUMBER = 13;
+    public static final int GUID_LIST_FIELD_NUMBER = 6;
     private com.google.protobuf.Internal.LongList guidList_;
     /**
      * <code>repeated uint64 guid_list = 9;</code>
@@ -212,7 +212,7 @@ public final class ReliquaryDecomposeRspOuterClass {
         output.writeInt32(5, retcode_);
       }
       if (getGuidListList().size() > 0) {
-        output.writeUInt32NoTag(106);
+        output.writeUInt32NoTag(50);
         output.writeUInt32NoTag(guidListMemoizedSerializedSize);
       }
       for (int i = 0; i < guidList_.size(); i++) {

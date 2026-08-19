@@ -109,37 +109,37 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 104: {
 
               levelId_ = input.readUInt32();
               break;
             }
-            case 8: {
+            case 24: {
 
               difficultyId_ = input.readUInt32();
               break;
             }
-            case 128000: {
+            case 128008: {
 
               eNBKLKPPLHL_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 80: {
 
               isNewRecord_ = input.readBool();
               break;
             }
-            case 128008: {
+            case 128016: {
 
               pDKDBGNJPDL_ = input.readBool();
               break;
             }
-            case 64: {
+            case 120: {
 
               finalScore_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 128000: {
 
               dEJJPIOCJDD_ = input.readUInt32();
               break;
@@ -176,7 +176,7 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
               emu.grasscutter.net.proto.CrystalLinkDungeonSettleInfoOuterClass.CrystalLinkDungeonSettleInfo.class, emu.grasscutter.net.proto.CrystalLinkDungeonSettleInfoOuterClass.CrystalLinkDungeonSettleInfo.Builder.class);
     }
 
-    public static final int DEJJPIOCJDD_FIELD_NUMBER = 15;
+    public static final int DEJJPIOCJDD_FIELD_NUMBER = 16000;
     private int dEJJPIOCJDD_;
     /**
      * <code>uint32 DEJJPIOCJDD = 15;</code>
@@ -187,7 +187,7 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
       return dEJJPIOCJDD_;
     }
 
-    public static final int FINAL_SCORE_FIELD_NUMBER = 8;
+    public static final int FINAL_SCORE_FIELD_NUMBER = 15;
     private int finalScore_;
     /**
      * <code>uint32 final_score = 12;</code>
@@ -198,7 +198,7 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
       return finalScore_;
     }
 
-    public static final int LEVEL_ID_FIELD_NUMBER = 6;
+    public static final int LEVEL_ID_FIELD_NUMBER = 13;
     private int levelId_;
     /**
      * <code>uint32 level_id = 3;</code>
@@ -209,7 +209,7 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
       return levelId_;
     }
 
-    public static final int ENBKLKPPLHL_FIELD_NUMBER = 16000;
+    public static final int ENBKLKPPLHL_FIELD_NUMBER = 16001;
     private int eNBKLKPPLHL_;
     /**
      * <code>uint32 ENBKLKPPLHL = 6;</code>
@@ -220,7 +220,7 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
       return eNBKLKPPLHL_;
     }
 
-    public static final int DIFFICULTY_ID_FIELD_NUMBER = 1;
+    public static final int DIFFICULTY_ID_FIELD_NUMBER = 3;
     private int difficultyId_;
     /**
      * <code>uint32 difficulty_id = 5;</code>
@@ -231,7 +231,7 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
       return difficultyId_;
     }
 
-    public static final int IS_NEW_RECORD_FIELD_NUMBER = 2;
+    public static final int IS_NEW_RECORD_FIELD_NUMBER = 10;
     private boolean isNewRecord_;
     /**
      * <code>bool is_new_record = 7;</code>
@@ -242,7 +242,7 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
       return isNewRecord_;
     }
 
-    public static final int PDKDBGNJPDL_FIELD_NUMBER = 16001;
+    public static final int PDKDBGNJPDL_FIELD_NUMBER = 16002;
     private boolean pDKDBGNJPDL_;
     /**
      * <code>bool PDKDBGNJPDL = 8;</code>
@@ -268,25 +268,25 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (levelId_ != 0) {
-        output.writeUInt32(6, levelId_);
+        output.writeUInt32(13, levelId_);
       }
       if (difficultyId_ != 0) {
-        output.writeUInt32(1, difficultyId_);
+        output.writeUInt32(3, difficultyId_);
       }
       if (eNBKLKPPLHL_ != 0) {
-        output.writeUInt32(16000, eNBKLKPPLHL_);
+        output.writeUInt32(16001, eNBKLKPPLHL_);
       }
       if (isNewRecord_ != false) {
-        output.writeBool(2, isNewRecord_);
+        output.writeBool(10, isNewRecord_);
       }
       if (pDKDBGNJPDL_ != false) {
-        output.writeBool(16001, pDKDBGNJPDL_);
+        output.writeBool(16002, pDKDBGNJPDL_);
       }
       if (finalScore_ != 0) {
-        output.writeUInt32(8, finalScore_);
+        output.writeUInt32(15, finalScore_);
       }
       if (dEJJPIOCJDD_ != 0) {
-        output.writeUInt32(15, dEJJPIOCJDD_);
+        output.writeUInt32(16000, dEJJPIOCJDD_);
       }
       unknownFields.writeTo(output);
     }
@@ -299,31 +299,31 @@ public final class CrystalLinkDungeonSettleInfoOuterClass {
       size = 0;
       if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, levelId_);
+          .computeUInt32Size(13, levelId_);
       }
       if (difficultyId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, difficultyId_);
+          .computeUInt32Size(3, difficultyId_);
       }
       if (eNBKLKPPLHL_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(16000, eNBKLKPPLHL_);
+          .computeUInt32Size(16001, eNBKLKPPLHL_);
       }
       if (isNewRecord_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isNewRecord_);
+          .computeBoolSize(10, isNewRecord_);
       }
       if (pDKDBGNJPDL_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(16001, pDKDBGNJPDL_);
+          .computeBoolSize(16002, pDKDBGNJPDL_);
       }
       if (finalScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, finalScore_);
+          .computeUInt32Size(15, finalScore_);
       }
       if (dEJJPIOCJDD_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, dEJJPIOCJDD_);
+          .computeUInt32Size(16000, dEJJPIOCJDD_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

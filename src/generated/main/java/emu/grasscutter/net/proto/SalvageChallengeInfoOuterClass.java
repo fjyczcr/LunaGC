@@ -122,9 +122,9 @@ public final class SalvageChallengeInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 58: {
+            case 122: {
               emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.Builder subBuilder = null;
-              if (challengeDetailCase_ == 7) {
+              if (challengeDetailCase_ == 15) {
                 subBuilder = ((emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_).toBuilder();
               }
               challengeDetail_ =
@@ -133,27 +133,27 @@ public final class SalvageChallengeInfoOuterClass {
                 subBuilder.mergeFrom((emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_);
                 challengeDetail_ = subBuilder.buildPartial();
               }
-              challengeDetailCase_ = 7;
+              challengeDetailCase_ = 15;
               break;
             }
-            case 80: {
-              challengeDetailCase_ = 10;
+            case 8: {
+              challengeDetailCase_ = 1;
               challengeDetail_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 80: {
 
               challengeType_ = input.readUInt32();
               break;
             }
-            case 8: {
+            case 24: {
 
               isUnlock_ = input.readBool();
               break;
             }
-            case 26: {
+            case 42: {
               emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.Builder subBuilder = null;
-              if (challengeDetailCase_ == 3) {
+              if (challengeDetailCase_ == 5) {
                 subBuilder = ((emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_).toBuilder();
               }
               challengeDetail_ =
@@ -162,7 +162,7 @@ public final class SalvageChallengeInfoOuterClass {
                 subBuilder.mergeFrom((emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_);
                 challengeDetail_ = subBuilder.buildPartial();
               }
-              challengeDetailCase_ = 3;
+              challengeDetailCase_ = 5;
               break;
             }
             default: {
@@ -204,7 +204,7 @@ public final class SalvageChallengeInfoOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       BUNDLE_INFO(14),
       SCORE_CHALLENGE_INFO(5),
-      BOSS_CHALLENGE_ID(10),
+      BOSS_CHALLENGE_ID(1),
       CHALLENGEDETAIL_NOT_SET(0);
       private final int value;
       private ChallengeDetailCase(int value) {
@@ -222,9 +222,9 @@ public final class SalvageChallengeInfoOuterClass {
 
       public static ChallengeDetailCase forNumber(int value) {
         switch (value) {
-          case 3: return BUNDLE_INFO;
-          case 7: return SCORE_CHALLENGE_INFO;
-          case 10: return BOSS_CHALLENGE_ID;
+          case 5: return BUNDLE_INFO;
+          case 15: return SCORE_CHALLENGE_INFO;
+          case 1: return BOSS_CHALLENGE_ID;
           case 0: return CHALLENGEDETAIL_NOT_SET;
           default: return null;
         }
@@ -240,7 +240,7 @@ public final class SalvageChallengeInfoOuterClass {
           challengeDetailCase_);
     }
 
-    public static final int CHALLENGE_TYPE_FIELD_NUMBER = 9;
+    public static final int CHALLENGE_TYPE_FIELD_NUMBER = 10;
     private int challengeType_;
     /**
      * <code>uint32 challenge_type = 12;</code>
@@ -251,7 +251,7 @@ public final class SalvageChallengeInfoOuterClass {
       return challengeType_;
     }
 
-    public static final int IS_UNLOCK_FIELD_NUMBER = 1;
+    public static final int IS_UNLOCK_FIELD_NUMBER = 3;
     private boolean isUnlock_;
     /**
      * <code>bool is_unlock = 13;</code>
@@ -262,14 +262,14 @@ public final class SalvageChallengeInfoOuterClass {
       return isUnlock_;
     }
 
-    public static final int BUNDLE_INFO_FIELD_NUMBER = 3;
+    public static final int BUNDLE_INFO_FIELD_NUMBER = 5;
     /**
      * <code>.SalvageBundleChallengeInfo bundle_info = 14;</code>
      * @return Whether the bundleInfo field is set.
      */
     @java.lang.Override
     public boolean hasBundleInfo() {
-      return challengeDetailCase_ == 3;
+      return challengeDetailCase_ == 5;
     }
     /**
      * <code>.SalvageBundleChallengeInfo bundle_info = 14;</code>
@@ -277,7 +277,7 @@ public final class SalvageChallengeInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo getBundleInfo() {
-      if (challengeDetailCase_ == 3) {
+      if (challengeDetailCase_ == 5) {
          return (emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_;
       }
       return emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.getDefaultInstance();
@@ -287,20 +287,20 @@ public final class SalvageChallengeInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfoOrBuilder getBundleInfoOrBuilder() {
-      if (challengeDetailCase_ == 3) {
+      if (challengeDetailCase_ == 5) {
          return (emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_;
       }
       return emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.getDefaultInstance();
     }
 
-    public static final int SCORE_CHALLENGE_INFO_FIELD_NUMBER = 7;
+    public static final int SCORE_CHALLENGE_INFO_FIELD_NUMBER = 15;
     /**
      * <code>.SalvageScoreChallengeInfo score_challenge_info = 5;</code>
      * @return Whether the scoreChallengeInfo field is set.
      */
     @java.lang.Override
     public boolean hasScoreChallengeInfo() {
-      return challengeDetailCase_ == 7;
+      return challengeDetailCase_ == 15;
     }
     /**
      * <code>.SalvageScoreChallengeInfo score_challenge_info = 5;</code>
@@ -308,7 +308,7 @@ public final class SalvageChallengeInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo getScoreChallengeInfo() {
-      if (challengeDetailCase_ == 7) {
+      if (challengeDetailCase_ == 15) {
          return (emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_;
       }
       return emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.getDefaultInstance();
@@ -318,20 +318,20 @@ public final class SalvageChallengeInfoOuterClass {
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfoOrBuilder getScoreChallengeInfoOrBuilder() {
-      if (challengeDetailCase_ == 7) {
+      if (challengeDetailCase_ == 15) {
          return (emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_;
       }
       return emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.getDefaultInstance();
     }
 
-    public static final int BOSS_CHALLENGE_ID_FIELD_NUMBER = 10;
+    public static final int BOSS_CHALLENGE_ID_FIELD_NUMBER = 1;
     /**
      * <code>uint32 boss_challenge_id = 10;</code>
      * @return Whether the bossChallengeId field is set.
      */
     @java.lang.Override
     public boolean hasBossChallengeId() {
-      return challengeDetailCase_ == 10;
+      return challengeDetailCase_ == 1;
     }
     /**
      * <code>uint32 boss_challenge_id = 10;</code>
@@ -339,7 +339,7 @@ public final class SalvageChallengeInfoOuterClass {
      */
     @java.lang.Override
     public int getBossChallengeId() {
-      if (challengeDetailCase_ == 10) {
+      if (challengeDetailCase_ == 1) {
         return (java.lang.Integer) challengeDetail_;
       }
       return 0;
@@ -359,21 +359,21 @@ public final class SalvageChallengeInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (challengeDetailCase_ == 7) {
-        output.writeMessage(7, (emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_);
+      if (challengeDetailCase_ == 15) {
+        output.writeMessage(15, (emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_);
       }
-      if (challengeDetailCase_ == 10) {
+      if (challengeDetailCase_ == 1) {
         output.writeUInt32(
             10, (int)((java.lang.Integer) challengeDetail_));
       }
       if (challengeType_ != 0) {
-        output.writeUInt32(9, challengeType_);
+        output.writeUInt32(10, challengeType_);
       }
       if (isUnlock_ != false) {
-        output.writeBool(1, isUnlock_);
+        output.writeBool(3, isUnlock_);
       }
-      if (challengeDetailCase_ == 3) {
-        output.writeMessage(3, (emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_);
+      if (challengeDetailCase_ == 5) {
+        output.writeMessage(5, (emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_);
       }
       unknownFields.writeTo(output);
     }
@@ -384,26 +384,26 @@ public final class SalvageChallengeInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (challengeDetailCase_ == 7) {
+      if (challengeDetailCase_ == 15) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_);
+          .computeMessageSize(15, (emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_);
       }
-      if (challengeDetailCase_ == 10) {
+      if (challengeDetailCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
               10, (int)((java.lang.Integer) challengeDetail_));
       }
       if (challengeType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, challengeType_);
+          .computeUInt32Size(10, challengeType_);
       }
       if (isUnlock_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isUnlock_);
+          .computeBoolSize(3, isUnlock_);
       }
-      if (challengeDetailCase_ == 3) {
+      if (challengeDetailCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_);
+          .computeMessageSize(5, (emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -644,21 +644,21 @@ public final class SalvageChallengeInfoOuterClass {
         emu.grasscutter.net.proto.SalvageChallengeInfoOuterClass.SalvageChallengeInfo result = new emu.grasscutter.net.proto.SalvageChallengeInfoOuterClass.SalvageChallengeInfo(this);
         result.challengeType_ = challengeType_;
         result.isUnlock_ = isUnlock_;
-        if (challengeDetailCase_ == 3) {
+        if (challengeDetailCase_ == 5) {
           if (bundleInfoBuilder_ == null) {
             result.challengeDetail_ = challengeDetail_;
           } else {
             result.challengeDetail_ = bundleInfoBuilder_.build();
           }
         }
-        if (challengeDetailCase_ == 7) {
+        if (challengeDetailCase_ == 15) {
           if (scoreChallengeInfoBuilder_ == null) {
             result.challengeDetail_ = challengeDetail_;
           } else {
             result.challengeDetail_ = scoreChallengeInfoBuilder_.build();
           }
         }
-        if (challengeDetailCase_ == 10) {
+        if (challengeDetailCase_ == 1) {
           result.challengeDetail_ = challengeDetail_;
         }
         result.challengeDetailCase_ = challengeDetailCase_;
@@ -847,7 +847,7 @@ public final class SalvageChallengeInfoOuterClass {
        */
       @java.lang.Override
       public boolean hasBundleInfo() {
-        return challengeDetailCase_ == 3;
+        return challengeDetailCase_ == 5;
       }
       /**
        * <code>.SalvageBundleChallengeInfo bundle_info = 14;</code>
@@ -856,12 +856,12 @@ public final class SalvageChallengeInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo getBundleInfo() {
         if (bundleInfoBuilder_ == null) {
-          if (challengeDetailCase_ == 3) {
+          if (challengeDetailCase_ == 5) {
             return (emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_;
           }
           return emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.getDefaultInstance();
         } else {
-          if (challengeDetailCase_ == 3) {
+          if (challengeDetailCase_ == 5) {
             return bundleInfoBuilder_.getMessage();
           }
           return emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.getDefaultInstance();
@@ -880,7 +880,7 @@ public final class SalvageChallengeInfoOuterClass {
         } else {
           bundleInfoBuilder_.setMessage(value);
         }
-        challengeDetailCase_ = 3;
+        challengeDetailCase_ = 5;
         return this;
       }
       /**
@@ -894,7 +894,7 @@ public final class SalvageChallengeInfoOuterClass {
         } else {
           bundleInfoBuilder_.setMessage(builderForValue.build());
         }
-        challengeDetailCase_ = 3;
+        challengeDetailCase_ = 5;
         return this;
       }
       /**
@@ -902,7 +902,7 @@ public final class SalvageChallengeInfoOuterClass {
        */
       public Builder mergeBundleInfo(emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo value) {
         if (bundleInfoBuilder_ == null) {
-          if (challengeDetailCase_ == 3 &&
+          if (challengeDetailCase_ == 5 &&
               challengeDetail_ != emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.getDefaultInstance()) {
             challengeDetail_ = emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.newBuilder((emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_)
                 .mergeFrom(value).buildPartial();
@@ -911,12 +911,12 @@ public final class SalvageChallengeInfoOuterClass {
           }
           onChanged();
         } else {
-          if (challengeDetailCase_ == 3) {
+          if (challengeDetailCase_ == 5) {
             bundleInfoBuilder_.mergeFrom(value);
           }
           bundleInfoBuilder_.setMessage(value);
         }
-        challengeDetailCase_ = 3;
+        challengeDetailCase_ = 5;
         return this;
       }
       /**
@@ -924,13 +924,13 @@ public final class SalvageChallengeInfoOuterClass {
        */
       public Builder clearBundleInfo() {
         if (bundleInfoBuilder_ == null) {
-          if (challengeDetailCase_ == 3) {
+          if (challengeDetailCase_ == 5) {
             challengeDetailCase_ = 0;
             challengeDetail_ = null;
             onChanged();
           }
         } else {
-          if (challengeDetailCase_ == 3) {
+          if (challengeDetailCase_ == 5) {
             challengeDetailCase_ = 0;
             challengeDetail_ = null;
           }
@@ -949,10 +949,10 @@ public final class SalvageChallengeInfoOuterClass {
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfoOrBuilder getBundleInfoOrBuilder() {
-        if ((challengeDetailCase_ == 3) && (bundleInfoBuilder_ != null)) {
+        if ((challengeDetailCase_ == 5) && (bundleInfoBuilder_ != null)) {
           return bundleInfoBuilder_.getMessageOrBuilder();
         } else {
-          if (challengeDetailCase_ == 3) {
+          if (challengeDetailCase_ == 5) {
             return (emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo) challengeDetail_;
           }
           return emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.getDefaultInstance();
@@ -965,7 +965,7 @@ public final class SalvageChallengeInfoOuterClass {
           emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo, emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.Builder, emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfoOrBuilder> 
           getBundleInfoFieldBuilder() {
         if (bundleInfoBuilder_ == null) {
-          if (!(challengeDetailCase_ == 3)) {
+          if (!(challengeDetailCase_ == 5)) {
             challengeDetail_ = emu.grasscutter.net.proto.SalvageBundleChallengeInfoOuterClass.SalvageBundleChallengeInfo.getDefaultInstance();
           }
           bundleInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -975,7 +975,7 @@ public final class SalvageChallengeInfoOuterClass {
                   isClean());
           challengeDetail_ = null;
         }
-        challengeDetailCase_ = 3;
+        challengeDetailCase_ = 5;
         onChanged();;
         return bundleInfoBuilder_;
       }
@@ -988,7 +988,7 @@ public final class SalvageChallengeInfoOuterClass {
        */
       @java.lang.Override
       public boolean hasScoreChallengeInfo() {
-        return challengeDetailCase_ == 7;
+        return challengeDetailCase_ == 15;
       }
       /**
        * <code>.SalvageScoreChallengeInfo score_challenge_info = 5;</code>
@@ -997,12 +997,12 @@ public final class SalvageChallengeInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo getScoreChallengeInfo() {
         if (scoreChallengeInfoBuilder_ == null) {
-          if (challengeDetailCase_ == 7) {
+          if (challengeDetailCase_ == 15) {
             return (emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_;
           }
           return emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.getDefaultInstance();
         } else {
-          if (challengeDetailCase_ == 7) {
+          if (challengeDetailCase_ == 15) {
             return scoreChallengeInfoBuilder_.getMessage();
           }
           return emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.getDefaultInstance();
@@ -1021,7 +1021,7 @@ public final class SalvageChallengeInfoOuterClass {
         } else {
           scoreChallengeInfoBuilder_.setMessage(value);
         }
-        challengeDetailCase_ = 7;
+        challengeDetailCase_ = 15;
         return this;
       }
       /**
@@ -1035,7 +1035,7 @@ public final class SalvageChallengeInfoOuterClass {
         } else {
           scoreChallengeInfoBuilder_.setMessage(builderForValue.build());
         }
-        challengeDetailCase_ = 7;
+        challengeDetailCase_ = 15;
         return this;
       }
       /**
@@ -1043,7 +1043,7 @@ public final class SalvageChallengeInfoOuterClass {
        */
       public Builder mergeScoreChallengeInfo(emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo value) {
         if (scoreChallengeInfoBuilder_ == null) {
-          if (challengeDetailCase_ == 7 &&
+          if (challengeDetailCase_ == 15 &&
               challengeDetail_ != emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.getDefaultInstance()) {
             challengeDetail_ = emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.newBuilder((emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_)
                 .mergeFrom(value).buildPartial();
@@ -1052,12 +1052,12 @@ public final class SalvageChallengeInfoOuterClass {
           }
           onChanged();
         } else {
-          if (challengeDetailCase_ == 7) {
+          if (challengeDetailCase_ == 15) {
             scoreChallengeInfoBuilder_.mergeFrom(value);
           }
           scoreChallengeInfoBuilder_.setMessage(value);
         }
-        challengeDetailCase_ = 7;
+        challengeDetailCase_ = 15;
         return this;
       }
       /**
@@ -1065,13 +1065,13 @@ public final class SalvageChallengeInfoOuterClass {
        */
       public Builder clearScoreChallengeInfo() {
         if (scoreChallengeInfoBuilder_ == null) {
-          if (challengeDetailCase_ == 7) {
+          if (challengeDetailCase_ == 15) {
             challengeDetailCase_ = 0;
             challengeDetail_ = null;
             onChanged();
           }
         } else {
-          if (challengeDetailCase_ == 7) {
+          if (challengeDetailCase_ == 15) {
             challengeDetailCase_ = 0;
             challengeDetail_ = null;
           }
@@ -1090,10 +1090,10 @@ public final class SalvageChallengeInfoOuterClass {
        */
       @java.lang.Override
       public emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfoOrBuilder getScoreChallengeInfoOrBuilder() {
-        if ((challengeDetailCase_ == 7) && (scoreChallengeInfoBuilder_ != null)) {
+        if ((challengeDetailCase_ == 15) && (scoreChallengeInfoBuilder_ != null)) {
           return scoreChallengeInfoBuilder_.getMessageOrBuilder();
         } else {
-          if (challengeDetailCase_ == 7) {
+          if (challengeDetailCase_ == 15) {
             return (emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo) challengeDetail_;
           }
           return emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.getDefaultInstance();
@@ -1106,7 +1106,7 @@ public final class SalvageChallengeInfoOuterClass {
           emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo, emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.Builder, emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfoOrBuilder> 
           getScoreChallengeInfoFieldBuilder() {
         if (scoreChallengeInfoBuilder_ == null) {
-          if (!(challengeDetailCase_ == 7)) {
+          if (!(challengeDetailCase_ == 15)) {
             challengeDetail_ = emu.grasscutter.net.proto.SalvageScoreChallengeInfoOuterClass.SalvageScoreChallengeInfo.getDefaultInstance();
           }
           scoreChallengeInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -1116,7 +1116,7 @@ public final class SalvageChallengeInfoOuterClass {
                   isClean());
           challengeDetail_ = null;
         }
-        challengeDetailCase_ = 7;
+        challengeDetailCase_ = 15;
         onChanged();;
         return scoreChallengeInfoBuilder_;
       }
@@ -1126,14 +1126,14 @@ public final class SalvageChallengeInfoOuterClass {
        * @return Whether the bossChallengeId field is set.
        */
       public boolean hasBossChallengeId() {
-        return challengeDetailCase_ == 10;
+        return challengeDetailCase_ == 1;
       }
       /**
        * <code>uint32 boss_challenge_id = 10;</code>
        * @return The bossChallengeId.
        */
       public int getBossChallengeId() {
-        if (challengeDetailCase_ == 10) {
+        if (challengeDetailCase_ == 1) {
           return (java.lang.Integer) challengeDetail_;
         }
         return 0;
@@ -1144,7 +1144,7 @@ public final class SalvageChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder setBossChallengeId(int value) {
-        challengeDetailCase_ = 10;
+        challengeDetailCase_ = 1;
         challengeDetail_ = value;
         onChanged();
         return this;
@@ -1154,7 +1154,7 @@ public final class SalvageChallengeInfoOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBossChallengeId() {
-        if (challengeDetailCase_ == 10) {
+        if (challengeDetailCase_ == 1) {
           challengeDetailCase_ = 0;
           challengeDetail_ = null;
           onChanged();

@@ -85,7 +85,7 @@ public final class PlayerCookArgsReqOuterClass {
               assistAvatar_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 40: {
 
               recipeId_ = input.readUInt32();
               break;
@@ -122,7 +122,7 @@ public final class PlayerCookArgsReqOuterClass {
               emu.grasscutter.net.proto.PlayerCookArgsReqOuterClass.PlayerCookArgsReq.class, emu.grasscutter.net.proto.PlayerCookArgsReqOuterClass.PlayerCookArgsReq.Builder.class);
     }
 
-    public static final int RECIPE_ID_FIELD_NUMBER = 9;
+    public static final int RECIPE_ID_FIELD_NUMBER = 5;
     private int recipeId_;
     /**
      * <code>uint32 recipe_id = 13;</code>
@@ -162,7 +162,7 @@ public final class PlayerCookArgsReqOuterClass {
         output.writeUInt32(12, assistAvatar_);
       }
       if (recipeId_ != 0) {
-        output.writeUInt32(9, recipeId_);
+        output.writeUInt32(5, recipeId_);
       }
       unknownFields.writeTo(output);
     }
@@ -179,7 +179,7 @@ public final class PlayerCookArgsReqOuterClass {
       }
       if (recipeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, recipeId_);
+          .computeUInt32Size(5, recipeId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

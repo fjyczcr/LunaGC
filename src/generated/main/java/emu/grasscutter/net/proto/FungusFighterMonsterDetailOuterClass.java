@@ -69,17 +69,17 @@ public final class FungusFighterMonsterDetailOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 56: {
 
               isAlive_ = input.readBool();
               break;
             }
-            case 96: {
+            case 8: {
 
               fungusId_ = input.readUInt32();
               break;
             }
-            case 93: {
+            case 109: {
 
               curHpPercentage_ = input.readFloat();
               break;
@@ -116,7 +116,7 @@ public final class FungusFighterMonsterDetailOuterClass {
               emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail.class, emu.grasscutter.net.proto.FungusFighterMonsterDetailOuterClass.FungusFighterMonsterDetail.Builder.class);
     }
 
-    public static final int IS_ALIVE_FIELD_NUMBER = 6;
+    public static final int IS_ALIVE_FIELD_NUMBER = 7;
     private boolean isAlive_;
 
     @java.lang.Override
@@ -124,7 +124,7 @@ public final class FungusFighterMonsterDetailOuterClass {
       return isAlive_;
     }
 
-    public static final int CUR_HP_PERCENTAGE_FIELD_NUMBER = 11;
+    public static final int CUR_HP_PERCENTAGE_FIELD_NUMBER = 13;
     private float curHpPercentage_;
 
     @java.lang.Override
@@ -132,7 +132,7 @@ public final class FungusFighterMonsterDetailOuterClass {
       return curHpPercentage_;
     }
 
-    public static final int FUNGUS_ID_FIELD_NUMBER = 12;
+    public static final int FUNGUS_ID_FIELD_NUMBER = 1;
     private int fungusId_;
 
     @java.lang.Override
@@ -155,13 +155,13 @@ public final class FungusFighterMonsterDetailOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isAlive_ != false) {
-        output.writeBool(6, isAlive_);
+        output.writeBool(7, isAlive_);
       }
       if (fungusId_ != 0) {
-        output.writeUInt32(12, fungusId_);
+        output.writeUInt32(1, fungusId_);
       }
       if (curHpPercentage_ != 0F) {
-        output.writeFloat(11, curHpPercentage_);
+        output.writeFloat(13, curHpPercentage_);
       }
       unknownFields.writeTo(output);
     }
@@ -174,15 +174,15 @@ public final class FungusFighterMonsterDetailOuterClass {
       size = 0;
       if (isAlive_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isAlive_);
+          .computeBoolSize(7, isAlive_);
       }
       if (fungusId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, fungusId_);
+          .computeUInt32Size(1, fungusId_);
       }
       if (curHpPercentage_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(11, curHpPercentage_);
+          .computeFloatSize(13, curHpPercentage_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -85,17 +85,17 @@ public final class ExpeditionChallengeInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 80: {
 
               openTime_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 96: {
 
               id_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 8: {
 
               isFinished_ = input.readBool();
               break;
@@ -132,7 +132,7 @@ public final class ExpeditionChallengeInfoOuterClass {
               emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo.class, emu.grasscutter.net.proto.ExpeditionChallengeInfoOuterClass.ExpeditionChallengeInfo.Builder.class);
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 8;
+    public static final int OPEN_TIME_FIELD_NUMBER = 10;
     private int openTime_;
     /**
      * <code>uint32 open_time = 2;</code>
@@ -143,7 +143,7 @@ public final class ExpeditionChallengeInfoOuterClass {
       return openTime_;
     }
 
-    public static final int ID_FIELD_NUMBER = 4;
+    public static final int ID_FIELD_NUMBER = 12;
     private int id_;
     /**
      * <code>uint32 id = 4;</code>
@@ -154,7 +154,7 @@ public final class ExpeditionChallengeInfoOuterClass {
       return id_;
     }
 
-    public static final int IS_FINISHED_FIELD_NUMBER = 3;
+    public static final int IS_FINISHED_FIELD_NUMBER = 1;
     private boolean isFinished_;
     /**
      * <code>bool is_finished = 10;</code>
@@ -180,13 +180,13 @@ public final class ExpeditionChallengeInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (openTime_ != 0) {
-        output.writeUInt32(8, openTime_);
+        output.writeUInt32(10, openTime_);
       }
       if (id_ != 0) {
-        output.writeUInt32(4, id_);
+        output.writeUInt32(12, id_);
       }
       if (isFinished_ != false) {
-        output.writeBool(3, isFinished_);
+        output.writeBool(1, isFinished_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class ExpeditionChallengeInfoOuterClass {
       size = 0;
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, openTime_);
+          .computeUInt32Size(10, openTime_);
       }
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, id_);
+          .computeUInt32Size(12, id_);
       }
       if (isFinished_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isFinished_);
+          .computeBoolSize(1, isFinished_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

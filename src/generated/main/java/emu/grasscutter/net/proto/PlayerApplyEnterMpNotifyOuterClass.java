@@ -79,7 +79,7 @@ public final class PlayerApplyEnterMpNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 122: {
+            case 34: {
               emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo.Builder subBuilder = null;
               if (srcPlayerInfo_ != null) {
                 subBuilder = srcPlayerInfo_.toBuilder();
@@ -139,7 +139,7 @@ public final class PlayerApplyEnterMpNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerApplyEnterMpNotifyOuterClass.PlayerApplyEnterMpNotify.class, emu.grasscutter.net.proto.PlayerApplyEnterMpNotifyOuterClass.PlayerApplyEnterMpNotify.Builder.class);
     }
 
-    public static final int SRC_PLAYER_INFO_FIELD_NUMBER = 15;
+    public static final int SRC_PLAYER_INFO_FIELD_NUMBER = 4;
     private emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo srcPlayerInfo_;
 
     @java.lang.Override
@@ -199,7 +199,7 @@ public final class PlayerApplyEnterMpNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (srcPlayerInfo_ != null) {
-        output.writeMessage(15, getSrcPlayerInfo());
+        output.writeMessage(4, getSrcPlayerInfo());
       }
       if (srcThreadIndex_ != 0) {
         output.writeUInt32(11, srcThreadIndex_);
@@ -221,7 +221,7 @@ public final class PlayerApplyEnterMpNotifyOuterClass {
       size = 0;
       if (srcPlayerInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getSrcPlayerInfo());
+          .computeMessageSize(4, getSrcPlayerInfo());
       }
       if (srcThreadIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream

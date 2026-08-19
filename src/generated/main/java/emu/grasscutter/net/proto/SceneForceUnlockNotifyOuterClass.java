@@ -77,7 +77,7 @@ public final class SceneForceUnlockNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 56: {
 
               isAdd_ = input.readBool();
               break;
@@ -156,7 +156,7 @@ public final class SceneForceUnlockNotifyOuterClass {
     }
     private int forceIdListMemoizedSerializedSize = -1;
 
-    public static final int IS_ADD_FIELD_NUMBER = 12;
+    public static final int IS_ADD_FIELD_NUMBER = 7;
     private boolean isAdd_;
 
     @java.lang.Override
@@ -180,7 +180,7 @@ public final class SceneForceUnlockNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (isAdd_ != false) {
-        output.writeBool(12, isAdd_);
+        output.writeBool(7, isAdd_);
       }
       if (getForceIdListList().size() > 0) {
         output.writeUInt32NoTag(18);
@@ -200,7 +200,7 @@ public final class SceneForceUnlockNotifyOuterClass {
       size = 0;
       if (isAdd_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isAdd_);
+          .computeBoolSize(7, isAdd_);
       }
       {
         int dataSize = 0;

@@ -75,13 +75,13 @@ public final class ChangeTeamNameReqOuterClass {
             case 0:
               done = true;
               break;
-            case 98: {
+            case 122: {
               java.lang.String s = input.readStringRequireUtf8();
 
               teamName_ = s;
               break;
             }
-            case 72: {
+            case 56: {
 
               teamId_ = input.readInt32();
               break;
@@ -118,7 +118,7 @@ public final class ChangeTeamNameReqOuterClass {
               emu.grasscutter.net.proto.ChangeTeamNameReqOuterClass.ChangeTeamNameReq.class, emu.grasscutter.net.proto.ChangeTeamNameReqOuterClass.ChangeTeamNameReq.Builder.class);
     }
 
-    public static final int TEAM_NAME_FIELD_NUMBER = 12;
+    public static final int TEAM_NAME_FIELD_NUMBER = 15;
     private volatile java.lang.Object teamName_;
 
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class ChangeTeamNameReqOuterClass {
       }
     }
 
-    public static final int TEAM_ID_FIELD_NUMBER = 9;
+    public static final int TEAM_ID_FIELD_NUMBER = 7;
     private int teamId_;
 
     @java.lang.Override
@@ -173,10 +173,10 @@ public final class ChangeTeamNameReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, teamName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, teamName_);
       }
       if (teamId_ != 0) {
-        output.writeInt32(9, teamId_);
+        output.writeInt32(7, teamId_);
       }
       unknownFields.writeTo(output);
     }
@@ -188,11 +188,11 @@ public final class ChangeTeamNameReqOuterClass {
 
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, teamName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, teamName_);
       }
       if (teamId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, teamId_);
+          .computeInt32Size(7, teamId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

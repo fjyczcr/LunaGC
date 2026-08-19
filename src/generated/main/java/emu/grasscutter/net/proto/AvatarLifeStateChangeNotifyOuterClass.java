@@ -101,13 +101,13 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 48: {
               int rawValue = input.readEnum();
 
               dieType_ = rawValue;
               break;
             }
-            case 32: {
+            case 8: {
 
               lifeState_ = input.readUInt32();
               break;
@@ -121,22 +121,22 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ServerBuffOuterClass.ServerBuff.parser(), extensionRegistry));
               break;
             }
-            case 64: {
+            case 104: {
 
               sourceEntityId_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 16: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 120: {
+            case 40: {
 
               moveReliableSeq_ = input.readUInt32();
               break;
             }
-            case 26: {
+            case 58: {
               java.lang.String s = input.readStringRequireUtf8();
 
               attackTag_ = s;
@@ -207,7 +207,7 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
       return serverBuffList_.get(index);
     }
 
-    public static final int ATTACK_TAG_FIELD_NUMBER = 3;
+    public static final int ATTACK_TAG_FIELD_NUMBER = 7;
     private volatile java.lang.Object attackTag_;
 
     @java.lang.Override
@@ -239,7 +239,7 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
       }
     }
 
-    public static final int LIFE_STATE_FIELD_NUMBER = 4;
+    public static final int LIFE_STATE_FIELD_NUMBER = 1;
     private int lifeState_;
 
     @java.lang.Override
@@ -247,7 +247,7 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
       return lifeState_;
     }
 
-    public static final int MOVE_RELIABLE_SEQ_FIELD_NUMBER = 15;
+    public static final int MOVE_RELIABLE_SEQ_FIELD_NUMBER = 5;
     private int moveReliableSeq_;
 
     @java.lang.Override
@@ -255,7 +255,7 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
       return moveReliableSeq_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 14;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 2;
     private long avatarGuid_;
 
     @java.lang.Override
@@ -263,7 +263,7 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
       return avatarGuid_;
     }
 
-    public static final int DIE_TYPE_FIELD_NUMBER = 10;
+    public static final int DIE_TYPE_FIELD_NUMBER = 6;
     private int dieType_;
 
     @java.lang.Override public int getDieTypeValue() {
@@ -276,7 +276,7 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
       return result == null ? emu.grasscutter.net.proto.PlayerDieTypeOuterClass.PlayerDieType.UNRECOGNIZED : result;
     }
 
-    public static final int SOURCE_ENTITY_ID_FIELD_NUMBER = 8;
+    public static final int SOURCE_ENTITY_ID_FIELD_NUMBER = 13;
     private int sourceEntityId_;
 
     @java.lang.Override
@@ -299,25 +299,25 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (dieType_ != emu.grasscutter.net.proto.PlayerDieTypeOuterClass.PlayerDieType.PlayerDieType_PLAYER_DIE_NONE.getNumber()) {
-        output.writeEnum(10, dieType_);
+        output.writeEnum(6, dieType_);
       }
       if (lifeState_ != 0) {
-        output.writeUInt32(4, lifeState_);
+        output.writeUInt32(1, lifeState_);
       }
       if (moveReliableSeq_ != 0) {
-        output.writeUInt32(15, moveReliableSeq_);
+        output.writeUInt32(5, moveReliableSeq_);
       }
       for (int i = 0; i < serverBuffList_.size(); i++) {
         output.writeMessage(11, serverBuffList_.get(i));
       }
       if (sourceEntityId_ != 0) {
-        output.writeUInt32(8, sourceEntityId_);
+        output.writeUInt32(13, sourceEntityId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attackTag_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, attackTag_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, attackTag_);
       }
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(14, avatarGuid_);
+        output.writeUInt64(2, avatarGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -330,15 +330,15 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
       size = 0;
       if (dieType_ != emu.grasscutter.net.proto.PlayerDieTypeOuterClass.PlayerDieType.PlayerDieType_PLAYER_DIE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(10, dieType_);
+          .computeEnumSize(6, dieType_);
       }
       if (lifeState_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, lifeState_);
+          .computeUInt32Size(1, lifeState_);
       }
       if (moveReliableSeq_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, moveReliableSeq_);
+          .computeUInt32Size(5, moveReliableSeq_);
       }
       for (int i = 0; i < serverBuffList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -346,14 +346,14 @@ public final class AvatarLifeStateChangeNotifyOuterClass {
       }
       if (sourceEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, sourceEntityId_);
+          .computeUInt32Size(13, sourceEntityId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attackTag_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, attackTag_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, attackTag_);
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(14, avatarGuid_);
+          .computeUInt64Size(2, avatarGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

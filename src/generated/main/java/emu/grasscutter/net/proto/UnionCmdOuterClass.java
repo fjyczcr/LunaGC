@@ -68,12 +68,12 @@ public final class UnionCmdOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 120: {
 
               messageId_ = input.readUInt32();
               break;
             }
-            case 10: {
+            case 66: {
 
               body_ = input.readBytes();
               break;
@@ -110,7 +110,7 @@ public final class UnionCmdOuterClass {
               emu.grasscutter.net.proto.UnionCmdOuterClass.UnionCmd.class, emu.grasscutter.net.proto.UnionCmdOuterClass.UnionCmd.Builder.class);
     }
 
-    public static final int BODY_FIELD_NUMBER = 1;
+    public static final int BODY_FIELD_NUMBER = 8;
     private com.google.protobuf.ByteString body_;
 
     @java.lang.Override
@@ -118,7 +118,7 @@ public final class UnionCmdOuterClass {
       return body_;
     }
 
-    public static final int MESSAGE_ID_FIELD_NUMBER = 10;
+    public static final int MESSAGE_ID_FIELD_NUMBER = 15;
     private int messageId_;
 
     @java.lang.Override
@@ -141,10 +141,10 @@ public final class UnionCmdOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (messageId_ != 0) {
-        output.writeUInt32(10, messageId_);
+        output.writeUInt32(15, messageId_);
       }
       if (!body_.isEmpty()) {
-        output.writeBytes(1, body_);
+        output.writeBytes(8, body_);
       }
       unknownFields.writeTo(output);
     }
@@ -157,11 +157,11 @@ public final class UnionCmdOuterClass {
       size = 0;
       if (messageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, messageId_);
+          .computeUInt32Size(15, messageId_);
       }
       if (!body_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, body_);
+          .computeBytesSize(8, body_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

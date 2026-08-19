@@ -84,7 +84,7 @@ public final class GetAreaExplorePointRspOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 48: {
 
               retcode_ = input.readInt32();
               break;
@@ -110,7 +110,7 @@ public final class GetAreaExplorePointRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 112: {
+            case 88: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 explorePointList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -118,7 +118,7 @@ public final class GetAreaExplorePointRspOuterClass {
               explorePointList_.addInt(input.readUInt32());
               break;
             }
-            case 114: {
+            case 90: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -169,7 +169,7 @@ public final class GetAreaExplorePointRspOuterClass {
               emu.grasscutter.net.proto.GetAreaExplorePointRspOuterClass.GetAreaExplorePointRsp.class, emu.grasscutter.net.proto.GetAreaExplorePointRspOuterClass.GetAreaExplorePointRsp.Builder.class);
     }
 
-    public static final int EXPLORE_POINT_LIST_FIELD_NUMBER = 14;
+    public static final int EXPLORE_POINT_LIST_FIELD_NUMBER = 11;
     private com.google.protobuf.Internal.IntList explorePointList_;
 
     @java.lang.Override
@@ -205,7 +205,7 @@ public final class GetAreaExplorePointRspOuterClass {
     }
     private int areaIdListMemoizedSerializedSize = -1;
 
-    public static final int RETCODE_FIELD_NUMBER = 4;
+    public static final int RETCODE_FIELD_NUMBER = 6;
     private int retcode_;
 
     @java.lang.Override
@@ -229,7 +229,7 @@ public final class GetAreaExplorePointRspOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (retcode_ != 0) {
-        output.writeInt32(4, retcode_);
+        output.writeInt32(6, retcode_);
       }
       if (getAreaIdListList().size() > 0) {
         output.writeUInt32NoTag(82);
@@ -239,7 +239,7 @@ public final class GetAreaExplorePointRspOuterClass {
         output.writeUInt32NoTag(areaIdList_.getInt(i));
       }
       if (getExplorePointListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(90);
         output.writeUInt32NoTag(explorePointListMemoizedSerializedSize);
       }
       for (int i = 0; i < explorePointList_.size(); i++) {
@@ -256,7 +256,7 @@ public final class GetAreaExplorePointRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, retcode_);
+          .computeInt32Size(6, retcode_);
       }
       {
         int dataSize = 0;

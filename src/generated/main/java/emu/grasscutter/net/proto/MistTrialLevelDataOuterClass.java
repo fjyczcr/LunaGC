@@ -132,12 +132,12 @@ public final class MistTrialLevelDataOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 120: {
 
               openTime_ = input.readUInt32();
               break;
             }
-            case 74: {
+            case 10: {
               emu.grasscutter.net.proto.MistTrialBestAvatarOuterClass.MistTrialBestAvatar.Builder subBuilder = null;
               if (bestHitAvatar_ != null) {
                 subBuilder = bestHitAvatar_.toBuilder();
@@ -150,7 +150,7 @@ public final class MistTrialLevelDataOuterClass {
 
               break;
             }
-            case 106: {
+            case 66: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 bestAvatarList_ = new java.util.ArrayList<emu.grasscutter.net.proto.MistTrialBestAvatarOuterClass.MistTrialBestAvatar>();
                 mutable_bitField0_ |= 0x00000001;
@@ -159,7 +159,7 @@ public final class MistTrialLevelDataOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.MistTrialBestAvatarOuterClass.MistTrialBestAvatar.parser(), extensionRegistry));
               break;
             }
-            case 40: {
+            case 32: {
 
               firstPassTime_ = input.readUInt32();
               break;
@@ -169,7 +169,7 @@ public final class MistTrialLevelDataOuterClass {
               levelId_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 88: {
 
               isOpen_ = input.readBool();
               break;
@@ -220,7 +220,7 @@ public final class MistTrialLevelDataOuterClass {
       return levelId_;
     }
 
-    public static final int FIRST_PASS_TIME_FIELD_NUMBER = 5;
+    public static final int FIRST_PASS_TIME_FIELD_NUMBER = 4;
     private int firstPassTime_;
     /**
      * <code>uint32 first_pass_time = 11;</code>
@@ -231,7 +231,7 @@ public final class MistTrialLevelDataOuterClass {
       return firstPassTime_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 7;
+    public static final int IS_OPEN_FIELD_NUMBER = 11;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 14;</code>
@@ -242,7 +242,7 @@ public final class MistTrialLevelDataOuterClass {
       return isOpen_;
     }
 
-    public static final int BEST_HIT_AVATAR_FIELD_NUMBER = 9;
+    public static final int BEST_HIT_AVATAR_FIELD_NUMBER = 1;
     private emu.grasscutter.net.proto.MistTrialBestAvatarOuterClass.MistTrialBestAvatar bestHitAvatar_;
     /**
      * <code>.MistTrialBestAvatar best_hit_avatar = 9;</code>
@@ -268,7 +268,7 @@ public final class MistTrialLevelDataOuterClass {
       return getBestHitAvatar();
     }
 
-    public static final int BEST_AVATAR_LIST_FIELD_NUMBER = 13;
+    public static final int BEST_AVATAR_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.MistTrialBestAvatarOuterClass.MistTrialBestAvatar> bestAvatarList_;
     /**
      * <code>repeated .MistTrialBestAvatar best_avatar_list = 10;</code>
@@ -308,7 +308,7 @@ public final class MistTrialLevelDataOuterClass {
       return bestAvatarList_.get(index);
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 14;
+    public static final int OPEN_TIME_FIELD_NUMBER = 15;
     private int openTime_;
     /**
      * <code>uint32 open_time = 7;</code>
@@ -334,22 +334,22 @@ public final class MistTrialLevelDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (openTime_ != 0) {
-        output.writeUInt32(14, openTime_);
+        output.writeUInt32(15, openTime_);
       }
       if (bestHitAvatar_ != null) {
-        output.writeMessage(9, getBestHitAvatar());
+        output.writeMessage(1, getBestHitAvatar());
       }
       for (int i = 0; i < bestAvatarList_.size(); i++) {
-        output.writeMessage(13, bestAvatarList_.get(i));
+        output.writeMessage(8, bestAvatarList_.get(i));
       }
       if (firstPassTime_ != 0) {
-        output.writeUInt32(5, firstPassTime_);
+        output.writeUInt32(4, firstPassTime_);
       }
       if (levelId_ != 0) {
         output.writeUInt32(10, levelId_);
       }
       if (isOpen_ != false) {
-        output.writeBool(7, isOpen_);
+        output.writeBool(11, isOpen_);
       }
       unknownFields.writeTo(output);
     }
@@ -362,19 +362,19 @@ public final class MistTrialLevelDataOuterClass {
       size = 0;
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, openTime_);
+          .computeUInt32Size(15, openTime_);
       }
       if (bestHitAvatar_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getBestHitAvatar());
+          .computeMessageSize(1, getBestHitAvatar());
       }
       for (int i = 0; i < bestAvatarList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, bestAvatarList_.get(i));
+          .computeMessageSize(8, bestAvatarList_.get(i));
       }
       if (firstPassTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, firstPassTime_);
+          .computeUInt32Size(4, firstPassTime_);
       }
       if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -382,7 +382,7 @@ public final class MistTrialLevelDataOuterClass {
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isOpen_);
+          .computeBoolSize(11, isOpen_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

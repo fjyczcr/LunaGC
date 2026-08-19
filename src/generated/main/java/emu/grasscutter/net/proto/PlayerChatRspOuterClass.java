@@ -80,12 +80,12 @@ public final class PlayerChatRspOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 56: {
 
               chatForbiddenEndtime_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 48: {
 
               retcode_ = input.readInt32();
               break;
@@ -122,7 +122,7 @@ public final class PlayerChatRspOuterClass {
               emu.grasscutter.net.proto.PlayerChatRspOuterClass.PlayerChatRsp.class, emu.grasscutter.net.proto.PlayerChatRspOuterClass.PlayerChatRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 2;
+    public static final int RETCODE_FIELD_NUMBER = 6;
     private int retcode_;
     /**
      * <code>int32 retcode = 15;</code>
@@ -133,7 +133,7 @@ public final class PlayerChatRspOuterClass {
       return retcode_;
     }
 
-    public static final int CHAT_FORBIDDEN_ENDTIME_FIELD_NUMBER = 6;
+    public static final int CHAT_FORBIDDEN_ENDTIME_FIELD_NUMBER = 7;
     private int chatForbiddenEndtime_;
     /**
      * <code>uint32 chat_forbidden_endtime = 1;</code>
@@ -159,10 +159,10 @@ public final class PlayerChatRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (chatForbiddenEndtime_ != 0) {
-        output.writeUInt32(6, chatForbiddenEndtime_);
+        output.writeUInt32(7, chatForbiddenEndtime_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(2, retcode_);
+        output.writeInt32(6, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +175,11 @@ public final class PlayerChatRspOuterClass {
       size = 0;
       if (chatForbiddenEndtime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, chatForbiddenEndtime_);
+          .computeUInt32Size(7, chatForbiddenEndtime_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, retcode_);
+          .computeInt32Size(6, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -82,7 +82,7 @@ public final class AvatarSatiationDataNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 74: {
+            case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 satiationDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarSatiationDataOuterClass.AvatarSatiationData>();
                 mutable_bitField0_ |= 0x00000001;
@@ -126,7 +126,7 @@ public final class AvatarSatiationDataNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarSatiationDataNotifyOuterClass.AvatarSatiationDataNotify.class, emu.grasscutter.net.proto.AvatarSatiationDataNotifyOuterClass.AvatarSatiationDataNotify.Builder.class);
     }
 
-    public static final int SATIATION_DATA_LIST_FIELD_NUMBER = 9;
+    public static final int SATIATION_DATA_LIST_FIELD_NUMBER = 1;
     private java.util.List<emu.grasscutter.net.proto.AvatarSatiationDataOuterClass.AvatarSatiationData> satiationDataList_;
 
     @java.lang.Override
@@ -171,7 +171,7 @@ public final class AvatarSatiationDataNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < satiationDataList_.size(); i++) {
-        output.writeMessage(9, satiationDataList_.get(i));
+        output.writeMessage(1, satiationDataList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -184,7 +184,7 @@ public final class AvatarSatiationDataNotifyOuterClass {
       size = 0;
       for (int i = 0; i < satiationDataList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, satiationDataList_.get(i));
+          .computeMessageSize(1, satiationDataList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

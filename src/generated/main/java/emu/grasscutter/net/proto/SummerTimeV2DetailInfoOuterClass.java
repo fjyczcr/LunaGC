@@ -133,12 +133,12 @@ public final class SummerTimeV2DetailInfoOuterClass {
               cKDIALOEBIP_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 56: {
 
               isContentClosed_ = input.readBool();
               break;
             }
-            case 56: {
+            case 128000: {
 
               cGHLCNODEPG_ = input.readUInt32();
               break;
@@ -290,7 +290,7 @@ public final class SummerTimeV2DetailInfoOuterClass {
       return cKDIALOEBIP_;
     }
 
-    public static final int CGHLCNODEPG_FIELD_NUMBER = 7;
+    public static final int CGHLCNODEPG_FIELD_NUMBER = 16000;
     private int cGHLCNODEPG_;
     /**
      * <code>uint32 CGHLCNODEPG = 7;</code>
@@ -301,7 +301,7 @@ public final class SummerTimeV2DetailInfoOuterClass {
       return cGHLCNODEPG_;
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 2;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 7;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -327,10 +327,10 @@ public final class SummerTimeV2DetailInfoOuterClass {
         output.writeUInt32(1, cKDIALOEBIP_);
       }
       if (isContentClosed_ != false) {
-        output.writeBool(2, isContentClosed_);
+        output.writeBool(7, isContentClosed_);
       }
       if (cGHLCNODEPG_ != 0) {
-        output.writeUInt32(7, cGHLCNODEPG_);
+        output.writeUInt32(16000, cGHLCNODEPG_);
       }
       for (int i = 0; i < lOMPNALOPMA_.size(); i++) {
         output.writeMessage(8, lOMPNALOPMA_.get(i));
@@ -353,11 +353,11 @@ public final class SummerTimeV2DetailInfoOuterClass {
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isContentClosed_);
+          .computeBoolSize(7, isContentClosed_);
       }
       if (cGHLCNODEPG_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, cGHLCNODEPG_);
+          .computeUInt32Size(16000, cGHLCNODEPG_);
       }
       for (int i = 0; i < lOMPNALOPMA_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream

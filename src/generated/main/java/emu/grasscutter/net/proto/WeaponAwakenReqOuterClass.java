@@ -94,7 +94,7 @@ public final class WeaponAwakenReqOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 112: {
 
               targetWeaponGuid_ = input.readUInt64();
               break;
@@ -104,7 +104,7 @@ public final class WeaponAwakenReqOuterClass {
               affixLevel_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 32: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemGuid_ = newLongList();
                 mutable_bitField0_ |= 0x00000001;
@@ -112,7 +112,7 @@ public final class WeaponAwakenReqOuterClass {
               itemGuid_.addLong(input.readUInt64());
               break;
             }
-            case 82: {
+            case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -160,7 +160,7 @@ public final class WeaponAwakenReqOuterClass {
               emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq.class, emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq.Builder.class);
     }
 
-    public static final int ITEM_GUID_FIELD_NUMBER = 10;
+    public static final int ITEM_GUID_FIELD_NUMBER = 4;
     private com.google.protobuf.Internal.LongList itemGuid_;
     /**
      * <code>repeated uint64 item_guid = 5124;</code>
@@ -199,7 +199,7 @@ public final class WeaponAwakenReqOuterClass {
       return affixLevel_;
     }
 
-    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 11;
+    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 14;
     private long targetWeaponGuid_;
 
     @java.lang.Override
@@ -226,10 +226,10 @@ public final class WeaponAwakenReqOuterClass {
         output.writeUInt32(5, affixLevel_);
       }
       if (targetWeaponGuid_ != 0L) {
-        output.writeUInt64(11, targetWeaponGuid_);
+        output.writeUInt64(14, targetWeaponGuid_);
       }
       if (getItemGuidList().size() > 0) {
-        output.writeUInt32NoTag(82);
+        output.writeUInt32NoTag(34);
         output.writeUInt32NoTag(itemGuidMemoizedSerializedSize);
       }
       for (int i = 0; i < itemGuid_.size(); i++) {
@@ -250,7 +250,7 @@ public final class WeaponAwakenReqOuterClass {
       }
       if (targetWeaponGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(11, targetWeaponGuid_);
+          .computeUInt64Size(14, targetWeaponGuid_);
       }
       {
         int dataSize = 0;

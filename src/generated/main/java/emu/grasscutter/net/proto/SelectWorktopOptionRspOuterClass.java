@@ -78,12 +78,12 @@ public final class SelectWorktopOptionRspOuterClass {
               retcode_ = input.readInt32();
               break;
             }
-            case 64: {
+            case 120: {
 
               optionId_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 32: {
 
               gadgetEntityId_ = input.readUInt32();
               break;
@@ -120,7 +120,7 @@ public final class SelectWorktopOptionRspOuterClass {
               emu.grasscutter.net.proto.SelectWorktopOptionRspOuterClass.SelectWorktopOptionRsp.class, emu.grasscutter.net.proto.SelectWorktopOptionRspOuterClass.SelectWorktopOptionRsp.Builder.class);
     }
 
-    public static final int GADGET_ENTITY_ID_FIELD_NUMBER = 11;
+    public static final int GADGET_ENTITY_ID_FIELD_NUMBER = 4;
     private int gadgetEntityId_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class SelectWorktopOptionRspOuterClass {
       return retcode_;
     }
 
-    public static final int OPTION_ID_FIELD_NUMBER = 8;
+    public static final int OPTION_ID_FIELD_NUMBER = 15;
     private int optionId_;
 
     @java.lang.Override
@@ -162,10 +162,10 @@ public final class SelectWorktopOptionRspOuterClass {
         output.writeInt32(12, retcode_);
       }
       if (optionId_ != 0) {
-        output.writeUInt32(8, optionId_);
+        output.writeUInt32(15, optionId_);
       }
       if (gadgetEntityId_ != 0) {
-        output.writeUInt32(11, gadgetEntityId_);
+        output.writeUInt32(4, gadgetEntityId_);
       }
       unknownFields.writeTo(output);
     }
@@ -182,11 +182,11 @@ public final class SelectWorktopOptionRspOuterClass {
       }
       if (optionId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, optionId_);
+          .computeUInt32Size(15, optionId_);
       }
       if (gadgetEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, gadgetEntityId_);
+          .computeUInt32Size(4, gadgetEntityId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

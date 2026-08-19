@@ -73,17 +73,17 @@ public final class TakeoffEquipRspOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 48: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 112: {
+            case 72: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 16: {
+            case 80: {
 
               slot_ = input.readUInt32();
               break;
@@ -120,7 +120,7 @@ public final class TakeoffEquipRspOuterClass {
               emu.grasscutter.net.proto.TakeoffEquipRspOuterClass.TakeoffEquipRsp.class, emu.grasscutter.net.proto.TakeoffEquipRspOuterClass.TakeoffEquipRsp.Builder.class);
     }
 
-    public static final int SLOT_FIELD_NUMBER = 2;
+    public static final int SLOT_FIELD_NUMBER = 10;
     private int slot_;
 
     @java.lang.Override
@@ -128,7 +128,7 @@ public final class TakeoffEquipRspOuterClass {
       return slot_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 14;
+    public static final int RETCODE_FIELD_NUMBER = 9;
     private int retcode_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class TakeoffEquipRspOuterClass {
       return retcode_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 10;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 6;
     private long avatarGuid_;
 
     @java.lang.Override
@@ -159,13 +159,13 @@ public final class TakeoffEquipRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(10, avatarGuid_);
+        output.writeUInt64(6, avatarGuid_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(14, retcode_);
+        output.writeInt32(9, retcode_);
       }
       if (slot_ != 0) {
-        output.writeUInt32(2, slot_);
+        output.writeUInt32(10, slot_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,15 +178,15 @@ public final class TakeoffEquipRspOuterClass {
       size = 0;
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(10, avatarGuid_);
+          .computeUInt64Size(6, avatarGuid_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(14, retcode_);
+          .computeInt32Size(9, retcode_);
       }
       if (slot_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, slot_);
+          .computeUInt32Size(10, slot_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

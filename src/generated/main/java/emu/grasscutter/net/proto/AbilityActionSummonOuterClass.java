@@ -93,7 +93,7 @@ public final class AbilityActionSummonOuterClass {
             case 0:
               done = true;
               break;
-            case 74: {
+            case 82: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (rot_ != null) {
                 subBuilder = rot_.toBuilder();
@@ -106,7 +106,7 @@ public final class AbilityActionSummonOuterClass {
 
               break;
             }
-            case 106: {
+            case 90: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (pos_ != null) {
                 subBuilder = pos_.toBuilder();
@@ -151,7 +151,7 @@ public final class AbilityActionSummonOuterClass {
               emu.grasscutter.net.proto.AbilityActionSummonOuterClass.AbilityActionSummon.class, emu.grasscutter.net.proto.AbilityActionSummonOuterClass.AbilityActionSummon.Builder.class);
     }
 
-    public static final int POS_FIELD_NUMBER = 13;
+    public static final int POS_FIELD_NUMBER = 11;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
      * <code>.Vector pos = 4;</code>
@@ -177,7 +177,7 @@ public final class AbilityActionSummonOuterClass {
       return getPos();
     }
 
-    public static final int ROT_FIELD_NUMBER = 9;
+    public static final int ROT_FIELD_NUMBER = 10;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
     /**
      * <code>.Vector rot = 13;</code>
@@ -218,10 +218,10 @@ public final class AbilityActionSummonOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pos_ != null) {
-        output.writeMessage(13, getPos());
+        output.writeMessage(11, getPos());
       }
       if (rot_ != null) {
-        output.writeMessage(9, getRot());
+        output.writeMessage(10, getRot());
       }
       unknownFields.writeTo(output);
     }
@@ -234,11 +234,11 @@ public final class AbilityActionSummonOuterClass {
       size = 0;
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getPos());
+          .computeMessageSize(11, getPos());
       }
       if (rot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getRot());
+          .computeMessageSize(10, getRot());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -152,7 +152,7 @@ public final class PlayerCookRspOuterClass {
             case 0:
               done = true;
               break;
-            case 122: {
+            case 42: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 extralItemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000002;
@@ -166,7 +166,7 @@ public final class PlayerCookRspOuterClass {
               cookCount_ = input.readUInt32();
               break;
             }
-            case 42: {
+            case 106: {
               emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData.Builder subBuilder = null;
               if (recipeData_ != null) {
                 subBuilder = recipeData_.toBuilder();
@@ -179,7 +179,7 @@ public final class PlayerCookRspOuterClass {
 
               break;
             }
-            case 34: {
+            case 98: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam>();
                 mutable_bitField0_ |= 0x00000001;
@@ -193,7 +193,7 @@ public final class PlayerCookRspOuterClass {
               qteQuality_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 16: {
 
               retcode_ = input.readInt32();
               break;
@@ -236,7 +236,7 @@ public final class PlayerCookRspOuterClass {
               emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp.class, emu.grasscutter.net.proto.PlayerCookRspOuterClass.PlayerCookRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 11;
+    public static final int RETCODE_FIELD_NUMBER = 2;
     private int retcode_;
     /**
      * <code>int32 retcode = 9;</code>
@@ -258,7 +258,7 @@ public final class PlayerCookRspOuterClass {
       return cookCount_;
     }
 
-    public static final int RECIPE_DATA_FIELD_NUMBER = 5;
+    public static final int RECIPE_DATA_FIELD_NUMBER = 13;
     private emu.grasscutter.net.proto.CookRecipeDataOuterClass.CookRecipeData recipeData_;
     /**
      * <code>.CookRecipeData recipe_data = 5;</code>
@@ -295,7 +295,7 @@ public final class PlayerCookRspOuterClass {
       return qteQuality_;
     }
 
-    public static final int ITEM_LIST_FIELD_NUMBER = 4;
+    public static final int ITEM_LIST_FIELD_NUMBER = 12;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> itemList_;
     /**
      * <code>repeated .ItemParam item_list = 10;</code>
@@ -335,7 +335,7 @@ public final class PlayerCookRspOuterClass {
       return itemList_.get(index);
     }
 
-    public static final int EXTRAL_ITEM_LIST_FIELD_NUMBER = 15;
+    public static final int EXTRAL_ITEM_LIST_FIELD_NUMBER = 5;
     private java.util.List<emu.grasscutter.net.proto.ItemParamOuterClass.ItemParam> extralItemList_;
     /**
      * <code>repeated .ItemParam extral_item_list = 15;</code>
@@ -393,19 +393,19 @@ public final class PlayerCookRspOuterClass {
         output.writeUInt32(10, cookCount_);
       }
       if (recipeData_ != null) {
-        output.writeMessage(5, getRecipeData());
+        output.writeMessage(13, getRecipeData());
       }
       if (qteQuality_ != 0) {
         output.writeUInt32(14, qteQuality_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(11, retcode_);
+        output.writeInt32(2, retcode_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
-        output.writeMessage(4, itemList_.get(i));
+        output.writeMessage(12, itemList_.get(i));
       }
       for (int i = 0; i < extralItemList_.size(); i++) {
-        output.writeMessage(15, extralItemList_.get(i));
+        output.writeMessage(5, extralItemList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -422,7 +422,7 @@ public final class PlayerCookRspOuterClass {
       }
       if (recipeData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getRecipeData());
+          .computeMessageSize(13, getRecipeData());
       }
       if (qteQuality_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -430,15 +430,15 @@ public final class PlayerCookRspOuterClass {
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(11, retcode_);
+          .computeInt32Size(2, retcode_);
       }
       for (int i = 0; i < itemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, itemList_.get(i));
+          .computeMessageSize(12, itemList_.get(i));
       }
       for (int i = 0; i < extralItemList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, extralItemList_.get(i));
+          .computeMessageSize(5, extralItemList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

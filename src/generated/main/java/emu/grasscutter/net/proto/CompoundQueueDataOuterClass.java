@@ -91,7 +91,7 @@ public final class CompoundQueueDataOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 72: {
 
               outputTime_ = input.readUInt32();
               break;
@@ -101,12 +101,12 @@ public final class CompoundQueueDataOuterClass {
               compoundId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 16: {
 
               outputCount_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 120: {
 
               waitCount_ = input.readUInt32();
               break;
@@ -202,16 +202,16 @@ public final class CompoundQueueDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (outputTime_ != 0) {
-        output.writeUInt32(1, outputTime_);
+        output.writeUInt32(9, outputTime_);
       }
       if (compoundId_ != 0) {
         output.writeUInt32(13, compoundId_);
       }
       if (outputCount_ != 0) {
-        output.writeUInt32(12, outputCount_);
+        output.writeUInt32(2, outputCount_);
       }
       if (waitCount_ != 0) {
-        output.writeUInt32(14, waitCount_);
+        output.writeUInt32(15, waitCount_);
       }
       unknownFields.writeTo(output);
     }
@@ -224,7 +224,7 @@ public final class CompoundQueueDataOuterClass {
       size = 0;
       if (outputTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, outputTime_);
+          .computeUInt32Size(9, outputTime_);
       }
       if (compoundId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -232,11 +232,11 @@ public final class CompoundQueueDataOuterClass {
       }
       if (outputCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, outputCount_);
+          .computeUInt32Size(2, outputCount_);
       }
       if (waitCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, waitCount_);
+          .computeUInt32Size(15, waitCount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

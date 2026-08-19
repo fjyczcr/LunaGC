@@ -92,12 +92,12 @@ public final class CrucibleActivityDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 96: {
 
               costTime_ = input.readUInt32();
               break;
             }
-            case 98: {
+            case 74: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (pos_ != null) {
                 subBuilder = pos_.toBuilder();
@@ -110,7 +110,7 @@ public final class CrucibleActivityDetailInfoOuterClass {
 
               break;
             }
-            case 106: {
+            case 42: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 uidInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.BELNHAFOHMLOuterClass.BELNHAFOHML>();
                 mutable_bitField0_ |= 0x00000001;
@@ -159,7 +159,7 @@ public final class CrucibleActivityDetailInfoOuterClass {
               emu.grasscutter.net.proto.CrucibleActivityDetailInfoOuterClass.CrucibleActivityDetailInfo.class, emu.grasscutter.net.proto.CrucibleActivityDetailInfoOuterClass.CrucibleActivityDetailInfo.Builder.class);
     }
 
-    public static final int UID_INFO_LIST_FIELD_NUMBER = 13;
+    public static final int UID_INFO_LIST_FIELD_NUMBER = 5;
     private java.util.List<emu.grasscutter.net.proto.BELNHAFOHMLOuterClass.BELNHAFOHML> uidInfoList_;
 
     @java.lang.Override
@@ -189,7 +189,7 @@ public final class CrucibleActivityDetailInfoOuterClass {
       return uidInfoList_.get(index);
     }
 
-    public static final int POS_FIELD_NUMBER = 12;
+    public static final int POS_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
 
     @java.lang.Override
@@ -218,7 +218,7 @@ public final class CrucibleActivityDetailInfoOuterClass {
       return kPLMJOFOGOF_;
     }
 
-    public static final int COST_TIME_FIELD_NUMBER = 10;
+    public static final int COST_TIME_FIELD_NUMBER = 12;
     private int costTime_;
 
     @java.lang.Override
@@ -241,13 +241,13 @@ public final class CrucibleActivityDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (costTime_ != 0) {
-        output.writeUInt32(10, costTime_);
+        output.writeUInt32(12, costTime_);
       }
       if (pos_ != null) {
-        output.writeMessage(12, getPos());
+        output.writeMessage(9, getPos());
       }
       for (int i = 0; i < uidInfoList_.size(); i++) {
-        output.writeMessage(13, uidInfoList_.get(i));
+        output.writeMessage(5, uidInfoList_.get(i));
       }
       if (kPLMJOFOGOF_ != 0) {
         output.writeUInt32(501, kPLMJOFOGOF_);
@@ -263,15 +263,15 @@ public final class CrucibleActivityDetailInfoOuterClass {
       size = 0;
       if (costTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, costTime_);
+          .computeUInt32Size(12, costTime_);
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getPos());
+          .computeMessageSize(9, getPos());
       }
       for (int i = 0; i < uidInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, uidInfoList_.get(i));
+          .computeMessageSize(5, uidInfoList_.get(i));
       }
       if (kPLMJOFOGOF_ != 0) {
         size += com.google.protobuf.CodedOutputStream

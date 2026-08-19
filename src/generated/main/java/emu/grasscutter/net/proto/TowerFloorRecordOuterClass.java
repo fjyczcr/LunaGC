@@ -116,7 +116,7 @@ public final class TowerFloorRecordOuterClass {
                   passedLevelMap__.getKey(), passedLevelMap__.getValue());
               break;
             }
-            case 58: {
+            case 90: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 passedLevelRecordList_ = new java.util.ArrayList<emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord>();
                 mutable_bitField0_ |= 0x00000001;
@@ -130,7 +130,7 @@ public final class TowerFloorRecordOuterClass {
               floorStarRewardProgress_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 72: {
 
               floorId_ = input.readUInt32();
               break;
@@ -182,7 +182,7 @@ public final class TowerFloorRecordOuterClass {
               emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.class, emu.grasscutter.net.proto.TowerFloorRecordOuterClass.TowerFloorRecord.Builder.class);
     }
 
-    public static final int PASSED_LEVEL_RECORD_LIST_FIELD_NUMBER = 7;
+    public static final int PASSED_LEVEL_RECORD_LIST_FIELD_NUMBER = 11;
     private java.util.List<emu.grasscutter.net.proto.TowerLevelRecordOuterClass.TowerLevelRecord> passedLevelRecordList_;
 
     @java.lang.Override
@@ -292,7 +292,7 @@ public final class TowerFloorRecordOuterClass {
       return floorStarRewardProgress_;
     }
 
-    public static final int FLOOR_ID_FIELD_NUMBER = 11;
+    public static final int FLOOR_ID_FIELD_NUMBER = 9;
     private int floorId_;
 
     @java.lang.Override
@@ -321,13 +321,13 @@ public final class TowerFloorRecordOuterClass {
           PassedLevelMapDefaultEntryHolder.defaultEntry,
           15);
       for (int i = 0; i < passedLevelRecordList_.size(); i++) {
-        output.writeMessage(7, passedLevelRecordList_.get(i));
+        output.writeMessage(11, passedLevelRecordList_.get(i));
       }
       if (floorStarRewardProgress_ != 0) {
         output.writeUInt32(12, floorStarRewardProgress_);
       }
       if (floorId_ != 0) {
-        output.writeUInt32(11, floorId_);
+        output.writeUInt32(9, floorId_);
       }
       unknownFields.writeTo(output);
     }
@@ -350,7 +350,7 @@ public final class TowerFloorRecordOuterClass {
       }
       for (int i = 0; i < passedLevelRecordList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, passedLevelRecordList_.get(i));
+          .computeMessageSize(11, passedLevelRecordList_.get(i));
       }
       if (floorStarRewardProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -358,7 +358,7 @@ public final class TowerFloorRecordOuterClass {
       }
       if (floorId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, floorId_);
+          .computeUInt32Size(9, floorId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

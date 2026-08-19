@@ -73,17 +73,17 @@ public final class ActivityScheduleInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 48: {
 
               activityId_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 96: {
 
               endTime_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 80: {
 
               scheduleId_ = input.readUInt32();
               break;
@@ -93,7 +93,7 @@ public final class ActivityScheduleInfoOuterClass {
               isOpen_ = input.readBool();
               break;
             }
-            case 56: {
+            case 16: {
 
               beginTime_ = input.readUInt32();
               break;
@@ -130,7 +130,7 @@ public final class ActivityScheduleInfoOuterClass {
               emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.class, emu.grasscutter.net.proto.ActivityScheduleInfoOuterClass.ActivityScheduleInfo.Builder.class);
     }
 
-    public static final int SCHEDULE_ID_FIELD_NUMBER = 13;
+    public static final int SCHEDULE_ID_FIELD_NUMBER = 10;
     private int scheduleId_;
 
     @java.lang.Override
@@ -138,7 +138,7 @@ public final class ActivityScheduleInfoOuterClass {
       return scheduleId_;
     }
 
-    public static final int ACTIVITY_ID_FIELD_NUMBER = 3;
+    public static final int ACTIVITY_ID_FIELD_NUMBER = 6;
     private int activityId_;
 
     @java.lang.Override
@@ -146,7 +146,7 @@ public final class ActivityScheduleInfoOuterClass {
       return activityId_;
     }
 
-    public static final int END_TIME_FIELD_NUMBER = 4;
+    public static final int END_TIME_FIELD_NUMBER = 12;
     private int endTime_;
 
     @java.lang.Override
@@ -162,7 +162,7 @@ public final class ActivityScheduleInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int BEGIN_TIME_FIELD_NUMBER = 7;
+    public static final int BEGIN_TIME_FIELD_NUMBER = 2;
     private int beginTime_;
 
     @java.lang.Override
@@ -185,19 +185,19 @@ public final class ActivityScheduleInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (activityId_ != 0) {
-        output.writeUInt32(3, activityId_);
+        output.writeUInt32(6, activityId_);
       }
       if (endTime_ != 0) {
-        output.writeUInt32(4, endTime_);
+        output.writeUInt32(12, endTime_);
       }
       if (scheduleId_ != 0) {
-        output.writeUInt32(13, scheduleId_);
+        output.writeUInt32(10, scheduleId_);
       }
       if (isOpen_ != false) {
         output.writeBool(5, isOpen_);
       }
       if (beginTime_ != 0) {
-        output.writeUInt32(7, beginTime_);
+        output.writeUInt32(2, beginTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -210,15 +210,15 @@ public final class ActivityScheduleInfoOuterClass {
       size = 0;
       if (activityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, activityId_);
+          .computeUInt32Size(6, activityId_);
       }
       if (endTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, endTime_);
+          .computeUInt32Size(12, endTime_);
       }
       if (scheduleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, scheduleId_);
+          .computeUInt32Size(10, scheduleId_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -226,7 +226,7 @@ public final class ActivityScheduleInfoOuterClass {
       }
       if (beginTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, beginTime_);
+          .computeUInt32Size(2, beginTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

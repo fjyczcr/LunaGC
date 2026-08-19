@@ -97,17 +97,17 @@ public final class VintageHuntingStageDataOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 96: {
 
               stageId_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 64: {
 
               isFinish_ = input.readBool();
               break;
             }
-            case 64: {
+            case 48: {
 
               isOpen_ = input.readBool();
               break;
@@ -117,7 +117,7 @@ public final class VintageHuntingStageDataOuterClass {
               hKIIFCMCGCL_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 88: {
 
               openTime_ = input.readUInt32();
               break;
@@ -154,7 +154,7 @@ public final class VintageHuntingStageDataOuterClass {
               emu.grasscutter.net.proto.VintageHuntingStageDataOuterClass.VintageHuntingStageData.class, emu.grasscutter.net.proto.VintageHuntingStageDataOuterClass.VintageHuntingStageData.Builder.class);
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 6;
+    public static final int STAGE_ID_FIELD_NUMBER = 12;
     private int stageId_;
     /**
      * <code>uint32 stage_id = 2;</code>
@@ -165,7 +165,7 @@ public final class VintageHuntingStageDataOuterClass {
       return stageId_;
     }
 
-    public static final int IS_FINISH_FIELD_NUMBER = 10;
+    public static final int IS_FINISH_FIELD_NUMBER = 8;
     private boolean isFinish_;
     /**
      * <code>bool is_finish = 4;</code>
@@ -176,7 +176,7 @@ public final class VintageHuntingStageDataOuterClass {
       return isFinish_;
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 15;
+    public static final int OPEN_TIME_FIELD_NUMBER = 11;
     private int openTime_;
     /**
      * <code>uint32 open_time = 12;</code>
@@ -198,7 +198,7 @@ public final class VintageHuntingStageDataOuterClass {
       return hKIIFCMCGCL_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 8;
+    public static final int IS_OPEN_FIELD_NUMBER = 6;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 8;</code>
@@ -224,19 +224,19 @@ public final class VintageHuntingStageDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (stageId_ != 0) {
-        output.writeUInt32(6, stageId_);
+        output.writeUInt32(12, stageId_);
       }
       if (isFinish_ != false) {
-        output.writeBool(10, isFinish_);
+        output.writeBool(8, isFinish_);
       }
       if (isOpen_ != false) {
-        output.writeBool(8, isOpen_);
+        output.writeBool(6, isOpen_);
       }
       if (hKIIFCMCGCL_ != 0) {
         output.writeUInt32(9, hKIIFCMCGCL_);
       }
       if (openTime_ != 0) {
-        output.writeUInt32(15, openTime_);
+        output.writeUInt32(11, openTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -249,15 +249,15 @@ public final class VintageHuntingStageDataOuterClass {
       size = 0;
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, stageId_);
+          .computeUInt32Size(12, stageId_);
       }
       if (isFinish_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isFinish_);
+          .computeBoolSize(8, isFinish_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, isOpen_);
+          .computeBoolSize(6, isOpen_);
       }
       if (hKIIFCMCGCL_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -265,7 +265,7 @@ public final class VintageHuntingStageDataOuterClass {
       }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, openTime_);
+          .computeUInt32Size(11, openTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

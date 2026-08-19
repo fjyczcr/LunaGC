@@ -90,12 +90,12 @@ public final class FleurFairMusicRecordOuterClass {
               maxCombo_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 8: {
 
               maxScore_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 96: {
 
               isUnlock_ = input.readBool();
               break;
@@ -143,7 +143,7 @@ public final class FleurFairMusicRecordOuterClass {
       return maxCombo_;
     }
 
-    public static final int IS_UNLOCK_FIELD_NUMBER = 7;
+    public static final int IS_UNLOCK_FIELD_NUMBER = 12;
     private boolean isUnlock_;
     /**
      * <code>bool is_unlock = 11;</code>
@@ -154,7 +154,7 @@ public final class FleurFairMusicRecordOuterClass {
       return isUnlock_;
     }
 
-    public static final int MAX_SCORE_FIELD_NUMBER = 15;
+    public static final int MAX_SCORE_FIELD_NUMBER = 1;
     private int maxScore_;
     /**
      * <code>uint32 max_score = 10;</code>
@@ -183,10 +183,10 @@ public final class FleurFairMusicRecordOuterClass {
         output.writeUInt32(5, maxCombo_);
       }
       if (maxScore_ != 0) {
-        output.writeUInt32(15, maxScore_);
+        output.writeUInt32(1, maxScore_);
       }
       if (isUnlock_ != false) {
-        output.writeBool(7, isUnlock_);
+        output.writeBool(12, isUnlock_);
       }
       unknownFields.writeTo(output);
     }
@@ -203,11 +203,11 @@ public final class FleurFairMusicRecordOuterClass {
       }
       if (maxScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, maxScore_);
+          .computeUInt32Size(1, maxScore_);
       }
       if (isUnlock_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isUnlock_);
+          .computeBoolSize(12, isUnlock_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -86,12 +86,12 @@ public final class PlayerEnterDungeonRspOuterClass {
             case 0:
               done = true;
               break;
-            case 104: {
+            case 120: {
 
               pointId_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 64: {
 
               retcode_ = input.readInt32();
               break;
@@ -133,7 +133,7 @@ public final class PlayerEnterDungeonRspOuterClass {
               emu.grasscutter.net.proto.PlayerEnterDungeonRspOuterClass.PlayerEnterDungeonRsp.class, emu.grasscutter.net.proto.PlayerEnterDungeonRspOuterClass.PlayerEnterDungeonRsp.Builder.class);
     }
 
-    public static final int POINT_ID_FIELD_NUMBER = 13;
+    public static final int POINT_ID_FIELD_NUMBER = 15;
     private int pointId_;
     /**
      * <code>uint32 point_id = 1;</code>
@@ -155,7 +155,7 @@ public final class PlayerEnterDungeonRspOuterClass {
       return dungeonId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 7;
+    public static final int RETCODE_FIELD_NUMBER = 8;
     private int retcode_;
     /**
      * <code>int32 retcode = 2;</code>
@@ -181,10 +181,10 @@ public final class PlayerEnterDungeonRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pointId_ != 0) {
-        output.writeUInt32(13, pointId_);
+        output.writeUInt32(15, pointId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(7, retcode_);
+        output.writeInt32(8, retcode_);
       }
       if (dungeonId_ != 0) {
         output.writeUInt32(2, dungeonId_);
@@ -200,11 +200,11 @@ public final class PlayerEnterDungeonRspOuterClass {
       size = 0;
       if (pointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, pointId_);
+          .computeUInt32Size(15, pointId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, retcode_);
+          .computeInt32Size(8, retcode_);
       }
       if (dungeonId_ != 0) {
         size += com.google.protobuf.CodedOutputStream

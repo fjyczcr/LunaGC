@@ -100,7 +100,7 @@ public final class PlayerWorldSceneInfoListNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 42: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 infoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.PlayerWorldSceneInfoOuterClass.PlayerWorldSceneInfo>();
                 mutable_bitField0_ |= 0x00000002;
@@ -196,7 +196,7 @@ public final class PlayerWorldSceneInfoListNotifyOuterClass {
     }
     private int unlockedAreaIdListMemoizedSerializedSize = -1;
 
-    public static final int INFO_LIST_FIELD_NUMBER = 3;
+    public static final int INFO_LIST_FIELD_NUMBER = 5;
     private java.util.List<emu.grasscutter.net.proto.PlayerWorldSceneInfoOuterClass.PlayerWorldSceneInfo> infoList_;
 
     @java.lang.Override
@@ -242,7 +242,7 @@ public final class PlayerWorldSceneInfoListNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       for (int i = 0; i < infoList_.size(); i++) {
-        output.writeMessage(3, infoList_.get(i));
+        output.writeMessage(5, infoList_.get(i));
       }
       if (getUnlockedAreaIdListList().size() > 0) {
         output.writeUInt32NoTag(9034);
@@ -262,7 +262,7 @@ public final class PlayerWorldSceneInfoListNotifyOuterClass {
       size = 0;
       for (int i = 0; i < infoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, infoList_.get(i));
+          .computeMessageSize(5, infoList_.get(i));
       }
       {
         int dataSize = 0;

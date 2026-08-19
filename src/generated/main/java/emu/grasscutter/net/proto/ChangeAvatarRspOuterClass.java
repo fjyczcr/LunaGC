@@ -73,17 +73,17 @@ public final class ChangeAvatarRspOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 8: {
 
               skillId_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 16: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 56: {
+            case 40: {
 
               curGuid_ = input.readUInt64();
               break;
@@ -120,7 +120,7 @@ public final class ChangeAvatarRspOuterClass {
               emu.grasscutter.net.proto.ChangeAvatarRspOuterClass.ChangeAvatarRsp.class, emu.grasscutter.net.proto.ChangeAvatarRspOuterClass.ChangeAvatarRsp.Builder.class);
     }
 
-    public static final int CUR_GUID_FIELD_NUMBER = 7;
+    public static final int CUR_GUID_FIELD_NUMBER = 5;
     private long curGuid_;
 
     @java.lang.Override
@@ -128,7 +128,7 @@ public final class ChangeAvatarRspOuterClass {
       return curGuid_;
     }
 
-    public static final int SKILL_ID_FIELD_NUMBER = 2;
+    public static final int SKILL_ID_FIELD_NUMBER = 1;
     private int skillId_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class ChangeAvatarRspOuterClass {
       return skillId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 8;
+    public static final int RETCODE_FIELD_NUMBER = 2;
     private int retcode_;
 
     @java.lang.Override
@@ -159,13 +159,13 @@ public final class ChangeAvatarRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (skillId_ != 0) {
-        output.writeUInt32(2, skillId_);
+        output.writeUInt32(1, skillId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(8, retcode_);
+        output.writeInt32(2, retcode_);
       }
       if (curGuid_ != 0L) {
-        output.writeUInt64(7, curGuid_);
+        output.writeUInt64(5, curGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,15 +178,15 @@ public final class ChangeAvatarRspOuterClass {
       size = 0;
       if (skillId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, skillId_);
+          .computeUInt32Size(1, skillId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, retcode_);
+          .computeInt32Size(2, retcode_);
       }
       if (curGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, curGuid_);
+          .computeUInt64Size(5, curGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

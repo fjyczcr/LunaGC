@@ -80,7 +80,7 @@ public final class PingReqOuterClass {
               oKOEPNILKKK_ = input.readBytes();
               break;
             }
-            case 93: {
+            case 29: {
 
               ueTime_ = input.readFloat();
               break;
@@ -90,18 +90,18 @@ public final class PingReqOuterClass {
               iDPDCFKNGML_ = input.readBytes();
               break;
             }
-            case 33: {
+            case 65: {
 
               totalTickTime_ = input.readDouble();
               break;
             }
-            case 96: {
+            case 8: {
 
               clientTime_ = input.readUInt32();
               break;
             }
             
-            case 48: {
+            case 120: {
 
               seq_ = input.readUInt32();
               break;
@@ -159,7 +159,7 @@ public final class PingReqOuterClass {
       return oKOEPNILKKK_;
     }
 
-    public static final int SEQ_FIELD_NUMBER = 6;
+    public static final int SEQ_FIELD_NUMBER = 15;
     private int seq_;
 
     @java.lang.Override
@@ -167,7 +167,7 @@ public final class PingReqOuterClass {
       return seq_;
     }
 
-    public static final int UE_TIME_FIELD_NUMBER = 11;
+    public static final int UE_TIME_FIELD_NUMBER = 3;
     private float ueTime_;
 
     @java.lang.Override
@@ -175,7 +175,7 @@ public final class PingReqOuterClass {
       return ueTime_;
     }
 
-    public static final int TOTAL_TICK_TIME_FIELD_NUMBER = 4;
+    public static final int TOTAL_TICK_TIME_FIELD_NUMBER = 8;
     private double totalTickTime_;
 
     @java.lang.Override
@@ -191,7 +191,7 @@ public final class PingReqOuterClass {
       return aKGPFDHNGBO_;
     }
 
-    public static final int CLIENT_TIME_FIELD_NUMBER = 12;
+    public static final int CLIENT_TIME_FIELD_NUMBER = 1;
     private int clientTime_;
 
     @java.lang.Override
@@ -217,19 +217,19 @@ public final class PingReqOuterClass {
         output.writeBytes(2, oKOEPNILKKK_);
       }
       if (ueTime_ != 0F) {
-        output.writeFloat(11, ueTime_);
+        output.writeFloat(3, ueTime_);
       }
       if (!iDPDCFKNGML_.isEmpty()) {
         output.writeBytes(5, iDPDCFKNGML_);
       }
       if (totalTickTime_ != 0D) {
-        output.writeDouble(4, totalTickTime_);
+        output.writeDouble(8, totalTickTime_);
       }
       if (clientTime_ != 0) {
-        output.writeUInt32(12, clientTime_);
+        output.writeUInt32(1, clientTime_);
       }
       if (seq_ != 0) {
-        output.writeUInt32(6, seq_);
+        output.writeUInt32(15, seq_);
       }
       if (aKGPFDHNGBO_ != 0) {
         output.writeUInt32(41, aKGPFDHNGBO_);
@@ -249,7 +249,7 @@ public final class PingReqOuterClass {
       }
       if (ueTime_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(11, ueTime_);
+          .computeFloatSize(3, ueTime_);
       }
       if (!iDPDCFKNGML_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -257,15 +257,15 @@ public final class PingReqOuterClass {
       }
       if (totalTickTime_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, totalTickTime_);
+          .computeDoubleSize(8, totalTickTime_);
       }
       if (clientTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, clientTime_);
+          .computeUInt32Size(1, clientTime_);
       }
       if (seq_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, seq_);
+          .computeUInt32Size(15, seq_);
       }
       if (aKGPFDHNGBO_ != 0) {
         size += com.google.protobuf.CodedOutputStream

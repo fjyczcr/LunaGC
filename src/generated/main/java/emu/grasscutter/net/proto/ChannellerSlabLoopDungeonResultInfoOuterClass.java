@@ -97,27 +97,27 @@ public final class ChannellerSlabLoopDungeonResultInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 120: {
 
               challengeScore_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 64: {
 
               challengeMaxScore_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 40: {
 
               isInTimeLimit_ = input.readBool();
               break;
             }
-            case 72: {
+            case 24: {
 
               isSuccess_ = input.readBool();
               break;
             }
-            case 80: {
+            case 112: {
 
               dungeonIndex_ = input.readUInt32();
               break;
@@ -154,7 +154,7 @@ public final class ChannellerSlabLoopDungeonResultInfoOuterClass {
               emu.grasscutter.net.proto.ChannellerSlabLoopDungeonResultInfoOuterClass.ChannellerSlabLoopDungeonResultInfo.class, emu.grasscutter.net.proto.ChannellerSlabLoopDungeonResultInfoOuterClass.ChannellerSlabLoopDungeonResultInfo.Builder.class);
     }
 
-    public static final int CHALLENGE_MAX_SCORE_FIELD_NUMBER = 14;
+    public static final int CHALLENGE_MAX_SCORE_FIELD_NUMBER = 8;
     private int challengeMaxScore_;
     /**
      * <code>uint32 challenge_max_score = 4;</code>
@@ -165,7 +165,7 @@ public final class ChannellerSlabLoopDungeonResultInfoOuterClass {
       return challengeMaxScore_;
     }
 
-    public static final int DUNGEON_INDEX_FIELD_NUMBER = 10;
+    public static final int DUNGEON_INDEX_FIELD_NUMBER = 14;
     private int dungeonIndex_;
     /**
      * <code>uint32 dungeon_index = 11;</code>
@@ -176,7 +176,7 @@ public final class ChannellerSlabLoopDungeonResultInfoOuterClass {
       return dungeonIndex_;
     }
 
-    public static final int IS_SUCCESS_FIELD_NUMBER = 9;
+    public static final int IS_SUCCESS_FIELD_NUMBER = 3;
     private boolean isSuccess_;
     /**
      * <code>bool is_success = 10;</code>
@@ -187,7 +187,7 @@ public final class ChannellerSlabLoopDungeonResultInfoOuterClass {
       return isSuccess_;
     }
 
-    public static final int IS_IN_TIME_LIMIT_FIELD_NUMBER = 8;
+    public static final int IS_IN_TIME_LIMIT_FIELD_NUMBER = 5;
     private boolean isInTimeLimit_;
     /**
      * <code>bool is_in_time_limit = 7;</code>
@@ -198,7 +198,7 @@ public final class ChannellerSlabLoopDungeonResultInfoOuterClass {
       return isInTimeLimit_;
     }
 
-    public static final int CHALLENGE_SCORE_FIELD_NUMBER = 7;
+    public static final int CHALLENGE_SCORE_FIELD_NUMBER = 15;
     private int challengeScore_;
     /**
      * <code>uint32 challenge_score = 1;</code>
@@ -224,19 +224,19 @@ public final class ChannellerSlabLoopDungeonResultInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (challengeScore_ != 0) {
-        output.writeUInt32(7, challengeScore_);
+        output.writeUInt32(15, challengeScore_);
       }
       if (challengeMaxScore_ != 0) {
-        output.writeUInt32(14, challengeMaxScore_);
+        output.writeUInt32(8, challengeMaxScore_);
       }
       if (isInTimeLimit_ != false) {
-        output.writeBool(8, isInTimeLimit_);
+        output.writeBool(5, isInTimeLimit_);
       }
       if (isSuccess_ != false) {
-        output.writeBool(9, isSuccess_);
+        output.writeBool(3, isSuccess_);
       }
       if (dungeonIndex_ != 0) {
-        output.writeUInt32(10, dungeonIndex_);
+        output.writeUInt32(14, dungeonIndex_);
       }
       unknownFields.writeTo(output);
     }
@@ -249,23 +249,23 @@ public final class ChannellerSlabLoopDungeonResultInfoOuterClass {
       size = 0;
       if (challengeScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, challengeScore_);
+          .computeUInt32Size(15, challengeScore_);
       }
       if (challengeMaxScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, challengeMaxScore_);
+          .computeUInt32Size(8, challengeMaxScore_);
       }
       if (isInTimeLimit_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, isInTimeLimit_);
+          .computeBoolSize(5, isInTimeLimit_);
       }
       if (isSuccess_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isSuccess_);
+          .computeBoolSize(3, isSuccess_);
       }
       if (dungeonIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, dungeonIndex_);
+          .computeUInt32Size(14, dungeonIndex_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

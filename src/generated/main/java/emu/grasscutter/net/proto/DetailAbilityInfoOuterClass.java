@@ -108,12 +108,12 @@ public final class DetailAbilityInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 88: {
 
               instancedAbilityId_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 120: {
 
               casterId_ = input.readUInt32();
               break;
@@ -123,7 +123,7 @@ public final class DetailAbilityInfoOuterClass {
               modifierLocalId_ = input.readInt32();
               break;
             }
-            case 90: {
+            case 106: {
               emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString.Builder subBuilder = null;
               if (parentAbilityName_ != null) {
                 subBuilder = parentAbilityName_.toBuilder();
@@ -136,12 +136,12 @@ public final class DetailAbilityInfoOuterClass {
 
               break;
             }
-            case 24: {
+            case 16: {
 
               instancedModifierId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 80: {
 
               localId_ = input.readInt32();
               break;
@@ -178,7 +178,7 @@ public final class DetailAbilityInfoOuterClass {
               emu.grasscutter.net.proto.DetailAbilityInfoOuterClass.DetailAbilityInfo.class, emu.grasscutter.net.proto.DetailAbilityInfoOuterClass.DetailAbilityInfo.Builder.class);
     }
 
-    public static final int PARENT_ABILITY_NAME_FIELD_NUMBER = 11;
+    public static final int PARENT_ABILITY_NAME_FIELD_NUMBER = 13;
     private emu.grasscutter.net.proto.AbilityStringOuterClass.AbilityString parentAbilityName_;
     /**
      * <code>.AbilityString parent_ability_name = 12;</code>
@@ -204,7 +204,7 @@ public final class DetailAbilityInfoOuterClass {
       return getParentAbilityName();
     }
 
-    public static final int INSTANCED_MODIFIER_ID_FIELD_NUMBER = 3;
+    public static final int INSTANCED_MODIFIER_ID_FIELD_NUMBER = 2;
     private int instancedModifierId_;
     /**
      * <code>uint32 instanced_modifier_id = 13;</code>
@@ -215,7 +215,7 @@ public final class DetailAbilityInfoOuterClass {
       return instancedModifierId_;
     }
 
-    public static final int CASTER_ID_FIELD_NUMBER = 14;
+    public static final int CASTER_ID_FIELD_NUMBER = 15;
     private int casterId_;
     /**
      * <code>uint32 caster_id = 7;</code>
@@ -237,7 +237,7 @@ public final class DetailAbilityInfoOuterClass {
       return modifierLocalId_;
     }
 
-    public static final int INSTANCED_ABILITY_ID_FIELD_NUMBER = 4;
+    public static final int INSTANCED_ABILITY_ID_FIELD_NUMBER = 11;
     private int instancedAbilityId_;
     /**
      * <code>uint32 instanced_ability_id = 4;</code>
@@ -248,7 +248,7 @@ public final class DetailAbilityInfoOuterClass {
       return instancedAbilityId_;
     }
 
-    public static final int LOCAL_ID_FIELD_NUMBER = 12;
+    public static final int LOCAL_ID_FIELD_NUMBER = 10;
     private int localId_;
     /**
      * <code>int32 local_id = 14;</code>
@@ -274,22 +274,22 @@ public final class DetailAbilityInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (instancedAbilityId_ != 0) {
-        output.writeUInt32(4, instancedAbilityId_);
+        output.writeUInt32(11, instancedAbilityId_);
       }
       if (casterId_ != 0) {
-        output.writeUInt32(14, casterId_);
+        output.writeUInt32(15, casterId_);
       }
       if (modifierLocalId_ != 0) {
         output.writeInt32(7, modifierLocalId_);
       }
       if (parentAbilityName_ != null) {
-        output.writeMessage(11, getParentAbilityName());
+        output.writeMessage(13, getParentAbilityName());
       }
       if (instancedModifierId_ != 0) {
-        output.writeUInt32(3, instancedModifierId_);
+        output.writeUInt32(2, instancedModifierId_);
       }
       if (localId_ != 0) {
-        output.writeInt32(12, localId_);
+        output.writeInt32(10, localId_);
       }
       unknownFields.writeTo(output);
     }
@@ -302,11 +302,11 @@ public final class DetailAbilityInfoOuterClass {
       size = 0;
       if (instancedAbilityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, instancedAbilityId_);
+          .computeUInt32Size(11, instancedAbilityId_);
       }
       if (casterId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, casterId_);
+          .computeUInt32Size(15, casterId_);
       }
       if (modifierLocalId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -314,15 +314,15 @@ public final class DetailAbilityInfoOuterClass {
       }
       if (parentAbilityName_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getParentAbilityName());
+          .computeMessageSize(13, getParentAbilityName());
       }
       if (instancedModifierId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, instancedModifierId_);
+          .computeUInt32Size(2, instancedModifierId_);
       }
       if (localId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, localId_);
+          .computeInt32Size(10, localId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

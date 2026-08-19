@@ -121,7 +121,7 @@ public final class HomeLimitedShopInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 64: {
 
               uid_ = input.readUInt32();
               break;
@@ -131,7 +131,7 @@ public final class HomeLimitedShopInfoOuterClass {
               startTime_ = input.readFixed32();
               break;
             }
-            case 18: {
+            case 122: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (djinnRot_ != null) {
                 subBuilder = djinnRot_.toBuilder();
@@ -144,7 +144,7 @@ public final class HomeLimitedShopInfoOuterClass {
 
               break;
             }
-            case 98: {
+            case 74: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (djinnPos_ != null) {
                 subBuilder = djinnPos_.toBuilder();
@@ -162,7 +162,7 @@ public final class HomeLimitedShopInfoOuterClass {
               endTime_ = input.readFixed32();
               break;
             }
-            case 125: {
+            case 128005: {
 
               lMJPHDCDAJK_ = input.readFixed32();
               break;
@@ -221,7 +221,7 @@ public final class HomeLimitedShopInfoOuterClass {
       return startTime_;
     }
 
-    public static final int LMJPHDCDAJK_FIELD_NUMBER = 15;
+    public static final int LMJPHDCDAJK_FIELD_NUMBER = 16000;
     private int lMJPHDCDAJK_;
     /**
      * <code>fixed32 LMJPHDCDAJK = 15;</code>
@@ -232,7 +232,7 @@ public final class HomeLimitedShopInfoOuterClass {
       return lMJPHDCDAJK_;
     }
 
-    public static final int DJINN_ROT_FIELD_NUMBER = 2;
+    public static final int DJINN_ROT_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector djinnRot_;
     /**
      * <code>.Vector djinn_rot = 7;</code>
@@ -258,7 +258,7 @@ public final class HomeLimitedShopInfoOuterClass {
       return getDjinnRot();
     }
 
-    public static final int DJINN_POS_FIELD_NUMBER = 12;
+    public static final int DJINN_POS_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector djinnPos_;
     /**
      * <code>.Vector djinn_pos = 8;</code>
@@ -284,7 +284,7 @@ public final class HomeLimitedShopInfoOuterClass {
       return getDjinnPos();
     }
 
-    public static final int UID_FIELD_NUMBER = 10;
+    public static final int UID_FIELD_NUMBER = 8;
     private int uid_;
     /**
      * <code>uint32 uid = 2;</code>
@@ -310,22 +310,22 @@ public final class HomeLimitedShopInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (uid_ != 0) {
-        output.writeUInt32(10, uid_);
+        output.writeUInt32(8, uid_);
       }
       if (startTime_ != 0) {
         output.writeFixed32(6, startTime_);
       }
       if (djinnRot_ != null) {
-        output.writeMessage(2, getDjinnRot());
+        output.writeMessage(15, getDjinnRot());
       }
       if (djinnPos_ != null) {
-        output.writeMessage(12, getDjinnPos());
+        output.writeMessage(9, getDjinnPos());
       }
       if (endTime_ != 0) {
         output.writeFixed32(13, endTime_);
       }
       if (lMJPHDCDAJK_ != 0) {
-        output.writeFixed32(15, lMJPHDCDAJK_);
+        output.writeFixed32(16000, lMJPHDCDAJK_);
       }
       unknownFields.writeTo(output);
     }
@@ -338,7 +338,7 @@ public final class HomeLimitedShopInfoOuterClass {
       size = 0;
       if (uid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, uid_);
+          .computeUInt32Size(8, uid_);
       }
       if (startTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -346,11 +346,11 @@ public final class HomeLimitedShopInfoOuterClass {
       }
       if (djinnRot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getDjinnRot());
+          .computeMessageSize(15, getDjinnRot());
       }
       if (djinnPos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getDjinnPos());
+          .computeMessageSize(9, getDjinnPos());
       }
       if (endTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -358,7 +358,7 @@ public final class HomeLimitedShopInfoOuterClass {
       }
       if (lMJPHDCDAJK_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(15, lMJPHDCDAJK_);
+          .computeFixed32Size(16000, lMJPHDCDAJK_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

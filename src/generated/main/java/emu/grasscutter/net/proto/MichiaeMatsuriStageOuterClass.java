@@ -85,17 +85,17 @@ public final class MichiaeMatsuriStageOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 104: {
 
               stageId_ = input.readUInt32();
               break;
             }
-            case 8: {
+            case 56: {
 
               openTime_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 8: {
 
               isOpen_ = input.readBool();
               break;
@@ -132,7 +132,7 @@ public final class MichiaeMatsuriStageOuterClass {
               emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage.class, emu.grasscutter.net.proto.MichiaeMatsuriStageOuterClass.MichiaeMatsuriStage.Builder.class);
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 6;
+    public static final int STAGE_ID_FIELD_NUMBER = 13;
     private int stageId_;
     /**
      * <code>uint32 stage_id = 6;</code>
@@ -143,7 +143,7 @@ public final class MichiaeMatsuriStageOuterClass {
       return stageId_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 11;
+    public static final int IS_OPEN_FIELD_NUMBER = 1;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 10;</code>
@@ -154,7 +154,7 @@ public final class MichiaeMatsuriStageOuterClass {
       return isOpen_;
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 1;
+    public static final int OPEN_TIME_FIELD_NUMBER = 7;
     private int openTime_;
     /**
      * <code>uint32 open_time = 8;</code>
@@ -180,13 +180,13 @@ public final class MichiaeMatsuriStageOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (stageId_ != 0) {
-        output.writeUInt32(6, stageId_);
+        output.writeUInt32(13, stageId_);
       }
       if (openTime_ != 0) {
-        output.writeUInt32(1, openTime_);
+        output.writeUInt32(7, openTime_);
       }
       if (isOpen_ != false) {
-        output.writeBool(11, isOpen_);
+        output.writeBool(1, isOpen_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class MichiaeMatsuriStageOuterClass {
       size = 0;
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, stageId_);
+          .computeUInt32Size(13, stageId_);
       }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, openTime_);
+          .computeUInt32Size(7, openTime_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, isOpen_);
+          .computeBoolSize(1, isOpen_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

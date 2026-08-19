@@ -73,7 +73,7 @@ public final class SceneTimeNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 48: {
 
               sceneId_ = input.readUInt32();
               break;
@@ -83,7 +83,7 @@ public final class SceneTimeNotifyOuterClass {
               sceneTime_ = input.readUInt64();
               break;
             }
-            case 120: {
+            case 56: {
 
               isPaused_ = input.readBool();
               break;
@@ -120,7 +120,7 @@ public final class SceneTimeNotifyOuterClass {
               emu.grasscutter.net.proto.SceneTimeNotifyOuterClass.SceneTimeNotify.class, emu.grasscutter.net.proto.SceneTimeNotifyOuterClass.SceneTimeNotify.Builder.class);
     }
 
-    public static final int IS_PAUSED_FIELD_NUMBER = 15;
+    public static final int IS_PAUSED_FIELD_NUMBER = 7;
     private boolean isPaused_;
 
     @java.lang.Override
@@ -128,7 +128,7 @@ public final class SceneTimeNotifyOuterClass {
       return isPaused_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 8;
+    public static final int SCENE_ID_FIELD_NUMBER = 6;
     private int sceneId_;
 
     @java.lang.Override
@@ -162,7 +162,7 @@ public final class SceneTimeNotifyOuterClass {
         output.writeUInt64(14, sceneTime_);
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(8, sceneId_);
+        output.writeUInt32(6, sceneId_);
       }
       unknownFields.writeTo(output);
     }
@@ -179,7 +179,7 @@ public final class SceneTimeNotifyOuterClass {
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, sceneId_);
+          .computeUInt32Size(6, sceneId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -126,12 +126,12 @@ public final class VintagePresentStageDataOuterClass {
             case 0:
               done = true;
               break;
-            case 40: {
+            case 64: {
 
               isFinish_ = input.readBool();
               break;
             }
-            case 90: {
+            case 58: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 presentLevelMap_ = com.google.protobuf.MapField.newMapField(
                     PresentLevelMapDefaultEntryHolder.defaultEntry);
@@ -144,17 +144,17 @@ public final class VintagePresentStageDataOuterClass {
                   presentLevelMap__.getKey(), presentLevelMap__.getValue());
               break;
             }
-            case 24: {
+            case 32: {
 
               stageId_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 88: {
 
               openTime_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 72: {
 
               isOpen_ = input.readBool();
               break;
@@ -203,7 +203,7 @@ public final class VintagePresentStageDataOuterClass {
               emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData.class, emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData.Builder.class);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 15;
+    public static final int IS_OPEN_FIELD_NUMBER = 9;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 11;</code>
@@ -214,7 +214,7 @@ public final class VintagePresentStageDataOuterClass {
       return isOpen_;
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 3;
+    public static final int STAGE_ID_FIELD_NUMBER = 4;
     private int stageId_;
     /**
      * <code>uint32 stage_id = 6;</code>
@@ -225,7 +225,7 @@ public final class VintagePresentStageDataOuterClass {
       return stageId_;
     }
 
-    public static final int IS_FINISH_FIELD_NUMBER = 5;
+    public static final int IS_FINISH_FIELD_NUMBER = 8;
     private boolean isFinish_;
     /**
      * <code>bool is_finish = 2;</code>
@@ -236,7 +236,7 @@ public final class VintagePresentStageDataOuterClass {
       return isFinish_;
     }
 
-    public static final int PRESENT_LEVEL_MAP_FIELD_NUMBER = 11;
+    public static final int PRESENT_LEVEL_MAP_FIELD_NUMBER = 7;
     private static final class PresentLevelMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> defaultEntry =
@@ -317,7 +317,7 @@ public final class VintagePresentStageDataOuterClass {
       return map.get(key);
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 6;
+    public static final int OPEN_TIME_FIELD_NUMBER = 11;
     private int openTime_;
     /**
      * <code>uint32 open_time = 8;</code>
@@ -343,22 +343,22 @@ public final class VintagePresentStageDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isFinish_ != false) {
-        output.writeBool(5, isFinish_);
+        output.writeBool(8, isFinish_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetPresentLevelMap(),
           PresentLevelMapDefaultEntryHolder.defaultEntry,
-          11);
+          7);
       if (stageId_ != 0) {
-        output.writeUInt32(3, stageId_);
+        output.writeUInt32(4, stageId_);
       }
       if (openTime_ != 0) {
-        output.writeUInt32(6, openTime_);
+        output.writeUInt32(11, openTime_);
       }
       if (isOpen_ != false) {
-        output.writeBool(15, isOpen_);
+        output.writeBool(9, isOpen_);
       }
       unknownFields.writeTo(output);
     }
@@ -371,7 +371,7 @@ public final class VintagePresentStageDataOuterClass {
       size = 0;
       if (isFinish_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isFinish_);
+          .computeBoolSize(8, isFinish_);
       }
       for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> entry
            : internalGetPresentLevelMap().getMap().entrySet()) {
@@ -381,19 +381,19 @@ public final class VintagePresentStageDataOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(11, presentLevelMap__);
+            .computeMessageSize(7, presentLevelMap__);
       }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, stageId_);
+          .computeUInt32Size(4, stageId_);
       }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, openTime_);
+          .computeUInt32Size(11, openTime_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isOpen_);
+          .computeBoolSize(9, isOpen_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

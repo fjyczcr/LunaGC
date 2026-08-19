@@ -75,12 +75,12 @@ public final class SetEntityClientDataNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 24: {
 
               entityId_ = input.readUInt32();
               break;
             }
-            case 74: {
+            case 122: {
               emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientData.Builder subBuilder = null;
               if (entityClientData_ != null) {
                 subBuilder = entityClientData_.toBuilder();
@@ -125,7 +125,7 @@ public final class SetEntityClientDataNotifyOuterClass {
               emu.grasscutter.net.proto.SetEntityClientDataNotifyOuterClass.SetEntityClientDataNotify.class, emu.grasscutter.net.proto.SetEntityClientDataNotifyOuterClass.SetEntityClientDataNotify.Builder.class);
     }
 
-    public static final int ENTITY_CLIENT_DATA_FIELD_NUMBER = 9;
+    public static final int ENTITY_CLIENT_DATA_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientData entityClientData_;
 
     @java.lang.Override
@@ -143,7 +143,7 @@ public final class SetEntityClientDataNotifyOuterClass {
       return getEntityClientData();
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 11;
+    public static final int ENTITY_ID_FIELD_NUMBER = 3;
     private int entityId_;
 
     @java.lang.Override
@@ -166,10 +166,10 @@ public final class SetEntityClientDataNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entityId_ != 0) {
-        output.writeUInt32(11, entityId_);
+        output.writeUInt32(3, entityId_);
       }
       if (entityClientData_ != null) {
-        output.writeMessage(9, getEntityClientData());
+        output.writeMessage(15, getEntityClientData());
       }
       unknownFields.writeTo(output);
     }
@@ -182,11 +182,11 @@ public final class SetEntityClientDataNotifyOuterClass {
       size = 0;
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, entityId_);
+          .computeUInt32Size(3, entityId_);
       }
       if (entityClientData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getEntityClientData());
+          .computeMessageSize(15, getEntityClientData());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

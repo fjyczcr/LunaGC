@@ -79,12 +79,12 @@ public final class InstableSprayAvatarInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 104: {
 
               avatarId_ = input.readUInt64();
               break;
             }
-            case 120: {
+            case 88: {
 
               isTrial_ = input.readBool();
               break;
@@ -121,7 +121,7 @@ public final class InstableSprayAvatarInfoOuterClass {
               emu.grasscutter.net.proto.InstableSprayAvatarInfoOuterClass.InstableSprayAvatarInfo.class, emu.grasscutter.net.proto.InstableSprayAvatarInfoOuterClass.InstableSprayAvatarInfo.Builder.class);
     }
 
-    public static final int IS_TRIAL_FIELD_NUMBER = 15;
+    public static final int IS_TRIAL_FIELD_NUMBER = 11;
     private boolean isTrial_;
     /**
      * <code>bool is_trial = 15;</code>
@@ -132,7 +132,7 @@ public final class InstableSprayAvatarInfoOuterClass {
       return isTrial_;
     }
 
-    public static final int AVATAR_ID_FIELD_NUMBER = 2;
+    public static final int AVATAR_ID_FIELD_NUMBER = 13;
     private long avatarId_;
     /**
      * <code>uint64 avatar_id = 12;</code>
@@ -158,10 +158,10 @@ public final class InstableSprayAvatarInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarId_ != 0L) {
-        output.writeUInt64(2, avatarId_);
+        output.writeUInt64(13, avatarId_);
       }
       if (isTrial_ != false) {
-        output.writeBool(15, isTrial_);
+        output.writeBool(11, isTrial_);
       }
       unknownFields.writeTo(output);
     }
@@ -174,11 +174,11 @@ public final class InstableSprayAvatarInfoOuterClass {
       size = 0;
       if (avatarId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, avatarId_);
+          .computeUInt64Size(13, avatarId_);
       }
       if (isTrial_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isTrial_);
+          .computeBoolSize(11, isTrial_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

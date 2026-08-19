@@ -247,7 +247,7 @@ public final class AllWidgetDataNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 66: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 normalCoolDownDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData>();
                 mutable_bitField0_ |= 0x00000004;
@@ -256,7 +256,7 @@ public final class AllWidgetDataNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData.parser(), extensionRegistry));
               break;
             }
-            case 58: {
+            case 42: {
               emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder subBuilder = null;
               if (lunchBoxData_ != null) {
                 subBuilder = lunchBoxData_.toBuilder();
@@ -269,7 +269,7 @@ public final class AllWidgetDataNotifyOuterClass {
 
               break;
             }
-            case 18: {
+            case 122: {
               emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData.Builder subBuilder = null;
               if (skyCrystalDetectorData_ != null) {
                 subBuilder = skyCrystalDetectorData_.toBuilder();
@@ -282,7 +282,7 @@ public final class AllWidgetDataNotifyOuterClass {
 
               break;
             }
-            case 114: {
+            case 74: {
               if (!((mutable_bitField0_ & 0x00000010) != 0)) {
                 clientCollectorDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData>();
                 mutable_bitField0_ |= 0x00000010;
@@ -291,7 +291,7 @@ public final class AllWidgetDataNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData.parser(), extensionRegistry));
               break;
             }
-            case 122: {
+            case 34: {
               if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 slotList_ = new java.util.ArrayList<emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData>();
                 mutable_bitField0_ |= 0x00000008;
@@ -300,7 +300,7 @@ public final class AllWidgetDataNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData.parser(), extensionRegistry));
               break;
             }
-            case 98: {
+            case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 coolDownGroupDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData>();
                 mutable_bitField0_ |= 0x00000001;
@@ -309,7 +309,7 @@ public final class AllWidgetDataNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData.parser(), extensionRegistry));
               break;
             }
-            case 66: {
+            case 106: {
               if (!((mutable_bitField0_ & 0x00000100) != 0)) {
                 anchorPointList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AnchorPointDataOuterClass.AnchorPointData>();
                 mutable_bitField0_ |= 0x00000100;
@@ -318,7 +318,7 @@ public final class AllWidgetDataNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.AnchorPointDataOuterClass.AnchorPointData.parser(), extensionRegistry));
               break;
             }
-            case 106: {
+            case 10: {
               emu.grasscutter.net.proto.WeatherWizardDataOuterClass.WeatherWizardData.Builder subBuilder = null;
               if (weatherWizardData_ != null) {
                 subBuilder = weatherWizardData_.toBuilder();
@@ -340,7 +340,7 @@ public final class AllWidgetDataNotifyOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.OneoffGatherPointDetectorDataOuterClass.OneoffGatherPointDetectorData.parser(), extensionRegistry));
               break;
             }
-            case 40: {
+            case 112: {
               if (!((mutable_bitField0_ & 0x00000040) != 0)) {
                 backgroundActiveWidgetList_ = newIntList();
                 mutable_bitField0_ |= 0x00000040;
@@ -348,7 +348,7 @@ public final class AllWidgetDataNotifyOuterClass {
               backgroundActiveWidgetList_.addInt(input.readUInt32());
               break;
             }
-            case 42: {
+            case 114: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
@@ -473,7 +473,7 @@ public final class AllWidgetDataNotifyOuterClass {
               emu.grasscutter.net.proto.AllWidgetDataNotifyOuterClass.AllWidgetDataNotify.class, emu.grasscutter.net.proto.AllWidgetDataNotifyOuterClass.AllWidgetDataNotify.Builder.class);
     }
 
-    public static final int WEATHER_WIZARD_DATA_FIELD_NUMBER = 13;
+    public static final int WEATHER_WIZARD_DATA_FIELD_NUMBER = 1;
     private emu.grasscutter.net.proto.WeatherWizardDataOuterClass.WeatherWizardData weatherWizardData_;
 
     @java.lang.Override
@@ -491,7 +491,7 @@ public final class AllWidgetDataNotifyOuterClass {
       return getWeatherWizardData();
     }
 
-    public static final int COOL_DOWN_GROUP_DATA_LIST_FIELD_NUMBER = 12;
+    public static final int COOL_DOWN_GROUP_DATA_LIST_FIELD_NUMBER = 2;
     private java.util.List<emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData> coolDownGroupDataList_;
 
     @java.lang.Override
@@ -551,7 +551,7 @@ public final class AllWidgetDataNotifyOuterClass {
       return oneoffGatherPointDetectorDataList_.get(index);
     }
 
-    public static final int SKY_CRYSTAL_DETECTOR_DATA_FIELD_NUMBER = 2;
+    public static final int SKY_CRYSTAL_DETECTOR_DATA_FIELD_NUMBER = 15;
     private emu.grasscutter.net.proto.SkyCrystalDetectorDataOuterClass.SkyCrystalDetectorData skyCrystalDetectorData_;
 
     @java.lang.Override
@@ -569,7 +569,7 @@ public final class AllWidgetDataNotifyOuterClass {
       return getSkyCrystalDetectorData();
     }
 
-    public static final int NORMAL_COOL_DOWN_DATA_LIST_FIELD_NUMBER = 3;
+    public static final int NORMAL_COOL_DOWN_DATA_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.WidgetCoolDownDataOuterClass.WidgetCoolDownData> normalCoolDownDataList_;
 
     @java.lang.Override
@@ -625,7 +625,7 @@ public final class AllWidgetDataNotifyOuterClass {
       return getCGKLJIPNBKF();
     }
 
-    public static final int LUNCH_BOX_DATA_FIELD_NUMBER = 7;
+    public static final int LUNCH_BOX_DATA_FIELD_NUMBER = 5;
     private emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData lunchBoxData_;
 
     @java.lang.Override
@@ -643,7 +643,7 @@ public final class AllWidgetDataNotifyOuterClass {
       return getLunchBoxData();
     }
 
-    public static final int SLOT_LIST_FIELD_NUMBER = 15;
+    public static final int SLOT_LIST_FIELD_NUMBER = 4;
     private java.util.List<emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData> slotList_;
 
     @java.lang.Override
@@ -673,7 +673,7 @@ public final class AllWidgetDataNotifyOuterClass {
       return slotList_.get(index);
     }
 
-    public static final int CLIENT_COLLECTOR_DATA_LIST_FIELD_NUMBER = 14;
+    public static final int CLIENT_COLLECTOR_DATA_LIST_FIELD_NUMBER = 9;
     private java.util.List<emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData> clientCollectorDataList_;
 
     @java.lang.Override
@@ -731,7 +731,7 @@ public final class AllWidgetDataNotifyOuterClass {
     }
     private int quickswapWidgetIdListMemoizedSerializedSize = -1;
 
-    public static final int BACKGROUND_ACTIVE_WIDGET_LIST_FIELD_NUMBER = 5;
+    public static final int BACKGROUND_ACTIVE_WIDGET_LIST_FIELD_NUMBER = 14;
     private com.google.protobuf.Internal.IntList backgroundActiveWidgetList_;
 
     @java.lang.Override
@@ -789,7 +789,7 @@ public final class AllWidgetDataNotifyOuterClass {
       return oMMDMKPAILD_.get(index);
     }
 
-    public static final int ANCHOR_POINT_LIST_FIELD_NUMBER = 8;
+    public static final int ANCHOR_POINT_LIST_FIELD_NUMBER = 13;
     private java.util.List<emu.grasscutter.net.proto.AnchorPointDataOuterClass.AnchorPointData> anchorPointList_;
 
     @java.lang.Override
@@ -857,34 +857,34 @@ public final class AllWidgetDataNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       for (int i = 0; i < normalCoolDownDataList_.size(); i++) {
-        output.writeMessage(3, normalCoolDownDataList_.get(i));
+        output.writeMessage(8, normalCoolDownDataList_.get(i));
       }
       if (lunchBoxData_ != null) {
-        output.writeMessage(7, getLunchBoxData());
+        output.writeMessage(5, getLunchBoxData());
       }
       if (skyCrystalDetectorData_ != null) {
-        output.writeMessage(2, getSkyCrystalDetectorData());
+        output.writeMessage(15, getSkyCrystalDetectorData());
       }
       for (int i = 0; i < clientCollectorDataList_.size(); i++) {
-        output.writeMessage(14, clientCollectorDataList_.get(i));
+        output.writeMessage(9, clientCollectorDataList_.get(i));
       }
       for (int i = 0; i < slotList_.size(); i++) {
-        output.writeMessage(15, slotList_.get(i));
+        output.writeMessage(4, slotList_.get(i));
       }
       for (int i = 0; i < coolDownGroupDataList_.size(); i++) {
-        output.writeMessage(12, coolDownGroupDataList_.get(i));
+        output.writeMessage(2, coolDownGroupDataList_.get(i));
       }
       for (int i = 0; i < anchorPointList_.size(); i++) {
-        output.writeMessage(8, anchorPointList_.get(i));
+        output.writeMessage(13, anchorPointList_.get(i));
       }
       if (weatherWizardData_ != null) {
-        output.writeMessage(13, getWeatherWizardData());
+        output.writeMessage(1, getWeatherWizardData());
       }
       for (int i = 0; i < oneoffGatherPointDetectorDataList_.size(); i++) {
         output.writeMessage(10, oneoffGatherPointDetectorDataList_.get(i));
       }
       if (getBackgroundActiveWidgetListList().size() > 0) {
-        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(114);
         output.writeUInt32NoTag(backgroundActiveWidgetListMemoizedSerializedSize);
       }
       for (int i = 0; i < backgroundActiveWidgetList_.size(); i++) {
@@ -920,35 +920,35 @@ public final class AllWidgetDataNotifyOuterClass {
       size = 0;
       for (int i = 0; i < normalCoolDownDataList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, normalCoolDownDataList_.get(i));
+          .computeMessageSize(8, normalCoolDownDataList_.get(i));
       }
       if (lunchBoxData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getLunchBoxData());
+          .computeMessageSize(5, getLunchBoxData());
       }
       if (skyCrystalDetectorData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSkyCrystalDetectorData());
+          .computeMessageSize(15, getSkyCrystalDetectorData());
       }
       for (int i = 0; i < clientCollectorDataList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, clientCollectorDataList_.get(i));
+          .computeMessageSize(9, clientCollectorDataList_.get(i));
       }
       for (int i = 0; i < slotList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, slotList_.get(i));
+          .computeMessageSize(4, slotList_.get(i));
       }
       for (int i = 0; i < coolDownGroupDataList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, coolDownGroupDataList_.get(i));
+          .computeMessageSize(2, coolDownGroupDataList_.get(i));
       }
       for (int i = 0; i < anchorPointList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, anchorPointList_.get(i));
+          .computeMessageSize(13, anchorPointList_.get(i));
       }
       if (weatherWizardData_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getWeatherWizardData());
+          .computeMessageSize(1, getWeatherWizardData());
       }
       for (int i = 0; i < oneoffGatherPointDetectorDataList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream

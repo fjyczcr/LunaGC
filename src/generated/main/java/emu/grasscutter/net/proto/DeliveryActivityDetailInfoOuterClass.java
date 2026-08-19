@@ -90,7 +90,7 @@ public final class DeliveryActivityDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 80: {
 
               isTakenReward_ = input.readBool();
               break;
@@ -195,7 +195,7 @@ public final class DeliveryActivityDetailInfoOuterClass {
       return bMLIGIIELDE_;
     }
 
-    public static final int IS_TAKEN_REWARD_FIELD_NUMBER = 9;
+    public static final int IS_TAKEN_REWARD_FIELD_NUMBER = 10;
     private boolean isTakenReward_;
 
     @java.lang.Override
@@ -219,7 +219,7 @@ public final class DeliveryActivityDetailInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (isTakenReward_ != false) {
-        output.writeBool(9, isTakenReward_);
+        output.writeBool(10, isTakenReward_);
       }
       if (bMLIGIIELDE_ != 0) {
         output.writeUInt32(6, bMLIGIIELDE_);
@@ -242,7 +242,7 @@ public final class DeliveryActivityDetailInfoOuterClass {
       size = 0;
       if (isTakenReward_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isTakenReward_);
+          .computeBoolSize(10, isTakenReward_);
       }
       if (bMLIGIIELDE_ != 0) {
         size += com.google.protobuf.CodedOutputStream

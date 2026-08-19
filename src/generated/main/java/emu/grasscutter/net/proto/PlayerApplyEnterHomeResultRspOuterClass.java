@@ -97,17 +97,17 @@ public final class PlayerApplyEnterHomeResultRspOuterClass {
               applyUid_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 32: {
 
               isAgreed_ = input.readBool();
               break;
             }
-            case 64: {
+            case 88: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 32: {
+            case 120: {
 
               param_ = input.readUInt32();
               break;
@@ -144,7 +144,7 @@ public final class PlayerApplyEnterHomeResultRspOuterClass {
               emu.grasscutter.net.proto.PlayerApplyEnterHomeResultRspOuterClass.PlayerApplyEnterHomeResultRsp.class, emu.grasscutter.net.proto.PlayerApplyEnterHomeResultRspOuterClass.PlayerApplyEnterHomeResultRsp.Builder.class);
     }
 
-    public static final int IS_AGREED_FIELD_NUMBER = 15;
+    public static final int IS_AGREED_FIELD_NUMBER = 4;
     private boolean isAgreed_;
     /**
      * <code>bool is_agreed = 3;</code>
@@ -155,7 +155,7 @@ public final class PlayerApplyEnterHomeResultRspOuterClass {
       return isAgreed_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 8;
+    public static final int RETCODE_FIELD_NUMBER = 11;
     private int retcode_;
     /**
      * <code>int32 retcode = 6;</code>
@@ -166,7 +166,7 @@ public final class PlayerApplyEnterHomeResultRspOuterClass {
       return retcode_;
     }
 
-    public static final int PARAM_FIELD_NUMBER = 4;
+    public static final int PARAM_FIELD_NUMBER = 15;
     private int param_;
     /**
      * <code>uint32 param = 8;</code>
@@ -206,13 +206,13 @@ public final class PlayerApplyEnterHomeResultRspOuterClass {
         output.writeUInt32(9, applyUid_);
       }
       if (isAgreed_ != false) {
-        output.writeBool(15, isAgreed_);
+        output.writeBool(4, isAgreed_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(8, retcode_);
+        output.writeInt32(11, retcode_);
       }
       if (param_ != 0) {
-        output.writeUInt32(4, param_);
+        output.writeUInt32(15, param_);
       }
       unknownFields.writeTo(output);
     }
@@ -229,15 +229,15 @@ public final class PlayerApplyEnterHomeResultRspOuterClass {
       }
       if (isAgreed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isAgreed_);
+          .computeBoolSize(4, isAgreed_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, retcode_);
+          .computeInt32Size(11, retcode_);
       }
       if (param_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, param_);
+          .computeUInt32Size(15, param_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -142,22 +142,22 @@ public final class BlossomBriefInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 80: {
 
               resin_ = input.readUInt32();
               break;
             }
-            case 112: {
+            case 40: {
 
               cityId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 120: {
 
               isGuideOpened_ = input.readBool();
               break;
             }
-            case 64: {
+            case 104: {
 
               rewardId_ = input.readUInt32();
               break;
@@ -167,12 +167,12 @@ public final class BlossomBriefInfoOuterClass {
               hJMMAOMEHOL_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 72: {
 
               state_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 56: {
 
               refreshId_ = input.readUInt32();
               break;
@@ -182,17 +182,17 @@ public final class BlossomBriefInfoOuterClass {
               monsterLevel_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 16: {
 
               sceneId_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 88: {
 
               circleCampId_ = input.readUInt32();
               break;
             }
-            case 122: {
+            case 114: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (pos_ != null) {
                 subBuilder = pos_.toBuilder();
@@ -237,7 +237,7 @@ public final class BlossomBriefInfoOuterClass {
               emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo.class, emu.grasscutter.net.proto.BlossomBriefInfoOuterClass.BlossomBriefInfo.Builder.class);
     }
 
-    public static final int STATE_FIELD_NUMBER = 4;
+    public static final int STATE_FIELD_NUMBER = 9;
     private int state_;
     /**
      * <code>uint32 state = 10;</code>
@@ -248,7 +248,7 @@ public final class BlossomBriefInfoOuterClass {
       return state_;
     }
 
-    public static final int IS_GUIDE_OPENED_FIELD_NUMBER = 13;
+    public static final int IS_GUIDE_OPENED_FIELD_NUMBER = 15;
     private boolean isGuideOpened_;
     /**
      * <code>bool is_guide_opened = 5;</code>
@@ -259,7 +259,7 @@ public final class BlossomBriefInfoOuterClass {
       return isGuideOpened_;
     }
 
-    public static final int RESIN_FIELD_NUMBER = 2;
+    public static final int RESIN_FIELD_NUMBER = 10;
     private int resin_;
     /**
      * <code>uint32 resin = 2;</code>
@@ -270,7 +270,7 @@ public final class BlossomBriefInfoOuterClass {
       return resin_;
     }
 
-    public static final int CIRCLE_CAMP_ID_FIELD_NUMBER = 10;
+    public static final int CIRCLE_CAMP_ID_FIELD_NUMBER = 11;
     private int circleCampId_;
     /**
      * <code>uint32 circle_camp_id = 14;</code>
@@ -303,7 +303,7 @@ public final class BlossomBriefInfoOuterClass {
       return hJMMAOMEHOL_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 7;
+    public static final int SCENE_ID_FIELD_NUMBER = 2;
     private int sceneId_;
     /**
      * <code>uint32 scene_id = 13;</code>
@@ -314,7 +314,7 @@ public final class BlossomBriefInfoOuterClass {
       return sceneId_;
     }
 
-    public static final int REFRESH_ID_FIELD_NUMBER = 5;
+    public static final int REFRESH_ID_FIELD_NUMBER = 7;
     private int refreshId_;
     /**
      * <code>uint32 refresh_id = 11;</code>
@@ -325,7 +325,7 @@ public final class BlossomBriefInfoOuterClass {
       return refreshId_;
     }
 
-    public static final int REWARD_ID_FIELD_NUMBER = 8;
+    public static final int REWARD_ID_FIELD_NUMBER = 13;
     private int rewardId_;
     /**
      * <code>uint32 reward_id = 7;</code>
@@ -336,7 +336,7 @@ public final class BlossomBriefInfoOuterClass {
       return rewardId_;
     }
 
-    public static final int POS_FIELD_NUMBER = 15;
+    public static final int POS_FIELD_NUMBER = 14;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
      * <code>.Vector pos = 15;</code>
@@ -362,7 +362,7 @@ public final class BlossomBriefInfoOuterClass {
       return getPos();
     }
 
-    public static final int CITY_ID_FIELD_NUMBER = 14;
+    public static final int CITY_ID_FIELD_NUMBER = 5;
     private int cityId_;
     /**
      * <code>uint32 city_id = 4;</code>
@@ -388,37 +388,37 @@ public final class BlossomBriefInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (resin_ != 0) {
-        output.writeUInt32(2, resin_);
+        output.writeUInt32(10, resin_);
       }
       if (cityId_ != 0) {
-        output.writeUInt32(14, cityId_);
+        output.writeUInt32(5, cityId_);
       }
       if (isGuideOpened_ != false) {
-        output.writeBool(13, isGuideOpened_);
+        output.writeBool(15, isGuideOpened_);
       }
       if (rewardId_ != 0) {
-        output.writeUInt32(8, rewardId_);
+        output.writeUInt32(13, rewardId_);
       }
       if (hJMMAOMEHOL_ != 0) {
         output.writeUInt32(16000, hJMMAOMEHOL_);
       }
       if (state_ != 0) {
-        output.writeUInt32(4, state_);
+        output.writeUInt32(9, state_);
       }
       if (refreshId_ != 0) {
-        output.writeUInt32(5, refreshId_);
+        output.writeUInt32(7, refreshId_);
       }
       if (monsterLevel_ != 0) {
         output.writeUInt32(3, monsterLevel_);
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(7, sceneId_);
+        output.writeUInt32(2, sceneId_);
       }
       if (circleCampId_ != 0) {
-        output.writeUInt32(10, circleCampId_);
+        output.writeUInt32(11, circleCampId_);
       }
       if (pos_ != null) {
-        output.writeMessage(15, getPos());
+        output.writeMessage(14, getPos());
       }
       unknownFields.writeTo(output);
     }
@@ -431,19 +431,19 @@ public final class BlossomBriefInfoOuterClass {
       size = 0;
       if (resin_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, resin_);
+          .computeUInt32Size(10, resin_);
       }
       if (cityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, cityId_);
+          .computeUInt32Size(5, cityId_);
       }
       if (isGuideOpened_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isGuideOpened_);
+          .computeBoolSize(15, isGuideOpened_);
       }
       if (rewardId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, rewardId_);
+          .computeUInt32Size(13, rewardId_);
       }
       if (hJMMAOMEHOL_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -451,11 +451,11 @@ public final class BlossomBriefInfoOuterClass {
       }
       if (state_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, state_);
+          .computeUInt32Size(9, state_);
       }
       if (refreshId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, refreshId_);
+          .computeUInt32Size(7, refreshId_);
       }
       if (monsterLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -463,15 +463,15 @@ public final class BlossomBriefInfoOuterClass {
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, sceneId_);
+          .computeUInt32Size(2, sceneId_);
       }
       if (circleCampId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, circleCampId_);
+          .computeUInt32Size(11, circleCampId_);
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getPos());
+          .computeMessageSize(14, getPos());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

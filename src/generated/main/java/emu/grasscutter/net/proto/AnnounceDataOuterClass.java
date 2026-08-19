@@ -132,7 +132,7 @@ public final class AnnounceDataOuterClass {
               countDownText_ = s;
               break;
             }
-            case 16: {
+            case 80: {
 
               configId_ = input.readUInt32();
               break;
@@ -158,7 +158,7 @@ public final class AnnounceDataOuterClass {
               countDownFrequency_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 24: {
 
               endTime_ = input.readUInt32();
               break;
@@ -169,7 +169,7 @@ public final class AnnounceDataOuterClass {
               centerSystemText_ = s;
               break;
             }
-            case 24: {
+            case 16: {
 
               isCenterSystemLast5EveryMinutes_ = input.readBool();
               break;
@@ -339,7 +339,7 @@ public final class AnnounceDataOuterClass {
       return beginTime_;
     }
 
-    public static final int END_TIME_FIELD_NUMBER = 11;
+    public static final int END_TIME_FIELD_NUMBER = 3;
     private int endTime_;
 
     @java.lang.Override
@@ -347,7 +347,7 @@ public final class AnnounceDataOuterClass {
       return endTime_;
     }
 
-    public static final int CONFIG_ID_FIELD_NUMBER = 2;
+    public static final int CONFIG_ID_FIELD_NUMBER = 10;
     private int configId_;
 
     @java.lang.Override
@@ -366,7 +366,7 @@ public final class AnnounceDataOuterClass {
       return countDownFrequency_;
     }
 
-    public static final int IS_CENTER_SYSTEM_LAST5_EVERY_MINUTES_FIELD_NUMBER = 3;
+    public static final int IS_CENTER_SYSTEM_LAST5_EVERY_MINUTES_FIELD_NUMBER = 2;
     private boolean isCenterSystemLast5EveryMinutes_;
     /**
      * <code>bool is_center_system_last5_every_minutes = 1301;</code>
@@ -395,7 +395,7 @@ public final class AnnounceDataOuterClass {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16000, countDownText_);
       }
       if (configId_ != 0) {
-        output.writeUInt32(2, configId_);
+        output.writeUInt32(10, configId_);
       }
       if (beginTime_ != 0) {
         output.writeUInt32(4, beginTime_);
@@ -410,13 +410,13 @@ public final class AnnounceDataOuterClass {
         output.writeUInt32(9, countDownFrequency_);
       }
       if (endTime_ != 0) {
-        output.writeUInt32(11, endTime_);
+        output.writeUInt32(3, endTime_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(centerSystemText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16001, centerSystemText_);
       }
       if (isCenterSystemLast5EveryMinutes_ != false) {
-        output.writeBool(3, isCenterSystemLast5EveryMinutes_);
+        output.writeBool(2, isCenterSystemLast5EveryMinutes_);
       }
       unknownFields.writeTo(output);
     }
@@ -432,7 +432,7 @@ public final class AnnounceDataOuterClass {
       }
       if (configId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, configId_);
+          .computeUInt32Size(10, configId_);
       }
       if (beginTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -451,14 +451,14 @@ public final class AnnounceDataOuterClass {
       }
       if (endTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, endTime_);
+          .computeUInt32Size(3, endTime_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(centerSystemText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16001, centerSystemText_);
       }
       if (isCenterSystemLast5EveryMinutes_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isCenterSystemLast5EveryMinutes_);
+          .computeBoolSize(2, isCenterSystemLast5EveryMinutes_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -116,17 +116,17 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 112: {
 
               levelId_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 72: {
 
               stageId_ = input.readUInt32();
               break;
             }
-            case 8: {
+            case 88: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 scoreList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -134,7 +134,7 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
               scoreList_.addInt(input.readUInt32());
               break;
             }
-            case 10: {
+            case 90: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -147,17 +147,17 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 64: {
+            case 16: {
 
               difficulty_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 40: {
 
               round_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 120: {
 
               isNewRecord_ = input.readBool();
               break;
@@ -197,7 +197,7 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
               emu.grasscutter.net.proto.InstableSprayDungeonSettleInfoOuterClass.InstableSprayDungeonSettleInfo.class, emu.grasscutter.net.proto.InstableSprayDungeonSettleInfoOuterClass.InstableSprayDungeonSettleInfo.Builder.class);
     }
 
-    public static final int IS_NEW_RECORD_FIELD_NUMBER = 3;
+    public static final int IS_NEW_RECORD_FIELD_NUMBER = 15;
     private boolean isNewRecord_;
     /**
      * <code>bool is_new_record = 15;</code>
@@ -208,7 +208,7 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
       return isNewRecord_;
     }
 
-    public static final int DIFFICULTY_FIELD_NUMBER = 13;
+    public static final int DIFFICULTY_FIELD_NUMBER = 2;
     private int difficulty_;
     /**
      * <code>uint32 difficulty = 8;</code>
@@ -219,7 +219,7 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
       return difficulty_;
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 4;
+    public static final int STAGE_ID_FIELD_NUMBER = 9;
     private int stageId_;
     /**
      * <code>uint32 stage_id = 5;</code>
@@ -230,7 +230,7 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
       return stageId_;
     }
 
-    public static final int ROUND_FIELD_NUMBER = 2;
+    public static final int ROUND_FIELD_NUMBER = 5;
     private int round_;
     /**
      * <code>uint32 round = 13;</code>
@@ -241,7 +241,7 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
       return round_;
     }
 
-    public static final int LEVEL_ID_FIELD_NUMBER = 9;
+    public static final int LEVEL_ID_FIELD_NUMBER = 14;
     private int levelId_;
     /**
      * <code>uint32 level_id = 4;</code>
@@ -252,7 +252,7 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
       return levelId_;
     }
 
-    public static final int SCORE_LIST_FIELD_NUMBER = 1;
+    public static final int SCORE_LIST_FIELD_NUMBER = 11;
     private com.google.protobuf.Internal.IntList scoreList_;
     /**
      * <code>repeated uint32 score_list = 7;</code>
@@ -296,26 +296,26 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (levelId_ != 0) {
-        output.writeUInt32(9, levelId_);
+        output.writeUInt32(14, levelId_);
       }
       if (stageId_ != 0) {
-        output.writeUInt32(4, stageId_);
+        output.writeUInt32(9, stageId_);
       }
       if (getScoreListList().size() > 0) {
-        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(90);
         output.writeUInt32NoTag(scoreListMemoizedSerializedSize);
       }
       for (int i = 0; i < scoreList_.size(); i++) {
         output.writeUInt32NoTag(scoreList_.getInt(i));
       }
       if (difficulty_ != 0) {
-        output.writeUInt32(8, difficulty_);
+        output.writeUInt32(2, difficulty_);
       }
       if (round_ != 0) {
-        output.writeUInt32(2, round_);
+        output.writeUInt32(5, round_);
       }
       if (isNewRecord_ != false) {
-        output.writeBool(3, isNewRecord_);
+        output.writeBool(15, isNewRecord_);
       }
       unknownFields.writeTo(output);
     }
@@ -328,11 +328,11 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
       size = 0;
       if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, levelId_);
+          .computeUInt32Size(14, levelId_);
       }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, stageId_);
+          .computeUInt32Size(9, stageId_);
       }
       {
         int dataSize = 0;
@@ -350,15 +350,15 @@ public final class InstableSprayDungeonSettleInfoOuterClass {
       }
       if (difficulty_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, difficulty_);
+          .computeUInt32Size(2, difficulty_);
       }
       if (round_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, round_);
+          .computeUInt32Size(5, round_);
       }
       if (isNewRecord_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isNewRecord_);
+          .computeBoolSize(15, isNewRecord_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

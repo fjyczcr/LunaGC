@@ -138,12 +138,12 @@ public final class GivingRecordOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 8: {
 
               configId_ = input.readUInt32();
               break;
             }
-            case 16: {
+            case 112: {
 
               givingId_ = input.readUInt32();
               break;
@@ -161,22 +161,22 @@ public final class GivingRecordOuterClass {
                   materialCntMap__.getKey(), materialCntMap__.getValue());
               break;
             }
-            case 104: {
+            case 32: {
 
               groupId_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 56: {
 
               isFinished_ = input.readBool();
               break;
             }
-            case 88: {
+            case 64: {
 
               lastGroupId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 120: {
 
               isGadgetGiving_ = input.readBool();
               break;
@@ -225,7 +225,7 @@ public final class GivingRecordOuterClass {
               emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.class, emu.grasscutter.net.proto.GivingRecordOuterClass.GivingRecord.Builder.class);
     }
 
-    public static final int CONFIG_ID_FIELD_NUMBER = 7;
+    public static final int CONFIG_ID_FIELD_NUMBER = 1;
     private int configId_;
     /**
      * <code>uint32 config_id = 2;</code>
@@ -236,7 +236,7 @@ public final class GivingRecordOuterClass {
       return configId_;
     }
 
-    public static final int IS_GADGET_GIVING_FIELD_NUMBER = 12;
+    public static final int IS_GADGET_GIVING_FIELD_NUMBER = 15;
     private boolean isGadgetGiving_;
     /**
      * <code>bool is_gadget_giving = 15;</code>
@@ -247,7 +247,7 @@ public final class GivingRecordOuterClass {
       return isGadgetGiving_;
     }
 
-    public static final int LAST_GROUP_ID_FIELD_NUMBER = 11;
+    public static final int LAST_GROUP_ID_FIELD_NUMBER = 8;
     private int lastGroupId_;
     /**
      * <code>uint32 last_group_id = 14;</code>
@@ -258,7 +258,7 @@ public final class GivingRecordOuterClass {
       return lastGroupId_;
     }
 
-    public static final int GIVING_ID_FIELD_NUMBER = 2;
+    public static final int GIVING_ID_FIELD_NUMBER = 14;
     private int givingId_;
     /**
      * <code>uint32 giving_id = 3;</code>
@@ -269,7 +269,7 @@ public final class GivingRecordOuterClass {
       return givingId_;
     }
 
-    public static final int IS_FINISHED_FIELD_NUMBER = 15;
+    public static final int IS_FINISHED_FIELD_NUMBER = 7;
     private boolean isFinished_;
     /**
      * <code>bool is_finished = 6;</code>
@@ -361,7 +361,7 @@ public final class GivingRecordOuterClass {
       return map.get(key);
     }
 
-    public static final int GROUP_ID_FIELD_NUMBER = 13;
+    public static final int GROUP_ID_FIELD_NUMBER = 4;
     private int groupId_;
     /**
      * <code>uint32 group_id = 5;</code>
@@ -387,10 +387,10 @@ public final class GivingRecordOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (configId_ != 0) {
-        output.writeUInt32(7, configId_);
+        output.writeUInt32(1, configId_);
       }
       if (givingId_ != 0) {
-        output.writeUInt32(2, givingId_);
+        output.writeUInt32(14, givingId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
@@ -399,16 +399,16 @@ public final class GivingRecordOuterClass {
           MaterialCntMapDefaultEntryHolder.defaultEntry,
           9);
       if (groupId_ != 0) {
-        output.writeUInt32(13, groupId_);
+        output.writeUInt32(4, groupId_);
       }
       if (isFinished_ != false) {
-        output.writeBool(15, isFinished_);
+        output.writeBool(7, isFinished_);
       }
       if (lastGroupId_ != 0) {
-        output.writeUInt32(11, lastGroupId_);
+        output.writeUInt32(8, lastGroupId_);
       }
       if (isGadgetGiving_ != false) {
-        output.writeBool(12, isGadgetGiving_);
+        output.writeBool(15, isGadgetGiving_);
       }
       unknownFields.writeTo(output);
     }
@@ -421,11 +421,11 @@ public final class GivingRecordOuterClass {
       size = 0;
       if (configId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, configId_);
+          .computeUInt32Size(1, configId_);
       }
       if (givingId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, givingId_);
+          .computeUInt32Size(14, givingId_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
            : internalGetMaterialCntMap().getMap().entrySet()) {
@@ -439,19 +439,19 @@ public final class GivingRecordOuterClass {
       }
       if (groupId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, groupId_);
+          .computeUInt32Size(4, groupId_);
       }
       if (isFinished_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isFinished_);
+          .computeBoolSize(7, isFinished_);
       }
       if (lastGroupId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, lastGroupId_);
+          .computeUInt32Size(8, lastGroupId_);
       }
       if (isGadgetGiving_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, isGadgetGiving_);
+          .computeBoolSize(15, isGadgetGiving_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

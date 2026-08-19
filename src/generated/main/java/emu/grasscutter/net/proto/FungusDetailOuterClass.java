@@ -97,17 +97,17 @@ public final class FungusDetailOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 40: {
 
               nameId_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 104: {
 
               fungusId_ = input.readUInt32();
               break;
             }
-            case 32: {
+            case 120: {
 
               isCultivate_ = input.readBool();
               break;
@@ -117,7 +117,7 @@ public final class FungusDetailOuterClass {
               ePEECFNCAJE_ = input.readUInt32();
               break;
             }
-            case 120: {
+            case 128000: {
 
               pOHAEGNNKFE_ = input.readUInt32();
               break;
@@ -154,7 +154,7 @@ public final class FungusDetailOuterClass {
               emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail.class, emu.grasscutter.net.proto.FungusDetailOuterClass.FungusDetail.Builder.class);
     }
 
-    public static final int FUNGUS_ID_FIELD_NUMBER = 6;
+    public static final int FUNGUS_ID_FIELD_NUMBER = 13;
     private int fungusId_;
     /**
      * <code>uint32 fungus_id = 6;</code>
@@ -165,7 +165,7 @@ public final class FungusDetailOuterClass {
       return fungusId_;
     }
 
-    public static final int POHAEGNNKFE_FIELD_NUMBER = 15;
+    public static final int POHAEGNNKFE_FIELD_NUMBER = 16000;
     private int pOHAEGNNKFE_;
     /**
      * <code>uint32 POHAEGNNKFE = 15;</code>
@@ -176,7 +176,7 @@ public final class FungusDetailOuterClass {
       return pOHAEGNNKFE_;
     }
 
-    public static final int IS_CULTIVATE_FIELD_NUMBER = 4;
+    public static final int IS_CULTIVATE_FIELD_NUMBER = 15;
     private boolean isCultivate_;
     /**
      * <code>bool is_cultivate = 7;</code>
@@ -187,7 +187,7 @@ public final class FungusDetailOuterClass {
       return isCultivate_;
     }
 
-    public static final int NAME_ID_FIELD_NUMBER = 14;
+    public static final int NAME_ID_FIELD_NUMBER = 5;
     private int nameId_;
     /**
      * <code>uint32 name_id = 3;</code>
@@ -224,19 +224,19 @@ public final class FungusDetailOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (nameId_ != 0) {
-        output.writeUInt32(14, nameId_);
+        output.writeUInt32(5, nameId_);
       }
       if (fungusId_ != 0) {
-        output.writeUInt32(6, fungusId_);
+        output.writeUInt32(13, fungusId_);
       }
       if (isCultivate_ != false) {
-        output.writeBool(4, isCultivate_);
+        output.writeBool(15, isCultivate_);
       }
       if (ePEECFNCAJE_ != 0) {
         output.writeUInt32(9, ePEECFNCAJE_);
       }
       if (pOHAEGNNKFE_ != 0) {
-        output.writeUInt32(15, pOHAEGNNKFE_);
+        output.writeUInt32(16000, pOHAEGNNKFE_);
       }
       unknownFields.writeTo(output);
     }
@@ -249,15 +249,15 @@ public final class FungusDetailOuterClass {
       size = 0;
       if (nameId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, nameId_);
+          .computeUInt32Size(5, nameId_);
       }
       if (fungusId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, fungusId_);
+          .computeUInt32Size(13, fungusId_);
       }
       if (isCultivate_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isCultivate_);
+          .computeBoolSize(15, isCultivate_);
       }
       if (ePEECFNCAJE_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -265,7 +265,7 @@ public final class FungusDetailOuterClass {
       }
       if (pOHAEGNNKFE_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, pOHAEGNNKFE_);
+          .computeUInt32Size(16000, pOHAEGNNKFE_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

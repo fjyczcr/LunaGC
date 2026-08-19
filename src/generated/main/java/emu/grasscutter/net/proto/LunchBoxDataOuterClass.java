@@ -85,7 +85,7 @@ public final class LunchBoxDataOuterClass {
             case 0:
               done = true;
               break;
-            case 58: {
+            case 34: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 slotMaterialMap_ = com.google.protobuf.MapField.newMapField(
                     SlotMaterialMapDefaultEntryHolder.defaultEntry);
@@ -142,7 +142,7 @@ public final class LunchBoxDataOuterClass {
               emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.class, emu.grasscutter.net.proto.LunchBoxDataOuterClass.LunchBoxData.Builder.class);
     }
 
-    public static final int SLOT_MATERIAL_MAP_FIELD_NUMBER = 7;
+    public static final int SLOT_MATERIAL_MAP_FIELD_NUMBER = 4;
     private static final class SlotMaterialMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -233,7 +233,7 @@ public final class LunchBoxDataOuterClass {
           output,
           internalGetSlotMaterialMap(),
           SlotMaterialMapDefaultEntryHolder.defaultEntry,
-          7);
+          4);
       unknownFields.writeTo(output);
     }
 
@@ -251,7 +251,7 @@ public final class LunchBoxDataOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, slotMaterialMap__);
+            .computeMessageSize(4, slotMaterialMap__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

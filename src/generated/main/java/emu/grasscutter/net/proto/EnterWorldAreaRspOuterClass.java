@@ -65,17 +65,17 @@ public final class EnterWorldAreaRspOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 80: {
 
               areaId_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 64: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 80: {
+            case 16: {
 
               areaType_ = input.readUInt32();
               break;
@@ -112,7 +112,7 @@ public final class EnterWorldAreaRspOuterClass {
               emu.grasscutter.net.proto.EnterWorldAreaRspOuterClass.EnterWorldAreaRsp.class, emu.grasscutter.net.proto.EnterWorldAreaRspOuterClass.EnterWorldAreaRsp.Builder.class);
     }
 
-    public static final int AREA_ID_FIELD_NUMBER = 9;
+    public static final int AREA_ID_FIELD_NUMBER = 10;
     private int areaId_;
 
     @java.lang.Override
@@ -120,7 +120,7 @@ public final class EnterWorldAreaRspOuterClass {
       return areaId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 7;
+    public static final int RETCODE_FIELD_NUMBER = 8;
     private int retcode_;
 
     @java.lang.Override
@@ -128,7 +128,7 @@ public final class EnterWorldAreaRspOuterClass {
       return retcode_;
     }
 
-    public static final int AREA_TYPE_FIELD_NUMBER = 10;
+    public static final int AREA_TYPE_FIELD_NUMBER = 2;
     private int areaType_;
 
     @java.lang.Override
@@ -151,13 +151,13 @@ public final class EnterWorldAreaRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (areaId_ != 0) {
-        output.writeUInt32(9, areaId_);
+        output.writeUInt32(10, areaId_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(7, retcode_);
+        output.writeInt32(8, retcode_);
       }
       if (areaType_ != 0) {
-        output.writeUInt32(10, areaType_);
+        output.writeUInt32(2, areaType_);
       }
       unknownFields.writeTo(output);
     }
@@ -170,15 +170,15 @@ public final class EnterWorldAreaRspOuterClass {
       size = 0;
       if (areaId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, areaId_);
+          .computeUInt32Size(10, areaId_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, retcode_);
+          .computeInt32Size(8, retcode_);
       }
       if (areaType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, areaType_);
+          .computeUInt32Size(2, areaType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -82,12 +82,12 @@ public final class TowerMonthlyBriefOuterClass {
               ePPJPCMDGEK_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 128000: {
 
               fFJJEFKCJEC_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 96: {
 
               towerScheduleId_ = input.readUInt32();
               break;
@@ -135,7 +135,7 @@ public final class TowerMonthlyBriefOuterClass {
       return ePPJPCMDGEK_;
     }
 
-    public static final int TOWER_SCHEDULE_ID_FIELD_NUMBER = 3;
+    public static final int TOWER_SCHEDULE_ID_FIELD_NUMBER = 12;
     private int towerScheduleId_;
 
     @java.lang.Override
@@ -143,7 +143,7 @@ public final class TowerMonthlyBriefOuterClass {
       return towerScheduleId_;
     }
 
-    public static final int FFJJEFKCJEC_FIELD_NUMBER = 12;
+    public static final int FFJJEFKCJEC_FIELD_NUMBER = 16000;
     private int fFJJEFKCJEC_;
     /**
      * <code>uint32 FFJJEFKCJEC = 12;</code>
@@ -172,10 +172,10 @@ public final class TowerMonthlyBriefOuterClass {
         output.writeUInt32(4, ePPJPCMDGEK_);
       }
       if (fFJJEFKCJEC_ != 0) {
-        output.writeUInt32(12, fFJJEFKCJEC_);
+        output.writeUInt32(16000, fFJJEFKCJEC_);
       }
       if (towerScheduleId_ != 0) {
-        output.writeUInt32(3, towerScheduleId_);
+        output.writeUInt32(12, towerScheduleId_);
       }
       unknownFields.writeTo(output);
     }
@@ -192,11 +192,11 @@ public final class TowerMonthlyBriefOuterClass {
       }
       if (fFJJEFKCJEC_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, fFJJEFKCJEC_);
+          .computeUInt32Size(16000, fFJJEFKCJEC_);
       }
       if (towerScheduleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, towerScheduleId_);
+          .computeUInt32Size(12, towerScheduleId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

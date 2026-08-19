@@ -162,7 +162,7 @@ public final class SeaLampActivityInfoOuterClass {
               gBNHBMOBHNH_ = input.readBool();
               break;
             }
-            case 16: {
+            case 80: {
 
               firstDayStartTime_ = input.readUInt32();
               break;
@@ -264,7 +264,7 @@ public final class SeaLampActivityInfoOuterClass {
       return bMLIGIIELDE_;
     }
 
-    public static final int FIRST_DAY_START_TIME_FIELD_NUMBER = 2;
+    public static final int FIRST_DAY_START_TIME_FIELD_NUMBER = 10;
     private int firstDayStartTime_;
 
     @java.lang.Override
@@ -349,7 +349,7 @@ public final class SeaLampActivityInfoOuterClass {
         output.writeBool(13, gBNHBMOBHNH_);
       }
       if (firstDayStartTime_ != 0) {
-        output.writeUInt32(2, firstDayStartTime_);
+        output.writeUInt32(10, firstDayStartTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -390,7 +390,7 @@ public final class SeaLampActivityInfoOuterClass {
       }
       if (firstDayStartTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, firstDayStartTime_);
+          .computeUInt32Size(10, firstDayStartTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

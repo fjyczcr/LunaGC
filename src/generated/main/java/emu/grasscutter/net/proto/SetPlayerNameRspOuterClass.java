@@ -75,13 +75,13 @@ public final class SetPlayerNameRspOuterClass {
             case 0:
               done = true;
               break;
-            case 82: {
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
               nickName_ = s;
               break;
             }
-            case 64: {
+            case 16: {
 
               retcode_ = input.readInt32();
               break;
@@ -118,7 +118,7 @@ public final class SetPlayerNameRspOuterClass {
               emu.grasscutter.net.proto.SetPlayerNameRspOuterClass.SetPlayerNameRsp.class, emu.grasscutter.net.proto.SetPlayerNameRspOuterClass.SetPlayerNameRsp.Builder.class);
     }
 
-    public static final int NICK_NAME_FIELD_NUMBER = 10;
+    public static final int NICK_NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object nickName_;
 
     @java.lang.Override
@@ -150,7 +150,7 @@ public final class SetPlayerNameRspOuterClass {
       }
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 8;
+    public static final int RETCODE_FIELD_NUMBER = 2;
     private int retcode_;
 
     @java.lang.Override
@@ -173,10 +173,10 @@ public final class SetPlayerNameRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nickName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nickName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nickName_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(8, retcode_);
+        output.writeInt32(2, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -188,11 +188,11 @@ public final class SetPlayerNameRspOuterClass {
 
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nickName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nickName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nickName_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, retcode_);
+          .computeInt32Size(2, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

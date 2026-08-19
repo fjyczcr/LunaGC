@@ -100,12 +100,12 @@ public final class ParkourLevelInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 32: {
 
               isOpen_ = input.readBool();
               break;
             }
-            case 10: {
+            case 90: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (pos_ != null) {
                 subBuilder = pos_.toBuilder();
@@ -118,7 +118,7 @@ public final class ParkourLevelInfoOuterClass {
 
               break;
             }
-            case 112: {
+            case 8: {
 
               bestRecord_ = input.readUInt32();
               break;
@@ -160,7 +160,7 @@ public final class ParkourLevelInfoOuterClass {
               emu.grasscutter.net.proto.ParkourLevelInfoOuterClass.ParkourLevelInfo.class, emu.grasscutter.net.proto.ParkourLevelInfoOuterClass.ParkourLevelInfo.Builder.class);
     }
 
-    public static final int BEST_RECORD_FIELD_NUMBER = 14;
+    public static final int BEST_RECORD_FIELD_NUMBER = 1;
     private int bestRecord_;
     /**
      * <code>uint32 best_record = 13;</code>
@@ -182,7 +182,7 @@ public final class ParkourLevelInfoOuterClass {
       return openTime_;
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 3;
+    public static final int IS_OPEN_FIELD_NUMBER = 4;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 1;</code>
@@ -193,7 +193,7 @@ public final class ParkourLevelInfoOuterClass {
       return isOpen_;
     }
 
-    public static final int POS_FIELD_NUMBER = 1;
+    public static final int POS_FIELD_NUMBER = 11;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
      * <code>.Vector pos = 7;</code>
@@ -234,13 +234,13 @@ public final class ParkourLevelInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isOpen_ != false) {
-        output.writeBool(3, isOpen_);
+        output.writeBool(4, isOpen_);
       }
       if (pos_ != null) {
-        output.writeMessage(1, getPos());
+        output.writeMessage(11, getPos());
       }
       if (bestRecord_ != 0) {
-        output.writeUInt32(14, bestRecord_);
+        output.writeUInt32(1, bestRecord_);
       }
       if (openTime_ != 0) {
         output.writeUInt32(8, openTime_);
@@ -256,15 +256,15 @@ public final class ParkourLevelInfoOuterClass {
       size = 0;
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isOpen_);
+          .computeBoolSize(4, isOpen_);
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPos());
+          .computeMessageSize(11, getPos());
       }
       if (bestRecord_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, bestRecord_);
+          .computeUInt32Size(1, bestRecord_);
       }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream

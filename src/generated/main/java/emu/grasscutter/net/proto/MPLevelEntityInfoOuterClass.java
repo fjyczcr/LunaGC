@@ -73,7 +73,7 @@ public final class MPLevelEntityInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 122: {
+            case 58: {
               emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo.Builder subBuilder = null;
               if (abilityInfo_ != null) {
                 subBuilder = abilityInfo_.toBuilder();
@@ -86,12 +86,12 @@ public final class MPLevelEntityInfoOuterClass {
 
               break;
             }
-            case 88: {
+            case 80: {
 
               entityId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 120: {
 
               authorityPeerId_ = input.readUInt32();
               break;
@@ -128,7 +128,7 @@ public final class MPLevelEntityInfoOuterClass {
               emu.grasscutter.net.proto.MPLevelEntityInfoOuterClass.MPLevelEntityInfo.class, emu.grasscutter.net.proto.MPLevelEntityInfoOuterClass.MPLevelEntityInfo.Builder.class);
     }
 
-    public static final int ABILITY_INFO_FIELD_NUMBER = 15;
+    public static final int ABILITY_INFO_FIELD_NUMBER = 7;
     private emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo abilityInfo_;
 
     @java.lang.Override
@@ -146,7 +146,7 @@ public final class MPLevelEntityInfoOuterClass {
       return getAbilityInfo();
     }
 
-    public static final int AUTHORITY_PEER_ID_FIELD_NUMBER = 13;
+    public static final int AUTHORITY_PEER_ID_FIELD_NUMBER = 15;
     private int authorityPeerId_;
 
     @java.lang.Override
@@ -154,7 +154,7 @@ public final class MPLevelEntityInfoOuterClass {
       return authorityPeerId_;
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 11;
+    public static final int ENTITY_ID_FIELD_NUMBER = 10;
     private int entityId_;
 
     @java.lang.Override
@@ -177,13 +177,13 @@ public final class MPLevelEntityInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (abilityInfo_ != null) {
-        output.writeMessage(15, getAbilityInfo());
+        output.writeMessage(7, getAbilityInfo());
       }
       if (entityId_ != 0) {
-        output.writeUInt32(11, entityId_);
+        output.writeUInt32(10, entityId_);
       }
       if (authorityPeerId_ != 0) {
-        output.writeUInt32(13, authorityPeerId_);
+        output.writeUInt32(15, authorityPeerId_);
       }
       unknownFields.writeTo(output);
     }
@@ -196,15 +196,15 @@ public final class MPLevelEntityInfoOuterClass {
       size = 0;
       if (abilityInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getAbilityInfo());
+          .computeMessageSize(7, getAbilityInfo());
       }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, entityId_);
+          .computeUInt32Size(10, entityId_);
       }
       if (authorityPeerId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, authorityPeerId_);
+          .computeUInt32Size(15, authorityPeerId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

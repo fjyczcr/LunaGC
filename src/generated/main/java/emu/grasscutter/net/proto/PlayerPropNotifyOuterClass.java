@@ -89,7 +89,7 @@ public final class PlayerPropNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 74: {
+            case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 propMap_ = com.google.protobuf.MapField.newMapField(
                     PropMapDefaultEntryHolder.defaultEntry);
@@ -146,7 +146,7 @@ public final class PlayerPropNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerPropNotifyOuterClass.PlayerPropNotify.class, emu.grasscutter.net.proto.PlayerPropNotifyOuterClass.PlayerPropNotify.Builder.class);
     }
 
-    public static final int PROP_MAP_FIELD_NUMBER = 9;
+    public static final int PROP_MAP_FIELD_NUMBER = 1;
     private static final class PropMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, emu.grasscutter.net.proto.PropValueOuterClass.PropValue> defaultEntry =
@@ -237,7 +237,7 @@ public final class PlayerPropNotifyOuterClass {
           output,
           internalGetPropMap(),
           PropMapDefaultEntryHolder.defaultEntry,
-          9);
+          1);
       unknownFields.writeTo(output);
     }
 
@@ -255,7 +255,7 @@ public final class PlayerPropNotifyOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(9, propMap__);
+            .computeMessageSize(1, propMap__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

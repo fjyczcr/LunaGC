@@ -73,17 +73,17 @@ public final class AvatarSkillUpgradeReqOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 104: {
 
               oldLevel_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 32: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 96: {
+            case 64: {
 
               avatarSkillId_ = input.readUInt32();
               break;
@@ -120,7 +120,7 @@ public final class AvatarSkillUpgradeReqOuterClass {
               emu.grasscutter.net.proto.AvatarSkillUpgradeReqOuterClass.AvatarSkillUpgradeReq.class, emu.grasscutter.net.proto.AvatarSkillUpgradeReqOuterClass.AvatarSkillUpgradeReq.Builder.class);
     }
 
-    public static final int AVATAR_SKILL_ID_FIELD_NUMBER = 12;
+    public static final int AVATAR_SKILL_ID_FIELD_NUMBER = 8;
     private int avatarSkillId_;
 
     @java.lang.Override
@@ -128,7 +128,7 @@ public final class AvatarSkillUpgradeReqOuterClass {
       return avatarSkillId_;
     }
 
-    public static final int OLD_LEVEL_FIELD_NUMBER = 8;
+    public static final int OLD_LEVEL_FIELD_NUMBER = 13;
     private int oldLevel_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class AvatarSkillUpgradeReqOuterClass {
       return oldLevel_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 6;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 4;
     private long avatarGuid_;
 
     @java.lang.Override
@@ -159,13 +159,13 @@ public final class AvatarSkillUpgradeReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(6, avatarGuid_);
+        output.writeUInt64(4, avatarGuid_);
       }
       if (oldLevel_ != 0) {
-        output.writeUInt32(8, oldLevel_);
+        output.writeUInt32(13, oldLevel_);
       }
       if (avatarSkillId_ != 0) {
-        output.writeUInt32(12, avatarSkillId_);
+        output.writeUInt32(8, avatarSkillId_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,15 +178,15 @@ public final class AvatarSkillUpgradeReqOuterClass {
       size = 0;
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, avatarGuid_);
+          .computeUInt64Size(4, avatarGuid_);
       }
       if (oldLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, oldLevel_);
+          .computeUInt32Size(13, oldLevel_);
       }
       if (avatarSkillId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, avatarSkillId_);
+          .computeUInt32Size(8, avatarSkillId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

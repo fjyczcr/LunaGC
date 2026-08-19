@@ -71,12 +71,12 @@ public final class AvatarFetterLevelRewardReqOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 24: {
 
               fetterLevel_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 104: {
 
               avatarGuid_ = input.readUInt64();
               break;
@@ -113,7 +113,7 @@ public final class AvatarFetterLevelRewardReqOuterClass {
               emu.grasscutter.net.proto.AvatarFetterLevelRewardReqOuterClass.AvatarFetterLevelRewardReq.class, emu.grasscutter.net.proto.AvatarFetterLevelRewardReqOuterClass.AvatarFetterLevelRewardReq.Builder.class);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 6;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 13;
     private long avatarGuid_;
 
     @java.lang.Override
@@ -121,7 +121,7 @@ public final class AvatarFetterLevelRewardReqOuterClass {
       return avatarGuid_;
     }
 
-    public static final int FETTER_LEVEL_FIELD_NUMBER = 14;
+    public static final int FETTER_LEVEL_FIELD_NUMBER = 3;
     private int fetterLevel_;
 
     @java.lang.Override
@@ -144,10 +144,10 @@ public final class AvatarFetterLevelRewardReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (fetterLevel_ != 0) {
-        output.writeUInt32(14, fetterLevel_);
+        output.writeUInt32(3, fetterLevel_);
       }
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(6, avatarGuid_);
+        output.writeUInt64(13, avatarGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -160,11 +160,11 @@ public final class AvatarFetterLevelRewardReqOuterClass {
       size = 0;
       if (fetterLevel_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, fetterLevel_);
+          .computeUInt32Size(3, fetterLevel_);
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, avatarGuid_);
+          .computeUInt64Size(13, avatarGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

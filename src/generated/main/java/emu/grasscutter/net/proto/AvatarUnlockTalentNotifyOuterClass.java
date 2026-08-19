@@ -80,17 +80,17 @@ public final class AvatarUnlockTalentNotifyOuterClass {
               entityId_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 112: {
 
               skillDepotId_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 24: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 48: {
+            case 40: {
 
               talentId_ = input.readUInt32();
               break;
@@ -127,7 +127,7 @@ public final class AvatarUnlockTalentNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarUnlockTalentNotifyOuterClass.AvatarUnlockTalentNotify.class, emu.grasscutter.net.proto.AvatarUnlockTalentNotifyOuterClass.AvatarUnlockTalentNotify.Builder.class);
     }
 
-    public static final int SKILL_DEPOT_ID_FIELD_NUMBER = 3;
+    public static final int SKILL_DEPOT_ID_FIELD_NUMBER = 14;
     private int skillDepotId_;
 
     @java.lang.Override
@@ -135,7 +135,7 @@ public final class AvatarUnlockTalentNotifyOuterClass {
       return skillDepotId_;
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 10;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 3;
     private long avatarGuid_;
 
     @java.lang.Override
@@ -143,7 +143,7 @@ public final class AvatarUnlockTalentNotifyOuterClass {
       return avatarGuid_;
     }
 
-    public static final int TALENT_ID_FIELD_NUMBER = 6;
+    public static final int TALENT_ID_FIELD_NUMBER = 5;
     private int talentId_;
 
     @java.lang.Override
@@ -177,13 +177,13 @@ public final class AvatarUnlockTalentNotifyOuterClass {
         output.writeUInt32(7, entityId_);
       }
       if (skillDepotId_ != 0) {
-        output.writeUInt32(3, skillDepotId_);
+        output.writeUInt32(14, skillDepotId_);
       }
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(10, avatarGuid_);
+        output.writeUInt64(3, avatarGuid_);
       }
       if (talentId_ != 0) {
-        output.writeUInt32(6, talentId_);
+        output.writeUInt32(5, talentId_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,15 +200,15 @@ public final class AvatarUnlockTalentNotifyOuterClass {
       }
       if (skillDepotId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, skillDepotId_);
+          .computeUInt32Size(14, skillDepotId_);
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(10, avatarGuid_);
+          .computeUInt64Size(3, avatarGuid_);
       }
       if (talentId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, talentId_);
+          .computeUInt32Size(5, talentId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

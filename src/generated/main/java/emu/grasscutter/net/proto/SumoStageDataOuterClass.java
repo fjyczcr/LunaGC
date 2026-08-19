@@ -117,17 +117,17 @@ public final class SumoStageDataOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 104: {
 
               isOpen_ = input.readBool();
               break;
             }
-            case 112: {
+            case 32: {
 
               maxScore_ = input.readUInt32();
               break;
             }
-            case 58: {
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 teamList_ = new java.util.ArrayList<emu.grasscutter.net.proto.SumoTeamDataOuterClass.SumoTeamData>();
                 mutable_bitField0_ |= 0x00000001;
@@ -141,7 +141,7 @@ public final class SumoStageDataOuterClass {
               stageId_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 120: {
 
               openTime_ = input.readUInt32();
               break;
@@ -181,7 +181,7 @@ public final class SumoStageDataOuterClass {
               emu.grasscutter.net.proto.SumoStageDataOuterClass.SumoStageData.class, emu.grasscutter.net.proto.SumoStageDataOuterClass.SumoStageData.Builder.class);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 4;
+    public static final int IS_OPEN_FIELD_NUMBER = 13;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 1;</code>
@@ -192,7 +192,7 @@ public final class SumoStageDataOuterClass {
       return isOpen_;
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 5;
+    public static final int OPEN_TIME_FIELD_NUMBER = 15;
     private int openTime_;
     /**
      * <code>uint32 open_time = 11;</code>
@@ -214,7 +214,7 @@ public final class SumoStageDataOuterClass {
       return stageId_;
     }
 
-    public static final int MAX_SCORE_FIELD_NUMBER = 14;
+    public static final int MAX_SCORE_FIELD_NUMBER = 4;
     private int maxScore_;
     /**
      * <code>uint32 max_score = 2;</code>
@@ -225,7 +225,7 @@ public final class SumoStageDataOuterClass {
       return maxScore_;
     }
 
-    public static final int TEAM_LIST_FIELD_NUMBER = 7;
+    public static final int TEAM_LIST_FIELD_NUMBER = 3;
     private java.util.List<emu.grasscutter.net.proto.SumoTeamDataOuterClass.SumoTeamData> teamList_;
     /**
      * <code>repeated .SumoTeamData team_list = 6;</code>
@@ -280,19 +280,19 @@ public final class SumoStageDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isOpen_ != false) {
-        output.writeBool(4, isOpen_);
+        output.writeBool(13, isOpen_);
       }
       if (maxScore_ != 0) {
-        output.writeUInt32(14, maxScore_);
+        output.writeUInt32(4, maxScore_);
       }
       for (int i = 0; i < teamList_.size(); i++) {
-        output.writeMessage(7, teamList_.get(i));
+        output.writeMessage(3, teamList_.get(i));
       }
       if (stageId_ != 0) {
         output.writeUInt32(2, stageId_);
       }
       if (openTime_ != 0) {
-        output.writeUInt32(5, openTime_);
+        output.writeUInt32(15, openTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -305,15 +305,15 @@ public final class SumoStageDataOuterClass {
       size = 0;
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isOpen_);
+          .computeBoolSize(13, isOpen_);
       }
       if (maxScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, maxScore_);
+          .computeUInt32Size(4, maxScore_);
       }
       for (int i = 0; i < teamList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, teamList_.get(i));
+          .computeMessageSize(3, teamList_.get(i));
       }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -321,7 +321,7 @@ public final class SumoStageDataOuterClass {
       }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, openTime_);
+          .computeUInt32Size(15, openTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

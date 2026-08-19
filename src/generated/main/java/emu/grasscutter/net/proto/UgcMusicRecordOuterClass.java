@@ -80,12 +80,12 @@ public final class UgcMusicRecordOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 120: {
 
               musicId_ = input.readUInt32();
               break;
             }
-            case 98: {
+            case 50: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 musicTrackList_ = new java.util.ArrayList<emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack>();
                 mutable_bitField0_ |= 0x00000001;
@@ -129,7 +129,7 @@ public final class UgcMusicRecordOuterClass {
               emu.grasscutter.net.proto.UgcMusicRecordOuterClass.UgcMusicRecord.class, emu.grasscutter.net.proto.UgcMusicRecordOuterClass.UgcMusicRecord.Builder.class);
     }
 
-    public static final int MUSIC_TRACK_LIST_FIELD_NUMBER = 12;
+    public static final int MUSIC_TRACK_LIST_FIELD_NUMBER = 6;
     private java.util.List<emu.grasscutter.net.proto.UgcMusicTrackOuterClass.UgcMusicTrack> musicTrackList_;
 
     @java.lang.Override
@@ -159,7 +159,7 @@ public final class UgcMusicRecordOuterClass {
       return musicTrackList_.get(index);
     }
 
-    public static final int MUSIC_ID_FIELD_NUMBER = 9;
+    public static final int MUSIC_ID_FIELD_NUMBER = 15;
     private int musicId_;
 
     @java.lang.Override
@@ -182,10 +182,10 @@ public final class UgcMusicRecordOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (musicId_ != 0) {
-        output.writeUInt32(9, musicId_);
+        output.writeUInt32(15, musicId_);
       }
       for (int i = 0; i < musicTrackList_.size(); i++) {
-        output.writeMessage(12, musicTrackList_.get(i));
+        output.writeMessage(6, musicTrackList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -198,11 +198,11 @@ public final class UgcMusicRecordOuterClass {
       size = 0;
       if (musicId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, musicId_);
+          .computeUInt32Size(15, musicId_);
       }
       for (int i = 0; i < musicTrackList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, musicTrackList_.get(i));
+          .computeMessageSize(6, musicTrackList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

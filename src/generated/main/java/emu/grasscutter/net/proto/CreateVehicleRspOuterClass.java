@@ -86,17 +86,17 @@ public final class CreateVehicleRspOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 120: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 56: {
+            case 80: {
 
               vehicleId_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 104: {
 
               entityId_ = input.readUInt32();
               break;
@@ -133,7 +133,7 @@ public final class CreateVehicleRspOuterClass {
               emu.grasscutter.net.proto.CreateVehicleRspOuterClass.CreateVehicleRsp.class, emu.grasscutter.net.proto.CreateVehicleRspOuterClass.CreateVehicleRsp.Builder.class);
     }
 
-    public static final int VEHICLE_ID_FIELD_NUMBER = 7;
+    public static final int VEHICLE_ID_FIELD_NUMBER = 10;
     private int vehicleId_;
     /**
      * <code>uint32 vehicle_id = 9;</code>
@@ -144,7 +144,7 @@ public final class CreateVehicleRspOuterClass {
       return vehicleId_;
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 5;
+    public static final int ENTITY_ID_FIELD_NUMBER = 13;
     private int entityId_;
     /**
      * <code>uint32 entity_id = 11;</code>
@@ -155,7 +155,7 @@ public final class CreateVehicleRspOuterClass {
       return entityId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 8;
+    public static final int RETCODE_FIELD_NUMBER = 15;
     private int retcode_;
     /**
      * <code>int32 retcode = 2;</code>
@@ -181,13 +181,13 @@ public final class CreateVehicleRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(8, retcode_);
+        output.writeInt32(15, retcode_);
       }
       if (vehicleId_ != 0) {
-        output.writeUInt32(7, vehicleId_);
+        output.writeUInt32(10, vehicleId_);
       }
       if (entityId_ != 0) {
-        output.writeUInt32(5, entityId_);
+        output.writeUInt32(13, entityId_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,15 +200,15 @@ public final class CreateVehicleRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, retcode_);
+          .computeInt32Size(15, retcode_);
       }
       if (vehicleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, vehicleId_);
+          .computeUInt32Size(10, vehicleId_);
       }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, entityId_);
+          .computeUInt32Size(13, entityId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

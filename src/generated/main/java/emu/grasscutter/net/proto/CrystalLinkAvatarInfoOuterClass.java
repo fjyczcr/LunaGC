@@ -84,7 +84,7 @@ public final class CrystalLinkAvatarInfoOuterClass {
               avatarId_ = input.readUInt64();
               break;
             }
-            case 112: {
+            case 40: {
 
               isTrial_ = input.readBool();
               break;
@@ -121,7 +121,7 @@ public final class CrystalLinkAvatarInfoOuterClass {
               emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.class, emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder.class);
     }
 
-    public static final int IS_TRIAL_FIELD_NUMBER = 14;
+    public static final int IS_TRIAL_FIELD_NUMBER = 5;
     private boolean isTrial_;
     /**
      * <code>bool is_trial = 7;</code>
@@ -161,7 +161,7 @@ public final class CrystalLinkAvatarInfoOuterClass {
         output.writeUInt64(3, avatarId_);
       }
       if (isTrial_ != false) {
-        output.writeBool(14, isTrial_);
+        output.writeBool(5, isTrial_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,7 +178,7 @@ public final class CrystalLinkAvatarInfoOuterClass {
       }
       if (isTrial_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(14, isTrial_);
+          .computeBoolSize(5, isTrial_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

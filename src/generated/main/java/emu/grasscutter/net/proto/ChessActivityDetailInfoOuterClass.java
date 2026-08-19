@@ -89,22 +89,22 @@ public final class ChessActivityDetailInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 56: {
 
               level_ = input.readUInt32();
               break;
             }
-            case 128000: {
+            case 128008: {
 
               dJHMOOHNKKO_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 48: {
 
               contentCloseTime_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 128000: {
 
               gIGPDLGGEOM_ = input.readBool();
               break;
@@ -114,12 +114,12 @@ public final class ChessActivityDetailInfoOuterClass {
               jGKFANJEFAF_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 40: {
 
               exp_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 112: {
 
               isContentClosed_ = input.readBool();
               break;
@@ -156,7 +156,7 @@ public final class ChessActivityDetailInfoOuterClass {
               emu.grasscutter.net.proto.ChessActivityDetailInfoOuterClass.ChessActivityDetailInfo.class, emu.grasscutter.net.proto.ChessActivityDetailInfoOuterClass.ChessActivityDetailInfo.Builder.class);
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 5;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 14;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -164,7 +164,7 @@ public final class ChessActivityDetailInfoOuterClass {
       return isContentClosed_;
     }
 
-    public static final int GIGPDLGGEOM_FIELD_NUMBER = 7;
+    public static final int GIGPDLGGEOM_FIELD_NUMBER = 16000;
     private boolean gIGPDLGGEOM_;
     /**
      * <code>bool GIGPDLGGEOM = 7;</code>
@@ -175,7 +175,7 @@ public final class ChessActivityDetailInfoOuterClass {
       return gIGPDLGGEOM_;
     }
 
-    public static final int EXP_FIELD_NUMBER = 13;
+    public static final int EXP_FIELD_NUMBER = 5;
     private int exp_;
 
     @java.lang.Override
@@ -183,7 +183,7 @@ public final class ChessActivityDetailInfoOuterClass {
       return exp_;
     }
 
-    public static final int DJHMOOHNKKO_FIELD_NUMBER = 16000;
+    public static final int DJHMOOHNKKO_FIELD_NUMBER = 16001;
     private int dJHMOOHNKKO_;
     /**
      * <code>uint32 DJHMOOHNKKO = 5;</code>
@@ -194,7 +194,7 @@ public final class ChessActivityDetailInfoOuterClass {
       return dJHMOOHNKKO_;
     }
 
-    public static final int LEVEL_FIELD_NUMBER = 11;
+    public static final int LEVEL_FIELD_NUMBER = 7;
     private int level_;
 
     @java.lang.Override
@@ -213,7 +213,7 @@ public final class ChessActivityDetailInfoOuterClass {
       return jGKFANJEFAF_;
     }
 
-    public static final int CONTENT_CLOSE_TIME_FIELD_NUMBER = 12;
+    public static final int CONTENT_CLOSE_TIME_FIELD_NUMBER = 6;
     private int contentCloseTime_;
 
     @java.lang.Override
@@ -236,25 +236,25 @@ public final class ChessActivityDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (level_ != 0) {
-        output.writeUInt32(11, level_);
+        output.writeUInt32(7, level_);
       }
       if (dJHMOOHNKKO_ != 0) {
-        output.writeUInt32(16000, dJHMOOHNKKO_);
+        output.writeUInt32(16001, dJHMOOHNKKO_);
       }
       if (contentCloseTime_ != 0) {
-        output.writeUInt32(12, contentCloseTime_);
+        output.writeUInt32(6, contentCloseTime_);
       }
       if (gIGPDLGGEOM_ != false) {
-        output.writeBool(7, gIGPDLGGEOM_);
+        output.writeBool(16000, gIGPDLGGEOM_);
       }
       if (jGKFANJEFAF_ != 0) {
         output.writeUInt32(8, jGKFANJEFAF_);
       }
       if (exp_ != 0) {
-        output.writeUInt32(13, exp_);
+        output.writeUInt32(5, exp_);
       }
       if (isContentClosed_ != false) {
-        output.writeBool(5, isContentClosed_);
+        output.writeBool(14, isContentClosed_);
       }
       unknownFields.writeTo(output);
     }
@@ -267,19 +267,19 @@ public final class ChessActivityDetailInfoOuterClass {
       size = 0;
       if (level_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, level_);
+          .computeUInt32Size(7, level_);
       }
       if (dJHMOOHNKKO_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(16000, dJHMOOHNKKO_);
+          .computeUInt32Size(16001, dJHMOOHNKKO_);
       }
       if (contentCloseTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, contentCloseTime_);
+          .computeUInt32Size(6, contentCloseTime_);
       }
       if (gIGPDLGGEOM_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, gIGPDLGGEOM_);
+          .computeBoolSize(16000, gIGPDLGGEOM_);
       }
       if (jGKFANJEFAF_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -287,11 +287,11 @@ public final class ChessActivityDetailInfoOuterClass {
       }
       if (exp_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, exp_);
+          .computeUInt32Size(5, exp_);
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isContentClosed_);
+          .computeBoolSize(14, isContentClosed_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

@@ -81,7 +81,7 @@ public final class AnchorPointDataOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 24: {
 
               endTime_ = input.readUInt32();
               break;
@@ -99,17 +99,17 @@ public final class AnchorPointDataOuterClass {
 
               break;
             }
-            case 48: {
+            case 104: {
 
               sceneId_ = input.readUInt32();
               break;
             }
-            case 8: {
+            case 40: {
 
               anchorPointId_ = input.readUInt32();
               break;
             }
-            case 122: {
+            case 74: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (pos_ != null) {
                 subBuilder = pos_.toBuilder();
@@ -172,7 +172,7 @@ public final class AnchorPointDataOuterClass {
       return getRot();
     }
 
-    public static final int POS_FIELD_NUMBER = 15;
+    public static final int POS_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
 
     @java.lang.Override
@@ -190,7 +190,7 @@ public final class AnchorPointDataOuterClass {
       return getPos();
     }
 
-    public static final int END_TIME_FIELD_NUMBER = 10;
+    public static final int END_TIME_FIELD_NUMBER = 3;
     private int endTime_;
 
     @java.lang.Override
@@ -198,7 +198,7 @@ public final class AnchorPointDataOuterClass {
       return endTime_;
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 6;
+    public static final int SCENE_ID_FIELD_NUMBER = 13;
     private int sceneId_;
 
     @java.lang.Override
@@ -206,7 +206,7 @@ public final class AnchorPointDataOuterClass {
       return sceneId_;
     }
 
-    public static final int ANCHOR_POINT_ID_FIELD_NUMBER = 1;
+    public static final int ANCHOR_POINT_ID_FIELD_NUMBER = 5;
     private int anchorPointId_;
 
     @java.lang.Override
@@ -229,19 +229,19 @@ public final class AnchorPointDataOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (endTime_ != 0) {
-        output.writeUInt32(10, endTime_);
+        output.writeUInt32(3, endTime_);
       }
       if (rot_ != null) {
         output.writeMessage(11, getRot());
       }
       if (sceneId_ != 0) {
-        output.writeUInt32(6, sceneId_);
+        output.writeUInt32(13, sceneId_);
       }
       if (anchorPointId_ != 0) {
-        output.writeUInt32(1, anchorPointId_);
+        output.writeUInt32(5, anchorPointId_);
       }
       if (pos_ != null) {
-        output.writeMessage(15, getPos());
+        output.writeMessage(9, getPos());
       }
       unknownFields.writeTo(output);
     }
@@ -254,7 +254,7 @@ public final class AnchorPointDataOuterClass {
       size = 0;
       if (endTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, endTime_);
+          .computeUInt32Size(3, endTime_);
       }
       if (rot_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -262,15 +262,15 @@ public final class AnchorPointDataOuterClass {
       }
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, sceneId_);
+          .computeUInt32Size(13, sceneId_);
       }
       if (anchorPointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, anchorPointId_);
+          .computeUInt32Size(5, anchorPointId_);
       }
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getPos());
+          .computeMessageSize(9, getPos());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

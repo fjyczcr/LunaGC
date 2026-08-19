@@ -125,7 +125,7 @@ public final class DragonSpineActivityDetailInfoOuterClass {
               mDHGPIPFBOJ_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 56: {
 
               isContentClosed_ = input.readBool();
               break;
@@ -224,7 +224,7 @@ public final class DragonSpineActivityDetailInfoOuterClass {
       return aEPAJCHDHED_.get(index);
     }
 
-    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 6;
+    public static final int IS_CONTENT_CLOSED_FIELD_NUMBER = 7;
     private boolean isContentClosed_;
 
     @java.lang.Override
@@ -297,7 +297,7 @@ public final class DragonSpineActivityDetailInfoOuterClass {
         output.writeUInt32(16000, mDHGPIPFBOJ_);
       }
       if (isContentClosed_ != false) {
-        output.writeBool(6, isContentClosed_);
+        output.writeBool(7, isContentClosed_);
       }
       for (int i = 0; i < aEPAJCHDHED_.size(); i++) {
         output.writeMessage(9, aEPAJCHDHED_.get(i));
@@ -327,7 +327,7 @@ public final class DragonSpineActivityDetailInfoOuterClass {
       }
       if (isContentClosed_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, isContentClosed_);
+          .computeBoolSize(7, isContentClosed_);
       }
       for (int i = 0; i < aEPAJCHDHED_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream

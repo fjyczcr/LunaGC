@@ -103,12 +103,12 @@ public final class HomeModuleComfortInfoOuterClass {
               roomSceneComfortValue_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 32: {
 
               moduleId_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 120: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 worldSceneBlockComfortValueList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -116,7 +116,7 @@ public final class HomeModuleComfortInfoOuterClass {
               worldSceneBlockComfortValueList_.addInt(input.readUInt32());
               break;
             }
-            case 82: {
+            case 122: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -175,7 +175,7 @@ public final class HomeModuleComfortInfoOuterClass {
       return roomSceneComfortValue_;
     }
 
-    public static final int WORLD_SCENE_BLOCK_COMFORT_VALUE_LIST_FIELD_NUMBER = 10;
+    public static final int WORLD_SCENE_BLOCK_COMFORT_VALUE_LIST_FIELD_NUMBER = 15;
     private com.google.protobuf.Internal.IntList worldSceneBlockComfortValueList_;
     /**
      * <code>repeated uint32 world_scene_block_comfort_value_list = 10;</code>
@@ -203,7 +203,7 @@ public final class HomeModuleComfortInfoOuterClass {
     }
     private int worldSceneBlockComfortValueListMemoizedSerializedSize = -1;
 
-    public static final int MODULE_ID_FIELD_NUMBER = 11;
+    public static final int MODULE_ID_FIELD_NUMBER = 4;
     private int moduleId_;
     /**
      * <code>uint32 module_id = 3;</code>
@@ -233,10 +233,10 @@ public final class HomeModuleComfortInfoOuterClass {
         output.writeUInt32(12, roomSceneComfortValue_);
       }
       if (moduleId_ != 0) {
-        output.writeUInt32(11, moduleId_);
+        output.writeUInt32(4, moduleId_);
       }
       if (getWorldSceneBlockComfortValueListList().size() > 0) {
-        output.writeUInt32NoTag(82);
+        output.writeUInt32NoTag(122);
         output.writeUInt32NoTag(worldSceneBlockComfortValueListMemoizedSerializedSize);
       }
       for (int i = 0; i < worldSceneBlockComfortValueList_.size(); i++) {
@@ -257,7 +257,7 @@ public final class HomeModuleComfortInfoOuterClass {
       }
       if (moduleId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, moduleId_);
+          .computeUInt32Size(4, moduleId_);
       }
       {
         int dataSize = 0;

@@ -92,7 +92,7 @@ public final class PlayerCookReqOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 32: {
 
               assistAvatar_ = input.readUInt32();
               break;
@@ -102,7 +102,7 @@ public final class PlayerCookReqOuterClass {
               qteQuality_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 64: {
 
               recipeId_ = input.readUInt32();
               break;
@@ -166,7 +166,7 @@ public final class PlayerCookReqOuterClass {
       return cookCount_;
     }
 
-    public static final int RECIPE_ID_FIELD_NUMBER = 6;
+    public static final int RECIPE_ID_FIELD_NUMBER = 8;
     private int recipeId_;
     /**
      * <code>uint32 recipe_id = 11;</code>
@@ -177,7 +177,7 @@ public final class PlayerCookReqOuterClass {
       return recipeId_;
     }
 
-    public static final int ASSIST_AVATAR_FIELD_NUMBER = 8;
+    public static final int ASSIST_AVATAR_FIELD_NUMBER = 4;
     private int assistAvatar_;
     /**
      * <code>uint32 assist_avatar = 5;</code>
@@ -203,13 +203,13 @@ public final class PlayerCookReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (assistAvatar_ != 0) {
-        output.writeUInt32(8, assistAvatar_);
+        output.writeUInt32(4, assistAvatar_);
       }
       if (qteQuality_ != 0) {
         output.writeUInt32(3, qteQuality_);
       }
       if (recipeId_ != 0) {
-        output.writeUInt32(6, recipeId_);
+        output.writeUInt32(8, recipeId_);
       }
       if (cookCount_ != 0) {
         output.writeUInt32(14, cookCount_);
@@ -225,7 +225,7 @@ public final class PlayerCookReqOuterClass {
       size = 0;
       if (assistAvatar_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, assistAvatar_);
+          .computeUInt32Size(4, assistAvatar_);
       }
       if (qteQuality_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -233,7 +233,7 @@ public final class PlayerCookReqOuterClass {
       }
       if (recipeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, recipeId_);
+          .computeUInt32Size(8, recipeId_);
       }
       if (cookCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream

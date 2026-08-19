@@ -102,7 +102,7 @@ public final class DropHintNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 58: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (position_ != null) {
                 subBuilder = position_.toBuilder();
@@ -115,7 +115,7 @@ public final class DropHintNotifyOuterClass {
 
               break;
             }
-            case 104: {
+            case 24: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 itemIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -123,7 +123,7 @@ public final class DropHintNotifyOuterClass {
               itemIdList_.addInt(input.readUInt32());
               break;
             }
-            case 106: {
+            case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -171,7 +171,7 @@ public final class DropHintNotifyOuterClass {
               emu.grasscutter.net.proto.DropHintNotifyOuterClass.DropHintNotify.class, emu.grasscutter.net.proto.DropHintNotifyOuterClass.DropHintNotify.Builder.class);
     }
 
-    public static final int POSITION_FIELD_NUMBER = 3;
+    public static final int POSITION_FIELD_NUMBER = 7;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector position_;
     /**
      * <code>.Vector position = 3;</code>
@@ -197,7 +197,7 @@ public final class DropHintNotifyOuterClass {
       return getPosition();
     }
 
-    public static final int ITEM_ID_LIST_FIELD_NUMBER = 13;
+    public static final int ITEM_ID_LIST_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.IntList itemIdList_;
     /**
      * <code>repeated uint32 item_id_list = 6;</code>
@@ -241,10 +241,10 @@ public final class DropHintNotifyOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (position_ != null) {
-        output.writeMessage(3, getPosition());
+        output.writeMessage(7, getPosition());
       }
       if (getItemIdListList().size() > 0) {
-        output.writeUInt32NoTag(106);
+        output.writeUInt32NoTag(26);
         output.writeUInt32NoTag(itemIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < itemIdList_.size(); i++) {
@@ -261,7 +261,7 @@ public final class DropHintNotifyOuterClass {
       size = 0;
       if (position_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getPosition());
+          .computeMessageSize(7, getPosition());
       }
       {
         int dataSize = 0;

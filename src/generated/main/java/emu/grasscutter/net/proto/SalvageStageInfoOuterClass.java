@@ -114,12 +114,12 @@ public final class SalvageStageInfoOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.SalvageChallengeInfoOuterClass.SalvageChallengeInfo.parser(), extensionRegistry));
               break;
             }
-            case 80: {
+            case 64: {
 
               isOpen_ = input.readBool();
               break;
             }
-            case 104: {
+            case 120: {
 
               stageId_ = input.readUInt32();
               break;
@@ -159,7 +159,7 @@ public final class SalvageStageInfoOuterClass {
               emu.grasscutter.net.proto.SalvageStageInfoOuterClass.SalvageStageInfo.class, emu.grasscutter.net.proto.SalvageStageInfoOuterClass.SalvageStageInfo.Builder.class);
     }
 
-    public static final int STAGE_ID_FIELD_NUMBER = 13;
+    public static final int STAGE_ID_FIELD_NUMBER = 15;
     private int stageId_;
     /**
      * <code>uint32 stage_id = 8;</code>
@@ -210,7 +210,7 @@ public final class SalvageStageInfoOuterClass {
       return challengeInfoList_.get(index);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 10;
+    public static final int IS_OPEN_FIELD_NUMBER = 8;
     private boolean isOpen_;
     /**
      * <code>bool is_open = 5;</code>
@@ -239,10 +239,10 @@ public final class SalvageStageInfoOuterClass {
         output.writeMessage(9, challengeInfoList_.get(i));
       }
       if (isOpen_ != false) {
-        output.writeBool(10, isOpen_);
+        output.writeBool(8, isOpen_);
       }
       if (stageId_ != 0) {
-        output.writeUInt32(13, stageId_);
+        output.writeUInt32(15, stageId_);
       }
       unknownFields.writeTo(output);
     }
@@ -259,11 +259,11 @@ public final class SalvageStageInfoOuterClass {
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, isOpen_);
+          .computeBoolSize(8, isOpen_);
       }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, stageId_);
+          .computeUInt32Size(15, stageId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

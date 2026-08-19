@@ -73,17 +73,17 @@ public final class ChangeGameTimeReqOuterClass {
             case 0:
               done = true;
               break;
-            case 120: {
+            case 104: {
 
               gameTime_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 8: {
 
               extraDays_ = input.readUInt32();
               break;
             }
-            case 8: {
+            case 32: {
 
               isForceSet_ = input.readBool();
               break;
@@ -120,7 +120,7 @@ public final class ChangeGameTimeReqOuterClass {
               emu.grasscutter.net.proto.ChangeGameTimeReqOuterClass.ChangeGameTimeReq.class, emu.grasscutter.net.proto.ChangeGameTimeReqOuterClass.ChangeGameTimeReq.Builder.class);
     }
 
-    public static final int GAME_TIME_FIELD_NUMBER = 15;
+    public static final int GAME_TIME_FIELD_NUMBER = 13;
     private int gameTime_;
 
     @java.lang.Override
@@ -128,7 +128,7 @@ public final class ChangeGameTimeReqOuterClass {
       return gameTime_;
     }
 
-    public static final int EXTRA_DAYS_FIELD_NUMBER = 11;
+    public static final int EXTRA_DAYS_FIELD_NUMBER = 1;
     private int extraDays_;
 
     @java.lang.Override
@@ -136,7 +136,7 @@ public final class ChangeGameTimeReqOuterClass {
       return extraDays_;
     }
 
-    public static final int IS_FORCE_SET_FIELD_NUMBER = 1;
+    public static final int IS_FORCE_SET_FIELD_NUMBER = 4;
     private boolean isForceSet_;
 
     @java.lang.Override
@@ -159,13 +159,13 @@ public final class ChangeGameTimeReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (gameTime_ != 0) {
-        output.writeUInt32(15, gameTime_);
+        output.writeUInt32(13, gameTime_);
       }
       if (extraDays_ != 0) {
-        output.writeUInt32(11, extraDays_);
+        output.writeUInt32(1, extraDays_);
       }
       if (isForceSet_ != false) {
-        output.writeBool(1, isForceSet_);
+        output.writeBool(4, isForceSet_);
       }
       unknownFields.writeTo(output);
     }
@@ -178,15 +178,15 @@ public final class ChangeGameTimeReqOuterClass {
       size = 0;
       if (gameTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, gameTime_);
+          .computeUInt32Size(13, gameTime_);
       }
       if (extraDays_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, extraDays_);
+          .computeUInt32Size(1, extraDays_);
       }
       if (isForceSet_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isForceSet_);
+          .computeBoolSize(4, isForceSet_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

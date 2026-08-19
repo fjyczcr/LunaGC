@@ -84,7 +84,7 @@ public final class SyncTeamEntityNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 32: {
 
               sceneId_ = input.readUInt32();
               break;
@@ -163,7 +163,7 @@ public final class SyncTeamEntityNotifyOuterClass {
       return teamEntityInfoList_.get(index);
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 6;
+    public static final int SCENE_ID_FIELD_NUMBER = 4;
     private int sceneId_;
 
     @java.lang.Override
@@ -186,7 +186,7 @@ public final class SyncTeamEntityNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sceneId_ != 0) {
-        output.writeUInt32(6, sceneId_);
+        output.writeUInt32(4, sceneId_);
       }
       for (int i = 0; i < teamEntityInfoList_.size(); i++) {
         output.writeMessage(15, teamEntityInfoList_.get(i));
@@ -202,7 +202,7 @@ public final class SyncTeamEntityNotifyOuterClass {
       size = 0;
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, sceneId_);
+          .computeUInt32Size(4, sceneId_);
       }
       for (int i = 0; i < teamEntityInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream

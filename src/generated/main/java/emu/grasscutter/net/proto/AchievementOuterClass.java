@@ -99,28 +99,28 @@ public final class AchievementOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 72: {
 
               totalProgress_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 40: {
 
               id_ = input.readUInt32();
               break;
             }
-            case 88: {
+            case 48: {
 
               curProgress_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 64: {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
               break;
             }
-            case 24: {
+            case 16: {
 
               finishTimestamp_ = input.readUInt32();
               break;
@@ -283,7 +283,7 @@ public final class AchievementOuterClass {
       // @@protoc_insertion_point(enum_scope:Achievement.Status)
     }
 
-    public static final int FINISH_TIMESTAMP_FIELD_NUMBER = 3;
+    public static final int FINISH_TIMESTAMP_FIELD_NUMBER = 2;
     private int finishTimestamp_;
     /**
      * <code>uint32 finish_timestamp = 14;</code>
@@ -294,7 +294,7 @@ public final class AchievementOuterClass {
       return finishTimestamp_;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 9;
+    public static final int STATUS_FIELD_NUMBER = 8;
     private int status_;
     /**
      * <code>.Achievement.Status status = 11;</code>
@@ -313,7 +313,7 @@ public final class AchievementOuterClass {
       return result == null ? emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.UNRECOGNIZED : result;
     }
 
-    public static final int CUR_PROGRESS_FIELD_NUMBER = 11;
+    public static final int CUR_PROGRESS_FIELD_NUMBER = 6;
     private int curProgress_;
     /**
      * <code>uint32 cur_progress = 8;</code>
@@ -324,7 +324,7 @@ public final class AchievementOuterClass {
       return curProgress_;
     }
 
-    public static final int TOTAL_PROGRESS_FIELD_NUMBER = 4;
+    public static final int TOTAL_PROGRESS_FIELD_NUMBER = 9;
     private int totalProgress_;
     /**
      * <code>uint32 total_progress = 1;</code>
@@ -335,7 +335,7 @@ public final class AchievementOuterClass {
       return totalProgress_;
     }
 
-    public static final int ID_FIELD_NUMBER = 10;
+    public static final int ID_FIELD_NUMBER = 5;
     private int id_;
     /**
      * <code>uint32 id = 4;</code>
@@ -361,19 +361,19 @@ public final class AchievementOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (totalProgress_ != 0) {
-        output.writeUInt32(4, totalProgress_);
+        output.writeUInt32(9, totalProgress_);
       }
       if (id_ != 0) {
-        output.writeUInt32(10, id_);
+        output.writeUInt32(5, id_);
       }
       if (curProgress_ != 0) {
-        output.writeUInt32(11, curProgress_);
+        output.writeUInt32(6, curProgress_);
       }
       if (status_ != emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.INVALID.getNumber()) {
-        output.writeEnum(9, status_);
+        output.writeEnum(8, status_);
       }
       if (finishTimestamp_ != 0) {
-        output.writeUInt32(3, finishTimestamp_);
+        output.writeUInt32(2, finishTimestamp_);
       }
       unknownFields.writeTo(output);
     }
@@ -386,23 +386,23 @@ public final class AchievementOuterClass {
       size = 0;
       if (totalProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, totalProgress_);
+          .computeUInt32Size(9, totalProgress_);
       }
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, id_);
+          .computeUInt32Size(5, id_);
       }
       if (curProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, curProgress_);
+          .computeUInt32Size(6, curProgress_);
       }
       if (status_ != emu.grasscutter.net.proto.AchievementOuterClass.Achievement.Status.INVALID.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(9, status_);
+          .computeEnumSize(8, status_);
       }
       if (finishTimestamp_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, finishTimestamp_);
+          .computeUInt32Size(2, finishTimestamp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
