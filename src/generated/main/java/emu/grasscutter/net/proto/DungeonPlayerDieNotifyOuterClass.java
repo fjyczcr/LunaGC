@@ -473,7 +473,7 @@ public final class DungeonPlayerDieNotifyOuterClass {
       }
       if (entityCase_ == 1) {
         output.writeUInt32(
-            4, (int)((java.lang.Integer) entity_));
+            1, (int)((java.lang.Integer) entity_));
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
@@ -495,7 +495,7 @@ public final class DungeonPlayerDieNotifyOuterClass {
       }
       if (entityCase_ == 6) {
         output.writeUInt32(
-            9, (int)((java.lang.Integer) entity_));
+            6, (int)((java.lang.Integer) entity_));
       }
       if (dieType_ != emu.grasscutter.net.proto.PlayerDieTypeOuterClass.PlayerDieType.PlayerDieType_PLAYER_DIE_NONE.getNumber()) {
         output.writeEnum(2, dieType_);
@@ -516,7 +516,7 @@ public final class DungeonPlayerDieNotifyOuterClass {
       if (entityCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              4, (int)((java.lang.Integer) entity_));
+              1, (int)((java.lang.Integer) entity_));
       }
       for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.StrengthenPointDataOuterClass.StrengthenPointData> entry
            : internalGetStrengthenPointDataMap().getMap().entrySet()) {
@@ -547,7 +547,7 @@ public final class DungeonPlayerDieNotifyOuterClass {
       if (entityCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              9, (int)((java.lang.Integer) entity_));
+              6, (int)((java.lang.Integer) entity_));
       }
       if (dieType_ != emu.grasscutter.net.proto.PlayerDieTypeOuterClass.PlayerDieType.PlayerDieType_PLAYER_DIE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream

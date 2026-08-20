@@ -306,7 +306,7 @@ public final class WorldPlayerDieNotifyOuterClass {
                         throws java.io.IOException {
       if (entityCase_ == 9) {
         output.writeUInt32(
-            8, (int)((java.lang.Integer) entity_));
+            9, (int)((java.lang.Integer) entity_));
       }
       if (murdererEntityId_ != 0) {
         output.writeUInt32(12, murdererEntityId_);
@@ -319,7 +319,7 @@ public final class WorldPlayerDieNotifyOuterClass {
       }
       if (entityCase_ == 14) {
         output.writeUInt32(
-            12, (int)((java.lang.Integer) entity_));
+            14, (int)((java.lang.Integer) entity_));
       }
       unknownFields.writeTo(output);
     }
@@ -333,7 +333,7 @@ public final class WorldPlayerDieNotifyOuterClass {
       if (entityCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              8, (int)((java.lang.Integer) entity_));
+              9, (int)((java.lang.Integer) entity_));
       }
       if (murdererEntityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -350,7 +350,7 @@ public final class WorldPlayerDieNotifyOuterClass {
       if (entityCase_ == 14) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              12, (int)((java.lang.Integer) entity_));
+              14, (int)((java.lang.Integer) entity_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

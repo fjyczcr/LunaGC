@@ -277,7 +277,7 @@ public final class UnlockPersonalLineRspOuterClass {
                         throws java.io.IOException {
       if (paramCase_ == 3) {
         output.writeUInt32(
-            5, (int)((java.lang.Integer) param_));
+            3, (int)((java.lang.Integer) param_));
       }
       if (personalLineId_ != 0) {
         output.writeUInt32(13, personalLineId_);
@@ -287,7 +287,7 @@ public final class UnlockPersonalLineRspOuterClass {
       }
       if (paramCase_ == 1) {
         output.writeUInt32(
-            3, (int)((java.lang.Integer) param_));
+            1, (int)((java.lang.Integer) param_));
       }
       unknownFields.writeTo(output);
     }
@@ -301,7 +301,7 @@ public final class UnlockPersonalLineRspOuterClass {
       if (paramCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              5, (int)((java.lang.Integer) param_));
+              3, (int)((java.lang.Integer) param_));
       }
       if (personalLineId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -314,7 +314,7 @@ public final class UnlockPersonalLineRspOuterClass {
       if (paramCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              3, (int)((java.lang.Integer) param_));
+              1, (int)((java.lang.Integer) param_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

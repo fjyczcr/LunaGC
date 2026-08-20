@@ -643,7 +643,7 @@ public final class ChatInfoOuterClass {
       }
       if (eBFBCAECMDGCase_ == 12) {
         output.writeUInt32(
-            14, (int)((java.lang.Integer) eBFBCAECMDG_));
+            12, (int)((java.lang.Integer) eBFBCAECMDG_));
       }
       if (sequence_ != 0) {
         output.writeUInt32(15, sequence_);
@@ -659,14 +659,14 @@ public final class ChatInfoOuterClass {
       }
       if (eBFBCAECMDGCase_ == 1) {
         output.writeBool(
-            12, (boolean)((java.lang.Boolean) eBFBCAECMDG_));
+            1, (boolean)((java.lang.Boolean) eBFBCAECMDG_));
       }
       if (contentCase_ == 654) {
         output.writeUInt32(
-            103, (int)((java.lang.Integer) content_));
+            654, (int)((java.lang.Integer) content_));
       }
       if (contentCase_ == 1275) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 548, content_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1275, content_);
       }
       if (contentCase_ == 934) {
         output.writeMessage(934, (emu.grasscutter.net.proto.SystemHintOuterClass.SystemHint) content_);
@@ -695,7 +695,7 @@ public final class ChatInfoOuterClass {
       if (eBFBCAECMDGCase_ == 12) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              14, (int)((java.lang.Integer) eBFBCAECMDG_));
+              12, (int)((java.lang.Integer) eBFBCAECMDG_));
       }
       if (sequence_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -715,15 +715,15 @@ public final class ChatInfoOuterClass {
       if (eBFBCAECMDGCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(
-              12, (boolean)((java.lang.Boolean) eBFBCAECMDG_));
+              1, (boolean)((java.lang.Boolean) eBFBCAECMDG_));
       }
       if (contentCase_ == 654) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              103, (int)((java.lang.Integer) content_));
+              654, (int)((java.lang.Integer) content_));
       }
       if (contentCase_ == 1275) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(548, content_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1275, content_);
       }
       if (contentCase_ == 934) {
         size += com.google.protobuf.CodedOutputStream

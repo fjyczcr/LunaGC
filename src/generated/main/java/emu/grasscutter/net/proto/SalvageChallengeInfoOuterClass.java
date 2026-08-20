@@ -364,7 +364,7 @@ public final class SalvageChallengeInfoOuterClass {
       }
       if (challengeDetailCase_ == 1) {
         output.writeUInt32(
-            10, (int)((java.lang.Integer) challengeDetail_));
+            1, (int)((java.lang.Integer) challengeDetail_));
       }
       if (challengeType_ != 0) {
         output.writeUInt32(10, challengeType_);
@@ -391,7 +391,7 @@ public final class SalvageChallengeInfoOuterClass {
       if (challengeDetailCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              10, (int)((java.lang.Integer) challengeDetail_));
+              1, (int)((java.lang.Integer) challengeDetail_));
       }
       if (challengeType_ != 0) {
         size += com.google.protobuf.CodedOutputStream

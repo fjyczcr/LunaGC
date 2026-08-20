@@ -1044,7 +1044,7 @@ public final class LockedPersonallineDataOuterClass {
       }
       if (paramCase_ == 10) {
         output.writeUInt32(
-            13, (int)((java.lang.Integer) param_));
+            10, (int)((java.lang.Integer) param_));
       }
       unknownFields.writeTo(output);
     }
@@ -1075,7 +1075,7 @@ public final class LockedPersonallineDataOuterClass {
       if (paramCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              13, (int)((java.lang.Integer) param_));
+              10, (int)((java.lang.Integer) param_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;

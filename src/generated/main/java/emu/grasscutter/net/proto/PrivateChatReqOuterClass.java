@@ -291,14 +291,14 @@ public final class PrivateChatReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (contentCase_ == 14) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, content_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, content_);
       }
       if (targetUid_ != 0) {
         output.writeUInt32(10, targetUid_);
       }
       if (contentCase_ == 8) {
         output.writeUInt32(
-            12, (int)((java.lang.Integer) content_));
+            8, (int)((java.lang.Integer) content_));
       }
       unknownFields.writeTo(output);
     }
@@ -310,7 +310,7 @@ public final class PrivateChatReqOuterClass {
 
       size = 0;
       if (contentCase_ == 14) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, content_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, content_);
       }
       if (targetUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -319,7 +319,7 @@ public final class PrivateChatReqOuterClass {
       if (contentCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              12, (int)((java.lang.Integer) content_));
+              8, (int)((java.lang.Integer) content_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
