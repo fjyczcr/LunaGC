@@ -32,14 +32,13 @@ Contribute if you want/can...
 
 ### Patching the game
 - Copy `patch/Astrolabe.dll` into the game folder at `GenshinImpact_Data/Plugins`. Back up the old `Astrolabe.dll` in the plugins folder first.
-- To build it yourself instead, clone [hk4e-patch-universal](https://github.com/kitkat033/hk4e-patch-universal), install [**Rust**](https://rust-lang.org/learn/get-started/) and **Cargo** (comes with rustup), run `cargo build --release`, and rename the DLL at `target/release` to `Astrolabe.dll`.
 
 ### Getting started
 
 - Clone the repository (install [Git](https://git-scm.com) first )
 
   ```
-  git clone --recurse-submodules https://github.com/kitkat033/LunaGC.git
+  git clone --recurse-submodules https://github.com/girluh/LunaGC.git
   ```
 
 - Now you can continue with the steps below.
