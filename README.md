@@ -31,10 +31,8 @@ Contribute if you want/can...
 - Have fun (or don't)
 
 ### Patching the game
-- Install [**Rust**](https://rust-lang.org/learn/get-started/) and **Cargo** (comes with rustup)
-- Go to the `patch/` folder (make sure you have cloned this repository with the `--recurse-submodules` flag)
-- Run `cargo build --release` to build the DLL at `target/release`
-- Inject the DLL into the game. You can do this by renaming the patch to `Astrolabe.dll` and putting it in the game folder at `GenshinImpact_Data/Plugins`. Make sure you back up the old `Astrolabe.dll` in the plugins folder.
+- Copy `patch/Astrolabe.dll` into the game folder at `GenshinImpact_Data/Plugins`. Back up the old `Astrolabe.dll` in the plugins folder first.
+- To build it yourself instead, clone [hk4e-patch-universal](https://github.com/kitkat033/hk4e-patch-universal), install [**Rust**](https://rust-lang.org/learn/get-started/) and **Cargo** (comes with rustup), run `cargo build --release`, and rename the DLL at `target/release` to `Astrolabe.dll`.
 
 ### Getting started
 
@@ -88,4 +86,4 @@ Contribute if you want/can...
 
 proto Repository [hk4e-protos](https://gitlab.com/kitkat-multiverse/genshin-protocol)
 
-patch Repository [hk4e-patch-universal](https://github.com/kitkat033/hk4e-patch-universal)
+patch Repository [hk4e-patch-universal](https://github.com/kitkat033/hk4e-patch-universal) - `patch/Astrolabe.dll` is built from it
