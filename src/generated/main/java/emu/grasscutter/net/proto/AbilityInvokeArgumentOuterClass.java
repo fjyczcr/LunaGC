@@ -383,6 +383,154 @@ public final class AbilityInvokeArgumentOuterClass {
      * <code>AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_DAMAGE_COUNT = 146;</code>
      */
     AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_DAMAGE_COUNT(146),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_SET_ESCENARIO_PARAMETER = 26;</code>
+     */
+    AbilityInvokeArgument_ABILITY_META_SET_ESCENARIO_PARAMETER(26),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_BATCH_GLOBAL_FLOAT_VALUE = 27;</code>
+     */
+    AbilityInvokeArgument_ABILITY_META_BATCH_GLOBAL_FLOAT_VALUE(27),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_UPDATE_MOON_OVERGROW_VALUE = 28;</code>
+     */
+    AbilityInvokeArgument_ABILITY_META_UPDATE_MOON_OVERGROW_VALUE(28),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_MP_ACTION = 29;</code>
+     */
+    AbilityInvokeArgument_ABILITY_META_MP_ACTION(29),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_UPDATE_RESOURCE_GLOBAL_VALUE = 30;</code>
+     */
+    AbilityInvokeArgument_ABILITY_META_UPDATE_RESOURCE_GLOBAL_VALUE(30),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_UPDATE_TPS_WEAPON_AMMUNITION = 31;</code>
+     */
+    AbilityInvokeArgument_ABILITY_META_UPDATE_TPS_WEAPON_AMMUNITION(31),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_NEW_ELEMENT_REACTION_ATTACK = 72;</code>
+     */
+    AbilityInvokeArgument_ABILITY_ACTION_NEW_ELEMENT_REACTION_ATTACK(72),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_MONSTER_FIEXED_JUMP = 73;</code>
+     */
+    AbilityInvokeArgument_ABILITY_ACTION_MONSTER_FIEXED_JUMP(73),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_NEW_ELEMENT_REACTION_ATTACK_EVENT = 74;</code>
+     */
+    AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_NEW_ELEMENT_REACTION_ATTACK_EVENT(74),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_TRY_BUILD_ICE_CREATURE = 75;</code>
+     */
+    AbilityInvokeArgument_ABILITY_ACTION_TRY_BUILD_ICE_CREATURE(75),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_TARGET_EVENT_WITH_PARAM = 76;</code>
+     */
+    AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_TARGET_EVENT_WITH_PARAM(76),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_MOON_CRYSTALLIZE_WATER_RESONANCE = 77;</code>
+     */
+    AbilityInvokeArgument_ABILITY_ACTION_MOON_CRYSTALLIZE_WATER_RESONANCE(77),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_CALL_PLAYER_SNEZHNAYA_TRAIN = 78;</code>
+     */
+    AbilityInvokeArgument_ABILITY_ACTION_CALL_PLAYER_SNEZHNAYA_TRAIN(78),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_PLACEMENT_DETECT_EFFECT = 142;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_PLACEMENT_DETECT_EFFECT(142),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_BULLET_HIT_MIXIN = 144;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_BULLET_HIT_MIXIN(144),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_SYNC_MIXIN = 147;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_SYNC_MIXIN(147),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_SINGLE_MAGNET = 148;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_SINGLE_MAGNET(148),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MIXED_MAGNET = 149;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_MIXED_MAGNET(149),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW = 150;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW(150),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MONOPOLE_TRACK_OBJECT = 151;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_MONOPOLE_TRACK_OBJECT(151),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_MOON_OVERGROW = 152;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_MOON_OVERGROW(152),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_CUSTOM_SKILL_ANIMATOR_MANAGER = 153;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_CUSTOM_SKILL_ANIMATOR_MANAGER(153),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_DYNAMIC_CHANGE_TO_NEXT_COSTUME = 154;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_DYNAMIC_CHANGE_TO_NEXT_COSTUME(154),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_PART_MOVE = 155;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_PART_MOVE(155),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW_GADGET = 156;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW_GADGET(156),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_LUNARIS_LINK_MANAGER = 157;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_LUNARIS_LINK_MANAGER(157),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_RESOURCE_GLOBAL_VALUE = 158;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_RESOURCE_GLOBAL_VALUE(158),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_RECORD_ELEMENT_REACTION_INFO = 159;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_RECORD_ELEMENT_REACTION_INFO(159),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_DAMAGE_SHIELD_BAR = 160;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_DAMAGE_SHIELD_BAR(160),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_SNEZHNAYA_FRIGID_VAR = 161;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_SNEZHNAYA_FRIGID_VAR(161),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_NEW_ELEMENT_REACTION_DAMAGE_COUNT_SYNC = 162;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_NEW_ELEMENT_REACTION_DAMAGE_COUNT_SYNC(162),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_SWITCH_EFFECT_BY_ID_ON_SELF_GLOBAL_VALUE = 163;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_SWITCH_EFFECT_BY_ID_ON_SELF_GLOBAL_VALUE(163),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_ABILITY_PLUGIN_MOVE_ABSORBER_GADGET = 164;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_ABILITY_PLUGIN_MOVE_ABSORBER_GADGET(164),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_NORMAL_TRACK_OBJECT = 165;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_NORMAL_TRACK_OBJECT(165),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MONSTER_FIXED_WARPING = 166;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_MONSTER_FIXED_WARPING(166),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_NEW_ELEMENT_REACTION_DAMAGE_COUNT = 167;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_NEW_ELEMENT_REACTION_DAMAGE_COUNT(167),
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_DISABLE_ALL_COLLIDER = 168;</code>
+     */
+    AbilityInvokeArgument_ABILITY_MIXIN_DISABLE_ALL_COLLIDER(168),
     UNRECOGNIZED(-1),
     ;
 
@@ -750,6 +898,154 @@ public final class AbilityInvokeArgumentOuterClass {
      * <code>AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_DAMAGE_COUNT = 146;</code>
      */
     public static final int AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_DAMAGE_COUNT_VALUE = 146;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_SET_ESCENARIO_PARAMETER = 26;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_META_SET_ESCENARIO_PARAMETER_VALUE = 26;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_BATCH_GLOBAL_FLOAT_VALUE = 27;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_META_BATCH_GLOBAL_FLOAT_VALUE_VALUE = 27;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_UPDATE_MOON_OVERGROW_VALUE = 28;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_META_UPDATE_MOON_OVERGROW_VALUE_VALUE = 28;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_MP_ACTION = 29;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_META_MP_ACTION_VALUE = 29;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_UPDATE_RESOURCE_GLOBAL_VALUE = 30;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_META_UPDATE_RESOURCE_GLOBAL_VALUE_VALUE = 30;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_META_UPDATE_TPS_WEAPON_AMMUNITION = 31;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_META_UPDATE_TPS_WEAPON_AMMUNITION_VALUE = 31;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_NEW_ELEMENT_REACTION_ATTACK = 72;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_ACTION_NEW_ELEMENT_REACTION_ATTACK_VALUE = 72;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_MONSTER_FIEXED_JUMP = 73;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_ACTION_MONSTER_FIEXED_JUMP_VALUE = 73;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_NEW_ELEMENT_REACTION_ATTACK_EVENT = 74;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_NEW_ELEMENT_REACTION_ATTACK_EVENT_VALUE = 74;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_TRY_BUILD_ICE_CREATURE = 75;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_ACTION_TRY_BUILD_ICE_CREATURE_VALUE = 75;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_TARGET_EVENT_WITH_PARAM = 76;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_TARGET_EVENT_WITH_PARAM_VALUE = 76;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_MOON_CRYSTALLIZE_WATER_RESONANCE = 77;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_ACTION_MOON_CRYSTALLIZE_WATER_RESONANCE_VALUE = 77;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_ACTION_CALL_PLAYER_SNEZHNAYA_TRAIN = 78;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_ACTION_CALL_PLAYER_SNEZHNAYA_TRAIN_VALUE = 78;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_PLACEMENT_DETECT_EFFECT = 142;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_PLACEMENT_DETECT_EFFECT_VALUE = 142;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_BULLET_HIT_MIXIN = 144;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_BULLET_HIT_MIXIN_VALUE = 144;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_SYNC_MIXIN = 147;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_SYNC_MIXIN_VALUE = 147;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_SINGLE_MAGNET = 148;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_SINGLE_MAGNET_VALUE = 148;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MIXED_MAGNET = 149;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_MIXED_MAGNET_VALUE = 149;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW = 150;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW_VALUE = 150;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MONOPOLE_TRACK_OBJECT = 151;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_MONOPOLE_TRACK_OBJECT_VALUE = 151;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_MOON_OVERGROW = 152;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_MOON_OVERGROW_VALUE = 152;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_CUSTOM_SKILL_ANIMATOR_MANAGER = 153;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_CUSTOM_SKILL_ANIMATOR_MANAGER_VALUE = 153;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_DYNAMIC_CHANGE_TO_NEXT_COSTUME = 154;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_DYNAMIC_CHANGE_TO_NEXT_COSTUME_VALUE = 154;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_PART_MOVE = 155;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_PART_MOVE_VALUE = 155;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW_GADGET = 156;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW_GADGET_VALUE = 156;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_LUNARIS_LINK_MANAGER = 157;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_LUNARIS_LINK_MANAGER_VALUE = 157;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_RESOURCE_GLOBAL_VALUE = 158;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_RESOURCE_GLOBAL_VALUE_VALUE = 158;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_RECORD_ELEMENT_REACTION_INFO = 159;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_RECORD_ELEMENT_REACTION_INFO_VALUE = 159;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_DAMAGE_SHIELD_BAR = 160;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_DAMAGE_SHIELD_BAR_VALUE = 160;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_SNEZHNAYA_FRIGID_VAR = 161;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_SNEZHNAYA_FRIGID_VAR_VALUE = 161;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_NEW_ELEMENT_REACTION_DAMAGE_COUNT_SYNC = 162;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_NEW_ELEMENT_REACTION_DAMAGE_COUNT_SYNC_VALUE = 162;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_SWITCH_EFFECT_BY_ID_ON_SELF_GLOBAL_VALUE = 163;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_SWITCH_EFFECT_BY_ID_ON_SELF_GLOBAL_VALUE_VALUE = 163;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_ABILITY_PLUGIN_MOVE_ABSORBER_GADGET = 164;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_ABILITY_PLUGIN_MOVE_ABSORBER_GADGET_VALUE = 164;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_NORMAL_TRACK_OBJECT = 165;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_NORMAL_TRACK_OBJECT_VALUE = 165;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MONSTER_FIXED_WARPING = 166;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_MONSTER_FIXED_WARPING_VALUE = 166;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_NEW_ELEMENT_REACTION_DAMAGE_COUNT = 167;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_NEW_ELEMENT_REACTION_DAMAGE_COUNT_VALUE = 167;
+    /**
+     * <code>AbilityInvokeArgument_ABILITY_MIXIN_DISABLE_ALL_COLLIDER = 168;</code>
+     */
+    public static final int AbilityInvokeArgument_ABILITY_MIXIN_DISABLE_ALL_COLLIDER_VALUE = 168;
 
 
     public final int getNumber() {
@@ -867,6 +1163,43 @@ public final class AbilityInvokeArgumentOuterClass {
         case 143: return AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_SPECIAL_MOVE;
         case 145: return AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_DAMAGE;
         case 146: return AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_DAMAGE_COUNT;
+        case 26: return AbilityInvokeArgument_ABILITY_META_SET_ESCENARIO_PARAMETER;
+        case 27: return AbilityInvokeArgument_ABILITY_META_BATCH_GLOBAL_FLOAT_VALUE;
+        case 28: return AbilityInvokeArgument_ABILITY_META_UPDATE_MOON_OVERGROW_VALUE;
+        case 29: return AbilityInvokeArgument_ABILITY_META_MP_ACTION;
+        case 30: return AbilityInvokeArgument_ABILITY_META_UPDATE_RESOURCE_GLOBAL_VALUE;
+        case 31: return AbilityInvokeArgument_ABILITY_META_UPDATE_TPS_WEAPON_AMMUNITION;
+        case 72: return AbilityInvokeArgument_ABILITY_ACTION_NEW_ELEMENT_REACTION_ATTACK;
+        case 73: return AbilityInvokeArgument_ABILITY_ACTION_MONSTER_FIEXED_JUMP;
+        case 74: return AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_NEW_ELEMENT_REACTION_ATTACK_EVENT;
+        case 75: return AbilityInvokeArgument_ABILITY_ACTION_TRY_BUILD_ICE_CREATURE;
+        case 76: return AbilityInvokeArgument_ABILITY_ACTION_TRIGGER_TARGET_EVENT_WITH_PARAM;
+        case 77: return AbilityInvokeArgument_ABILITY_ACTION_MOON_CRYSTALLIZE_WATER_RESONANCE;
+        case 78: return AbilityInvokeArgument_ABILITY_ACTION_CALL_PLAYER_SNEZHNAYA_TRAIN;
+        case 142: return AbilityInvokeArgument_ABILITY_MIXIN_PLACEMENT_DETECT_EFFECT;
+        case 144: return AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_BULLET_HIT_MIXIN;
+        case 147: return AbilityInvokeArgument_ABILITY_MIXIN_AVATAR_DRAW_PLAY_SYNC_MIXIN;
+        case 148: return AbilityInvokeArgument_ABILITY_MIXIN_SINGLE_MAGNET;
+        case 149: return AbilityInvokeArgument_ABILITY_MIXIN_MIXED_MAGNET;
+        case 150: return AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW;
+        case 151: return AbilityInvokeArgument_ABILITY_MIXIN_MONOPOLE_TRACK_OBJECT;
+        case 152: return AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_MOON_OVERGROW;
+        case 153: return AbilityInvokeArgument_ABILITY_MIXIN_CUSTOM_SKILL_ANIMATOR_MANAGER;
+        case 154: return AbilityInvokeArgument_ABILITY_MIXIN_DYNAMIC_CHANGE_TO_NEXT_COSTUME;
+        case 155: return AbilityInvokeArgument_ABILITY_MIXIN_PART_MOVE;
+        case 156: return AbilityInvokeArgument_ABILITY_MIXIN_ABSORB_THROW_GADGET;
+        case 157: return AbilityInvokeArgument_ABILITY_MIXIN_LUNARIS_LINK_MANAGER;
+        case 158: return AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_RESOURCE_GLOBAL_VALUE;
+        case 159: return AbilityInvokeArgument_ABILITY_MIXIN_RECORD_ELEMENT_REACTION_INFO;
+        case 160: return AbilityInvokeArgument_ABILITY_MIXIN_DAMAGE_SHIELD_BAR;
+        case 161: return AbilityInvokeArgument_ABILITY_MIXIN_CHANGE_SNEZHNAYA_FRIGID_VAR;
+        case 162: return AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_NEW_ELEMENT_REACTION_DAMAGE_COUNT_SYNC;
+        case 163: return AbilityInvokeArgument_ABILITY_MIXIN_SWITCH_EFFECT_BY_ID_ON_SELF_GLOBAL_VALUE;
+        case 164: return AbilityInvokeArgument_ABILITY_MIXIN_ABILITY_PLUGIN_MOVE_ABSORBER_GADGET;
+        case 165: return AbilityInvokeArgument_ABILITY_MIXIN_NORMAL_TRACK_OBJECT;
+        case 166: return AbilityInvokeArgument_ABILITY_MIXIN_MONSTER_FIXED_WARPING;
+        case 167: return AbilityInvokeArgument_ABILITY_MIXIN_MODIFY_BE_HIT_NEW_ELEMENT_REACTION_DAMAGE_COUNT;
+        case 168: return AbilityInvokeArgument_ABILITY_MIXIN_DISABLE_ALL_COLLIDER;
         default: return null;
       }
     }

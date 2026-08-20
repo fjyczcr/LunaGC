@@ -111,6 +111,18 @@ public final class CombatTypeArgumentOuterClass {
      * <code>CombatTypeArgument_COMBAT_DEBUG_SYNC_MOTION = 22;</code>
      */
     CombatTypeArgument_COMBAT_DEBUG_SYNC_MOTION(22),
+    /**
+     * <code>CombatTypeArgument_ENTITY_INTERPOLATE_MOVE = 24;</code>
+     */
+    CombatTypeArgument_ENTITY_INTERPOLATE_MOVE(24),
+    /**
+     * <code>CombatTypeArgument_COMBAT_DIE_ANIMATOR_CHANGE = 25;</code>
+     */
+    CombatTypeArgument_COMBAT_DIE_ANIMATOR_CHANGE(25),
+    /**
+     * <code>CombatTypeArgument_COMBAT_AVATAR_TRANSFER_BY_SERVER = 26;</code>
+     */
+    CombatTypeArgument_COMBAT_AVATAR_TRANSFER_BY_SERVER(26),
     UNRECOGNIZED(-1),
     ;
 
@@ -206,6 +218,18 @@ public final class CombatTypeArgumentOuterClass {
      * <code>CombatTypeArgument_COMBAT_DEBUG_SYNC_MOTION = 22;</code>
      */
     public static final int CombatTypeArgument_COMBAT_DEBUG_SYNC_MOTION_VALUE = 22;
+    /**
+     * <code>CombatTypeArgument_ENTITY_INTERPOLATE_MOVE = 24;</code>
+     */
+    public static final int CombatTypeArgument_ENTITY_INTERPOLATE_MOVE_VALUE = 24;
+    /**
+     * <code>CombatTypeArgument_COMBAT_DIE_ANIMATOR_CHANGE = 25;</code>
+     */
+    public static final int CombatTypeArgument_COMBAT_DIE_ANIMATOR_CHANGE_VALUE = 25;
+    /**
+     * <code>CombatTypeArgument_COMBAT_AVATAR_TRANSFER_BY_SERVER = 26;</code>
+     */
+    public static final int CombatTypeArgument_COMBAT_AVATAR_TRANSFER_BY_SERVER_VALUE = 26;
 
 
     public final int getNumber() {
@@ -255,6 +279,9 @@ public final class CombatTypeArgumentOuterClass {
         case 20: return CombatTypeArgument_COMBAT_FIXED_AVATAR_FLASH_MOVE;
         case 21: return CombatTypeArgument_COMBAT_MULTI_OVERRIDE_ANIM;
         case 22: return CombatTypeArgument_COMBAT_DEBUG_SYNC_MOTION;
+        case 24: return CombatTypeArgument_ENTITY_INTERPOLATE_MOVE;
+        case 25: return CombatTypeArgument_COMBAT_DIE_ANIMATOR_CHANGE;
+        case 26: return CombatTypeArgument_COMBAT_AVATAR_TRANSFER_BY_SERVER;
         default: return null;
       }
     }

@@ -246,7 +246,7 @@ public final class AttackResultOuterClass {
 
               break;
             }
-            case 112: {
+            case 72: {
 
               defenseId_ = input.readUInt32();
               break;
@@ -646,7 +646,7 @@ public final class AttackResultOuterClass {
       return damage_;
     }
 
-    public static final int DEFENSE_ID_FIELD_NUMBER = 14;
+    public static final int DEFENSE_ID_FIELD_NUMBER = 9;
     private int defenseId_;
     /**
      * <code>uint32 defense_id = 14;</code>
@@ -825,7 +825,7 @@ public final class AttackResultOuterClass {
         output.writeMessage(10, getAbilityIdentifier());
       }
       if (defenseId_ != 0) {
-        output.writeUInt32(14, defenseId_);
+        output.writeUInt32(9, defenseId_);
       }
       if (aDIAGMANJIC_ != 0) {
         output.writeUInt32(213, aDIAGMANJIC_);
@@ -925,7 +925,7 @@ public final class AttackResultOuterClass {
       }
       if (defenseId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, defenseId_);
+          .computeUInt32Size(9, defenseId_);
       }
       if (aDIAGMANJIC_ != 0) {
         size += com.google.protobuf.CodedOutputStream
