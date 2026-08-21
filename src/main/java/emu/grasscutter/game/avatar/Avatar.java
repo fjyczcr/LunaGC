@@ -736,6 +736,20 @@ public class Avatar {
             this.addToExtraAbilityEmbryos(proudSkillData.getOpenConfig());
         }
 
+        if (skillDepot != null) {
+            skillDepot
+                    .getSkillsAndEnergySkill()
+                    .mapToObj(GameData.getAvatarSkillDataMap()::get)
+                    .filter(Objects::nonNull)
+                    .mapToInt(AvatarSkillData::getProudSkillGroupId)
+                    .filter(groupId -> groupId > 0)
+                    .mapToObj(groupId -> GameData.getProudSkillDataMap().get((groupId * 100) + 1))
+                    .filter(Objects::nonNull)
+                    .map(ProudSkillData::getOpenConfig)
+                    .filter(Objects::nonNull)
+                    .forEach(this::addToExtraAbilityEmbryos);
+        }
+
         // Constellations
         this.getTalentIdList()
                 .intStream()

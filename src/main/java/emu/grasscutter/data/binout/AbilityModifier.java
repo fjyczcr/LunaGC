@@ -80,6 +80,10 @@ public class AbilityModifier implements Serializable {
     public DynamicFloat elementDurability = DynamicFloat.ZERO;
 
     @ToString
+    public static class GadgetInfo implements Serializable {
+        public int configID;
+    }
+
     public static class AbilityModifierAction implements Serializable {
         public enum Type {
            PhlogistonCostMixin,
@@ -369,6 +373,7 @@ public class AbilityModifier implements Serializable {
         public String campTargetType;
         public int campID;
         public int gadgetID;
+        public GadgetInfo gadgetInfo;
         public boolean ownerIsTarget;
 
         public boolean isFromOwner;
