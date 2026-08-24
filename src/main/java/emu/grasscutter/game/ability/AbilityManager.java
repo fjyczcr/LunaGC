@@ -816,6 +816,9 @@ public final class AbilityManager extends BasePlayerManager {
                 entity.getInstancedModifiers().put(head.getInstancedModifierId(), modifier);
             }
 
+            entity.applyModifierProperties(
+                    head.getInstancedModifierId(), modifierData, instancedAbility);
+
             if (fromParentName && hasOrchestration && modifierData.onAdded != null) {
                 final var finalAbility = instancedAbility;
                 final var finalEntity = entity;
@@ -824,6 +827,7 @@ public final class AbilityManager extends BasePlayerManager {
                 }
             }
         } else if (modChange.getAction() == ModifierAction.MODIFIER_ACTION_REMOVED) {
+            entity.revertModifierProperties(head.getInstancedModifierId());
             entity.getInstancedModifiers().remove(head.getInstancedModifierId());
         } else {
 
@@ -1002,6 +1006,193 @@ public final class AbilityManager extends BasePlayerManager {
         entity.getInstancedAbilities().add(data != null ? new Ability(data, entity, player) : null);
     }
 
+    private static final int MAX_ATTACH_DEPTH = 8;
+
+    // guards re-entry: executeAction dispatches asynchronously, so a depth counter cannot
+    // bound recursion through ActionAttachModifier. A modifier stays attached until detached.
+    private final java.util.Set<String> attachedModifiers =
+            java.util.concurrent.ConcurrentHashMap.newKeySet();
+
+    private static String attachKey(GameEntity entity, Ability ability, String modifierName) {
+        return entity.getId() + "/" + ability.getData().abilityName + "/" + modifierName;
+    }
+
+    public static int syntheticModifierId(String abilityName, String modifierName) {
+        return -Math.abs((abilityName + "/" + modifierName).hashCode());
+    }
+
+    /** Server-side modifier attach: applies properties, runs onAdded, then follows the modifier's own mixins. */
+    public void attachModifier(
+            GameEntity entity, Ability ability, String modifierName, ByteString abilityData, int depth) {
+        if (entity == null || ability == null || modifierName == null || modifierName.isEmpty()) return;
+        if (depth > MAX_ATTACH_DEPTH) return;
+        if (ability.getData() == null || ability.getData().modifiers == null) return;
+
+        var modifierData = ability.getData().modifiers.get(modifierName);
+        if (modifierData == null) return;
+
+        if (!this.attachedModifiers.add(attachKey(entity, ability, modifierName))) return;
+
+        entity.applyModifierProperties(
+                syntheticModifierId(ability.getData().abilityName, modifierName), modifierData, ability);
+
+        if (modifierData.onAdded != null) {
+            for (var action : modifierData.onAdded) {
+                if (action != null) this.executeAction(ability, action, abilityData, entity);
+            }
+        }
+
+        this.processModifierMixins(entity, ability, modifierData, abilityData, depth);
+    }
+
+    public void detachModifier(GameEntity entity, Ability ability, String modifierName) {
+        if (entity == null || ability == null || ability.getData() == null) return;
+        if (!this.attachedModifiers.remove(attachKey(entity, ability, modifierName))) return;
+        entity.revertModifierProperties(
+                syntheticModifierId(ability.getData().abilityName, modifierName));
+    }
+
+    private void processModifierMixins(
+            GameEntity entity,
+            Ability ability,
+            AbilityModifier modifierData,
+            ByteString abilityData,
+            int depth) {
+        if (modifierData.modifierMixins == null) return;
+
+        for (var mixin : modifierData.modifierMixins) {
+            if (mixin == null || mixin.type == null) continue;
+
+            switch (mixin.type) {
+                case AttachModifierToGlobalValueMixin -> this.evaluateGlobalValueMixin(
+                        entity, ability, mixin, abilityData, depth);
+                case CurLocalAvatarMixinV2, CurLocalAvatarMixin -> {
+                    var avatar = this.player.getTeamManager().getCurrentAvatarEntity();
+                    if (avatar != null
+                            && mixin.modifierName != null
+                            && !mixin.modifierName.isJsonNull()) {
+                        for (var name : mixin.getModifierNames()) {
+                            this.attachModifier(avatar, ability, name, abilityData, depth + 1);
+                        }
+                    }
+                }
+                default -> {}
+            }
+        }
+    }
+
+    /** Attaches whichever modifierNameStep the watched global value currently selects. */
+    public void evaluateGlobalValueMixin(
+            GameEntity entity,
+            Ability ability,
+            AbilityMixinData mixin,
+            ByteString abilityData,
+            int depth) {
+        if (mixin.globalValueKey == null || mixin.modifierNameSteps.isEmpty()) return;
+
+        var source = this.resolveGlobalValueSource(entity, mixin.globalValueTarget);
+        if (source == null) return;
+
+        float value =
+                source.getGlobalAbilityValues()
+                        .getOrDefault(
+                                mixin.globalValueKey, mixin.defaultGlobalValueOnCreate.get(ability));
+
+        int step = -1;
+        if (mixin.valueSteps.isEmpty()) {
+            step = value > 0 ? 0 : -1;
+        } else {
+            for (int i = 0; i < mixin.valueSteps.size(); i++) {
+                float lower = mixin.valueSteps.get(i).get();
+                float upper =
+                        (i + 1) < mixin.valueSteps.size()
+                                ? mixin.valueSteps.get(i + 1).get()
+                                : Float.MAX_VALUE;
+                if (value >= lower && value < upper) {
+                    step = i;
+                    break;
+                }
+            }
+        }
+
+        for (int i = 0; i < mixin.modifierNameSteps.size(); i++) {
+            var name = mixin.modifierNameSteps.get(i);
+            if (name == null || name.isEmpty()) continue;
+
+            if (i == step) {
+                this.attachModifier(entity, ability, name, abilityData, depth + 1);
+            } else if (mixin.removeAppliedModifier) {
+                this.detachModifier(entity, ability, name);
+            }
+        }
+    }
+
+    private GameEntity resolveGlobalValueSource(GameEntity entity, String target) {
+        if (target == null) return entity;
+        return switch (target) {
+            case "Team" -> this.player.getTeamManager().getEntity();
+            case "CurLocalAvatar" -> this.player.getTeamManager().getCurrentAvatarEntity();
+            default -> entity;
+        };
+    }
+
+    /**
+     * Re-runs global-value watchers that act as roots (RegisterOnce mixins). A modifier is only a
+     * root when nothing else in the ability attaches it - otherwise its watcher would fire without
+     * the parent that is supposed to gate it.
+     */
+    public void refreshGlobalValueWatchers(GameEntity entity) {
+        if (entity == null) return;
+        for (var ability : entity.getInstancedAbilities()) {
+            if (ability == null || ability.getData() == null || ability.getData().modifiers == null)
+                continue;
+
+            var attachedByOthers = this.collectReferencedModifiers(ability);
+
+            for (var namedModifier : ability.getData().modifiers.entrySet()) {
+                var modifierData = namedModifier.getValue();
+                if (modifierData == null || modifierData.modifierMixins == null) continue;
+                if (attachedByOthers.contains(namedModifier.getKey())) continue;
+
+                for (var mixin : modifierData.modifierMixins) {
+                    if (mixin != null
+                            && mixin.type == AbilityMixinData.Type.AttachModifierToGlobalValueMixin) {
+                        this.evaluateGlobalValueMixin(
+                                entity, ability, mixin, ByteString.EMPTY, 0);
+                    }
+                }
+            }
+        }
+    }
+
+    /** Modifier names that some other modifier in this ability attaches or steps to. */
+    private java.util.Set<String> collectReferencedModifiers(Ability ability) {
+        var referenced = new java.util.HashSet<String>();
+        for (var modifierData : ability.getData().modifiers.values()) {
+            if (modifierData == null) continue;
+
+            for (var actions : new AbilityModifierAction[][] {
+                modifierData.onAdded, modifierData.onRemoved, modifierData.onThinkInterval
+            }) {
+                if (actions == null) continue;
+                for (var action : actions) {
+                    if (action != null && action.modifierName != null) referenced.add(action.modifierName);
+                }
+            }
+
+            if (modifierData.modifierMixins != null) {
+                for (var mixin : modifierData.modifierMixins) {
+                    if (mixin == null) continue;
+                    referenced.addAll(mixin.modifierNameSteps);
+                    if (mixin.modifierName != null && !mixin.modifierName.isJsonNull()) {
+                        referenced.addAll(mixin.getModifierNames());
+                    }
+                }
+            }
+        }
+        return referenced;
+    }
+
     private void initializeEntityAbilities(EntityAvatar avatar) {
         var avatarData = avatar.getAvatar().getAvatarData();
         if (avatarData.getAbilities() != null) {
@@ -1024,6 +1215,8 @@ public final class AbilityManager extends BasePlayerManager {
             var data = GameData.getAbilityData(name);
             avatar.getInstancedAbilities().add(data != null ? new Ability(data, avatar, player) : null);
         }
+
+        this.refreshGlobalValueWatchers(avatar);
     }
 
     private void invokeAction(
@@ -1085,6 +1278,7 @@ public final class AbilityManager extends BasePlayerManager {
                 .count();
             var teamEntity = this.player.getTeamManager().getEntity();
             int teamEntityId = teamEntity.getId();
+            teamEntity.getGlobalAbilityValues().put("SGV_MoonPhaseLevel", (float) moonCount);
             this.player.sendPacket(new PacketServerGlobalValueChangeNotify(
                 teamEntityId, "SGV_MoonPhaseLevel", (float) moonCount));
             if (moonCount > 0) {

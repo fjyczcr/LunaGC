@@ -25,6 +25,7 @@ import emu.grasscutter.server.packet.send.PacketAvatarFightPropNotify;
 import emu.grasscutter.server.packet.send.PacketEntityFightPropChangeReasonNotify;
 import emu.grasscutter.server.packet.send.PacketEntityFightPropUpdateNotify;
 import it.unimi.dsi.fastutil.ints.*;
+import it.unimi.dsi.fastutil.objects.*;
 import emu.grasscutter.*;
 import emu.grasscutter.data.GameData;
 
@@ -180,13 +181,57 @@ public abstract class GameEntity {
         if (data.properties == null) {
             return;
         }
-        float hpThresholdRatio = data.properties.Actor_HpThresholdRatio;
+        var threshold = data.properties.get("Actor_HpThresholdRatio");
+        float hpThresholdRatio = threshold != null ? threshold.get() : 0f;
 
-        if (data.properties != null) {
-            if (data.state == AbilityModifier.State.Limbo && hpThresholdRatio > 0.0f) {
-                Grasscutter.getLogger().info("Limbo set to " + hpThresholdRatio);
-                this.setLimbo(hpThresholdRatio);
-            }
+        if (data.state == AbilityModifier.State.Limbo && hpThresholdRatio > 0.0f) {
+            Grasscutter.getLogger().info("Limbo set to " + hpThresholdRatio);
+            this.setLimbo(hpThresholdRatio);
+        }
+    }
+
+    private final Int2ObjectMap<Object2FloatMap<FightProperty>> appliedModifierProps =
+            new Int2ObjectOpenHashMap<>();
+
+    public void applyModifierProperties(int instancedModifierId, AbilityModifier data, Ability ability) {
+        if (data == null || data.properties == null || data.properties.isEmpty()) return;
+        if (this.getFightProperties() == null) return;
+
+        // stacking="Refresh" re-adds the same modifier id; undo the previous grant first
+        this.revertModifierProperties(instancedModifierId);
+
+        var applied = new Object2FloatOpenHashMap<FightProperty>();
+        for (var entry : data.properties.entrySet()) {
+            var prop = ActorProperty.getFightProperty(entry.getKey());
+            if (prop == null || entry.getValue() == null) continue;
+
+            float delta = ability != null ? entry.getValue().get(ability) : entry.getValue().get();
+            if (delta == 0f) continue;
+
+            this.setFightProperty(prop, this.getFightProperty(prop) + delta);
+            applied.put(prop, applied.getOrDefault(prop, 0f) + delta);
+        }
+
+        if (applied.isEmpty()) return;
+        this.appliedModifierProps.put(instancedModifierId, applied);
+        this.broadcastModifierProps(applied);
+    }
+
+    public void revertModifierProperties(int instancedModifierId) {
+        var applied = this.appliedModifierProps.remove(instancedModifierId);
+        if (applied == null || this.getFightProperties() == null) return;
+
+        for (var entry : applied.object2FloatEntrySet()) {
+            this.setFightProperty(
+                    entry.getKey(), this.getFightProperty(entry.getKey()) - entry.getFloatValue());
+        }
+        this.broadcastModifierProps(applied);
+    }
+
+    private void broadcastModifierProps(Object2FloatMap<FightProperty> applied) {
+        if (this.getScene() == null) return;
+        for (var prop : applied.keySet()) {
+            this.getScene().broadcastPacket(new PacketEntityFightPropUpdateNotify(this, prop));
         }
     }
 

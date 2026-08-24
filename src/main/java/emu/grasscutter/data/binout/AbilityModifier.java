@@ -74,7 +74,7 @@ public class AbilityModifier implements Serializable {
 
     @SerializedName(value = "modifierMixins", alternate = "IIECHMHLPDM")
     public AbilityMixinData[] modifierMixins;
-    public AbilityModifierProperty properties;
+    public Map<String, DynamicFloat> properties;
 
     public ElementType elementType;
     public DynamicFloat elementDurability = DynamicFloat.ZERO;

@@ -83,7 +83,8 @@ public class AbilityMixinData implements Serializable {
         AttackCostElementMixin,
         OnAvatarUseSkillMixin,
         DoActionByElementReactionMixin,
-        DoActionBySelfElementReactionMixin
+        DoActionBySelfElementReactionMixin,
+        CurLocalAvatarMixinV2
     }
     public AbilityModifierAction[] idontknowwhattonamethis;
     public AbilityModifierAction[] idontknowwhattonamethis2;
@@ -136,6 +137,9 @@ public class AbilityMixinData implements Serializable {
     public String stateID;
     public DynamicFloat defaultGlobalValueOnCreate = DynamicFloat.ZERO;
     public List<DynamicFloat> ratioSteps = new ArrayList<>();
+    public List<DynamicFloat> valueSteps = new ArrayList<>();
+    public String globalValueTarget;
+    public boolean removeAppliedModifier = true;
     public List<String> modifierNameSteps = new ArrayList<>();
     public boolean EJEMBMFPBKF = true;
     public boolean isCheckOnAttach = true;
