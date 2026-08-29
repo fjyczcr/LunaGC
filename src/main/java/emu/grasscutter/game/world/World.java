@@ -651,6 +651,10 @@ public class World implements Iterable<Player> {
      */
     public void changeTime(long gameTime) {
         this.currentWorldTime = gameTime;
+        // Rebase the tick baseline. getWorldTime() advances currentWorldTime by
+        // (now - lastUpdateTime); without this, real time elapsed since the last read is
+        // added on top of the value just set, so the clock drifts past the chosen time.
+        this.lastUpdateTime = System.currentTimeMillis();
     }
 
     /**
