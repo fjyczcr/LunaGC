@@ -594,6 +594,8 @@ public final class PacketOpcodes {
     public static final int CheckUgcUpdateReq = 1;
     public static final int CheckUgcUpdateRsp = 1725;
     public static final int ClientLockGameTimeNotify = 22608;
+    public static final int ClientSetGameTimeReq = 7024;
+    public static final int ClientSetGameTimeRsp = 7501;
     public static final int CloseCommonTipsNotify = 1;
     public static final int CombineDataNotify = 985;
     public static final int CookDataNotify = 20254;
